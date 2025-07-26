@@ -25,9 +25,9 @@ window.draw = function (category) {
   }
 
   const result = weightedDraw(pool);
-  document.getElementById("result").innerHTML = \`
-    <h2>\${result.name}</h2>
-    <p>\${result.description}</p>
-    <small>Rarity: \${result.rarity.toFixed(2)}%</small>
-  \`;
+  document.getElementById("result").innerHTML = `
+    <h2>${result.name}</h2>
+    <p>${result.description}</p>
+    <small>Rarity: ${result.rarity.toFixed(2)}%</small>
+  `;
 };
