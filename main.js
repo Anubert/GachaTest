@@ -24,14 +24,17 @@ function weightedDraw(pool,min,max) {
 window.draw = function(cat) {
   const min=parseFloat(document.getElementById('minRarity').value);
   const max=parseFloat(document.getElementById('maxRarity').value);
-  if(cat==='random'){ const keys=Object.keys(data);cat=keys[Math.floor(Math.random()*keys.length)]; }
+  if(cat==='random'){
+    const cats=Object.keys(data);
+    cat=cats[Math.floor(Math.random()*cats.length)];
+  }
   const pool=data[cat];
   const box=document.getElementById('result');
   box.className='result-box animate'; box.textContent='Rolling...';
   setTimeout(()=>{
     const res=weightedDraw(pool,min,max);
-    if(!res){box.className='result-box';box.textContent='No results!';return;}
+    if(!res){box.className='result-box'; box.textContent='No results!'; return;}
     const tier=getTier(res.rarity);
-    box.className=`result-box tier-${tier}`;box.innerHTML=`<h2>${res.name}</h2><p>${res.description}</p><small>Rarity: ${res.rarity.toFixed(2)}</small>`;
+    box.className=`result-box tier-${tier}`; box.innerHTML=`<h2>${res.name}</h2><p>${res.description}</p><small>Rarity: ${res.rarity.toFixed(2)}</small>`;
   },1000);
 };
