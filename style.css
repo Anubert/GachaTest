@@ -1,74 +1,61 @@
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  /* Set the GIF as a full-screen, fixed background */
-  background: url('https://d2w9rnfcy7mm78.cloudfront.net/16292323/original_83093ea34391d9a149e767b741d746b2.gif?1651445961?bc=0')
-              no-repeat center center fixed;
+  background: url('https://d2w9rnfcy7mm78.cloudfront.net/16292323/original_83093ea34391d9a149e767b741d746b2.gif?1651445961?bc=0') no-repeat center center fixed;
   background-size: cover;
   color: #fff;
 }
 
-/* Ensure your result box remains readable */
-#result {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 1.5em;
-  border-radius: 10px;
-  backdrop-filter: blur(4px);
-  max-width: 400px;
-  margin: 2em auto;
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
 }
 
-
-h1 {
-  margin-bottom: 20px;
-}
-
-.layout {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  gap: 20px;
-  align-items: start;
-  margin-bottom: 20px;
-}
-
-.categories, .tiers {
+.categories {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.result-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 200px;
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  border: none;
 }
 
 #result {
-  padding: 20px;
-  background: rgba(0,0,0,0.6);
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  width: 100%;
-  max-width: 400px;
-  color: #fff;
-}
-
-.inputs {
   margin: 20px auto;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
+  padding: 20px;
+  max-width: 400px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: rgba(0,0,0,0.6);
+  backdrop-filter: blur(4px);
+  font-size: 18px;
 }
 
-input {
-  width: 80px;
-  padding: 5px;
+.rolling {
+  animation: pulse 1s infinite;
 }
 
-button {
-  padding: 10px 15px;
-  cursor: pointer;
-  font-weight: bold;
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
 }
+
+/* Rarity tier classes */
+.rarity-trash { color: #888; }
+.rarity-bronze { color: #cd7f32; }
+.rarity-silver { color: #c0c0c0; }
+.rarity-gold { color: #ffd700; }
+.rarity-platinum { color: #e5e4e2; }
+.rarity-diamond { color: #00ffff; }
+.rarity-mythril { color: #48d1cc; }
+.rarity-legendary { color: #bf00ff; }
+.rarity-mythical { color: #ff4500; font-weight: bold; }
