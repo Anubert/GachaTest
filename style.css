@@ -1,12 +1,24 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  background: url('https://d2w9rnfcy7mm78.cloudfront.net/16292323/original_83093ea34391d9a149e767b741d746b2.gif?1651445961?bc=0') no-repeat center center fixed;
+  font-family: sans-serif;
+  /* Set the GIF as a full-screen, fixed background */
+  background: url('https://d2w9rnfcy7mm78.cloudfront.net/16292323/original_83093ea34391d9a149e767b741d746b2.gif?1651445961?bc=0')
+              no-repeat center center fixed;
   background-size: cover;
-  color: #eee;
-  padding: 20px;
+  color: #fff;
 }
+
+/* Ensure your result box remains readable */
+#result {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1.5em;
+  border-radius: 10px;
+  backdrop-filter: blur(4px);
+  max-width: 400px;
+  margin: 2em auto;
+}
+
 
 h1 {
   margin-bottom: 20px;
