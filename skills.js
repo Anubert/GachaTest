@@ -1,4 +1,1 @@
-export const skills = [
-  { name: "Sword Slash", rarity: 10, description: "A basic melee attack." },
-  { name: "Arcane Surge", rarity: 3, description: "Boosts magical abilities." }
-];
+export const skills = [{ name: 'Slash', rarity: 9.5, description: 'A test.' }];

@@ -4,34 +4,35 @@
   <meta charset="UTF-8" />
   <title>Chaos Gacha</title>
   <link rel="stylesheet" href="./style.css" />
+</style>
 </head>
 <body>
   <h1>🎲 Chaos Gacha</h1>
-  <div class="gacha-container">
-    <div class="category-buttons">
-      <button onclick="draw('traits')">Traits</button>
-      <button onclick="draw('abilities')">Abilities</button>
-      <button onclick="draw('summons')">Summons</button>
-      <button onclick="draw('items')">Items</button>
-      <button onclick="draw('skills')">Skills</button>
-      <button onclick="draw('random')">Random</button>
+  <div class="layout">
+    <div class="categories">
+      <button onclick="draw('traits')">Draw Trait</button>
+      <button onclick="draw('abilities')">Draw Ability</button>
+      <button onclick="draw('summons')">Draw Summon</button>
+      <button onclick="draw('items')">Draw Item</button>
+      <button onclick="draw('skills')">Draw Skill</button>
+      <button onclick="draw('random')">🎲 Random</button>
     </div>
-    <div class="tier-buttons">
-      <button onclick="setTier(0.01, 0.25, 0.75)">Trash</button>
-      <button onclick="setTier(1.00, 1.25, 1.99)">Bronze</button>
-      <button onclick="setTier(2.00, 2.25, 2.99)">Silver</button>
-      <button onclick="setTier(3.00, 3.25, 3.99)">Gold</button>
-      <button onclick="setTier(4.00, 4.50, 4.99)">Platinum</button>
-      <button onclick="setTier(5.00, 5.50, 5.99)">Diamond</button>
-      <button onclick="setTier(6.00, 6.50, 6.99)">Mythril</button>
-      <button onclick="setTier(7.00, 7.50, 7.99)">Legendary</button>
-      <button onclick="setTier(8.00, 8.50, 9.99)">Mythical</button>
+    <div class="tiers">
+      <button onclick="setTier(0)">Trash</button>
+      <button onclick="setTier(1)">Bronze</button>
+      <button onclick="setTier(2)">Silver</button>
+      <button onclick="setTier(3)">Gold</button>
+      <button onclick="setTier(4)">Platinum</button>
+      <button onclick="setTier(5)">Diamond</button>
+      <button onclick="setTier(6)">Mythril</button>
+      <button onclick="setTier(7)">Legendary</button>
+      <button onclick="setTier(8)">Mythical</button>
     </div>
   </div>
-  <div class="rarity-inputs">
-    <label>Min Rarity: <input type="number" id="min" step="0.01" value="0.01"></label>
-    <label>Avg Rarity: <input type="number" id="avg" step="0.01" value="5.00"></label>
-    <label>Max Rarity: <input type="number" id="max" step="0.01" value="9.99"></label>
+  <div class="inputs">
+    <label>Min Rarity: <input id="minRarity" type="number" step="0.01" value="0.01" /></label>
+    <label>Avg Rarity: <input id="avgRarity" type="number" step="0.01" value="5.00" /></label>
+    <label>Max Rarity: <input id="maxRarity" type="number" step="0.01" value="9.99" /></label>
   </div>
   <div id="result">Roll something above...</div>
   <script type="module" src="./main.js"></script>
