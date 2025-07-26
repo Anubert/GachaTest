@@ -6,37 +6,59 @@ import { skills } from './skills.js';
 
 const data = { traits, abilities, summons, items, skills };
 
-window.setTier = function(min, max) {
-  document.getElementById('minRarity').value = min.toFixed(2);
-  document.getElementById('maxRarity').value = max.toFixed(2);
-};
-
-function weightedDraw(pool, minR, maxR) {
-  const filtered = pool.filter(i => i.rarity >= minR && i.rarity <= maxR);
-  const total = filtered.reduce((sum, i) => sum + i.rarity, 0);
-  let roll = Math.random() * total;
-  return filtered.find(i => (roll -= i.rarity) < 0);
+function getTier(rarity) {
+  return Math.min(9, Math.floor(rarity)); // 0.01-0.99 = tier 0, 1.00-1.99 = tier 1, ..., 9.00-9.99 = tier 9
 }
 
-window.draw = function(category) {
-  const resultBox = document.getElementById('result');
-  resultBox.textContent = 'Rolling...';
-  resultBox.className = 'gacha-result rolling';
+function weightedDraw(pool, min, max) {
+  const filtered = pool.filter(item => item.rarity >= min && item.rarity <= max);
+  const total = filtered.reduce((sum, item) => sum + item.rarity, 0);
+  let roll = Math.random() * total;
+  return filtered.find(item => (roll -= item.rarity) < 0);
+}
+
+window.draw = function (category) {
+  const min = parseFloat(document.getElementById("minRarity").value);
+  const max = parseFloat(document.getElementById("maxRarity").value);
+  const avg = parseFloat(document.getElementById("avgRarity").value);
+
+  if (category === "random") {
+    const categories = Object.keys(data);
+    category = categories[Math.floor(Math.random() * categories.length)];
+  }
+
+  const pool = data[category];
+  if (!pool) {
+    document.getElementById("result").textContent = "Unknown category!";
+    return;
+  }
+
+  const result = weightedDraw(pool, min, max);
+  if (!result) {
+    document.getElementById("result").textContent = "No item found in range!";
+    return;
+  }
+
+  const tier = getTier(result.rarity);
+  const resultBox = document.getElementById("result");
+  resultBox.className = `result-box tier-${tier} animate`;
+  resultBox.innerHTML = `
+    <h2>${result.name}</h2>
+    <p>${result.description}</p>
+    <small>Rarity: ${result.rarity.toFixed(2)}</small>
+  `;
+
+  // Remove animation class after animation completes
   setTimeout(() => {
-    if (category === 'random') {
-      const cats = Object.keys(data);
-      category = cats[Math.floor(Math.random()*cats.length)];
-    }
-    const pool = data[category];
-    const minR = parseFloat(document.getElementById('minRarity').value);
-    const maxR = parseFloat(document.getElementById('maxRarity').value);
-    const res = weightedDraw(pool, minR, maxR);
-    if (!res) {
-      resultBox.className = 'gacha-result';
-      resultBox.textContent = 'No results';
-      return;
-    }
-    resultBox.className = 'gacha-result';
-    resultBox.innerHTML = `<h2>${res.name}</h2><p>${res.description}</p><small>Rarity: ${res.rarity.toFixed(2)}</small>`;
-  }, 1000);
+    resultBox.classList.remove("animate");
+  }, 600);
+};
+
+window.setTier = function (tier) {
+  const min = (tier - 1) + 0.01;
+  const max = tier - 0.01 + 1;
+  const avg = (min + max) / 2;
+  document.getElementById("minRarity").value = min.toFixed(2);
+  document.getElementById("maxRarity").value = max.toFixed(2);
+  document.getElementById("avgRarity").value = avg.toFixed(2);
 };
