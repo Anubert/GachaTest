@@ -1,19 +1,41 @@
 body {
   font-family: sans-serif;
   text-align: center;
-  background: #f5f5f5;
-  padding: 2em;
+  background: #f2f2f2;
+  color: #333;
 }
+
+h1 {
+  margin-top: 20px;
+}
+
+.inputs, .tiers, .buttons {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+input {
+  width: 80px;
+  padding: 5px;
+}
+
 button {
-  margin: 1em;
-  padding: 0.8em 1.5em;
-  font-size: 1.2em;
+  padding: 10px 15px;
   cursor: pointer;
+  font-weight: bold;
 }
+
 #result {
-  margin-top: 2em;
-  padding: 1.5em;
+  margin-top: 30px;
+  padding: 20px;
   background: white;
-  box-shadow: 0 0 10px #ccc;
   border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 80%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
