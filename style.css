@@ -1,7 +1,9 @@
 body {
-  font-family: sans-serif;
-  text-align: center;
-  background: https://www.google.com/imgres?q=wallpaper%20gif&imgurl=https%3A%2F%2Fi.redd.it%2F0bb6dqsiab451.gif&imgrefurl=https%3A%2F%2Fwww.reddit.com%2Fr%2Fwallpapergif%2F&docid=3qj8UAaPov-HiM&tbnid=x74cpDgGi6pptM&vet=12ahUKEwib59u9oduOAxWvdaQEHbNmHv8QM3oECBQQAA..i&w=740&h=416&hcb=2&ved=2ahUKEwib59u9oduOAxWvdaQEHbNmHv8QM3oECBQQAA;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: url('https://d2w9rnfcy7mm78.cloudfront.net/16292323/original_83093ea34391d9a149e767b741d746b2.gif?1651445961?bc=0') no-repeat center center fixed;
+  background-size: cover;
   color: #eee;
   padding: 20px;
 }
