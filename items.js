@@ -1,1 +1,1 @@
-export const traits = [{name:'Test', rarity:5, description:'Desc'}];
+export const items = [{name:'Test',rarity:5,description:'Desc'}];

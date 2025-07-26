@@ -6,59 +6,32 @@ import { skills } from './skills.js';
 
 const data = { traits, abilities, summons, items, skills };
 
-function getTier(rarity) {
-  return Math.min(9, Math.floor(rarity)); // 0.01-0.99 = tier 0, 1.00-1.99 = tier 1, ..., 9.00-9.99 = tier 9
-}
+function getTier(rarity) { return Math.min(9, Math.floor(rarity)); }
 
-function weightedDraw(pool, min, max) {
-  const filtered = pool.filter(item => item.rarity >= min && item.rarity <= max);
-  const total = filtered.reduce((sum, item) => sum + item.rarity, 0);
-  let roll = Math.random() * total;
-  return filtered.find(item => (roll -= item.rarity) < 0);
-}
-
-window.draw = function (category) {
-  const min = parseFloat(document.getElementById("minRarity").value);
-  const max = parseFloat(document.getElementById("maxRarity").value);
-  const avg = parseFloat(document.getElementById("avgRarity").value);
-
-  if (category === "random") {
-    const categories = Object.keys(data);
-    category = categories[Math.floor(Math.random() * categories.length)];
-  }
-
-  const pool = data[category];
-  if (!pool) {
-    document.getElementById("result").textContent = "Unknown category!";
-    return;
-  }
-
-  const result = weightedDraw(pool, min, max);
-  if (!result) {
-    document.getElementById("result").textContent = "No item found in range!";
-    return;
-  }
-
-  const tier = getTier(result.rarity);
-  const resultBox = document.getElementById("result");
-  resultBox.className = `result-box tier-${tier} animate`;
-  resultBox.innerHTML = `
-    <h2>${result.name}</h2>
-    <p>${result.description}</p>
-    <small>Rarity: ${result.rarity.toFixed(2)}</small>
-  `;
-
-  // Remove animation class after animation completes
-  setTimeout(() => {
-    resultBox.classList.remove("animate");
-  }, 600);
+window.setTier = function(t) {
+  const min = t-1+0.01, max = t-1+0.99, avg=(min+max)/2;
+  document.getElementById('minRarity').value=min.toFixed(2);
+  document.getElementById('avgRarity').value=avg.toFixed(2);
+  document.getElementById('maxRarity').value=max.toFixed(2);
 };
 
-window.setTier = function (tier) {
-  const min = (tier - 1) + 0.01;
-  const max = tier - 0.01 + 1;
-  const avg = (min + max) / 2;
-  document.getElementById("minRarity").value = min.toFixed(2);
-  document.getElementById("maxRarity").value = max.toFixed(2);
-  document.getElementById("avgRarity").value = avg.toFixed(2);
+function weightedDraw(pool,min,max) {
+  const filt=pool.filter(i=>i.rarity>=min&&i.rarity<=max);
+  const sum=filt.reduce((s,i)=>s+i.rarity,0);
+  let r=Math.random()*sum; return filt.find(i=>(r-=i.rarity)<0);
+}
+
+window.draw = function(cat) {
+  const min=parseFloat(document.getElementById('minRarity').value);
+  const max=parseFloat(document.getElementById('maxRarity').value);
+  if(cat==='random'){ const keys=Object.keys(data);cat=keys[Math.floor(Math.random()*keys.length)]; }
+  const pool=data[cat];
+  const box=document.getElementById('result');
+  box.className='result-box animate'; box.textContent='Rolling...';
+  setTimeout(()=>{
+    const res=weightedDraw(pool,min,max);
+    if(!res){box.className='result-box';box.textContent='No results!';return;}
+    const tier=getTier(res.rarity);
+    box.className=`result-box tier-${tier}`;box.innerHTML=`<h2>${res.name}</h2><p>${res.description}</p><small>Rarity: ${res.rarity.toFixed(2)}</small>`;
+  },1000);
 };

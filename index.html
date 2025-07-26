@@ -7,41 +7,37 @@
 </head>
 <body>
   <div class="container">
-    <h1>🎲 Chaos Gacha</h1>
-
-    <div class="controls">
-      <div class="category-buttons">
-        <button onclick="draw('traits')">Traits</button>
-        <button onclick="draw('abilities')">Abilities</button>
-        <button onclick="draw('summons')">Summons</button>
-        <button onclick="draw('items')">Items</button>
-        <button onclick="draw('skills')">Skills</button>
-        <button onclick="draw('random')">🎲 Random</button>
-      </div>
-
-      <div class="rarity-controls">
-        <label>Min Rarity: <input id="minRarity" type="number" min="0.01" max="9.99" step="0.01" value="0.01" /></label>
-        <label>Avg Rarity: <input id="avgRarity" type="number" min="0.01" max="9.99" step="0.01" value="5.00" /></label>
-        <label>Max Rarity: <input id="maxRarity" type="number" min="0.01" max="9.99" step="0.01" value="9.99" /></label>
-
-        <div class="tier-buttons">
-          <button onclick="setTier(1)">Trash</button>
-          <button onclick="setTier(2)">Bronze</button>
-          <button onclick="setTier(3)">Silver</button>
-          <button onclick="setTier(4)">Gold</button>
-          <button onclick="setTier(5)">Platinum</button>
-          <button onclick="setTier(6)">Diamond</button>
-          <button onclick="setTier(7)">Mythril</button>
-          <button onclick="setTier(8)">Legendary</button>
-          <button onclick="setTier(9)">Mythical</button>
-        </div>
-      </div>
+    <div class="sidebar left">
+      <h2>Categories</h2>
+      <button onclick="draw('traits')">Traits</button>
+      <button onclick="draw('abilities')">Abilities</button>
+      <button onclick="draw('summons')">Summons</button>
+      <button onclick="draw('items')">Items</button>
+      <button onclick="draw('skills')">Skills</button>
+      <button onclick="draw('random')">Random</button>
     </div>
-
-    <div id="result" class="result-box">Roll something above...</div>
+    <div class="result-container">
+      <h1>🎲 Chaos Gacha</h1>
+      <div id="result" class="result-box">Roll something above...</div>
+    </div>
+    <div class="sidebar right">
+      <h2>Tiers</h2>
+      <button onclick="setTier(1)">Trash</button>
+      <button onclick="setTier(2)">Bronze</button>
+      <button onclick="setTier(3)">Silver</button>
+      <button onclick="setTier(4)">Gold</button>
+      <button onclick="setTier(5)">Platinum</button>
+      <button onclick="setTier(6)">Diamond</button>
+      <button onclick="setTier(7)">Mythril</button>
+      <button onclick="setTier(8)">Legendary</button>
+      <button onclick="setTier(9)">Mythical</button>
+    </div>
   </div>
-
+  <div class="rarity-inputs">
+    <label>Min: <input type="number" id="minRarity" step="0.01" value="0.01" /></label>
+    <label>Avg: <input type="number" id="avgRarity" step="0.01" value="5.00" /></label>
+    <label>Max: <input type="number" id="maxRarity" step="0.01" value="9.99" /></label>
+  </div>
   <script type="module" src="./main.js"></script>
 </body>
 </html>
-
