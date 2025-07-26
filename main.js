@@ -21,3 +21,19 @@ window.draw = function (category) {
     <small>Rarity: ${result.rarity.toFixed(2)}%</small>
   `;
 };
+
+const siteUnderConstruction = false; // ⛔ Set to false to reactivate the gacha
+
+if (siteUnderConstruction) {
+  document.addEventListener("DOMContentLoaded", () => {
+    const result = document.getElementById("result");
+    const buttons = document.querySelectorAll("button");
+
+    result.textContent = "🛠️ the Gacha is currently going through a training arc. Please check back soon!";
+    buttons.forEach(btn => {
+      btn.disabled = true;
+      btn.style.opacity = 0.5;
+      btn.style.cursor = "not-allowed";
+    });
+  });
+}
