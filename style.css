@@ -1,10 +1,7 @@
 body {
   font-family: sans-serif;
   text-align: center;
-  background: #202124; /* fallback color */
-  /* To use an image or gif, uncomment and set your URL below: */
-  /* background: url('your-background.gif') no-repeat center center fixed; */
-  /* background-size: cover; */
+  background: https://www.google.com/imgres?q=wallpaper%20gif&imgurl=https%3A%2F%2Fi.redd.it%2F0bb6dqsiab451.gif&imgrefurl=https%3A%2F%2Fwww.reddit.com%2Fr%2Fwallpapergif%2F&docid=3qj8UAaPov-HiM&tbnid=x74cpDgGi6pptM&vet=12ahUKEwib59u9oduOAxWvdaQEHbNmHv8QM3oECBQQAA..i&w=740&h=416&hcb=2&ved=2ahUKEwib59u9oduOAxWvdaQEHbNmHv8QM3oECBQQAA
   color: #eee;
   padding: 20px;
 }
