@@ -22,7 +22,7 @@ window.draw = function (category) {
   `;
 };
 
-const siteUnderConstruction = false; // ⛔ Set to false to reactivate the gacha
+const siteUnderConstruction = true; // ⛔ Set to false to reactivate the gacha
 
 if (siteUnderConstruction) {
   document.addEventListener("DOMContentLoaded", () => {
