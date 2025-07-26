@@ -22,18 +22,44 @@ window.draw = function (category) {
   `;
 };
 
-const siteUnderConstruction = false; // ⛔ Set to false to reactivate the gacha
+const siteUnderConstruction = false; // Set to true to disable gacha
 
-if (siteUnderConstruction) {
-  document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
+  if (siteUnderConstruction) {
     const result = document.getElementById("result");
     const buttons = document.querySelectorAll("button");
 
-    result.textContent = "🛠️ the Gacha is currently going through a training arc. Please check back soon!";
+    result.textContent = "🛠️ Chaos Gacha is currently under construction. Please check back soon!";
     buttons.forEach(btn => {
       btn.disabled = true;
       btn.style.opacity = 0.5;
       btn.style.cursor = "not-allowed";
     });
-  });
-}
+    return; // stop any further loading if paused
+  }
+
+  // 👉 Place your regular gacha draw logic below here:
+  window.draw = function (type) {
+    import(`./${type}.js`)
+      .then((module) => {
+        const items = module[type];
+        const totalWeight = items.reduce((sum, item) => sum + (100 - item.rarity), 0);
+        let rand = Math.random() * totalWeight;
+        for (const item of items) {
+          rand -= (100 - item.rarity);
+          if (rand <= 0) {
+            document.getElementById("result").innerHTML = `
+              <h2>${item.name}</h2>
+              <p><em>Rarity: ${item.rarity.toFixed(2)}%</em></p>
+              <p>${item.description}</p>
+            `;
+            break;
+          }
+        }
+      })
+      .catch((err) => {
+        console.error("Failed to load module:", err);
+        document.getElementById("result").textContent = "Error loading data.";
+      });
+  };
+});
