@@ -1,8 +1,7 @@
-
 body {
   margin: 0;
   padding: 0;
-  background: url('./assets/background.gif') no-repeat center center fixed;
+  background: url('https://d2w9rnfcy7mm78.cloudfront.net/16292323/original_83093ea34391d9a149e767b741d746b2.gif?1651445961?bc=0') no-repeat center center fixed;
   background-size: cover;
   font-family: sans-serif;
   color: white;
@@ -28,7 +27,6 @@ body {
   cursor: pointer;
 }
 
-#gacha-result,
 .gacha-result {
   text-align: center;
   max-width: 40%;
