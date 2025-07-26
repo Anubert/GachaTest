@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const result = document.getElementById("result");
     const buttons = document.querySelectorAll("button");
 
-    result.textContent = "🛠️ Chaos Gacha is currently under construction. Please check back soon!";
+    result.textContent = "🛠️ The Gacha is currently going through its training arc, please check back soon!";
     buttons.forEach(btn => {
       btn.disabled = true;
       btn.style.opacity = 0.5;
