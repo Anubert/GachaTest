@@ -1,1 +1,1 @@
-export const skills = [{ name: 'Slash', rarity: 9.5, description: 'A test.' }];
+export const traits = [{ name:'Test', rarity:5, description:'Desc'}];

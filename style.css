@@ -1,8 +1,11 @@
 body {
   font-family: sans-serif;
   text-align: center;
-  background: #f2f2f2;
-  color: #333;
+  background: #202124; /* fallback color */
+  /* To use an image or gif, uncomment and set your URL below: */
+  /* background: url('your-background.gif') no-repeat center center fixed; */
+  /* background-size: cover; */
+  color: #eee;
   padding: 20px;
 }
 
@@ -11,9 +14,10 @@ h1 {
 }
 
 .layout {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
   gap: 20px;
+  align-items: start;
   margin-bottom: 20px;
 }
 
@@ -21,6 +25,23 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.result-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+#result {
+  padding: 20px;
+  background: rgba(0,0,0,0.6);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  width: 100%;
+  max-width: 400px;
+  color: #fff;
 }
 
 .inputs {
@@ -39,16 +60,4 @@ button {
   padding: 10px 15px;
   cursor: pointer;
   font-weight: bold;
-}
-
-#result {
-  margin-top: 30px;
-  padding: 20px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  width: 80%;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
 }

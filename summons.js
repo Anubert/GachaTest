@@ -1,1 +1,1 @@
-export const summons = [{ name: 'Wolf', rarity: 6.5, description: 'A test.' }];
+export const traits = [{ name:'Test', rarity:5, description:'Desc'}];
