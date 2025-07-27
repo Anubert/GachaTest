@@ -4,147 +4,37 @@
   <meta charset="UTF-8" />
   <title>Chaos Gacha</title>
   <link rel="stylesheet" href="./style.css" />
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background: url('assets/relax.gif') no-repeat center center fixed;
-      background-size: cover;
-      color: white;
-    }
-
-    .container {
-      display: grid;
-      grid-template-areas:
-        "left center right"
-        "bottom bottom bottom";
-      grid-template-columns: 1fr 2fr 1fr;
-      grid-template-rows: auto 100px;
-      height: 100vh;
-      gap: 20px;
-      padding: 20px;
-      box-sizing: border-box;
-    }
-
-    h1 {
-      grid-area: center;
-      text-align: center;
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-
-    .left-panel {
-      grid-area: left;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      align-items: flex-start;
-    }
-
-    .right-panel {
-      grid-area: right;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      align-items: flex-end;
-    }
-
-    .bottom-panel {
-      grid-area: bottom;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      align-items: center;
-    }
-
-    button {
-      padding: 10px 20px;
-      font-size: 16px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      min-width: 120px;
-      transition: transform 0.2s, background-color 0.2s;
-    }
-
-    .shake {
-      animation: shake 0.5s;
-    }
-
-    @keyframes shake {
-      0% { transform: translate(1px, 1px) rotate(0deg); }
-      10% { transform: translate(-1px, -2px) rotate(-1deg); }
-      20% { transform: translate(-3px, 0px) rotate(1deg); }
-      30% { transform: translate(3px, 2px) rotate(0deg); }
-      40% { transform: translate(1px, -1px) rotate(1deg); }
-      50% { transform: translate(-1px, 2px) rotate(-1deg); }
-      60% { transform: translate(-3px, 1px) rotate(0deg); }
-      70% { transform: translate(3px, 1px) rotate(-1deg); }
-      80% { transform: translate(-1px, -1px) rotate(1deg); }
-      90% { transform: translate(1px, 2px) rotate(0deg); }
-      100% { transform: translate(1px, -2px) rotate(-1deg); }
-    }
-
-    .rarity-buttons button:hover {
-      transform: scale(1.05);
-    }
-
-    .rarity-buttons button.trash:hover { background-color: #777; }
-    .rarity-buttons button.bronze:hover { background-color: #cd7f32; }
-    .rarity-buttons button.silver:hover { background-color: #c0c0c0; }
-    .rarity-buttons button.gold:hover { background-color: #ffd700; }
-    .rarity-buttons button.platinum:hover { background-color: #e5e4e2; }
-    .rarity-buttons button.diamond:hover { background-color: #b9f2ff; }
-    .rarity-buttons button.mythril:hover { background-color: #a5f3fc; }
-    .rarity-buttons button.legendary:hover { background-color: #ff69b4; }
-    .rarity-buttons button.mythical:hover { background-color: #8a2be2; }
-
-    #result {
-      grid-area: center;
-      align-self: center;
-      justify-self: center;
-      background-color: rgba(0, 0, 0, 0.7);
-      padding: 20px;
-      border-radius: 10px;
-      text-align: center;
-      max-width: 400px;
-      width: 100%;
-    }
-  </style>
 </head>
 <body>
   <div class="container">
-    <h1>🎲 Chaos Gacha</h1>
-
     <div class="left-panel">
-      <button onclick="draw('traits')">Traits</button>
-      <button onclick="draw('abilities')">Abilities</button>
-      <button onclick="draw('summons')">Summons</button>
-      <button onclick="draw('items')">Items</button>
-      <button onclick="draw('skills')">Skills</button>
-      <button onclick="draw('random')">Random</button>
-    </div>
-
-    <div class="right-panel rarity-buttons">
-      <button class="trash" onclick="setTier(0)">Trash</button>
-      <button class="bronze" onclick="setTier(1)">Bronze</button>
-      <button class="silver" onclick="setTier(2)">Silver</button>
-      <button class="gold" onclick="setTier(3)">Gold</button>
-      <button class="platinum" onclick="setTier(4)">Platinum</button>
-      <button class="diamond" onclick="setTier(5)">Diamond</button>
-      <button class="mythril" onclick="setTier(6)">Mythril</button>
-      <button class="legendary" onclick="setTier(7)">Legendary</button>
-      <button class="mythical" onclick="setTier(8)">Mythical</button>
-    </div>
-
-    <div class="bottom-panel">
-      <label>Min Rarity: <input type="number" id="minRarity" value="0.01" step="0.01" /></label>
-      <label>Avg Rarity: <input type="number" id="avgRarity" value="5.00" step="0.01" /></label>
-      <label>Max Rarity: <input type="number" id="maxRarity" value="9.99" step="0.01" /></label>
+      <button id="btnTraits" onclick="draw('traits')">Traits</button>
+      <button id="btnAbilities" onclick="draw('abilities')">Abilities</button>
+      <button id="btnSummons" onclick="draw('summons')">Summons</button>
+      <button id="btnItems" onclick="draw('items')">Items</button>
+      <button id="btnSkills" onclick="draw('skills')">Skills</button>
+      <button id="btnRandom" onclick="draw('random')">Random</button>
     </div>
 
     <div id="result">Roll something above...</div>
+
+    <div class="right-panel rarity-buttons">
+      <button id="btnTrash" class="trash" onclick="setTier(0.01,0.99)">Trash</button>
+      <button id="btnBronze" class="bronze" onclick="setTier(1.00,1.99)">Bronze</button>
+      <button id="btnSilver" class="silver" onclick="setTier(2.00,2.99)">Silver</button>
+      <button id="btnGold" class="gold" onclick="setTier(3.00,3.99)">Gold</button>
+      <button id="btnPlatinum" class="platinum" onclick="setTier(4.00,4.99)">Platinum</button>
+      <button id="btnDiamond" class="diamond" onclick="setTier(5.00,5.99)">Diamond</button>
+      <button id="btnMythril" class="mythril" onclick="setTier(6.00,6.99)">Mythril</button>
+      <button id="btnLegendary" class="legendary" onclick="setTier(7.00,7.99)">Legendary</button>
+      <button id="btnMythical" class="mythical" onclick="setTier(8.00,9.99)">Mythical</button>
+    </div>
+
+    <div class="bottom-panel">
+      <label>Min: <input type="number" id="minRarity" step="0.01" value="0.01" /></label>
+      <label>Avg: <input type="number" id="avgRarity" step="0.01" value="5.00" /></label>
+      <label>Max: <input type="number" id="maxRarity" step="0.01" value="9.99" /></label>
+    </div>
   </div>
   <script type="module" src="./main.js"></script>
 </body>
