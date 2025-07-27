@@ -15,21 +15,36 @@ const trashSound = new Audio(audioPath + 'trash.mp3');
 const winSound = new Audio(audioPath + 'win.mp3');
 const winRareSound = new Audio(audioPath + 'win_rare.mp3');
 
-// Setup hover and click events
-['btnMythril', 'btnLegendary', 'btnMythical'].forEach(id => {
-  const btn = document.getElementById(id);
-  if (btn) {
-    btn.addEventListener('mouseenter', () => { hoverRareSound.currentTime = 0; hoverRareSound.play(); });
-    btn.addEventListener('click', () => { clickRareSound.currentTime = 0; clickRareSound.play(); });
+let currentHoverAudio = null;
+window.playHoverSound = (btn) => {
+  if (['mythril', 'legendary', 'mythical'].some(cls => btn.classList.contains(cls))) {
+    if (currentHoverAudio) { currentHoverAudio.pause(); }
+    currentHoverAudio = hoverRareSound;
+    hoverRareSound.currentTime = 0;
+    hoverRareSound.play();
   }
-});
+};
+window.stopHoverSound = () => {
+  if (currentHoverAudio) {
+    currentHoverAudio.pause();
+    currentHoverAudio.currentTime = 0;
+    currentHoverAudio = null;
+  }
+};
+
+// Click sounds
+const rareBtnIds = ['btnMythril', 'btnLegendary', 'btnMythical'];
 document.querySelectorAll('button').forEach(btn => {
-  if (!['btnMythril', 'btnLegendary', 'btnMythical'].includes(btn.id)) {
-    btn.addEventListener('click', () => { clickSound.currentTime = 0; clickSound.play(); });
-  }
+  btn.addEventListener('click', () => {
+    if (rareBtnIds.includes(btn.id)) {
+      clickRareSound.currentTime = 0; clickRareSound.play();
+    } else {
+      clickSound.currentTime = 0; clickSound.play();
+    }
+  });
 });
 
-// Rarity filter range global
+// Rarity range handlers
 let currentMin = 0.01, currentMax = 9.99;
 window.setTier = (min, max) => {
   currentMin = min; currentMax = max;
@@ -45,25 +60,24 @@ window.setTier = (min, max) => {
 
 function weightedDraw(pool) {
   const filtered = pool.filter(item => item.rarity >= currentMin && item.rarity <= currentMax);
-  const total = filtered.reduce((sum, i) => sum + i.rarity, 0);
-  let r = Math.random() * total; return filtered.find(i => (r -= i.rarity) < 0);
+  const total = filtered.reduce((sum,i) => sum + i.rarity, 0);
+  let r = Math.random() * total;
+  return filtered.find(i => (r -= i.rarity) < 0);
 }
 
-window.draw = category => {
+window.draw = (category) => {
   if (category === 'random') {
     const cats = Object.keys(data);
-    category = cats[Math.floor(Math.random() * cats.length)];
+    category = cats[Math.floor(Math.random()*cats.length)];
   }
   const pool = data[category];
   const resultBox = document.getElementById('result');
-  resultBox.classList.remove('shake');
-  void resultBox.offsetWidth;
-  resultBox.classList.add('shake');
+  resultBox.classList.remove('shake'); void resultBox.offsetWidth; resultBox.classList.add('shake');
   resultBox.textContent = 'Rolling...';
   setTimeout(() => {
     const result = weightedDraw(pool);
     if (!result) { resultBox.textContent = 'No results!'; return; }
-    // play result sound
+    // Result sound
     if (result.rarity <= 0.99) trashSound.play();
     else if (result.rarity >= 6.00) winRareSound.play();
     else winSound.play();
