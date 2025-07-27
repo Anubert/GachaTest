@@ -6,9 +6,9 @@
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
+  <h1>🎲 Chaos Gacha</h1>
   <div class="container">
-    <div class="sidebar left">
-      <h2>Categories</h2>
+    <div class="category-buttons">
       <button onclick="draw('traits')">Traits</button>
       <button onclick="draw('abilities')">Abilities</button>
       <button onclick="draw('summons')">Summons</button>
@@ -16,28 +16,28 @@
       <button onclick="draw('skills')">Skills</button>
       <button onclick="draw('random')">Random</button>
     </div>
-    <div class="result-container">
-      <h1>🎲 Chaos Gacha</h1>
-      <div id="result" class="result-box">Roll something above...</div>
-    </div>
-    <div class="sidebar right">
-      <h2>Tiers</h2>
-      <button onclick="setTier(1)">Trash</button>
-      <button onclick="setTier(2)">Bronze</button>
-      <button onclick="setTier(3)">Silver</button>
-      <button onclick="setTier(4)">Gold</button>
-      <button onclick="setTier(5)">Platinum</button>
-      <button onclick="setTier(6)">Diamond</button>
-      <button onclick="setTier(7)">Mythril</button>
-      <button onclick="setTier(8)">Legendary</button>
-      <button onclick="setTier(9)">Mythical</button>
+
+    <div class="rarity-buttons">
+      <button data-tier="Trash" onclick="setTier(0)">Trash</button>
+      <button data-tier="Bronze" onclick="setTier(1)">Bronze</button>
+      <button data-tier="Silver" onclick="setTier(2)">Silver</button>
+      <button data-tier="Gold" onclick="setTier(3)">Gold</button>
+      <button data-tier="Platinum" onclick="setTier(4)">Platinum</button>
+      <button data-tier="Diamond" onclick="setTier(5)">Diamond</button>
+      <button data-tier="Mythril" onclick="setTier(6)">Mythril</button>
+      <button data-tier="Legendary" onclick="setTier(7)">Legendary</button>
+      <button data-tier="Mythical" onclick="setTier(8)">Mythical</button>
     </div>
   </div>
-  <div class="rarity-inputs">
-    <label>Min: <input type="number" id="minRarity" step="0.01" value="0.01" /></label>
-    <label>Avg: <input type="number" id="avgRarity" step="0.01" value="5.00" /></label>
-    <label>Max: <input type="number" id="maxRarity" step="0.01" value="9.99" /></label>
+
+  <div class="rarity-range">
+    Min: <input type="number" id="minRarity" step="0.01" value="0.01">
+    Avg: <input type="number" id="avgRarity" step="0.01" value="5.00">
+    Max: <input type="number" id="maxRarity" step="0.01" value="9.99">
   </div>
+
+  <div id="result" class="result-box">Roll something above...</div>
+
   <script type="module" src="./main.js"></script>
 </body>
 </html>
