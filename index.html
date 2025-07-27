@@ -2,34 +2,60 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chaos Gacha</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
-  <div class="container">
-    <div class="categories">
-      <button class="category-button" onclick="draw('category1')">Category 1</button>
-      <button class="category-button" onclick="draw('category2')">Category 2</button>
+  <div id="app">
+    <div class="container">
+      <!-- Category Buttons -->
+      <div class="category-buttons">
+        <button class="category-button" onclick="draw('traits')">Traits</button>
+        <button class="category-button" onclick="draw('abilities')">Abilities</button>
+        <button class="category-button" onclick="draw('summons')">Summons</button>
+        <button class="category-button" onclick="draw('items')">Items</button>
+        <button class="category-button" onclick="draw('skills')">Skills</button>
+        <button class="category-button" onclick="draw('random')">Random</button>
+      </div>
+
+      <!-- Roll Result Display -->
+      <div id="result" class="roll-result">Roll something above...</div>
+
+      <!-- Tier Buttons -->
+      <div class="tier-buttons">
+        <button class="tier-button" onclick="setTier(0)">Trash</button>
+        <button class="tier-button" onclick="setTier(1)">Bronze</button>
+        <button class="tier-button" onclick="setTier(2)">Silver</button>
+        <button class="tier-button" onclick="setTier(3)">Gold</button>
+        <button class="tier-button" onclick="setTier(4)">Platinum</button>
+        <button class="tier-button" onclick="setTier(5)">Diamond</button>
+        <button class="tier-button" onclick="setTier(6)">Mythril</button>
+        <button class="tier-button" onclick="setTier(7)">Legendary</button>
+        <button class="tier-button" onclick="setTier(8)">Mythical</button>
+      </div>
     </div>
-    <div class="result-bubble" id="result">Roll Result</div>
-    <div class="tiers">
-      <button class="tier-button tier-trash" data-tier="trash" onclick="setTier('trash')">Trash</button>
-      <button class="tier-button tier-bronze" data-tier="bronze" onclick="setTier('bronze')">Bronze</button>
-      <button class="tier-button tier-silver" data-tier="silver" onclick="setTier('silver')">Silver</button>
-      <button class="tier-button tier-gold" data-tier="gold" onclick="setTier('gold')">Gold</button>
-      <button class="tier-button tier-platinum" data-tier="platinum" onclick="setTier('platinum')">Platinum</button>
-      <button class="tier-button tier-diamond" data-tier="diamond" onclick="setTier('diamond')">Diamond</button>
-      <button class="tier-button tier-mythril" data-tier="mythril" onclick="setTier('mythril')">Mythril</button>
-      <button class="tier-button tier-legendary" data-tier="legendary" onclick="setTier('legendary')">Legendary</button>
-      <button class="tier-button tier-mythical" data-tier="mythical" onclick="setTier('mythical')">Mythical</button>
-    </div>
+
+    <!-- Rarity Inputs -->
     <div class="rarity-inputs">
-      <input type="number" id="minRarity" placeholder="Min Rarity" />
-      <input type="number" id="avgRarity" placeholder="Avg Rarity" />
-      <input type="number" id="maxRarity" placeholder="Max Rarity" />
+      <label for="minRarity">Min Rarity</label>
+      <input type="number" id="minRarity" min="0.01" max="9.99" step="0.01" value="0.01">
+
+      <label for="avgRarity">Avg Rarity</label>
+      <input type="number" id="avgRarity" min="0.01" max="9.99" step="0.01" value="5.00">
+
+      <label for="maxRarity">Max Rarity</label>
+      <input type="number" id="maxRarity" min="0.01" max="9.99" step="0.01" value="9.99">
     </div>
   </div>
-  <script src="main.js"></script>
+
+  <!-- Audio Elements -->
+  <audio id="clickSound" src="assets/audio/click.mp3"></audio>
+  <audio id="clickRareSound" src="assets/audio/click_rare.mp3"></audio>
+  <audio id="hoverRareSound" src="assets/audio/hover_rare.mp3"></audio>
+  <audio id="trashSound" src="assets/audio/trash.mp3"></audio>
+  <audio id="winSound" src="assets/audio/win.mp3"></audio>
+  <audio id="winRareSound" src="assets/audio/win_rare.mp3"></audio>
+
+  <script type="module" src="./main.js"></script>
 </body>
 </html>
