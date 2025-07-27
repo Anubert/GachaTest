@@ -1,60 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chaos Gacha</title>
-  <link rel="stylesheet" href="./style.css">
-  <style>
-    body { margin: 0; padding: 0; font-family: Arial, sans-serif; background: url('assets/relax.gif') no-repeat center center fixed; background-size: cover; color: white; }
-    .container { display: grid; grid-template-areas:
-        "left center right"
-        "bottom bottom bottom";
-      grid-template-columns: 1fr 2fr 1fr;
-      grid-template-rows: auto auto;
-      height: 100vh; gap: 20px; padding: 20px; box-sizing: border-box; }
-    .left-panel { grid-area: left; display: flex; flex-direction: column; gap: 10px; }
-    .center-panel { grid-area: center; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-    .right-panel { grid-area: right; display: flex; flex-direction: column; gap: 10px; align-items: flex-end; }
-    .bottom-panel { grid-area: bottom; display: flex; justify-content: center; gap: 20px; }
-    button { padding: 10px 20px; font-size: 16px; border: none; border-radius: 8px; cursor: pointer; min-width: 120px; transition: transform 0.2s, background-color 0.2s; }
-    button:hover { transform: scale(1.05); }
-    #result { background: rgba(0,0,0,0.7); padding: 20px; border-radius: 10px; text-align: center; max-width: 400px; width: 100%; transition: max-width 0.3s ease; }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1 style="text-align:center;margin:0;padding-top:10px;">🎲 Chaos Gacha</h1>
   <div class="container">
-    <div class="left-panel">
-      <button id="btnTraits" onclick="draw('traits')">Traits</button>
-      <button id="btnAbilities" onclick="draw('abilities')">Abilities</button>
-      <button id="btnSummons" onclick="draw('summons')">Summons</button>
-      <button id="btnItems" onclick="draw('items')">Items</button>
-      <button id="btnSkills" onclick="draw('skills')">Skills</button>
-      <button id="btnRandom" onclick="draw('random')">Random</button>
+    <div class="categories">
+      <button class="category-button" onclick="draw('category1')">Category 1</button>
+      <button class="category-button" onclick="draw('category2')">Category 2</button>
     </div>
-
-    <div class="center-panel">
-      <div id="result">Roll something above...</div>
+    <div class="result-bubble" id="result">Roll Result</div>
+    <div class="tiers">
+      <button class="tier-button tier-trash" data-tier="trash" onclick="setTier('trash')">Trash</button>
+      <button class="tier-button tier-bronze" data-tier="bronze" onclick="setTier('bronze')">Bronze</button>
+      <button class="tier-button tier-silver" data-tier="silver" onclick="setTier('silver')">Silver</button>
+      <button class="tier-button tier-gold" data-tier="gold" onclick="setTier('gold')">Gold</button>
+      <button class="tier-button tier-platinum" data-tier="platinum" onclick="setTier('platinum')">Platinum</button>
+      <button class="tier-button tier-diamond" data-tier="diamond" onclick="setTier('diamond')">Diamond</button>
+      <button class="tier-button tier-mythril" data-tier="mythril" onclick="setTier('mythril')">Mythril</button>
+      <button class="tier-button tier-legendary" data-tier="legendary" onclick="setTier('legendary')">Legendary</button>
+      <button class="tier-button tier-mythical" data-tier="mythical" onclick="setTier('mythical')">Mythical</button>
     </div>
-
-    <div class="right-panel rarity-buttons">
-      <button id="btnTrash" class="trash" onclick="setTier(0.01,0.99)" onmouseenter="playHoverSound(this)" onmouseleave="stopHoverSound()">Trash</button>
-      <button id="btnBronze" class="bronze" onclick="setTier(1.00,1.99)" onmouseenter="playHoverSound(this)" onmouseleave="stopHoverSound()">Bronze</button>
-      <button id="btnSilver" class="silver" onclick="setTier(2.00,2.99)" onmouseenter="playHoverSound(this)" onmouseleave="stopHoverSound()">Silver</button>
-      <button id="btnGold" class="gold" onclick="setTier(3.00,3.99)" onmouseenter="playHoverSound(this)" onmouseleave="stopHoverSound()">Gold</button>
-      <button id="btnPlatinum" class="platinum" onclick="setTier(4.00,4.99)" onmouseenter="playHoverSound(this)" onmouseleave="stopHoverSound()">Platinum</button>
-      <button id="btnDiamond" class="diamond" onclick="setTier(5.00,5.99)" onmouseenter="playHoverSound(this)" onmouseleave="stopHoverSound()">Diamond</button>
-      <button id="btnMythril" class="mythril" onclick="setTier(6.00,6.99)" onmouseenter="playHoverSound(this)" onmouseleave="stopHoverSound()">Mythril</button>
-      <button id="btnLegendary" class="legendary" onclick="setTier(7.00,7.99)" onmouseenter="playHoverSound(this)" onmouseleave="stopHoverSound()">Legendary</button>
-      <button id="btnMythical" class="mythical" onclick="setTier(8.00,9.99)" onmouseenter="playHoverSound(this)" onmouseleave="stopHoverSound()">Mythical</button>
-    </div>
-
-    <div class="bottom-panel">
-      <label>Min: <input type="number" id="minRarity" step="0.01" value="0.01" /></label>
-      <label>Avg: <input type="number" id="avgRarity" step="0.01" value="5.00" /></label>
-      <label>Max: <input type="number" id="maxRarity" step="0.01" value="9.99" /></label>
+    <div class="rarity-inputs">
+      <input type="number" id="minRarity" placeholder="Min Rarity" />
+      <input type="number" id="avgRarity" placeholder="Avg Rarity" />
+      <input type="number" id="maxRarity" placeholder="Max Rarity" />
     </div>
   </div>
-  <script type="module" src="./main.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>

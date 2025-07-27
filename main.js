@@ -1,86 +1,75 @@
-import { traits } from './traits.js';
-import { abilities } from './abilities.js';
-import { summons } from './summons.js';
-import { items } from './items.js';
-import { skills } from './skills.js';
+const hoverSound = new Audio("asset/audio/hover_rare.mp3");
+const clickSound = new Audio("asset/audio/click.mp3");
+const clickRareSound = new Audio("asset/audio/click_rare.mp3");
+const trashSound = new Audio("asset/audio/trash.mp3");
+const winSound = new Audio("asset/audio/win.mp3");
+const winRareSound = new Audio("asset/audio/win_rare.mp3");
 
-const data = { traits, abilities, summons, items, skills };
+document.querySelectorAll(".tier-button").forEach(button => {
+  button.addEventListener("mouseenter", () => {
+    const tier = button.dataset.tier;
+    if (["mythril", "legendary", "mythical"].includes(tier)) {
+      hoverSound.currentTime = 0;
+      hoverSound.play();
+    }
+  });
 
-// Audio setup
-const audioPath = 'assets/audio/';
-const clickSound = new Audio(audioPath + 'click.mp3');
-const clickRareSound = new Audio(audioPath + 'click_rare.mp3');
-const hoverRareSound = new Audio(audioPath + 'hover_rare.mp3');
-const trashSound = new Audio(audioPath + 'trash.mp3');
-const winSound = new Audio(audioPath + 'win.mp3');
-const winRareSound = new Audio(audioPath + 'win_rare.mp3');
-
-let currentHoverAudio = null;
-window.playHoverSound = (btn) => {
-  if (['mythril', 'legendary', 'mythical'].some(cls => btn.classList.contains(cls))) {
-    if (currentHoverAudio) { currentHoverAudio.pause(); }
-    currentHoverAudio = hoverRareSound;
-    hoverRareSound.currentTime = 0;
-    hoverRareSound.play();
-  }
-};
-window.stopHoverSound = () => {
-  if (currentHoverAudio) {
-    currentHoverAudio.pause();
-    currentHoverAudio.currentTime = 0;
-    currentHoverAudio = null;
-  }
-};
-
-// Click sounds
-const rareBtnIds = ['btnMythril', 'btnLegendary', 'btnMythical'];
-document.querySelectorAll('button').forEach(btn => {
-  btn.addEventListener('click', () => {
-    if (rareBtnIds.includes(btn.id)) {
-      clickRareSound.currentTime = 0; clickRareSound.play();
+  button.addEventListener("click", () => {
+    const tier = button.dataset.tier;
+    if (["mythril", "legendary", "mythical"].includes(tier)) {
+      clickRareSound.currentTime = 0;
+      clickRareSound.play();
     } else {
-      clickSound.currentTime = 0; clickSound.play();
+      clickSound.currentTime = 0;
+      clickSound.play();
     }
   });
 });
 
-// Rarity range handlers
-let currentMin = 0.01, currentMax = 9.99;
-window.setTier = (min, max) => {
-  currentMin = min; currentMax = max;
-  document.getElementById('minRarity').value = min.toFixed(2);
-  document.getElementById('maxRarity').value = max.toFixed(2);
-};
-['minRarity','maxRarity'].forEach(id => {
-  document.getElementById(id).addEventListener('input', e => {
-    if (id === 'minRarity') currentMin = parseFloat(e.target.value) || 0.01;
-    else currentMax = parseFloat(e.target.value) || 9.99;
-  });
-});
+function draw(category) {
+  const min = parseFloat(document.getElementById("minRarity").value) || 0.01;
+  const avg = parseFloat(document.getElementById("avgRarity").value) || 5.0;
+  const max = parseFloat(document.getElementById("maxRarity").value) || 9.99;
+  const rarity = Math.random() * (max - min) + min;
+  const resultEl = document.getElementById("result");
 
-function weightedDraw(pool) {
-  const filtered = pool.filter(item => item.rarity >= currentMin && item.rarity <= currentMax);
-  const total = filtered.reduce((sum,i) => sum + i.rarity, 0);
-  let r = Math.random() * total;
-  return filtered.find(i => (r -= i.rarity) < 0);
+  let resultText = "";
+  let sound = winSound;
+
+  if (rarity < 1) {
+    resultText = "Trash Item!";
+    sound = trashSound;
+  } else if (rarity >= 7) {
+    resultText = "Mythical Item!";
+    sound = winRareSound;
+  } else {
+    resultText = "Standard Item!";
+  }
+
+  resultEl.textContent = resultText;
+  resultEl.classList.add("shake");
+
+  sound.currentTime = 0;
+  sound.play();
+
+  setTimeout(() => resultEl.classList.remove("shake"), 500);
 }
 
-window.draw = (category) => {
-  if (category === 'random') {
-    const cats = Object.keys(data);
-    category = cats[Math.floor(Math.random()*cats.length)];
-  }
-  const pool = data[category];
-  const resultBox = document.getElementById('result');
-  resultBox.classList.remove('shake'); void resultBox.offsetWidth; resultBox.classList.add('shake');
-  resultBox.textContent = 'Rolling...';
-  setTimeout(() => {
-    const result = weightedDraw(pool);
-    if (!result) { resultBox.textContent = 'No results!'; return; }
-    // Result sound
-    if (result.rarity <= 0.99) trashSound.play();
-    else if (result.rarity >= 6.00) winRareSound.play();
-    else winSound.play();
-    resultBox.innerHTML = `<h2>${result.name}</h2><p>${result.description}</p><small>Rarity: ${result.rarity.toFixed(2)}</small>`;
-  }, 500);
-};
+function setTier(tier) {
+  const values = {
+    trash: [0.01, 0.25, 0.99],
+    bronze: [1.0, 1.5, 1.99],
+    silver: [2.0, 2.5, 2.99],
+    gold: [3.0, 3.5, 3.99],
+    platinum: [4.0, 4.5, 4.99],
+    diamond: [5.0, 5.5, 5.99],
+    mythril: [6.0, 6.5, 6.99],
+    legendary: [7.0, 7.5, 7.99],
+    mythical: [8.0, 9.0, 9.99]
+  };
+
+  const [min, avg, max] = values[tier];
+  document.getElementById("minRarity").value = min;
+  document.getElementById("avgRarity").value = avg;
+  document.getElementById("maxRarity").value = max;
+}
