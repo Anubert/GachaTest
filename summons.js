@@ -1,3 +1,1 @@
-export const summons = [
-  { name: 'Example', rarity: 5, description: 'A placeholder.' }
-];
+export const summons = [{name:'Test',rarity:5,description:'Desc'}];

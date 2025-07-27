@@ -1,3 +1,1 @@
-export const items = [
-  { name: 'Example', rarity: 5, description: 'A placeholder.' }
-];
+export const items = [{name:'Test',rarity:5,description:'Desc'}];
