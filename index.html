@@ -15,25 +15,47 @@
     }
 
     .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      display: grid;
+      grid-template-areas:
+        "left center right"
+        "bottom bottom bottom";
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-rows: auto 100px;
       height: 100vh;
+      gap: 20px;
+      padding: 20px;
+      box-sizing: border-box;
     }
 
     h1 {
+      grid-area: center;
       text-align: center;
       font-size: 3rem;
       margin-bottom: 1rem;
     }
 
-    .row {
+    .left-panel {
+      grid-area: left;
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      flex-direction: column;
       gap: 10px;
-      margin: 10px 0;
+      align-items: flex-start;
+    }
+
+    .right-panel {
+      grid-area: right;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: flex-end;
+    }
+
+    .bottom-panel {
+      grid-area: bottom;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      align-items: center;
     }
 
     button {
@@ -43,11 +65,11 @@
       border-radius: 8px;
       cursor: pointer;
       min-width: 120px;
-      transition: transform 0.6s, background-color 0.2s;
+      transition: transform 0.2s, background-color 0.2s;
     }
 
     .shake {
-      animation: shake 1.5s;
+      animation: shake 0.5s;
     }
 
     @keyframes shake {
@@ -79,19 +101,23 @@
     .rarity-buttons button.mythical:hover { background-color: #8a2be2; }
 
     #result {
-      margin-top: 20px;
+      grid-area: center;
+      align-self: center;
+      justify-self: center;
       background-color: rgba(0, 0, 0, 0.7);
       padding: 20px;
       border-radius: 10px;
       text-align: center;
       max-width: 400px;
+      width: 100%;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>🎲 Chaos Gacha</h1>
-    <div class="row category-buttons">
+
+    <div class="left-panel">
       <button onclick="draw('traits')">Traits</button>
       <button onclick="draw('abilities')">Abilities</button>
       <button onclick="draw('summons')">Summons</button>
@@ -99,7 +125,8 @@
       <button onclick="draw('skills')">Skills</button>
       <button onclick="draw('random')">Random</button>
     </div>
-    <div class="rarity-buttons row">
+
+    <div class="right-panel rarity-buttons">
       <button class="trash" onclick="setTier(0)">Trash</button>
       <button class="bronze" onclick="setTier(1)">Bronze</button>
       <button class="silver" onclick="setTier(2)">Silver</button>
@@ -110,11 +137,13 @@
       <button class="legendary" onclick="setTier(7)">Legendary</button>
       <button class="mythical" onclick="setTier(8)">Mythical</button>
     </div>
-    <div class="row">
+
+    <div class="bottom-panel">
       <label>Min Rarity: <input type="number" id="minRarity" value="0.01" step="0.01" /></label>
       <label>Avg Rarity: <input type="number" id="avgRarity" value="5.00" step="0.01" /></label>
       <label>Max Rarity: <input type="number" id="maxRarity" value="9.99" step="0.01" /></label>
     </div>
+
     <div id="result">Roll something above...</div>
   </div>
   <script type="module" src="./main.js"></script>
