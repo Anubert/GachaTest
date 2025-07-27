@@ -1,74 +1,84 @@
+
 body {
-  font-family: sans-serif;
+  margin: 0;
+  font-family: Arial, sans-serif;
   background-color: #111;
   color: white;
-  text-align: center;
-  margin: 0;
-  padding: 1em;
   background-size: cover;
+  background-position: center;
+  height: 100vh;
+  overflow: hidden;
 }
-
-h1 {
-  margin-bottom: 1em;
-}
-
 .container {
+  text-align: center;
+  padding-top: 20px;
+}
+.buttons-container {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin-bottom: 1em;
+  padding: 20px;
 }
-
-.category-buttons button,
-.rarity-buttons button {
-  display: block;
-  margin: 0.5em auto;
-  padding: 0.75em 1.5em;
-  font-size: 1em;
+.category-buttons, .rarity-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+button {
+  padding: 10px 20px;
+  font-size: 16px;
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 8px;
   border: none;
-  width: 160px;
+  min-width: 120px;
+  transition: transform 0.2s ease;
 }
-
-.rarity-range {
-  margin: 1em 0;
-}
-
-.result-box {
-  margin: 2em auto;
-  padding: 1.5em;
-  background: rgba(0,0,0,0.7);
-  border-radius: 10px;
-  width: 50%;
-  min-height: 100px;
-}
-
-@keyframes flip {
-  0% { transform: perspective(400px) rotateY(0deg); }
-  50% { transform: perspective(400px) rotateY(90deg); opacity: 0.2; }
-  100% { transform: perspective(400px) rotateY(0deg); opacity: 1; }
-}
-
-.result-box.flip {
-  animation: flip 0.8s ease-in-out;
-}
-
-/* Hover styles */
-.rarity-buttons button {
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
-}
-
-.rarity-buttons button:hover {
+button:hover {
   transform: scale(1.05);
 }
-
-.rarity-buttons button[data-tier="Trash"]:hover { box-shadow: 0 0 8px #888; }
-.rarity-buttons button[data-tier="Bronze"]:hover { box-shadow: 0 0 8px #cd7f32; }
-.rarity-buttons button[data-tier="Silver"]:hover { box-shadow: 0 0 8px #c0c0c0; }
-.rarity-buttons button[data-tier="Gold"]:hover { box-shadow: 0 0 8px #ffd700; }
-.rarity-buttons button[data-tier="Platinum"]:hover { box-shadow: 0 0 8px #e5e4e2; }
-.rarity-buttons button[data-tier="Diamond"]:hover { box-shadow: 0 0 8px #b9f2ff; }
-.rarity-buttons button[data-tier="Mythril"]:hover { box-shadow: 0 0 8px #aaffff; }
-.rarity-buttons button[data-tier="Legendary"]:hover { box-shadow: 0 0 8px #ff8c00; }
-.rarity-buttons button[data-tier="Mythical"]:hover { box-shadow: 0 0 8px #ff00ff; }
+.rarity.trash:hover     { background-color: gray; }
+.rarity.bronze:hover    { background-color: peru; }
+.rarity.silver:hover    { background-color: silver; }
+.rarity.gold:hover      { background-color: gold; }
+.rarity.platinum:hover  { background-color: lightblue; }
+.rarity.diamond:hover   { background-color: deepskyblue; }
+.rarity.mythril:hover   { background-color: violet; }
+.rarity.legendary:hover { background-color: crimson; }
+.rarity.mythical:hover  { background-color: magenta; }
+.range-inputs {
+  margin: 20px 0;
+}
+.card {
+  margin: auto;
+  margin-top: 20px;
+  width: 300px;
+  height: 200px;
+  perspective: 1000px;
+}
+.card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #222;
+  border-radius: 10px;
+}
+.card-back {
+  transform: rotateY(180deg);
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}

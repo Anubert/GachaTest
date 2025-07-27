@@ -6,38 +6,41 @@
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
-  <h1>🎲 Chaos Gacha</h1>
   <div class="container">
-    <div class="category-buttons">
-      <button onclick="draw('traits')">Traits</button>
-      <button onclick="draw('abilities')">Abilities</button>
-      <button onclick="draw('summons')">Summons</button>
-      <button onclick="draw('items')">Items</button>
-      <button onclick="draw('skills')">Skills</button>
-      <button onclick="draw('random')">Random</button>
+    <h1>🎲 Chaos Gacha</h1>
+    <div class="buttons-container">
+      <div class="category-buttons">
+        <button onclick="draw('traits')">Trait</button>
+        <button onclick="draw('abilities')">Ability</button>
+        <button onclick="draw('summons')">Summon</button>
+        <button onclick="draw('items')">Item</button>
+        <button onclick="draw('skills')">Skill</button>
+        <button onclick="draw('random')">Random</button>
+      </div>
+      <div class="rarity-buttons">
+        <button class="rarity trash" onclick="setTier(0.01, 0.99)">Trash</button>
+        <button class="rarity bronze" onclick="setTier(1, 1.99)">Bronze</button>
+        <button class="rarity silver" onclick="setTier(2, 2.99)">Silver</button>
+        <button class="rarity gold" onclick="setTier(3, 3.99)">Gold</button>
+        <button class="rarity platinum" onclick="setTier(4, 4.99)">Platinum</button>
+        <button class="rarity diamond" onclick="setTier(5, 5.99)">Diamond</button>
+        <button class="rarity mythril" onclick="setTier(6, 6.99)">Mythril</button>
+        <button class="rarity legendary" onclick="setTier(7, 7.99)">Legendary</button>
+        <button class="rarity mythical" onclick="setTier(8, 9.99)">Mythical</button>
+      </div>
     </div>
-
-    <div class="rarity-buttons">
-      <button data-tier="Trash" onclick="setTier(0)">Trash</button>
-      <button data-tier="Bronze" onclick="setTier(1)">Bronze</button>
-      <button data-tier="Silver" onclick="setTier(2)">Silver</button>
-      <button data-tier="Gold" onclick="setTier(3)">Gold</button>
-      <button data-tier="Platinum" onclick="setTier(4)">Platinum</button>
-      <button data-tier="Diamond" onclick="setTier(5)">Diamond</button>
-      <button data-tier="Mythril" onclick="setTier(6)">Mythril</button>
-      <button data-tier="Legendary" onclick="setTier(7)">Legendary</button>
-      <button data-tier="Mythical" onclick="setTier(8)">Mythical</button>
+    <div class="range-inputs">
+      Min: <input id="minRarity" type="number" step="0.01" value="0.01" />
+      Avg: <input id="avgRarity" type="number" step="0.01" value="5.00" />
+      Max: <input id="maxRarity" type="number" step="0.01" value="9.99" />
+    </div>
+    <div id="result-card" class="card">
+      <div class="card-inner">
+        <div class="card-front">Roll something above...</div>
+        <div class="card-back" id="result"></div>
+      </div>
     </div>
   </div>
-
-  <div class="rarity-range">
-    Min: <input type="number" id="minRarity" step="0.01" value="0.01">
-    Avg: <input type="number" id="avgRarity" step="0.01" value="5.00">
-    Max: <input type="number" id="maxRarity" step="0.01" value="9.99">
-  </div>
-
-  <div id="result" class="result-box">Roll something above...</div>
-
   <script type="module" src="./main.js"></script>
 </body>
 </html>
