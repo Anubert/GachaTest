@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +7,7 @@
   <title>Chaos Gacha</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body style="background-image: url('assets/relax.gif'); background-size: cover; background-position: center;">
   <audio id="clickSound" src="assets/audio/click.mp3"></audio>
   <audio id="clickRareSound" src="assets/audio/click_rare.mp3"></audio>
   <audio id="hoverRareSound" src="assets/audio/hover_rare.mp3"></audio>
@@ -27,13 +28,13 @@
     <div id="result" class="result-bubble">Your result will appear here.</div>
 
     <div class="tier-buttons">
-      <button class="tier-btn bronze" onclick="playClickSound(this); setRarity(0.01, 0.5, 0.99)">Trash</button>
+      <button class="tier-btn trash" onclick="playClickSound(this); setRarity(0.01, 0.5, 0.99)">Trash</button>
       <button class="tier-btn bronze" onclick="playClickSound(this); setRarity(1, 1.5, 1.99)">Bronze</button>
       <button class="tier-btn silver" onclick="playClickSound(this); setRarity(2, 2.5, 2.99)">Silver</button>
       <button class="tier-btn gold" onclick="playClickSound(this); setRarity(3, 3.5, 3.99)">Gold</button>
-      <button class="tier-btn mythril rare" onclick="playClickSound(this); setRarity(4, 4.5, 4.99)" onmouseenter="playHoverSound(this)">Mythril</button>
-      <button class="tier-btn legendary rare" onclick="playClickSound(this); setRarity(5, 5.5, 5.99)" onmouseenter="playHoverSound(this)">Legendary</button>
-      <button class="tier-btn mythical rare" onclick="playClickSound(this); setRarity(6, 6.5, 6.99)" onmouseenter="playHoverSound(this)">Mythical</button>
+      <button class="tier-btn mythril rare" onclick="playClickSound(this); setRarity(4, 4.5, 4.99)" onmouseenter="playHoverSound(this)" onmouseleave="stopHoverSound()">Mythril</button>
+      <button class="tier-btn legendary rare" onclick="playClickSound(this); setRarity(5, 5.5, 5.99)" onmouseenter="playHoverSound(this)" onmouseleave="stopHoverSound()">Legendary</button>
+      <button class="tier-btn mythical rare" onclick="playClickSound(this); setRarity(6, 6.5, 6.99)" onmouseenter="playHoverSound(this)" onmouseleave="stopHoverSound()">Mythical</button>
     </div>
 
     <div class="rarity-inputs">
