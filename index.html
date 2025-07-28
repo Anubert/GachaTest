@@ -16,26 +16,24 @@
 
   <div class="container">
     <div class="category-buttons">
-      <button onclick="playClickSound(this); draw('traits')">Traits</button>
-      <button onclick="playClickSound(this); draw('abilities')">Abilities</button>
-      <button onclick="playClickSound(this); draw('summons')">Summons</button>
-      <button onclick="playClickSound(this); draw('items')">Items</button>
-      <button onclick="playClickSound(this); draw('skills')">Skills</button>
-      <button onclick="playClickSound(this); draw('random')">Random</button>
+      <button class="category-btn" onclick="playClickSound(this); draw('traits')">Traits</button>
+      <button class="category-btn" onclick="playClickSound(this); draw('abilities')">Abilities</button>
+      <button class="category-btn" onclick="playClickSound(this); draw('summons')">Summons</button>
+      <button class="category-btn" onclick="playClickSound(this); draw('items')">Items</button>
+      <button class="category-btn" onclick="playClickSound(this); draw('skills')">Skills</button>
+      <button class="category-btn" onclick="playClickSound(this); draw('random')">Random</button>
     </div>
 
     <div id="result" class="result-bubble">Your result will appear here.</div>
 
     <div class="tier-buttons">
-      <button class="tier-btn" onclick="playClickSound(this); setRarity(0.01, 0.5, 0.99)">Trash</button>
-      <button class="tier-btn" onclick="playClickSound(this); setRarity(1, 1.5, 1.99)">Bronze</button>
-      <button class="tier-btn" onclick="playClickSound(this); setRarity(2, 2.5, 2.99)">Silver</button>
-      <button class="tier-btn" onclick="playClickSound(this); setRarity(3, 3.5, 3.99)">Gold</button>
-      <button class="tier-btn rare" onclick="playClickSound(this); setRarity(4, 4.5, 4.99)" onmouseenter="playHoverSound(this)" onmouseleave="stopHoverSound()">Platinum</button>
-      <button class="tier-btn rare" onclick="playClickSound(this); setRarity(5, 5.5, 5.99)" onmouseenter="playHoverSound(this)" onmouseleave="stopHoverSound()">Diamond</button>
-      <button class="tier-btn rare" onclick="playClickSound(this); setRarity(6, 6.5, 6.99)" onmouseenter="playHoverSound(this)" onmouseleave="stopHoverSound()">Mythril</button>
-      <button class="tier-btn rare" onclick="playClickSound(this); setRarity(7, 7.5, 7.99)" onmouseenter="playHoverSound(this)" onmouseleave="stopHoverSound()">Legendary</button>
-      <button class="tier-btn rare" onclick="playClickSound(this); setRarity(8, 8.5, 8.99)" onmouseenter="playHoverSound(this)" onmouseleave="stopHoverSound()">Mythical</button>
+      <button class="tier-btn bronze" onclick="playClickSound(this); setRarity(0.01, 0.5, 0.99)">Trash</button>
+      <button class="tier-btn bronze" onclick="playClickSound(this); setRarity(1, 1.5, 1.99)">Bronze</button>
+      <button class="tier-btn silver" onclick="playClickSound(this); setRarity(2, 2.5, 2.99)">Silver</button>
+      <button class="tier-btn gold" onclick="playClickSound(this); setRarity(3, 3.5, 3.99)">Gold</button>
+      <button class="tier-btn mythril rare" onclick="playClickSound(this); setRarity(4, 4.5, 4.99)" onmouseenter="playHoverSound(this)">Mythril</button>
+      <button class="tier-btn legendary rare" onclick="playClickSound(this); setRarity(5, 5.5, 5.99)" onmouseenter="playHoverSound(this)">Legendary</button>
+      <button class="tier-btn mythical rare" onclick="playClickSound(this); setRarity(6, 6.5, 6.99)" onmouseenter="playHoverSound(this)">Mythical</button>
     </div>
 
     <div class="rarity-inputs">
@@ -44,6 +42,7 @@
       <label>Max Rarity: <input type="number" id="maxRarity" value="9.99" step="0.01" /></label>
     </div>
   </div>
+
   <script src="main.js"></script>
 </body>
 </html>
