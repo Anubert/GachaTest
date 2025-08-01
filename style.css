@@ -1,25 +1,75 @@
-body {
-  margin: 0; font-family: Arial, sans-serif;
-  background: url('assets/relax.gif') center/cover no-repeat fixed;
-  color: white;
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
 }
+
 .container {
-  display: grid;
-  grid-template-areas:
-    "left center right"
-    ". bottom .";
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: auto auto;
-  gap: 20px; padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: 100vh;
-  box-sizing: border-box;
 }
-.category-buttons { grid-area: left; display: flex; flex-direction: column; gap: 10px; }
-.tier-buttons { grid-area: right; display: flex; flex-direction: column; gap: 10px; align-items: flex-end; }
-.result-bubble { grid-area: center; background: rgba(0,0,0,0.6); padding: 1rem; border-radius: 10px; text-align: center; font-size: 1.2rem; }
-.rarity-inputs { grid-area: bottom; display: flex; justify-content: center; gap: 20px; }
-button { padding: 0.5rem 1rem; border:none; border-radius:8px; cursor:pointer; transition: all 0.3s ease; }
-button:hover { transform: scale(1.05); }
-/* Tier hover colors */
-.tier-btn.rare:hover { background-color: #a5f3fc; }
-.tier-btn:hover { }
+
+.category-buttons,
+.tier-buttons,
+.rarity-inputs {
+  display: flex;
+  gap: 10px;
+  margin: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+button {
+  padding: 10px 16px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+.result-bubble {
+  margin: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 20px;
+  font-size: 1.2rem;
+  text-align: center;
+  width: 60%;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+/* Tier Colors */
+.trash    { background-color: #444; color: #eee; }
+.bronze   { background-color: #cd7f32; color: #fff; }
+.silver   { background-color: #c0c0c0; color: #000; }
+.gold     { background-color: #ffd700; color: #000; }
+.diamond  { background-color: #b9f2ff; color: #000; border: 2px solid #88e0ff; }
+.mythril  { background-color: #a0e7e5; color: #000; }
+.legendary{ background-color: #ff8c00; color: #fff; }
+.mythical { background-color: #8a2be2; color: #fff; }
+
+/* Category buttons */
+.category-btn {
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #333;
+  border: 2px solid #ccc;
+}
+
+/* Inputs */
+.rarity-inputs label {
+  color: white;
+  font-weight: bold;
+}
+.rarity-inputs input {
+  margin-left: 5px;
+  width: 70px;
+}
