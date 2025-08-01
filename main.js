@@ -1,38 +1,77 @@
-// Audio refs
-const clickSound = document.getElementById('clickSound');
-const clickRareSound = document.getElementById('clickRareSound');
-const hoverRareSound = document.getElementById('hoverRareSound');
-const trashSound = document.getElementById('trashSound');
-const winSound = document.getElementById('winSound');
-const winRareSound = document.getElementById('winRareSound');
+// Sound helpers
+function stopAllSounds() {
+  const sounds = [
+    'clickSound',
+    'clickRareSound',
+    'clickDiamondSound',
+    'hoverRareSound',
+    'trashSound',
+    'winSound',
+    'winRareSound'
+  ];
+  sounds.forEach(id => {
+    const audio = document.getElementById(id);
+    if (!audio.paused) {
+      audio.pause();
+      audio.currentTime = 0;
+    }
+  });
+}
 
-window.playClickSound = (btn) => {
-  if (btn.classList.contains('rare')) {
-    clickRareSound.currentTime = 0; clickRareSound.play();
+function playClickSound(button) {
+  stopAllSounds();
+
+  if (button.classList.contains('diamond')) {
+    document.getElementById('clickDiamondSound').play();
+  } else if (button.classList.contains('mythical') ||
+             button.classList.contains('legendary') ||
+             button.classList.contains('mythril')) {
+    document.getElementById('clickRareSound').play();
   } else {
-    clickSound.currentTime = 0; clickSound.play();
+    document.getElementById('clickSound').play();
   }
-};
+}
 
-let hoverAudio = null;
-window.playHoverSound = (btn) => {
-  hoverAudio = hoverRareSound; hoverAudio.currentTime = 0; hoverAudio.play();
-};
-window.stopHoverSound = () => {
-  if (hoverAudio) { hoverAudio.pause(); hoverAudio.currentTime = 0; hoverAudio = null; }
-};
+function playHoverSound(button) {
+  if (button.classList.contains('rare')) {
+    document.getElementById('hoverRareSound').play();
+  }
+}
 
-window.setRarity = (min, avg, max) => {
-  document.getElementById('minRarity').value = min.toFixed(2);
-  document.getElementById('avgRarity').value = avg.toFixed(2);
-  document.getElementById('maxRarity').value = max.toFixed(2);
-};
+function stopHoverSound() {
+  const audio = document.getElementById('hoverRareSound');
+  audio.pause();
+  audio.currentTime = 0;
+}
 
-window.draw = (category) => {
-  const resultEl = document.getElementById('result');
-  // simulate drawing
-  const rarity = parseFloat(document.getElementById('avgRarity').value);
-  if (rarity < 1) { trashSound.play(); resultEl.textContent = 'Trash Item!'; }
-  else if (rarity >= 6) { winRareSound.play(); resultEl.textContent = 'Rare Item!'; }
-  else { winSound.play(); resultEl.textContent = 'Standard Item!'; }
-};
+// Drawing logic
+function draw(category) {
+  const min = parseFloat(document.getElementById('minRarity').value);
+  const avg = parseFloat(document.getElementById('avgRarity').value);
+  const max = parseFloat(document.getElementById('maxRarity').value);
+  
+  const roll = generateRandomRarity(min, avg, max);
+  const result = `${capitalize(category)} result (Rarity: ${roll.toFixed(2)})`;
+  document.getElementById('result').textContent = result;
+
+  if (roll < 1) document.getElementById('trashSound').play();
+  else if (roll >= 5) document.getElementById('winRareSound').play();
+  else document.getElementById('winSound').play();
+}
+
+function setRarity(min, avg, max) {
+  document.getElementById('minRarity').value = min;
+  document.getElementById('avgRarity').value = avg;
+  document.getElementById('maxRarity').value = max;
+}
+
+// Random rarity generator weighted toward avg
+function generateRandomRarity(min, avg, max) {
+  const r = Math.random();
+  const bias = (r + Math.random()) / 2; // Skew toward center
+  return min + bias * (max - min);
+}
+
+function capitalize(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
