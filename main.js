@@ -11,7 +11,7 @@ function stopAllSounds() {
   ];
   sounds.forEach(id => {
     const audio = document.getElementById(id);
-    if (!audio.paused) {
+    if (audio && !audio.paused) {
       audio.pause();
       audio.currentTime = 0;
     }
@@ -21,19 +21,17 @@ function stopAllSounds() {
 function playClickSound(button) {
   stopAllSounds();
 
-  // Only Mythril, Legendary, and Mythical count as "rare" click tiers
   if (button.classList.contains('mythical') ||
       button.classList.contains('legendary') ||
       button.classList.contains('mythril')) {
     document.getElementById('clickRareSound').play();
   } else {
-    // Diamond and below use regular click
+    // Diamond and below
     document.getElementById('clickSound').play();
   }
 }
 
 function playHoverSound(button) {
-  // Only Mythril, Legendary, and Mythical play rare hover sound
   if (button.classList.contains('mythical') ||
       button.classList.contains('legendary') ||
       button.classList.contains('mythril')) {
