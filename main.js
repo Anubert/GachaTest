@@ -57,9 +57,9 @@ function draw(category) {
   const result = `${capitalize(category)} result (Rarity: ${roll.toFixed(2)})`;
   document.getElementById('result').textContent = result;
 
-  if (roll < 1) {
+  if (roll < 0.99) {
     document.getElementById('trashSound').play();
-  } else if (roll >= 5) {
+  } else if (roll >= 9) {
     document.getElementById('winRareSound').play();
   } else {
     document.getElementById('winSound').play();
