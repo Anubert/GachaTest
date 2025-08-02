@@ -14,11 +14,12 @@ body {
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: auto auto;
   gap: 20px;
-  padding: 40px;
+  padding: 80px 40px 40px;
   height: 100vh;
   box-sizing: border-box;
 }
 
+/* CATEGORY & TIER BUTTONS */
 .category-buttons {
   grid-area: categories;
   display: flex;
@@ -68,7 +69,7 @@ body {
   transform: scale(1.05);
 }
 
-/* Tier Colors */
+/* TIER COLORS */
 .tier-btn.trash { background-color: #444; color: #ccc; }
 .tier-btn.bronze { background-color: #cd7f32; }
 .tier-btn.silver { background-color: #c0c0c0; }
@@ -83,7 +84,7 @@ body {
   to { opacity: 1; }
 }
 
-/* Overlay dark background */
+/* OVERLAY BACKGROUND */
 #settings-overlay {
   position: fixed;
   top: 0;
@@ -99,7 +100,7 @@ body {
   display: none;
 }
 
-/* Settings panel base */
+/* SETTINGS PANEL */
 #settings-panel {
   position: fixed;
   top: 0;
@@ -126,11 +127,48 @@ body {
 }
 
 #settings-panel label {
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin: 12px 0;
   font-size: 0.95rem;
 }
 
+/* SLIDER TOGGLES */
+#settings-panel input[type="checkbox"] {
+  display: none;
+}
+
+#settings-panel label .slider {
+  position: relative;
+  width: 45px;
+  height: 24px;
+  background: #ccc;
+  border-radius: 34px;
+  transition: 0.2s;
+}
+
+#settings-panel label .slider::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+#settings-panel input[type="checkbox"]:checked + .slider {
+  background-color: #4caf50;
+}
+
+#settings-panel input[type="checkbox"]:checked + .slider::before {
+  transform: translateX(21px);
+}
+
+/* ABOUT LINK & CLOSE BUTTON */
 #settings-panel a {
   color: #007acc;
   text-decoration: none;
@@ -146,12 +184,22 @@ body {
   cursor: pointer;
 }
 
-/* Ensure the toggle icon sits above */
+/* SETTINGS TOGGLE BUTTON (☰) */
 #settings-toggle {
   position: fixed;
-  top: 10px;
-  right: 10px;
-  font-size: 1.5rem;
+  top: 12px;
+  right: 16px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  background: rgba(0,0,0,0.6);
+  padding: 8px 12px;
+  border-radius: 8px;
   cursor: pointer;
   z-index: 1000;
+  color: white;
+  transition: background 0.2s ease;
+}
+
+#settings-toggle:hover {
+  background: rgba(0,0,0,0.8);
 }
