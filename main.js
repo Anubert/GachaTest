@@ -18,6 +18,12 @@ function stopAllSounds() {
   });
 }
 
+window.nsfwEnabled = false;  // default OFF
+
+document.getElementById('nsfwToggle').addEventListener('change', e => {
+  window.nsfwEnabled = e.target.checked;
+});
+
 function playClickSound(button) {
   stopAllSounds();
 
