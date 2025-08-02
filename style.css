@@ -1,28 +1,27 @@
-/* Settings Toggle (top-right gear) */
 #settings-toggle {
   position: fixed;
   top: 10px;
   right: 10px;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   cursor: pointer;
-  background: rgba(0,0,0,0.5);
-  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
   padding: 6px 8px;
   border-radius: 6px;
   z-index: 1000;
 }
 
-/* Settings Panel */
 #settings-panel {
   position: fixed;
   top: 50px;
   right: 10px;
   width: 180px;
-  background: rgba(255,255,255,0.9);
+  background: rgba(255, 255, 255, 0.95);
   padding: 12px;
   border-radius: 8px;
-  box-shadow: 0 0 12px rgba(0,0,0,0.4);
-  z-index: 1000;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  font-size: 0.9rem;
 }
 
 #settings-panel.hidden {
@@ -31,13 +30,7 @@
 
 #settings-panel h3 {
   margin-top: 0;
-  font-size: 1.1rem;
-}
-
-#settings-panel label {
-  display: block;
-  margin: 8px 0;
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .about-link {
@@ -45,5 +38,4 @@
   margin-top: 10px;
   text-decoration: none;
   color: #007acc;
-  font-weight: bold;
 }
