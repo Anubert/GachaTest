@@ -54,3 +54,25 @@
       <label>Min Rarity: <input type="number" id="minRarity" value="0.01" step="0.01" /></label>
       <label>Avg Rarity: <input type="number" id="avgRarity" value="3.5" step="0.01" /></label>
       <label>Max Rarity: <input type="number" id="maxRarity" value="9.99" step="0.01" /></label>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+  <script>
+    function toggleSettings() {
+      document.getElementById("settings-panel").classList.toggle("hidden");
+    }
+
+    document.getElementById('soundToggle').addEventListener('change', e => {
+      window.soundEnabled = e.target.checked;
+    });
+
+    document.getElementById('animToggle').addEventListener('change', e => {
+      window.animEnabled = e.target.checked;
+    });
+
+    window.soundEnabled = true;
+    window.animEnabled = true;
+  </script>
+</body>
+</html>
