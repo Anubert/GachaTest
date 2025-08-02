@@ -203,3 +203,49 @@ body {
 #settings-toggle:hover {
   background: rgba(0,0,0,0.8);
 }
+
+/* Toggle Setting Row */
+.toggle-setting {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 16px 0;
+  font-size: 0.95rem;
+}
+
+/* Hide actual checkbox */
+.toggle-setting input[type="checkbox"] {
+  display: none;
+}
+
+/* Switch appearance */
+.switch {
+  width: 40px;
+  height: 24px;
+  background-color: #ccc;
+  border-radius: 12px;
+  position: relative;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+/* Dot inside the switch */
+.switch .dot {
+  width: 18px;
+  height: 18px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  transition: transform 0.3s ease;
+}
+
+/* Active (checked) state styling */
+.toggle-setting input[type="checkbox"]:checked + .switch {
+  background-color: #4caf50;
+}
+
+.toggle-setting input[type="checkbox"]:checked + .switch .dot {
+  transform: translateX(16px);
+}
