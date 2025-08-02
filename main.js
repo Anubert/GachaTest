@@ -1,3 +1,32 @@
+// Sample data pool (expand later or load from JSON)
+const data = {
+  traits: [
+    { name: 'Swift Reflexes', rarity: 1.2, isNSFW: false },
+    { name: 'Night Howler', rarity: 4.7, isNSFW: false },
+    { name: 'Sensual Touch', rarity: 5.1, isNSFW: true }
+  ],
+  abilities: [
+    { name: 'Fire Lash', rarity: 2.3, isNSFW: false },
+    { name: 'Whisper Moan', rarity: 5.8, isNSFW: true }
+  ],
+  summons: [
+    { name: 'Wisp Familiar', rarity: 1.5, isNSFW: false },
+    { name: 'Succubus Embrace', rarity: 6.2, isNSFW: true }
+  ],
+  items: [
+    { name: 'Ancient Ring', rarity: 2.8, isNSFW: false },
+    { name: 'Forbidden Idol', rarity: 6.7, isNSFW: true }
+  ],
+  skills: [
+    { name: 'Blade Dance', rarity: 3.4, isNSFW: false },
+    { name: 'Flesh Bloom', rarity: 5.9, isNSFW: true }
+  ],
+  random: [
+    { name: 'Mystery Cube', rarity: 3.1, isNSFW: false },
+    { name: 'Obscene Scroll', rarity: 6.9, isNSFW: true }
+  ]
+};
+
 // Sound helpers
 function stopAllSounds() {
   const sounds = [
@@ -18,7 +47,7 @@ function stopAllSounds() {
   });
 }
 
-window.nsfwEnabled = false;  // default OFF
+window.nsfwEnabled = false;
 
 document.getElementById('nsfwToggle').addEventListener('change', e => {
   window.nsfwEnabled = e.target.checked;
@@ -32,7 +61,6 @@ function playClickSound(button) {
       button.classList.contains('mythril')) {
     document.getElementById('clickRareSound').play();
   } else {
-    // Diamond and below
     document.getElementById('clickSound').play();
   }
 }
@@ -51,15 +79,29 @@ function stopHoverSound() {
   audio.currentTime = 0;
 }
 
-// Drawing logic
+// Drawing logic with NSFW-aware filtering
 function draw(category) {
   const min = parseFloat(document.getElementById('minRarity').value);
   const avg = parseFloat(document.getElementById('avgRarity').value);
   const max = parseFloat(document.getElementById('maxRarity').value);
   
   const roll = generateRandomRarity(min, avg, max);
-  const result = `${capitalize(category)} result (Rarity: ${roll.toFixed(2)})`;
-  document.getElementById('result').textContent = result;
+  const pool = data[category] || [];
+
+  const filtered = pool.filter(item => {
+    if (!window.nsfwEnabled && item.isNSFW) return false;
+    return item.rarity >= min && item.rarity <= max;
+  });
+
+  let resultText;
+  if (filtered.length > 0) {
+    const randomItem = filtered[Math.floor(Math.random() * filtered.length)];
+    resultText = `${capitalize(category)}: ${randomItem.name} (Rarity: ${randomItem.rarity.toFixed(2)})`;
+  } else {
+    resultText = `No ${category} found in this rarity range${window.nsfwEnabled ? '' : ' (NSFW filtered)'}.`;
+  }
+
+  document.getElementById('result').textContent = resultText;
 
   if (roll < 0.99) {
     document.getElementById('trashSound').play();
@@ -76,7 +118,6 @@ function setRarity(min, avg, max) {
   document.getElementById('maxRarity').value = max;
 }
 
-// Weighted rarity generator toward avg
 function generateRandomRarity(min, avg, max) {
   const r = Math.random();
   const bias = (r + Math.random()) / 2;
