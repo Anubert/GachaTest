@@ -8,22 +8,18 @@
 </head>
 <body style="background-image: url('assets/relax.gif'); background-size: cover; background-position: center;">
 
-  <!-- Settings Toggle Icon -->
+  <!-- SETTINGS BUTTON & PANEL -->
   <div id="settings-toggle" onclick="openSettings()">⚙️</div>
-
-  <!-- Overlay -->
   <div id="settings-overlay" class="hidden" onclick="closeSettings()"></div>
-
-  <!-- Sliding Settings Panel -->
   <div id="settings-panel" class="hidden">
     <h3>Settings</h3>
-    <label><input type="checkbox" id="soundToggle" checked /> Enable Sound</label><br>
-    <label><input type="checkbox" id="animToggle" checked /> Enable Animations</label><br>
-    <a href="about.html" target="_blank">About</a>
+    <label><input type="checkbox" id="soundToggle" checked /> Enable Sound</label><br />
+    <label><input type="checkbox" id="animToggle" checked /> Enable Animations</label><br />
+    <a href="about.html" target="_blank">About</a><br />
     <button class="close-btn" onclick="closeSettings()">Close</button>
   </div>
 
-  <!-- Audio Elements -->
+  <!-- AUDIO -->
   <audio id="clickSound" src="assets/audio/click.mp3"></audio>
   <audio id="clickRareSound" src="assets/audio/click_rare.mp3"></audio>
   <audio id="hoverRareSound" src="assets/audio/hover_rare.mp3"></audio>
@@ -31,25 +27,51 @@
   <audio id="winSound" src="assets/audio/win.mp3"></audio>
   <audio id="winRareSound" src="assets/audio/win_rare.mp3"></audio>
 
+  <!-- MAIN GACHA UI -->
   <div class="container">
-    <!-- ... your existing category, result, tier-buttons, inputs ... -->
+    <div class="category-buttons">
+      <button class="category-btn" onclick="playClickSound(this); draw('traits')">Traits</button>
+      <button class="category-btn" onclick="playClickSound(this); draw('abilities')">Abilities</button>
+      <button class="category-btn" onclick="playClickSound(this); draw('summons')">Summons</button>
+      <button class="category-btn" onclick="playClickSound(this); draw('items')">Items</button>
+      <button class="category-btn" onclick="playClickSound(this); draw('skills')">Skills</button>
+      <button class="category-btn" onclick="playClickSound(this); draw('random')">Random</button>
+    </div>
+
+    <div id="result" class="result-bubble">Your result will appear here.</div>
+
+    <div class="tier-buttons">
+      <button class="tier-btn trash" onclick="playClickSound(this); setRarity(0.01, 0.5, 0.99)">Trash</button>
+      <button class="tier-btn bronze" onclick="playClickSound(this); setRarity(1, 1.5, 1.99)">Bronze</button>
+      <button class="tier-btn silver" onclick="playClickSound(this); setRarity(2, 2.5, 2.99)">Silver</button>
+      <button class="tier-btn gold" onclick="playClickSound(this); setRarity(3, 3.5, 3.99)">Gold</button>
+      <button class="tier-btn diamond" onclick="playClickSound(this); setRarity(3.99, 4, 4.49)">Diamond</button>
+      <button class="tier-btn mythril rare" onclick="playClickSound(this); setRarity(4.5, 4.75, 4.99)" onmouseenter="playHoverSound(this)" onmouseleave="stopHoverSound()">Mythril</button>
+      <button class="tier-btn legendary rare" onclick="playClickSound(this); setRarity(5, 5.5, 5.99)" onmouseenter="playHoverSound(this)" onmouseleave="stopHoverSound()">Legendary</button>
+      <button class="tier-btn mythical rare" onclick="playClickSound(this); setRarity(6, 6.5, 6.99)" onmouseenter="playHoverSound(this)" onmouseleave="stopHoverSound()">Mythical</button>
+    </div>
+
+    <div class="rarity-inputs">
+      <label>Min Rarity: <input type="number" id="minRarity" value="0.01" step="0.01" /></label>
+      <label>Avg Rarity: <input type="number" id="avgRarity" value="3.5" step="0.01" /></label>
+      <label>Max Rarity: <input type="number" id="maxRarity" value="9.99" step="0.01" /></label>
+    </div>
   </div>
 
   <script src="main.js"></script>
   <script>
-    // Settings pane control
+    // SETTINGS PANEL LOGIC
     function openSettings() {
       document.getElementById('settings-overlay').classList.remove('hidden');
       document.getElementById('settings-panel').classList.remove('hidden');
-      // trigger reflow then slide in
       requestAnimationFrame(() =>
         document.getElementById('settings-panel').classList.add('visible')
       );
     }
+
     function closeSettings() {
       document.getElementById('settings-panel').classList.remove('visible');
       document.getElementById('settings-overlay').classList.add('hidden');
-      // after panel slides out, hide it
       document.getElementById('settings-panel')
         .addEventListener('transitionend', function hide() {
           document.getElementById('settings-panel').classList.add('hidden');
@@ -57,7 +79,6 @@
         });
     }
 
-    // Toggle sound/animation flags
     window.soundEnabled = true;
     window.animEnabled = true;
     document.getElementById('soundToggle')
@@ -65,7 +86,6 @@
     document.getElementById('animToggle')
       .addEventListener('change', e => window.animEnabled = e.target.checked);
 
-    // Wrap existing functions
     const origPlayClick = playClickSound;
     playClickSound = btn => { if (soundEnabled) origPlayClick(btn); };
     const origPlayHover = playHoverSound;
