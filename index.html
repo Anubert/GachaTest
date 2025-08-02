@@ -7,6 +7,25 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body style="background-image: url('assets/relax.gif'); background-size: cover; background-position: center;">
+  <!-- Settings Toggle -->
+  <div id="settings-toggle" onclick="toggleSettings()">
+    ⚙️
+  </div>
+
+  <!-- Settings Panel -->
+  <div id="settings-panel" class="hidden">
+    <h3>Settings</h3>
+    <label>
+      <input type="checkbox" id="soundToggle" checked onchange="toggleSound()" />
+      Enable Sound
+    </label>
+    <label>
+      <input type="checkbox" id="animToggle" checked onchange="toggleAnimation()" />
+      Enable Animations
+    </label>
+    <a href="about.html" class="about-link">About</a>
+  </div>
+
   <!-- Audio Files -->
   <audio id="clickSound" src="assets/audio/click.mp3"></audio>
   <audio id="clickRareSound" src="assets/audio/click_rare.mp3"></audio>
@@ -17,39 +36,46 @@
   <audio id="winRareSound" src="assets/audio/win_rare.mp3"></audio>
 
   <div class="container">
-    <!-- Category Buttons -->
-    <div class="category-buttons">
-      <button class="category-btn" onclick="playClickSound(this); draw('traits')">Traits</button>
-      <button class="category-btn" onclick="playClickSound(this); draw('abilities')">Abilities</button>
-      <button class="category-btn" onclick="playClickSound(this); draw('summons')">Summons</button>
-      <button class="category-btn" onclick="playClickSound(this); draw('items')">Items</button>
-      <button class="category-btn" onclick="playClickSound(this); draw('skills')">Skills</button>
-      <button class="category-btn" onclick="playClickSound(this); draw('random')">Random</button>
-    </div>
-
-    <!-- Result Bubble -->
-    <div id="result" class="result-bubble">Let's wee what you got, get rolling !</div>
-
-    <!-- Tier Buttons -->
-    <div class="tier-buttons">
-      <button class="tier-btn trash" onclick="playClickSound(this); setRarity(0.01, 0.50, 0.99)">Trash</button>
-      <button class="tier-btn bronze" onclick="playClickSound(this); setRarity(0.50, 1.50, 2.99)">Bronze</button>
-      <button class="tier-btn silver" onclick="playClickSound(this); setRarity(1, 2.5, 3.75)">Silver</button>
-      <button class="tier-btn gold" onclick="playClickSound(this); setRarity(2.50, 3, 5)">Gold</button>
-      <button class="tier-btn diamond rare" onclick="playClickSound(this); setRarity(3, 4.25, 6.50)" onmouseenter="playHoverSound(this)" onmouseleave="stopHoverSound()">Diamond</button>
-      <button class="tier-btn mythril rare" onclick="playClickSound(this); setRarity(4.50, 5.80, 7.50)" onmouseenter="playHoverSound(this)" onmouseleave="stopHoverSound()">Mythril</button>
-      <button class="tier-btn legendary rare" onclick="playClickSound(this); setRarity(5, 6.5, 8.99)" onmouseenter="playHoverSound(this)" onmouseleave="stopHoverSound()">Legendary</button>
-      <button class="tier-btn mythical rare" onclick="playClickSound(this); setRarity(7, 8.50, 9.99)" onmouseenter="playHoverSound(this)" onmouseleave="stopHoverSound()">Mythical</button>
-    </div>
-
-    <!-- Rarity Inputs -->
-    <div class="rarity-inputs">
-      <label>Min Rarity: <input type="number" id="minRarity" value="0.01" step="0.01" /></label>
-      <label>Avg Rarity: <input type="number" id="avgRarity" value="3.5" step="0.01" /></label>
-      <label>Max Rarity: <input type="number" id="maxRarity" value="9.99" step="0.01" /></label>
-    </div>
+    <!-- ... rest of your existing markup ... -->
   </div>
 
   <script src="main.js"></script>
+  <script>
+    // Settings script
+    function toggleSettings() {
+      document.getElementById('settings-panel')
+              .classList.toggle('hidden');
+    }
+
+    let soundEnabled = true;
+    function toggleSound() {
+      soundEnabled = !soundEnabled;
+    }
+
+    let animEnabled = true;
+    function toggleAnimation() {
+      animEnabled = !animEnabled;
+    }
+
+    // Wrap existing sound/animation calls:
+    const origPlayClick = playClickSound;
+    playClickSound = btn => { if (soundEnabled) origPlayClick(btn); };
+
+    const origPlayHover = playHoverSound;
+    playHoverSound = btn => { if (soundEnabled) origPlayHover(btn); };
+
+    const origDraw = draw;
+    draw = cat => {
+      if (animEnabled) {
+        document.getElementById('result').classList.add('pulse');
+        setTimeout(() => {
+          document.getElementById('result').classList.remove('pulse');
+          origDraw(cat);
+        }, 300);
+      } else {
+        origDraw(cat);
+      }
+    };
+  </script>
 </body>
 </html>
