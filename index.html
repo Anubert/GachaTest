@@ -8,18 +8,18 @@
 </head>
 <body style="background-image: url('assets/relax.gif'); background-size: cover; background-position: center;">
 
-  <!-- Settings Toggle Icon -->
+  <!-- Top-Right Settings Icon -->
   <div id="settings-toggle" onclick="toggleSettings()">⚙️</div>
 
-  <!-- Settings Panel -->
+  <!-- Settings Panel (Hidden by Default) -->
   <div id="settings-panel" class="hidden">
     <h3>Settings</h3>
-    <label><input type="checkbox" id="soundToggle" checked /> Enable Sound</label>
-    <label><input type="checkbox" id="animToggle" checked /> Enable Animations</label>
-    <a href="about.html" class="about-link">About</a>
+    <label><input type="checkbox" id="soundToggle" checked /> Enable Sound</label><br>
+    <label><input type="checkbox" id="animToggle" checked /> Enable Animations</label><br>
+    <a href="about.html" target="_blank">About</a>
   </div>
 
-  <!-- Audio -->
+  <!-- Audio Elements -->
   <audio id="clickSound" src="assets/audio/click.mp3"></audio>
   <audio id="clickRareSound" src="assets/audio/click_rare.mp3"></audio>
   <audio id="hoverRareSound" src="assets/audio/hover_rare.mp3"></audio>
@@ -54,26 +54,3 @@
       <label>Min Rarity: <input type="number" id="minRarity" value="0.01" step="0.01" /></label>
       <label>Avg Rarity: <input type="number" id="avgRarity" value="3.5" step="0.01" /></label>
       <label>Max Rarity: <input type="number" id="maxRarity" value="9.99" step="0.01" /></label>
-    </div>
-  </div>
-
-  <script src="main.js"></script>
-  <script>
-    function toggleSettings() {
-      document.getElementById("settings-panel").classList.toggle("hidden");
-    }
-
-    document.getElementById('soundToggle').addEventListener('change', e => {
-      window.soundEnabled = e.target.checked;
-    });
-
-    document.getElementById('animToggle').addEventListener('change', e => {
-      window.animEnabled = e.target.checked;
-    });
-
-    // Initialize global toggles
-    window.soundEnabled = true;
-    window.animEnabled = true;
-  </script>
-</body>
-</html>
