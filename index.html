@@ -107,6 +107,38 @@
       if (e.key === 'Escape') closeSettings();
     });
   </script>
+
+<!-- Settings Toggle Button -->
+<div id="settings-toggle">☰</div>
+
+<!-- Settings Overlay -->
+<div id="settings-overlay" class="hidden"></div>
+
+<!-- Settings Panel -->
+<div id="settings-panel">
+  <h3>Settings</h3>
+
+  <label class="toggle-setting">
+    <span>Sound</span>
+    <input type="checkbox" id="soundToggle" checked />
+    <div class="switch"><div class="dot"></div></div>
+  </label>
+
+  <label class="toggle-setting">
+    <span>Animation</span>
+    <input type="checkbox" id="animToggle" checked />
+    <div class="switch"><div class="dot"></div></div>
+  </label>
+
+  <label class="toggle-setting">
+    <span>NSFW Content</span>
+    <input type="checkbox" id="nsfwToggle" />
+    <div class="switch"><div class="dot"></div></div>
+  </label>
+
+  <a href="#">About</a>
+  <button class="close-btn" onclick="closeSettings()">Close</button>
+</div>
 </body>
 </html>
 
