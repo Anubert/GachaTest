@@ -127,3 +127,21 @@ function generateRandomRarity(min, avg, max) {
 function capitalize(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
+
+<script>
+  const toggleBtn = document.getElementById('settings-toggle');
+  const overlay = document.getElementById('settings-overlay');
+  const panel = document.getElementById('settings-panel');
+
+  toggleBtn.addEventListener('click', () => {
+    panel.classList.add('visible');
+    overlay.classList.remove('hidden');
+  });
+
+  overlay.addEventListener('click', closeSettings);
+
+  function closeSettings() {
+    panel.classList.remove('visible');
+    overlay.classList.add('hidden');
+  }
+</script>
