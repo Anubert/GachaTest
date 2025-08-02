@@ -7,19 +7,6 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body style="background-image: url('assets/relax.gif'); background-size: cover; background-position: center;">
-
-  <!-- Top-Right Settings Icon -->
-  <div id="settings-toggle" onclick="toggleSettings()">⚙️</div>
-
-  <!-- Settings Panel (Hidden by Default) -->
-  <div id="settings-panel" class="hidden">
-    <h3>Settings</h3>
-    <label><input type="checkbox" id="soundToggle" checked /> Enable Sound</label><br>
-    <label><input type="checkbox" id="animToggle" checked /> Enable Animations</label><br>
-    <a href="about.html" target="_blank">About</a>
-  </div>
-
-  <!-- Audio Elements -->
   <audio id="clickSound" src="assets/audio/click.mp3"></audio>
   <audio id="clickRareSound" src="assets/audio/click_rare.mp3"></audio>
   <audio id="hoverRareSound" src="assets/audio/hover_rare.mp3"></audio>
@@ -58,21 +45,5 @@
   </div>
 
   <script src="main.js"></script>
-  <script>
-    function toggleSettings() {
-      document.getElementById("settings-panel").classList.toggle("hidden");
-    }
-
-    document.getElementById('soundToggle').addEventListener('change', e => {
-      window.soundEnabled = e.target.checked;
-    });
-
-    document.getElementById('animToggle').addEventListener('change', e => {
-      window.animEnabled = e.target.checked;
-    });
-
-    window.soundEnabled = true;
-    window.animEnabled = true;
-  </script>
 </body>
 </html>
