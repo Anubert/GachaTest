@@ -21,19 +21,22 @@ function stopAllSounds() {
 function playClickSound(button) {
   stopAllSounds();
 
-  if (button.classList.contains('diamond')) {
-    document.getElementById('clickDiamondSound').play();
-  } else if (button.classList.contains('mythical') ||
-             button.classList.contains('legendary') ||
-             button.classList.contains('mythril')) {
+  // Only Mythril, Legendary, and Mythical count as "rare" click tiers
+  if (button.classList.contains('mythical') ||
+      button.classList.contains('legendary') ||
+      button.classList.contains('mythril')) {
     document.getElementById('clickRareSound').play();
   } else {
+    // Diamond and below use regular click
     document.getElementById('clickSound').play();
   }
 }
 
 function playHoverSound(button) {
-  if (button.classList.contains('rare')) {
+  // Only Mythril, Legendary, and Mythical play rare hover sound
+  if (button.classList.contains('mythical') ||
+      button.classList.contains('legendary') ||
+      button.classList.contains('mythril')) {
     document.getElementById('hoverRareSound').play();
   }
 }
@@ -54,9 +57,13 @@ function draw(category) {
   const result = `${capitalize(category)} result (Rarity: ${roll.toFixed(2)})`;
   document.getElementById('result').textContent = result;
 
-  if (roll < 1) document.getElementById('trashSound').play();
-  else if (roll >= 5) document.getElementById('winRareSound').play();
-  else document.getElementById('winSound').play();
+  if (roll < 1) {
+    document.getElementById('trashSound').play();
+  } else if (roll >= 5) {
+    document.getElementById('winRareSound').play();
+  } else {
+    document.getElementById('winSound').play();
+  }
 }
 
 function setRarity(min, avg, max) {
@@ -65,10 +72,10 @@ function setRarity(min, avg, max) {
   document.getElementById('maxRarity').value = max;
 }
 
-// Random rarity generator weighted toward avg
+// Weighted rarity generator toward avg
 function generateRandomRarity(min, avg, max) {
   const r = Math.random();
-  const bias = (r + Math.random()) / 2; // Skew toward center
+  const bias = (r + Math.random()) / 2;
   return min + bias * (max - min);
 }
 
