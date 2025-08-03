@@ -8,7 +8,7 @@
 </head>
 <body style="background-image: url('assets/relax.gif'); background-size: cover; background-position: center;">
 
-  <!-- Settings Toggle Button -->
+  <!-- Settings Button -->
   <div id="settings-toggle" onclick="openSettings()">☰</div>
 
   <!-- Settings Overlay -->
@@ -55,7 +55,7 @@
   <audio id="winRareSound" src="assets/audio/win_rare.mp3"></audio>
 
   <!-- MAIN GACHA UI -->
-  <div class="container">
+  <div class="container" style="margin-top: 80px;">
     <div class="category-buttons">
       <button class="category-btn" onclick="playClickSound(this); draw('traits')">Traits</button>
       <button class="category-btn" onclick="playClickSound(this); draw('abilities')">Abilities</button>
@@ -87,7 +87,6 @@
 
   <script src="main.js"></script>
   <script>
-    // SETTINGS PANEL LOGIC
     function openSettings() {
       document.getElementById('settings-overlay').classList.remove('hidden');
       document.getElementById('settings-panel').classList.remove('hidden');
