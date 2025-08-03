@@ -39,18 +39,66 @@ body {
   background: rgba(0, 0, 0, 0.7);
 }
 
-/* SLIDER STYLE SWITCHES */
+/* SETTINGS PANEL */
+#settings-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background: #121212;
+  box-shadow: -4px 0 12px rgba(0,0,0,0.7);
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 999;
+  font-family: sans-serif;
+  color: #e0e0e0;
+}
+
+#settings-panel.visible {
+  transform: translateX(0);
+}
+
+#settings-panel h3 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+#settings-panel label,
+#settings-panel a,
+#settings-panel span {
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+#settings-panel a {
+  color: #66ccff;
+  text-decoration: none;
+}
+
+#settings-panel .close-btn {
+  margin-top: 20px;
+  padding: 8px 12px;
+  background: #222;
+  color: #eee;
+  border: 1px solid #444;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* TOGGLE SETTING ROW */
 .toggle-setting {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 16px 0;
   font-size: 0.95rem;
-  color: #ccc;
-  position: relative;
 }
 
-/* Hide the native checkbox */
+/* Hide actual checkbox */
 .toggle-setting input[type="checkbox"] {
   opacity: 0;
   width: 0;
@@ -58,7 +106,7 @@ body {
   position: absolute;
 }
 
-/* The slider track */
+/* The slider */
 .slider {
   position: relative;
   width: 50px;
@@ -70,8 +118,8 @@ body {
   flex-shrink: 0;
 }
 
-/* The slider knob */
-.slider:before {
+/* The knob inside the slider */
+.slider::before {
   content: "";
   position: absolute;
   height: 18px;
@@ -88,7 +136,7 @@ body {
   background-color: #29c96d;
 }
 
-.toggle-setting input[type="checkbox"]:checked + .slider:before {
+.toggle-setting input[type="checkbox"]:checked + .slider::before {
   transform: translateX(26px);
 }
 
