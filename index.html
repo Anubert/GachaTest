@@ -7,41 +7,34 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body style="background-image: url('assets/relax.gif'); background-size: cover; background-position: center;">
+<!-- Settings Toggle Button -->
+<div id="settings-toggle" onclick="openSettings()">☰</div>
 
-  <!-- Settings Button -->
-  <div id="settings-toggle" onclick="openSettings()">☰</div>
+<!-- Settings Overlay -->
+<div id="settings-overlay" class="hidden" onclick="closeSettings()"></div>
 
-  <!-- Settings Overlay -->
-  <div id="settings-overlay" class="hidden" onclick="closeSettings()"></div>
+<!-- Settings Panel -->
+<div id="settings-panel" class="hidden">
+  <h3>Settings</h3>
 
-  <!-- Settings Panel -->
-  <div id="settings-panel" class="hidden">
-    <h3>Settings</h3>
+  <label class="switch">
+    <input type="checkbox" id="soundToggle" checked />
+    <span class="slider"></span> Enable Sound
+  </label>
 
-    <div class="toggle-setting">
-      <span>Sound</span>
-      <label>
-        <input type="checkbox" id="soundToggle" checked />
-        <span class="switch"><span class="dot"></span></span>
-      </label>
-    </div>
+  <label class="switch">
+    <input type="checkbox" id="animToggle" checked />
+    <span class="slider"></span> Enable Animations
+  </label>
 
-    <div class="toggle-setting">
-      <span>Animation</span>
-      <label>
-        <input type="checkbox" id="animToggle" checked />
-        <span class="switch"><span class="dot"></span></span>
-      </label>
-    </div>
+  <label class="switch">
+    <input type="checkbox" id="nsfwToggle" />
+    <span class="slider"></span> Show NSFW content
+  </label>
 
-    <div class="toggle-setting">
-      <span>NSFW Content</span>
-      <label>
-        <input type="checkbox" id="nsfwToggle" />
-        <span class="switch"><span class="dot"></span></span>
-      </label>
-    </div>
-
+  <a href="about.html" target="_blank">About</a><br />
+  <button class="close-btn" onclick="closeSettings()">Close</button>
+</div>
     <a href="about.html" target="_blank">About</a><br />
     <button class="close-btn" onclick="closeSettings()">Close</button>
   </div>
