@@ -1,8 +1,6 @@
 const categories = document.querySelectorAll(".category-btn");
 const tiers = document.querySelectorAll(".tier-btn");
 const resultBubble = document.getElementById("result");
-const scrollingItems = document.getElementById("scrolling-items");
-const finalResultText = document.getElementById("final-result-text");
 const minInput = document.getElementById("minRarity");
 const avgInput = document.getElementById("avgRarity");
 const maxInput = document.getElementById("maxRarity");
@@ -13,6 +11,7 @@ const soundToggle = document.getElementById("toggle-sound");
 const animationToggle = document.getElementById("toggle-animation");
 const nsfwToggle = document.getElementById("toggle-nsfw");
 
+// Audio setup
 const sounds = {
   roll: new Audio("assets/sound/roll.mp3"),
   click: new Audio("assets/sound/click.mp3"),
@@ -22,15 +21,8 @@ const sounds = {
 
 const rareTiers = ["mythril", "legendary", "mythical"];
 
-function updateMuteState() {
-  const muted = !soundToggle.checked;
-  Object.values(sounds).forEach(s => s.muted = muted);
-}
-
-soundToggle.addEventListener("change", updateMuteState);
-updateMuteState();
-
 function playSound(soundKey) {
+  if (!soundToggle.checked) return;
   const sound = sounds[soundKey];
   if (sound) {
     sound.currentTime = 0;
@@ -38,6 +30,7 @@ function playSound(soundKey) {
   }
 }
 
+// Sample data
 const data = {
   animal: {
     bronze: ["Dog", "Cat"],
@@ -54,6 +47,7 @@ const data = {
 let currentCategory = null;
 let currentTier = null;
 
+// Button logic
 categories.forEach((btn) => {
   btn.addEventListener("click", () => {
     playSound("click");
@@ -77,18 +71,19 @@ function draw() {
   if (!currentCategory || !currentTier) return;
 
   let entries = data[currentCategory]?.[currentTier] || [];
-  if (!nsfwToggle.checked) {
-    entries = entries.filter(e => !e.isNSFW);
-  }
+  if (!nsfwToggle.checked) entries = entries.filter(e => !e.isNSFW);
 
   if (entries.length === 0) {
-    scrollingItems.textContent = "";
-    finalResultText.textContent = "Nothing found...";
+    resultBubble.textContent = "Nothing found...";
     return;
   }
 
+  playSound("roll");
+
   const chosen = entries[Math.floor(Math.random() * entries.length)];
-  const finalName = typeof chosen === "string" ? chosen : chosen.name;
+  const name = typeof chosen === "string" ? chosen : chosen.name;
+
+  resultBubble.textContent = name;
 
   if (animationToggle.checked) {
     resultBubble.classList.remove("shake");
@@ -96,31 +91,15 @@ function draw() {
     resultBubble.classList.add("shake");
   }
 
-  playSound("roll");
-
-  const scrollDuration = 1000;
-  const interval = 100;
-  let count = 0;
-  scrollingItems.textContent = "";
-  finalResultText.textContent = "";
-
-  const intervalId = setInterval(() => {
-    const temp = entries[Math.floor(Math.random() * entries.length)];
-    scrollingItems.textContent = typeof temp === "string" ? temp : temp.name;
-    count += interval;
-    if (count >= scrollDuration) {
-      clearInterval(intervalId);
-      scrollingItems.textContent = "";
-      finalResultText.textContent = finalName;
-      if (rareTiers.includes(currentTier)) playSound("winRare");
-      else playSound("win");
-    }
-  }, interval);
+  if (rareTiers.includes(currentTier)) playSound("winRare");
+  else playSound("win");
 }
 
+// Toggle settings panel
 function toggleSettings() {
   settingsPanel.classList.toggle("visible");
   settingsOverlay.classList.toggle("hidden");
 }
+
 toggleBtn.addEventListener("click", toggleSettings);
 settingsOverlay.addEventListener("click", toggleSettings);
