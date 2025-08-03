@@ -6,34 +6,43 @@
   <title>Chaos Gacha</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body style="background: url('assets/relax.gif') no-repeat center center fixed; background-size: cover;">
-  <button id="settings-toggle">⚙️</button>
+<body>
   <div id="settings-overlay" class="hidden"></div>
+
+  <button id="settings-toggle">⚙️</button>
+
   <div id="settings-panel">
     <h3>Settings</h3>
-    <label class="switch">Sound
-      <input type="checkbox" id="toggle-sound" checked>
+    <label class="switch">
+      Sound
+      <input type="checkbox" id="toggle-sound" checked />
       <span class="slider"></span>
     </label>
-    <label class="switch">Animation
-      <input type="checkbox" id="toggle-animation" checked>
+    <label class="switch">
+      Animation
+      <input type="checkbox" id="toggle-animation" checked />
       <span class="slider"></span>
     </label>
-    <label class="switch">NSFW
-      <input type="checkbox" id="toggle-nsfw">
+    <label class="switch">
+      NSFW
+      <input type="checkbox" id="toggle-nsfw" />
       <span class="slider"></span>
     </label>
-    <a href="#">About this project</a>
+    <br/>
+    <a href="#">About</a>
   </div>
+
   <div class="container">
     <div class="category-buttons">
       <button class="category-btn" data-category="animal">Animal</button>
       <button class="category-btn" data-category="waifu">Waifu</button>
     </div>
-    <div id="result" class="result-bubble">
+
+    <div class="result-bubble" id="result">
       <div id="scrolling-items"></div>
       <div id="final-result-text"></div>
     </div>
+
     <div class="tier-buttons">
       <button class="tier-btn trash" data-tier="trash">Trash</button>
       <button class="tier-btn bronze" data-tier="bronze">Bronze</button>
@@ -44,12 +53,14 @@
       <button class="tier-btn legendary" data-tier="legendary">Legendary</button>
       <button class="tier-btn mythical" data-tier="mythical">Mythical</button>
     </div>
+
     <div class="rarity-inputs">
-      <input type="number" id="minRarity" placeholder="Min Rarity">
-      <input type="number" id="avgRarity" placeholder="Avg Rarity">
-      <input type="number" id="maxRarity" placeholder="Max Rarity">
+      <label>Min Rarity: <input type="number" id="minRarity" value="1" /></label>
+      <label>Avg Rarity: <input type="number" id="avgRarity" value="5" /></label>
+      <label>Max Rarity: <input type="number" id="maxRarity" value="10" /></label>
     </div>
   </div>
+
   <script src="main.js"></script>
 </body>
 </html>
