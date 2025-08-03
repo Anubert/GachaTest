@@ -17,23 +17,27 @@
 <div id="settings-panel" class="hidden">
   <h3>Settings</h3>
 
-  <label class="switch">
+  <label class="toggle-setting">
+    <span>Enable Sound</span>
     <input type="checkbox" id="soundToggle" checked />
-    <span class="slider"></span> Enable Sound
+    <div class="slider"></div>
   </label>
 
-  <label class="switch">
+  <label class="toggle-setting">
+    <span>Enable Animations</span>
     <input type="checkbox" id="animToggle" checked />
-    <span class="slider"></span> Enable Animations
+    <div class="slider"></div>
   </label>
 
-  <label class="switch">
+  <label class="toggle-setting">
+    <span>Show NSFW Content</span>
     <input type="checkbox" id="nsfwToggle" />
-    <span class="slider"></span> Show NSFW content
+    <div class="slider"></div>
   </label>
-    <a href="about.html" target="_blank">About</a><br />
-    <button class="close-btn" onclick="closeSettings()">Close</button>
-  </div>
+
+  <a href="about.html" target="_blank">About</a><br />
+  <button class="close-btn" onclick="closeSettings()">Close</button>
+</div>
 
   <!-- AUDIO -->
   <audio id="clickSound" src="assets/audio/click.mp3"></audio>
