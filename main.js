@@ -1,230 +1,185 @@
-// Sample data pool (expand later or load from JSON)
+// Globals for rarity filtering, you can adjust these via UI inputs
+let minRarity = 0.01;
+let avgRarity = 3.5;
+let maxRarity = 9.99;
+
+// Set rarity ranges (call when tier buttons clicked)
+function setRarity(min, avg, max) {
+  minRarity = min;
+  avgRarity = avg;
+  maxRarity = max;
+  // Update inputs if you have them visible
+  const minInput = document.getElementById('minRarity');
+  const avgInput = document.getElementById('avgRarity');
+  const maxInput = document.getElementById('maxRarity');
+  if (minInput) minInput.value = min;
+  if (avgInput) avgInput.value = avg;
+  if (maxInput) maxInput.value = max;
+}
+
+// Example datasets - replace with your actual data
+// Each entry must have rarity property and other needed properties for display
 const data = {
   traits: [
-    { name: 'Swift Reflexes', rarity: 1.2, isNSFW: false },
-    { name: 'Night Howler', rarity: 4.7, isNSFW: false },
-    { name: 'Sensual Touch', rarity: 5.1, isNSFW: true }
+    { name: "Brave", rarity: 1.2 },
+    { name: "Clever", rarity: 2.5 },
+    { name: "Mysterious", rarity: 5.1 },
+    { name: "Legendary Trait", rarity: 7.8 },
+    { name: "Trash Trait", rarity: 0.3 },
+    // ... add your own traits here
   ],
   abilities: [
-    { name: 'Fire Lash', rarity: 2.3, isNSFW: false },
-    { name: 'Whisper Moan', rarity: 5.8, isNSFW: true }
+    { name: "Fireball", rarity: 3.0 },
+    { name: "Ice Shield", rarity: 4.2 },
+    // ...
   ],
-  summons: [
-    { name: 'Wisp Familiar', rarity: 1.5, isNSFW: false },
-    { name: 'Succubus Embrace', rarity: 6.2, isNSFW: true }
-  ],
-  items: [
-    { name: 'Ancient Ring', rarity: 2.8, isNSFW: false },
-    { name: 'Forbidden Idol', rarity: 6.7, isNSFW: true }
-  ],
-  skills: [
-    { name: 'Blade Dance', rarity: 3.4, isNSFW: false },
-    { name: 'Flesh Bloom', rarity: 5.9, isNSFW: true }
-  ],
-  random: [
-    { name: 'Mystery Cube', rarity: 3.1, isNSFW: false },
-    { name: 'Obscene Scroll', rarity: 6.9, isNSFW: true }
-  ]
+  // Add other categories like summons, items, skills, random...
 };
 
-// Global flags
-window.soundEnabled = true;
-window.animEnabled = true;
-window.nsfwEnabled = false;
-
-// SOUND HELPERS
-function stopAllSounds() {
-  const soundIds = [
-    'clickSound',
-    'clickRareSound',
-    'hoverRareSound',
-    'trashSound',
-    'winSound',
-    'winRareSound'
-  ];
-  soundIds.forEach(id => {
-    const audio = document.getElementById(id);
-    if (audio && !audio.paused) {
-      audio.pause();
-      audio.currentTime = 0;
-    }
-  });
-}
-
-function muteAllSounds(mute) {
-  const soundIds = [
-    'clickSound',
-    'clickRareSound',
-    'hoverRareSound',
-    'trashSound',
-    'winSound',
-    'winRareSound'
-  ];
-  soundIds.forEach(id => {
-    const audio = document.getElementById(id);
-    if (audio) audio.muted = mute;
-  });
-}
-
-// PLAY SOUNDS
-function playClickSound(button) {
-  if (!window.soundEnabled) return;
-  stopAllSounds();
-  if (
-    button.classList.contains('mythical') ||
-    button.classList.contains('legendary') ||
-    button.classList.contains('mythril')
-  ) {
-    document.getElementById('clickRareSound').play();
-  } else {
-    document.getElementById('clickSound').play();
-  }
-}
-
-function playHoverSound(button) {
-  if (!window.soundEnabled) return;
-  if (
-    button.classList.contains('mythical') ||
-    button.classList.contains('legendary') ||
-    button.classList.contains('mythril')
-  ) {
-    document.getElementById('hoverRareSound').play();
-  }
-}
-
-function stopHoverSound() {
-  const audio = document.getElementById('hoverRareSound');
-  if (audio) {
-    audio.pause();
-    audio.currentTime = 0;
-  }
-}
-
-// RANDOM RARITY GENERATION
-function generateRandomRarity(min, avg, max) {
-  const r = Math.random();
-  const bias = (r + Math.random()) / 2;
-  return min + bias * (max - min);
-}
-
+// Utility to capitalize first letter
 function capitalize(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
-// DRAW FUNCTION WITH NSFW FILTERING AND SOUND PLAYBACK
-function draw(category) {
-  const min = parseFloat(document.getElementById('minRarity').value);
-  const avg = parseFloat(document.getElementById('avgRarity').value);
-  const max = parseFloat(document.getElementById('maxRarity').value);
+// Helper to generate a random rarity within current set range, weighted towards avgRarity
+function generateRandomRarity() {
+  // Weighted average: simple triangular distribution approximation
+  const rand1 = Math.random();
+  const rand2 = Math.random();
+  const weighted = (rand1 + rand2) / 2;
+  return minRarity + weighted * (maxRarity - minRarity);
+}
 
-  const roll = generateRandomRarity(min, avg, max);
-  const pool = data[category] || [];
-
-  const filtered = pool.filter(item => {
-    if (!window.nsfwEnabled && item.isNSFW) return false;
-    return item.rarity >= min && item.rarity <= max;
-  });
-
-  let resultText;
-  if (filtered.length > 0) {
-    const randomItem = filtered[Math.floor(Math.random() * filtered.length)];
-    resultText = `${capitalize(category)}: ${randomItem.name} (Rarity: ${randomItem.rarity.toFixed(2)})`;
-  } else {
-    resultText = `No ${category} found in this rarity range${window.nsfwEnabled ? '' : ' (NSFW filtered)'}.`;
-  }
-
-  document.getElementById('result').textContent = resultText;
-
+// Play click sound if enabled
+function playClickSound(btn) {
   if (!window.soundEnabled) return;
-
-  if (roll < 0.99) {
-    document.getElementById('trashSound').play();
-  } else if (roll >= 9) {
-    document.getElementById('winRareSound').play();
-  } else {
-    document.getElementById('winSound').play();
+  const clickSound = document.getElementById('clickSound');
+  if (clickSound) {
+    clickSound.currentTime = 0;
+    clickSound.play();
   }
 }
 
-// RARITY INPUT SETTER
-function setRarity(min, avg, max) {
-  document.getElementById('minRarity').value = min;
-  document.getElementById('avgRarity').value = avg;
-  document.getElementById('maxRarity').value = max;
-}
-
-// SETTINGS PANEL OPEN/CLOSE LOGIC
-function openSettings() {
-  const overlay = document.getElementById('settings-overlay');
-  const panel = document.getElementById('settings-panel');
-  overlay.classList.remove('hidden');
-  panel.classList.remove('hidden');
-  requestAnimationFrame(() => {
-    panel.classList.add('visible');
-  });
-}
-
-function closeSettings() {
-  const overlay = document.getElementById('settings-overlay');
-  const panel = document.getElementById('settings-panel');
-  panel.classList.remove('visible');
-  overlay.classList.add('hidden');
-  panel.addEventListener('transitionend', function hide() {
-    panel.classList.add('hidden');
-    panel.removeEventListener('transitionend', hide);
-  });
-}
-
-// TOGGLE SETTINGS BUTTON - Also closes settings if open
-document.getElementById('settings-toggle').addEventListener('click', () => {
-  const panel = document.getElementById('settings-panel');
-  if (panel.classList.contains('visible')) {
-    closeSettings();
-  } else {
-    openSettings();
+// Play hover rare sound if enabled
+function playHoverSound(btn) {
+  if (!window.soundEnabled) return;
+  const hoverRareSound = document.getElementById('hoverRareSound');
+  if (hoverRareSound) {
+    hoverRareSound.currentTime = 0;
+    hoverRareSound.play();
   }
-});
+}
 
-// SETTINGS TOGGLES
-document.getElementById('soundToggle').addEventListener('change', e => {
-  window.soundEnabled = e.target.checked;
-  muteAllSounds(!window.soundEnabled);
-});
-
-document.getElementById('animToggle').addEventListener('change', e => {
-  window.animEnabled = e.target.checked;
-});
-
-document.getElementById('nsfwToggle').addEventListener('change', e => {
-  window.nsfwEnabled = e.target.checked;
-});
-
-// WRAP ORIGINAL FUNCTIONS TO ADD SOUND & ANIM CHECKS
-const origPlayClick = playClickSound;
-playClickSound = btn => {
-  if (window.soundEnabled) origPlayClick(btn);
-};
-
-const origPlayHover = playHoverSound;
-playHoverSound = btn => {
-  if (window.soundEnabled) origPlayHover(btn);
-};
-
-const origDraw = draw;
-draw = cat => {
-  if (window.animEnabled) {
-    const result = document.getElementById('result');
-    result.classList.add('pulse');
-    setTimeout(() => {
-      result.classList.remove('pulse');
-      origDraw(cat);
-    }, 300);
-  } else {
-    origDraw(cat);
+function stopHoverSound() {
+  const hoverRareSound = document.getElementById('hoverRareSound');
+  if (hoverRareSound) {
+    hoverRareSound.pause();
+    hoverRareSound.currentTime = 0;
   }
-};
+}
 
-// ESC key closes settings
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') closeSettings();
+// Main draw function with scrolling animation
+async function draw(category) {
+  const resultDiv = document.getElementById('result');
+  const scrollingItems = document.getElementById('scrolling-items');
+
+  // Clear previous result text and scrolling items
+  resultDiv.textContent = '';
+  scrollingItems.innerHTML = '';
+
+  // Safety check: category data exists
+  if (!data[category] || data[category].length === 0) {
+    resultDiv.textContent = 'No data for category: ' + category;
+    return;
+  }
+
+  // Filter possible entries by rarity range
+  const possibleEntries = data[category].filter(
+    item => item.rarity >= minRarity && item.rarity <= maxRarity
+  );
+
+  if (possibleEntries.length === 0) {
+    resultDiv.textContent = 'No items in selected rarity range.';
+    return;
+  }
+
+  // Number of scroll steps before landing on final result
+  const scrollSteps = 20;
+
+  // Build the scroll sequence of random items (not final result)
+  const scrollSequence = [];
+  for (let i = 0; i < scrollSteps; i++) {
+    const randomIndex = Math.floor(Math.random() * possibleEntries.length);
+    scrollSequence.push(possibleEntries[randomIndex]);
+  }
+
+  // Pick final item randomly weighted around avgRarity
+  let finalItem = null;
+  let tries = 0;
+  do {
+    const candidateIndex = Math.floor(Math.random() * possibleEntries.length);
+    const candidate = possibleEntries[candidateIndex];
+    // Accept candidate if rarity near avgRarity +/- 1.5, else retry
+    if (Math.abs(candidate.rarity - avgRarity) <= 1.5) {
+      finalItem = candidate;
+      break;
+    }
+    tries++;
+  } while (tries < 30);
+
+  // Fallback: if no match found after tries, just pick any
+  if (!finalItem) {
+    finalItem = possibleEntries[Math.floor(Math.random() * possibleEntries.length)];
+  }
+
+  // Animate scrolling items visually inside #scrolling-items
+  for (let i = 0; i < scrollSequence.length; i++) {
+    scrollingItems.textContent = capitalize(scrollSequence[i].name);
+    await new Promise(res => setTimeout(res, 60 + i * 30)); // Speed up gradually
+  }
+
+  // Show final result
+  scrollingItems.textContent = '';
+  resultDiv.textContent = capitalize(finalItem.name);
+
+  // Play sounds for rarity category (adjust as you want)
+  if (finalItem.rarity < 1) {
+    const trashSound = document.getElementById('trashSound');
+    if (trashSound && window.soundEnabled) trashSound.play();
+  } else if (finalItem.rarity < 4) {
+    const winSound = document.getElementById('winSound');
+    if (winSound && window.soundEnabled) winSound.play();
+  } else {
+    const winRareSound = document.getElementById('winRareSound');
+    if (winRareSound && window.soundEnabled) winRareSound.play();
+  }
+}
+
+// Initial rarity set (can be set via tier buttons)
+setRarity(0.01, 3.5, 9.99);
+
+// Add event listeners for rarity inputs to update values live
+document.addEventListener('DOMContentLoaded', () => {
+  const minInput = document.getElementById('minRarity');
+  const avgInput = document.getElementById('avgRarity');
+  const maxInput = document.getElementById('maxRarity');
+
+  if (minInput) {
+    minInput.value = minRarity;
+    minInput.addEventListener('input', () => {
+      minRarity = parseFloat(minInput.value) || 0.01;
+    });
+  }
+  if (avgInput) {
+    avgInput.value = avgRarity;
+    avgInput.addEventListener('input', () => {
+      avgRarity = parseFloat(avgInput.value) || 3.5;
+    });
+  }
+  if (maxInput) {
+    maxInput.value = maxRarity;
+    maxInput.addEventListener('input', () => {
+      maxRarity = parseFloat(maxInput.value) || 9.99;
+    });
+  }
 });
