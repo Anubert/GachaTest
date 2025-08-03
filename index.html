@@ -1,68 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Chaos Gacha</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <button id="settings-toggle">⚙</button>
+<body style="background-image: url('assets/relax.gif'); background-size: cover; background-position: center;">
 
+  <!-- Settings Toggle Button -->
+  <button id="settings-toggle" aria-label="Toggle Settings">☰</button>
+
+  <!-- Settings Overlay -->
+  <div id="settings-overlay" class="hidden" onclick="closeSettings()"></div>
+
+  <!-- Settings Panel -->
+  <div id="settings-panel" class="hidden" role="dialog" aria-modal="true" aria-labelledby="settings-title">
+    <h3 id="settings-title">Settings</h3>
+
+    <label class="switch">
+      <input type="checkbox" id="soundToggle" checked />
+      <span class="slider"></span> Enable Sound
+    </label>
+
+    <label class="switch">
+      <input type="checkbox" id="animToggle" checked />
+      <span class="slider"></span> Enable Animations
+    </label>
+
+    <label class="switch">
+      <input type="checkbox" id="nsfwToggle" />
+      <span class="slider"></span> Show NSFW content
+    </label>
+
+    <a href="about.html" target="_blank" rel="noopener noreferrer">About</a><br />
+
+    <button class="close-btn" onclick="closeSettings()">Close</button>
+  </div>
+
+  <!-- AUDIO -->
+  <audio id="clickSound" src="assets/audio/click.mp3"></audio>
+  <audio id="clickRareSound" src="assets/audio/click_rare.mp3"></audio>
+  <audio id="hoverRareSound" src="assets/audio/hover_rare.mp3"></audio>
+  <audio id="trashSound" src="assets/audio/trash.mp3"></audio>
+  <audio id="winSound" src="assets/audio/win.mp3"></audio>
+  <audio id="winRareSound" src="assets/audio/win_rare.mp3"></audio>
+
+  <!-- MAIN GACHA UI -->
   <div class="container">
     <div class="category-buttons">
-      <button class="category-btn">Beasts</button>
-      <button class="category-btn">Humans</button>
-      <button class="category-btn">Machines</button>
+      <button class="category-btn" onclick="playClickSound(this); draw('traits')">Traits</button>
+      <button class="category-btn" onclick="playClickSound(this); draw('abilities')">Abilities</button>
+      <button class="category-btn" onclick="playClickSound(this); draw('summons')">Summons</button>
+      <button class="category-btn" onclick="playClickSound(this); draw('items')">Items</button>
+      <button class="category-btn" onclick="playClickSound(this); draw('skills')">Skills</button>
+      <button class="category-btn" onclick="playClickSound(this); draw('random')">Random</button>
     </div>
 
-    <div class="result-bubble">Roll something...</div>
+    <div id="result" class="result-bubble">Your result will appear here.</div>
 
     <div class="tier-buttons">
-      <button class="tier-btn trash">Trash</button>
-      <button class="tier-btn bronze">Bronze</button>
-      <button class="tier-btn silver">Silver</button>
-      <button class="tier-btn gold">Gold</button>
-      <button class="tier-btn diamond">Diamond</button>
-      <button class="tier-btn mythril">Mythril</button>
-      <button class="tier-btn legendary">Legendary</button>
-      <button class="tier-btn mythical">Mythical</button>
+      <button class="tier-btn trash" onclick="playClickSound(this); setRarity(0.01, 0.5, 0.99)">Trash</button>
+      <button class="tier-btn bronze" onclick="playClickSound(this); setRarity(0.75, 1.5, 1.99)">Bronze</button>
+      <button class="tier-btn silver" onclick="playClickSound(this); setRarity(1.25, 2.5, 3.25)">Silver</button>
+      <button class="tier-btn gold" onclick="playClickSound(this); setRarity(2, 3, 4.5)">Gold</button>
+      <button class="tier-btn diamond" onclick="playClickSound(this); setRarity(3.25, 4, 5.75)">Diamond</button>
+      <button class="tier-btn mythril rare" 
+              onclick="playClickSound(this); setRarity(4, 5.25, 6.99)" 
+              onmouseenter="playHoverSound(this)" 
+              onmouseleave="stopHoverSound()">Mythril</button>
+      <button class="tier-btn legendary rare" 
+              onclick="playClickSound(this); setRarity(5, 5.5, 7)" 
+              onmouseenter="playHoverSound(this)" 
+              onmouseleave="stopHoverSound()">Legendary</button>
+      <button class="tier-btn mythical rare" 
+              onclick="playClickSound(this); setRarity(6.5, 7.75, 9.99)" 
+              onmouseenter="playHoverSound(this)" 
+              onmouseleave="stopHoverSound()">Mythical</button>
     </div>
 
     <div class="rarity-inputs">
-      <input type="number" placeholder="Min Rarity">
-      <input type="number" placeholder="Avg Rarity">
-      <input type="number" placeholder="Max Rarity">
+      <label>Min Rarity: <input type="number" id="minRarity" value="0.01" step="0.01" /></label>
+      <label>Avg Rarity: <input type="number" id="avgRarity" value="3.5" step="0.01" /></label>
+      <label>Max Rarity: <input type="number" id="maxRarity" value="9.99" step="0.01" /></label>
     </div>
-  </div>
-
-  <div id="settings-overlay" class="hidden"></div>
-
-  <div id="settings-panel">
-    <h3>Settings</h3>
-
-    <div class="toggle-setting">
-      <label for="toggle-sound">Enable Sound</label>
-      <input type="checkbox" id="toggle-sound" checked>
-      <span class="slider"></span>
-    </div>
-
-    <div class="toggle-setting">
-      <label for="toggle-animation">Enable Animation</label>
-      <input type="checkbox" id="toggle-animation" checked>
-      <span class="slider"></span>
-    </div>
-
-    <div class="toggle-setting">
-      <label for="toggle-nsfw">Allow NSFW</label>
-      <input type="checkbox" id="toggle-nsfw">
-      <span class="slider"></span>
-    </div>
-
-    <a href="about.html">About This Project</a>
-    <button class="close-btn" id="close-settings">Close</button>
   </div>
 
   <script src="main.js"></script>
+  <script>
+    const settingsToggle = document.getElementById('settings-toggle');
+    const settingsPanel = document.getElementById('settings-panel');
+    const settingsOverlay = document.getElementById('settings-overlay');
+
+    function openSettings() {
+      settingsOverlay.classList.remove('hidden');
+      settingsPanel.classList.remove('hidden');
+      requestAnimationFrame(() => settingsPanel.classList.add('visible'));
+    }
+
+    function closeSettings() {
+      settingsPanel.classList.remove('visible');
+      settingsOverlay.classList.add('hidden');
+      settingsPanel.addEventListener('transitionend', function hide() {
+        settingsPanel.classList.add('hidden');
+        settingsPanel.removeEventListener('transitionend', hide);
+      });
+    }
+
+    // Toggle settings panel with the button - also close if open
+    settingsToggle.addEventListener('click', () => {
+      if (settingsPanel.classList.contains('visible')) {
+        closeSettings();
+      } else {
+        openSettings();
+      }
+    });
+
+    // Close settings on overlay click
+    settingsOverlay.addEventListener('click', closeSettings);
+
+    // ESC key closes settings
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeSettings();
+    });
+
+    // Sound and animation toggles
+    window.soundEnabled = true;
+    window.animEnabled = true;
+
+    const soundToggle = document.getElementById('soundToggle');
+    const animToggle = document.getElementById('animToggle');
+    const nsfwToggle = document.getElementById('nsfwToggle');
+
+    soundToggle.addEventListener('change', e => {
+      window.soundEnabled = e.target.checked;
+    });
+
+    animToggle.addEventListener('change', e => {
+      window.animEnabled = e.target.checked;
+    });
+
+    nsfwToggle.addEventListener('change', e => {
+      window.showNSFW = e.target.checked;
+    });
+
+    // Wrap original sound functions to respect mute toggle
+    const origPlayClick = playClickSound;
+    playClickSound = btn => {
+      if (window.soundEnabled) origPlayClick(btn);
+    };
+
+    const origPlayHover = playHoverSound;
+    playHoverSound = btn => {
+      if (window.soundEnabled) origPlayHover(btn);
+    };
+
+    // Wrap draw with animation respect
+    const origDraw = draw;
+    draw = cat => {
+      if (window.animEnabled) {
+        const res = document.getElementById('result');
+        res.classList.add('pulse');
+        setTimeout(() => {
+          res.classList.remove('pulse');
+          origDraw(cat);
+        }, 300);
+      } else {
+        origDraw(cat);
+      }
+    };
+  </script>
 </body>
 </html>
