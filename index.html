@@ -2,115 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Chaos Gacha</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body style="background-image: url('assets/relax.gif'); background-size: cover; background-position: center;">
-
-  <!-- Settings Toggle Button -->
-  <div id="settings-toggle" onclick="toggleSettings()">☰</div>
-
-  <!-- Settings Overlay -->
-  <div id="settings-overlay" class="hidden" onclick="closeSettings()"></div>
-
-  <!-- Settings Panel -->
-  <div id="settings-panel" class="hidden">
+<body style="background: url('assets/relax.gif') no-repeat center center fixed; background-size: cover;">
+  <button id="settings-toggle">⚙️</button>
+  <div id="settings-overlay" class="hidden"></div>
+  <div id="settings-panel">
     <h3>Settings</h3>
-
-    <label class="switch">
-      <input type="checkbox" id="soundToggle" checked />
-      <span class="slider"></span> Enable Sound
+    <label class="switch">Sound
+      <input type="checkbox" id="toggle-sound" checked>
+      <span class="slider"></span>
     </label>
-
-    <label class="switch">
-      <input type="checkbox" id="animToggle" checked />
-      <span class="slider"></span> Enable Animations
+    <label class="switch">Animation
+      <input type="checkbox" id="toggle-animation" checked>
+      <span class="slider"></span>
     </label>
-
-    <label class="switch">
-      <input type="checkbox" id="nsfwToggle" />
-      <span class="slider"></span> Show NSFW content
+    <label class="switch">NSFW
+      <input type="checkbox" id="toggle-nsfw">
+      <span class="slider"></span>
     </label>
-
-    <a href="about.html" target="_blank">About</a><br />
-    <button class="close-btn" onclick="closeSettings()">Close</button>
+    <a href="#">About this project</a>
   </div>
-
-  <!-- AUDIO -->
-  <audio id="clickSound" src="assets/audio/click.mp3"></audio>
-  <audio id="clickRareSound" src="assets/audio/click_rare.mp3"></audio>
-  <audio id="hoverRareSound" src="assets/audio/hover_rare.mp3"></audio>
-  <audio id="trashSound" src="assets/audio/trash.mp3"></audio>
-  <audio id="winSound" src="assets/audio/win.mp3"></audio>
-  <audio id="winRareSound" src="assets/audio/win_rare.mp3"></audio>
-
-  <!-- MAIN GACHA UI -->
-  <div class="container" style="margin-top: 80px;">
+  <div class="container">
     <div class="category-buttons">
-      <button class="category-btn" onclick="playClickSound(this); draw('traits')">Traits</button>
-      <button class="category-btn" onclick="playClickSound(this); draw('abilities')">Abilities</button>
-      <button class="category-btn" onclick="playClickSound(this); draw('summons')">Summons</button>
-      <button class="category-btn" onclick="playClickSound(this); draw('items')">Items</button>
-      <button class="category-btn" onclick="playClickSound(this); draw('skills')">Skills</button>
-      <button class="category-btn" onclick="playClickSound(this); draw('random')">Random</button>
+      <button class="category-btn" data-category="animal">Animal</button>
+      <button class="category-btn" data-category="waifu">Waifu</button>
     </div>
-
     <div id="result" class="result-bubble">
-      <div id="scrolling-items" style="font-weight: bold; font-size: 1.6rem;"></div>
-      <div id="final-result-text" style="margin-top: 8px;"></div>
+      <div id="scrolling-items"></div>
+      <div id="final-result-text"></div>
     </div>
-
     <div class="tier-buttons">
-      <button class="tier-btn trash" onclick="playClickSound(this); setRarity(0.01, 0.5, 0.99)">Trash</button>
-      <button class="tier-btn bronze" onclick="playClickSound(this); setRarity(0.75, 1.5, 1.99)">Bronze</button>
-      <button class="tier-btn silver" onclick="playClickSound(this); setRarity(1.25, 2.5, 3.25)">Silver</button>
-      <button class="tier-btn gold" onclick="playClickSound(this); setRarity(2, 3, 4.5)">Gold</button>
-      <button class="tier-btn diamond" onclick="playClickSound(this); setRarity(3.25, 4, 5.75)">Diamond</button>
-      <button class="tier-btn mythril rare" onclick="playClickSound(this); setRarity(4, 5.25, 6.99)" onmouseenter="playHoverSound(this)" onmouseleave="stopHoverSound()">Mythril</button>
-      <button class="tier-btn legendary rare" onclick="playClickSound(this); setRarity(5, 5.5, 7)" onmouseenter="playHoverSound(this)" onmouseleave="stopHoverSound()">Legendary</button>
-      <button class="tier-btn mythical rare" onclick="playClickSound(this); setRarity(6.5, 7.75, 9.99)" onmouseenter="playHoverSound(this)" onmouseleave="stopHoverSound()">Mythical</button>
+      <button class="tier-btn trash" data-tier="trash">Trash</button>
+      <button class="tier-btn bronze" data-tier="bronze">Bronze</button>
+      <button class="tier-btn silver" data-tier="silver">Silver</button>
+      <button class="tier-btn gold" data-tier="gold">Gold</button>
+      <button class="tier-btn diamond" data-tier="diamond">Diamond</button>
+      <button class="tier-btn mythril" data-tier="mythril">Mythril</button>
+      <button class="tier-btn legendary" data-tier="legendary">Legendary</button>
+      <button class="tier-btn mythical" data-tier="mythical">Mythical</button>
     </div>
-
     <div class="rarity-inputs">
-      <label>Min Rarity: <input type="number" id="minRarity" value="0.01" step="0.01" /></label>
-      <label>Avg Rarity: <input type="number" id="avgRarity" value="3.5" step="0.01" /></label>
-      <label>Max Rarity: <input type="number" id="maxRarity" value="9.99" step="0.01" /></label>
+      <input type="number" id="minRarity" placeholder="Min Rarity">
+      <input type="number" id="avgRarity" placeholder="Avg Rarity">
+      <input type="number" id="maxRarity" placeholder="Max Rarity">
     </div>
   </div>
-
   <script src="main.js"></script>
-  <script>
-    // SETTINGS PANEL LOGIC
-    function openSettings() {
-      document.getElementById('settings-overlay').classList.remove('hidden');
-      document.getElementById('settings-panel').classList.remove('hidden');
-      requestAnimationFrame(() =>
-        document.getElementById('settings-panel').classList.add('visible')
-      );
-    }
-    function closeSettings() {
-      document.getElementById('settings-panel').classList.remove('visible');
-      document.getElementById('settings-overlay').classList.add('hidden');
-      document.getElementById('settings-panel')
-        .addEventListener('transitionend', function hide() {
-          document.getElementById('settings-panel').classList.add('hidden');
-          this.removeEventListener('transitionend', hide);
-        });
-    }
-    function toggleSettings() {
-      const panel = document.getElementById('settings-panel');
-      if (panel.classList.contains('visible')) {
-        closeSettings();
-      } else {
-        openSettings();
-      }
-    }
-
-    // ESC to close settings
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape') closeSettings();
-    });
-  </script>
 </body>
 </html>
