@@ -2,36 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chaos Gacha</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div id="settings-overlay" class="hidden"></div>
-
-  <button id="settings-toggle">⚙️</button>
-
-  <div id="settings-panel">
-    <h3>Settings</h3>
-    <label class="switch">
-      Sound
-      <input type="checkbox" id="toggle-sound" checked />
-      <span class="slider"></span>
-    </label>
-    <label class="switch">
-      Animation
-      <input type="checkbox" id="toggle-animation" checked />
-      <span class="slider"></span>
-    </label>
-    <label class="switch">
-      NSFW
-      <input type="checkbox" id="toggle-nsfw" />
-      <span class="slider"></span>
-    </label>
-    <br/>
-    <a href="#">About</a>
-  </div>
-
   <div class="container">
     <div class="category-buttons">
       <button class="category-btn" data-category="animal">Animal</button>
@@ -55,11 +30,35 @@
     </div>
 
     <div class="rarity-inputs">
-      <label>Min Rarity: <input type="number" id="minRarity" value="1" /></label>
-      <label>Avg Rarity: <input type="number" id="avgRarity" value="5" /></label>
-      <label>Max Rarity: <input type="number" id="maxRarity" value="10" /></label>
+      <label>Min Rarity: <input id="minRarity" type="number" /></label>
+      <label>Avg Rarity: <input id="avgRarity" type="number" /></label>
+      <label>Max Rarity: <input id="maxRarity" type="number" /></label>
     </div>
   </div>
+
+  <button id="settings-toggle">⚙️</button>
+
+  <div id="settings-panel">
+    <h3>Settings</h3>
+    <label class="switch">
+      <input type="checkbox" id="toggle-sound" checked />
+      <span class="slider"></span>
+      Enable Sound
+    </label>
+    <label class="switch">
+      <input type="checkbox" id="toggle-animation" checked />
+      <span class="slider"></span>
+      Enable Animation
+    </label>
+    <label class="switch">
+      <input type="checkbox" id="toggle-nsfw" />
+      <span class="slider"></span>
+      Allow NSFW
+    </label>
+    <a href="#">About</a>
+  </div>
+
+  <div id="settings-overlay" class="hidden"></div>
 
   <script src="main.js"></script>
 </body>
