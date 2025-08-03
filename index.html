@@ -8,14 +8,40 @@
 </head>
 <body style="background-image: url('assets/relax.gif'); background-size: cover; background-position: center;">
 
-  <!-- SETTINGS BUTTON & PANEL -->
+  <!-- Settings Toggle Button -->
   <div id="settings-toggle" onclick="openSettings()">☰</div>
+
+  <!-- Settings Overlay -->
   <div id="settings-overlay" class="hidden" onclick="closeSettings()"></div>
+
+  <!-- Settings Panel -->
   <div id="settings-panel" class="hidden">
     <h3>Settings</h3>
-    <label class="switch"><input type="checkbox" id="soundToggle" checked /><span class="slider"></span> Enable Sound</label>
-    <label class="switch"><input type="checkbox" id="animToggle" checked /><span class="slider"></span> Enable Animations</label>
-    <label class="switch"><input type="checkbox" id="nsfwToggle" /><span class="slider"></span> Show NSFW content</label>
+
+    <div class="toggle-setting">
+      <span>Sound</span>
+      <label>
+        <input type="checkbox" id="soundToggle" checked />
+        <span class="switch"><span class="dot"></span></span>
+      </label>
+    </div>
+
+    <div class="toggle-setting">
+      <span>Animation</span>
+      <label>
+        <input type="checkbox" id="animToggle" checked />
+        <span class="switch"><span class="dot"></span></span>
+      </label>
+    </div>
+
+    <div class="toggle-setting">
+      <span>NSFW Content</span>
+      <label>
+        <input type="checkbox" id="nsfwToggle" />
+        <span class="switch"><span class="dot"></span></span>
+      </label>
+    </div>
+
     <a href="about.html" target="_blank">About</a><br />
     <button class="close-btn" onclick="closeSettings()">Close</button>
   </div>
@@ -82,6 +108,7 @@
 
     window.soundEnabled = true;
     window.animEnabled = true;
+
     document.getElementById('soundToggle')
       .addEventListener('change', e => window.soundEnabled = e.target.checked);
     document.getElementById('animToggle')
@@ -102,43 +129,9 @@
       } else origDraw(cat);
     };
 
-    // ESC to close settings
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape') closeSettings();
     });
   </script>
-
-<!-- Settings Toggle Button -->
-<div id="settings-toggle">☰</div>
-
-<!-- Settings Overlay -->
-<div id="settings-overlay" class="hidden"></div>
-
-<!-- Settings Panel -->
-<div id="settings-panel">
-  <h3>Settings</h3>
-
-  <label class="toggle-setting">
-    <span>Sound</span>
-    <input type="checkbox" id="soundToggle" checked />
-    <div class="switch"><div class="dot"></div></div>
-  </label>
-
-  <label class="toggle-setting">
-    <span>Animation</span>
-    <input type="checkbox" id="animToggle" checked />
-    <div class="switch"><div class="dot"></div></div>
-  </label>
-
-  <label class="toggle-setting">
-    <span>NSFW Content</span>
-    <input type="checkbox" id="nsfwToggle" />
-    <div class="switch"><div class="dot"></div></div>
-  </label>
-
-  <a href="#">About</a>
-  <button class="close-btn" onclick="closeSettings()">Close</button>
-</div>
 </body>
 </html>
-
