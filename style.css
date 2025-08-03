@@ -234,3 +234,12 @@ input:checked + .slider:before {
   border-radius: 4px;
   cursor: pointer;
 }
+
+.rarity-gray { color: #888; }
+.rarity-brown { color: #cd7f32; }
+.rarity-silver { color: #c0c0c0; }
+.rarity-gold { color: #ffd700; }
+.rarity-deepskyblue { color: #00bfff; }
+.rarity-orchid { color: #da70d6; }
+.rarity-violet { color: #8a2be2; }
+.rarity-red { color: #ff3333; }
