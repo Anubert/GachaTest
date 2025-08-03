@@ -1,105 +1,80 @@
-const categories = document.querySelectorAll(".category-btn");
-const tiers = document.querySelectorAll(".tier-btn");
+// Tier rarity ranges will be set by setRarity()
+let rarityRange = { min: 0.01, avg: 3.5, max: 9.99 };
+let currentCategory = null;
+
 const resultBubble = document.getElementById("result");
-const minInput = document.getElementById("minRarity");
-const avgInput = document.getElementById("avgRarity");
-const maxInput = document.getElementById("maxRarity");
-const toggleBtn = document.getElementById("settings-toggle");
-const settingsPanel = document.getElementById("settings-panel");
-const settingsOverlay = document.getElementById("settings-overlay");
-const soundToggle = document.getElementById("toggle-sound");
-const animationToggle = document.getElementById("toggle-animation");
-const nsfwToggle = document.getElementById("toggle-nsfw");
 
-// Audio setup
-const sounds = {
-  roll: new Audio("assets/sound/roll.mp3"),
-  click: new Audio("assets/sound/click.mp3"),
-  win: new Audio("assets/sound/win.mp3"),
-  winRare: new Audio("assets/sound/winRare.mp3"),
-};
+// Audio elements
+const clickSound = document.getElementById("clickSound");
+const hoverRareSound = document.getElementById("hoverRareSound");
+const trashSound = document.getElementById("trashSound");
+const winSound = document.getElementById("winSound");
+const winRareSound = document.getElementById("winRareSound");
 
-const rareTiers = ["mythril", "legendary", "mythical"];
-
-function playSound(soundKey) {
-  if (!soundToggle.checked) return;
-  const sound = sounds[soundKey];
-  if (sound) {
-    sound.currentTime = 0;
-    sound.play();
-  }
+function playClickSound(btn) {
+  if (window.soundEnabled) clickSound.play();
 }
 
-// Sample data
+function playHoverSound(btn) {
+  if (window.soundEnabled) hoverRareSound.play();
+}
+
+function stopHoverSound() {
+  if (window.soundEnabled) hoverRareSound.pause();
+}
+
+function setRarity(min, avg, max) {
+  rarityRange.min = min;
+  rarityRange.avg = avg;
+  rarityRange.max = max;
+
+  document.getElementById("minRarity").value = min;
+  document.getElementById("avgRarity").value = avg;
+  document.getElementById("maxRarity").value = max;
+}
+
+// Sample data — you’ll replace these with your real trait pools
 const data = {
-  animal: {
-    bronze: ["Dog", "Cat"],
-    gold: ["Dragon"],
-    mythical: [{ name: "Cerberus", isNSFW: true }],
-  },
-  waifu: {
-    silver: ["Maid"],
-    diamond: ["Princess"],
-    legendary: [{ name: "Succubus", isNSFW: true }],
-  },
+  traits: [{ name: "Brave", rarity: 2 }],
+  abilities: [{ name: "Fireball", rarity: 4 }],
+  summons: [{ name: "Mini Dragon", rarity: 5.5 }],
+  items: [{ name: "Rusty Sword", rarity: 1 }],
+  skills: [{ name: "Lockpicking", rarity: 2.5 }],
+  random: [
+    { name: "Mysterious Goo", rarity: 3 },
+    { name: "Forbidden Desire", rarity: 6.66, isNSFW: true },
+  ],
 };
 
-let currentCategory = null;
-let currentTier = null;
+function draw(categoryName) {
+  currentCategory = categoryName;
 
-// Button logic
-categories.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    playSound("click");
-    currentCategory = btn.dataset.category;
+  const min = parseFloat(document.getElementById("minRarity").value);
+  const avg = parseFloat(document.getElementById("avgRarity").value);
+  const max = parseFloat(document.getElementById("maxRarity").value);
+
+  const entries = data[categoryName] || [];
+  const filtered = entries.filter(entry => {
+    const validRarity = entry.rarity >= min && entry.rarity <= max;
+    const nsfwOkay = window.showNSFW || !entry.isNSFW;
+    return validRarity && nsfwOkay;
   });
-});
 
-tiers.forEach((btn) => {
-  const tier = btn.dataset.tier;
-  btn.addEventListener("mouseenter", () => {
-    if (rareTiers.includes(tier)) playSound("winRare");
-  });
-  btn.addEventListener("click", () => {
-    playSound("click");
-    currentTier = tier;
-    draw();
-  });
-});
-
-function draw() {
-  if (!currentCategory || !currentTier) return;
-
-  let entries = data[currentCategory]?.[currentTier] || [];
-  if (!nsfwToggle.checked) entries = entries.filter(e => !e.isNSFW);
-
-  if (entries.length === 0) {
+  if (filtered.length === 0) {
     resultBubble.textContent = "Nothing found...";
+    trashSound.play();
     return;
   }
 
-  playSound("roll");
+  const chosen = filtered[Math.floor(Math.random() * filtered.length)];
 
-  const chosen = entries[Math.floor(Math.random() * entries.length)];
-  const name = typeof chosen === "string" ? chosen : chosen.name;
-
-  resultBubble.textContent = name;
-
-  if (animationToggle.checked) {
-    resultBubble.classList.remove("shake");
-    void resultBubble.offsetWidth;
-    resultBubble.classList.add("shake");
+  if (window.animEnabled) {
+    resultBubble.classList.add("pulse");
+    setTimeout(() => resultBubble.classList.remove("pulse"), 300);
   }
 
-  if (rareTiers.includes(currentTier)) playSound("winRare");
-  else playSound("win");
-}
+  resultBubble.textContent = chosen.name;
 
-// Toggle settings panel
-function toggleSettings() {
-  settingsPanel.classList.toggle("visible");
-  settingsOverlay.classList.toggle("hidden");
+  if (chosen.rarity >= 6.5) winRareSound.play();
+  else winSound.play();
 }
-
-toggleBtn.addEventListener("click", toggleSettings);
-settingsOverlay.addEventListener("click", toggleSettings);
