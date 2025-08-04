@@ -4,7 +4,7 @@ const minInput = document.getElementById("minRarity");
 const avgInput = document.getElementById("avgRarity");
 const maxInput = document.getElementById("maxRarity");
 
-// === Audio Elements ===
+// === Audio ===
 const audio = {
   click: document.getElementById("clickSound"),
   clickRare: document.getElementById("clickRareSound"),
@@ -13,71 +13,6 @@ const audio = {
   win: document.getElementById("winSound"),
   winRare: document.getElementById("winRareSound"),
 };
-
-// === Sound & Animation Toggles (already in your code) ===
-window.soundEnabled = true;
-window.animEnabled = true;
-window.showNSFW = false;
-
-document.getElementById("soundToggle").addEventListener("change", e => {
-  window.soundEnabled = e.target.checked;
-});
-document.getElementById("animToggle").addEventListener("change", e => {
-  window.animEnabled = e.target.checked;
-});
-document.getElementById("nsfwToggle").addEventListener("change", e => {
-  window.showNSFW = e.target.checked;
-});
-
-// === Audio Control Functions ===
-
-// Stop all currently playing audio immediately
-function stopAllSounds() {
-  Object.values(audio).forEach(sound => {
-    sound.pause();
-    sound.currentTime = 0;
-  });
-}
-
-// General play sound by name with stop-all-before-play logic
-function playSound(name) {
-  if (!window.soundEnabled) return;
-  stopAllSounds();
-  if (audio[name]) {
-    audio[name].play();
-  }
-}
-
-// Play click sound, rare clicks use clickRare
-function playClickSound(btn) {
-  if (!window.soundEnabled) return;
-  stopAllSounds();
-  const tier = btn.className || "";
-  if (tier.includes("rare")) playSound("clickRare");
-  else playSound("click");
-}
-
-// Play hover sound for rare tiers
-function playHoverSound(btn) {
-  if (!window.soundEnabled) return;
-  stopAllSounds();
-  const tier = btn.className || "";
-  if (tier.includes("rare")) playSound("hoverRare");
-}
-
-// Stop hover rare sound immediately
-function stopHoverSound() {
-  if (!window.soundEnabled) return;
-  audio.hoverRare.pause();
-  audio.hoverRare.currentTime = 0;
-}
-
-// Expose audio functions globally for use in HTML inline handlers
-window.playClickSound = playClickSound;
-window.playHoverSound = playHoverSound;
-window.stopHoverSound = stopHoverSound;
-window.playSound = playSound;
-
 
 // === Toggles ===
 window.soundEnabled = true;
@@ -94,15 +29,25 @@ document.getElementById("nsfwToggle").addEventListener("change", e => {
   window.showNSFW = e.target.checked;
 });
 
+// === Stop all sounds helper ===
+function stopAllSounds() {
+  Object.values(audio).forEach(sound => {
+    sound.pause();
+    sound.currentTime = 0;
+  });
+}
+
 // === Sounds ===
 function playClickSound(btn) {
   if (!window.soundEnabled) return;
+  stopAllSounds();
   const tier = btn.className || "";
   if (tier.includes("rare")) audio.clickRare.play();
   else audio.click.play();
 }
 function playHoverSound(btn) {
   if (!window.soundEnabled) return;
+  stopAllSounds();
   const tier = btn.className || "";
   if (tier.includes("rare")) audio.hoverRare.play();
 }
@@ -177,10 +122,17 @@ function draw(category) {
 
   displayResult(resultHTML, flavorText);
 
-  // Play sound based on rarity
-  if (chosen.rarity >= 5) playSound("winRare");
-  else if (chosen.rarity >= 2) playSound("win");
-  else playSound("trash");
+  // Play sound based on rarity with updated rarity ranges
+  if (chosen.rarity >= 9.0 && chosen.rarity <= 9.99) {
+    playSound("winRare");
+  } else if (chosen.rarity >= 5) {
+    playSound("win");
+  } else if (chosen.rarity >= 0.01 && chosen.rarity <= 0.99) {
+    playSound("trash");
+  } else {
+    // Default fallback sound for other rarities
+    playSound("win");
+  }
 }
 
 function displayResult(nameHTML, description) {
@@ -197,9 +149,9 @@ function displayResult(nameHTML, description) {
 // Play sound by key
 function playSound(key) {
   if (!window.soundEnabled) return;
+  stopAllSounds();
   const sound = audio[key];
   if (sound) {
-    sound.currentTime = 0;
     sound.play();
   }
 }
