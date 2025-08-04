@@ -1,6 +1,3 @@
-// Initialize global data object
-window.allData = window.allData || {};
-
 // === DOM Elements ===
 const resultBubble = document.getElementById("result");
 const minInput = document.getElementById("minRarity");
@@ -33,29 +30,17 @@ document.getElementById("nsfwToggle").addEventListener("change", e => {
 });
 
 // === Sounds ===
-function playSound(name) {
-  if (!window.soundEnabled) return;
-  if (audio[name]) {
-    // Stop and rewind before playing so repeated plays work immediately
-    audio[name].pause();
-    audio[name].currentTime = 0;
-    audio[name].play();
-  }
-}
-
 function playClickSound(btn) {
   if (!window.soundEnabled) return;
   const tier = btn.className || "";
   if (tier.includes("rare")) audio.clickRare.play();
   else audio.click.play();
 }
-
 function playHoverSound(btn) {
   if (!window.soundEnabled) return;
   const tier = btn.className || "";
   if (tier.includes("rare")) audio.hoverRare.play();
 }
-
 function stopHoverSound() {
   if (!window.soundEnabled) return;
   audio.hoverRare.pause();
@@ -75,26 +60,32 @@ function setRarity(min, avg, max) {
 }
 window.setRarity = setRarity;
 
-// === Draw logic ===
+// Draw logic
 function draw(category) {
-  console.log("Draw called for category:", category);
+  if (!category) return;
 
-  if (!category || !allData[category]) {
-    console.warn("Category not found or empty:", category);
-    displayResult("No data for this category.", "");
-    return;
+  // Combine all categories for "random"
+  let entries = [];
+  if (category === 'random') {
+    const cats = ['traits', 'abilities', 'summons', 'items', 'skills'];
+    cats.forEach(cat => {
+      if (allData[cat]) {
+        entries = entries.concat(allData[cat]);
+      }
+    });
+  } else {
+    if (!allData[category]) return;
+    entries = allData[category];
   }
 
   const min = parseFloat(minInput.value);
   const avg = parseFloat(avgInput.value);
   const max = parseFloat(maxInput.value);
 
-  const entries = allData[category].filter(entry => {
+  entries = entries.filter(entry => {
     return entry.rarity >= min && entry.rarity <= max &&
            (window.showNSFW || !entry.isNSFW);
   });
-
-  console.log(`Entries matching rarity and NSFW filters: ${entries.length}`);
 
   if (entries.length === 0) {
     displayResult("Nothing found...", "");
@@ -102,7 +93,6 @@ function draw(category) {
   }
 
   const chosen = entries[Math.floor(Math.random() * entries.length)];
-  console.log("Chosen entry:", chosen);
 
   // Color by rarity
   let color = "white";
@@ -128,11 +118,8 @@ function draw(category) {
   else playSound("trash");
 }
 
-window.draw = draw;
-
-// === Display result ===
 function displayResult(nameHTML, description) {
-  const res = document.getElementById("result");
+  const res = resultBubble;
   res.innerHTML = `<div class="result-name">${nameHTML}</div>
                    <div class="result-desc">${description}</div>`;
 
@@ -141,4 +128,17 @@ function displayResult(nameHTML, description) {
     setTimeout(() => res.classList.remove("pulse"), 300);
   }
 }
-window.displayResult = displayResult;
+
+// Play sound by key
+function playSound(key) {
+  if (!window.soundEnabled) return;
+  const sound = audio[key];
+  if (sound) {
+    sound.currentTime = 0;
+    sound.play();
+  }
+}
+
+// Expose functions globally
+window.draw = draw;
+window.playSound = playSound;
