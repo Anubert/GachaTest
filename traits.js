@@ -1,3 +1,5 @@
+window.allData = window.allData || {};
+
 allData.traits = [
   {
     name: "Voidborn Resilience",
