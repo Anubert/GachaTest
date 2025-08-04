@@ -49,4 +49,19 @@ export default [
     rarity: 8.7,
     isNSFW: false,
   }
+  
+];
+allData.traits = [
+  {
+    name: "Unstable Laughter",
+    rarity: 6.8,
+    isNSFW: false,
+    description: "Grants you the ability to laugh off most injuries... but also makes funeral attendance awkward."
+  },
+  {
+    name: "Velvet Claws",
+    rarity: 9.2,
+    isNSFW: true,
+    description: "Delightfully soft, dangerously sharp. Cuddles not recommended."
+  }
 ];
