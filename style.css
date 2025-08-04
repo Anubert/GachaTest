@@ -243,3 +243,26 @@ input:checked + .slider:before {
 .rarity-orchid { color: #da70d6; }
 .rarity-violet { color: #8a2be2; }
 .rarity-red { color: #ff3333; }
+
+/* Rolling animation glow + subtle shake */
+#result.rolling {
+  animation: glowShake 1.5s ease-in-out;
+  box-shadow: 0 0 12px 3px rgba(255, 215, 0, 0.8);
+}
+
+@keyframes glowShake {
+  0%, 100% {
+    transform: translateX(0);
+    box-shadow: 0 0 12px 3px rgba(255, 215, 0, 0.8);
+  }
+  25% {
+    transform: translateX(-3px);
+  }
+  50% {
+    transform: translateX(3px);
+    box-shadow: 0 0 18px 6px rgba(255, 215, 0, 1);
+  }
+  75% {
+    transform: translateX(-2px);
+  }
+}
