@@ -1,93 +1,89 @@
-import traits from './traits.js';
-import abilities from './abilities.js';
-import summons from './summons.js';
-import items from './items.js';
-import skills from './skills.js';
-import random from './random.js';
-
-const data = {
-  traits,
-  abilities,
-  summons,
-  items,
-  skills,
-  random,
-};
-
-const resultDisplay = document.getElementById("result");
+// === DOM Elements ===
+const resultBubble = document.getElementById("result");
 const minInput = document.getElementById("minRarity");
 const avgInput = document.getElementById("avgRarity");
 const maxInput = document.getElementById("maxRarity");
 
-const clickSound = document.getElementById("clickSound");
-const clickRareSound = document.getElementById("clickRareSound");
-const hoverRareSound = document.getElementById("hoverRareSound");
-const trashSound = document.getElementById("trashSound");
-const winSound = document.getElementById("winSound");
-const winRareSound = document.getElementById("winRareSound");
+// === Audio ===
+const audio = {
+  click: document.getElementById("clickSound"),
+  clickRare: document.getElementById("clickRareSound"),
+  hoverRare: document.getElementById("hoverRareSound"),
+  trash: document.getElementById("trashSound"),
+  win: document.getElementById("winSound"),
+  winRare: document.getElementById("winRareSound"),
+};
 
-function playClickSound(button) {
-  if (button.classList.contains("rare")) {
-    clickRareSound.currentTime = 0;
-    clickRareSound.play();
-  } else {
-    clickSound.currentTime = 0;
-    clickSound.play();
-  }
+// === Toggles ===
+let soundEnabled = true;
+let animEnabled = true;
+let showNSFW = false;
+
+document.getElementById("soundToggle").addEventListener("change", e => {
+  soundEnabled = e.target.checked;
+});
+document.getElementById("animToggle").addEventListener("change", e => {
+  animEnabled = e.target.checked;
+});
+document.getElementById("nsfwToggle").addEventListener("change", e => {
+  showNSFW = e.target.checked;
+});
+
+// === Sounds ===
+function playClickSound(btn) {
+  if (!soundEnabled) return;
+  const tier = btn.className || "";
+  if (tier.includes("rare")) audio.clickRare.play();
+  else audio.click.play();
 }
-
-function playHoverSound(button) {
-  hoverRareSound.currentTime = 0;
-  hoverRareSound.play();
+function playHoverSound(btn) {
+  if (!soundEnabled) return;
+  const tier = btn.className || "";
+  if (tier.includes("rare")) audio.hoverRare.play();
 }
-
 function stopHoverSound() {
-  hoverRareSound.pause();
-  hoverRareSound.currentTime = 0;
+  if (!soundEnabled) return;
+  audio.hoverRare.pause();
+  audio.hoverRare.currentTime = 0;
 }
 
+// === Tier Rarity Set ===
 function setRarity(min, avg, max) {
   minInput.value = min;
   avgInput.value = avg;
   maxInput.value = max;
 }
 
-function getTierColor(rarity) {
-  if (rarity >= 8.99) return 'red';
-  if (rarity >= 7.75) return 'mythical';
-  if (rarity >= 5.5) return 'legendary';
-  if (rarity >= 5.25) return 'mythril';
-  if (rarity >= 4) return 'diamond';
-  if (rarity >= 3) return 'gold';
-  if (rarity >= 2) return 'silver';
-  if (rarity >= 1) return 'bronze';
-  return 'trash';
-}
+// === Dynamic Category Loader ===
+async function draw(category) {
+  const min = parseFloat(minInput.value);
+  const avg = parseFloat(avgInput.value);
+  const max = parseFloat(maxInput.value);
 
-function draw(category) {
-  const min = parseFloat(minInput.value) || 0;
-  const avg = parseFloat(avgInput.value) || 0;
-  const max = parseFloat(maxInput.value) || 0;
-
-  const pool = data[category] || [];
-  const filtered = pool.filter(obj => {
-    if (!window.showNSFW && obj.isNSFW) return false;
-    return obj.rarity >= min && obj.rarity <= max;
-  });
-
-  if (filtered.length === 0) {
-    resultDisplay.innerHTML = `<span class="tier-trash">Nothing found...</span>`;
-    trashSound.play();
+  if (isNaN(min) || isNaN(avg) || isNaN(max)) {
+    resultBubble.textContent = "Invalid rarity values.";
     return;
   }
 
-  const selected = filtered[Math.floor(Math.random() * filtered.length)];
-  const colorClass = `tier-${getTierColor(selected.rarity)}`;
-  resultDisplay.innerHTML = `<span class="${colorClass}">${selected.name}</span>`;
+  // Dynamic import
+  try {
+    const module = await import(`./${category}.js`);
+    const pool = module.default;
 
-  if (selected.rarity >= 8.99) {
-    winRareSound.play();
-  } else {
-    winSound.play();
-  }
-}
+    const filtered = showNSFW ? pool : pool.filter(obj => !obj.isNSFW);
+    if (filtered.length === 0) {
+      resultBubble.textContent = "No entries found.";
+      return;
+    }
+
+    // Weighted roll
+    const selected = filtered[Math.floor(Math.random() * filtered.length)];
+    const rarity = selected.rarity ?? avg;
+    const color = getColorForRarity(rarity);
+
+    if (animEnabled) {
+      resultBubble.classList.add("pulse");
+      setTimeout(() => resultBubble.classList.remove("pulse"), 300);
+    }
+
+    resultBubble.innerHTML = `<span style
