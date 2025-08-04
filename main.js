@@ -143,6 +143,12 @@ function draw(category) {
   let rollCount = Math.floor(ROLL_DURATION / ROLL_INTERVAL);
   let currentIndex = 0;
 
+  // Play roll sound if enabled
+  if (window.soundEnabled) {
+    audio.roll.currentTime = 0;
+    audio.roll.play();
+  }
+
   const rollIntervalId = setInterval(() => {
     const entry = rollEntries[currentIndex];
     const color = getColorByRarity(entry.rarity);
@@ -154,6 +160,13 @@ function draw(category) {
     rollCount--;
     if (rollCount <= 0) {
       clearInterval(rollIntervalId);
+
+      // Stop rolling sound immediately
+      if (window.soundEnabled) {
+        audio.roll.pause();
+        audio.roll.currentTime = 0;
+      }
+
       // Final chosen entry with weighted random
       const chosen = weightedRandom(entries, weights);
       showResultAndPlaySound(chosen);
