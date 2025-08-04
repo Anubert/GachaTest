@@ -13,6 +13,7 @@ const audio = {
   trash: document.getElementById("trashSound"),
   win: document.getElementById("winSound"),
   winRare: document.getElementById("winRareSound"),
+  roll: document.getElementById("rollSound"),
 };
 
 // === Toggles ===
