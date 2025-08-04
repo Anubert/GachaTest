@@ -134,8 +134,7 @@ function draw(category) {
 
   // Play sound based on rarity
   if (chosen.rarity >= 9) playSound("winRare");
-  else if (chosen.rarity >= 5) playSound("winRare");
-  else if (chosen.rarity >= 2) playSound("win");
+  else if (chosen.rarity >= 1) playSound("win");
   else if (chosen.rarity >= 0.01 && chosen.rarity <= 0.99) playSound("trash");
   // No sound if rarity is outside these bounds (optional)
 }
