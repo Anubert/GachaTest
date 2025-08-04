@@ -74,8 +74,8 @@ function weightedRandom(items, weights) {
 }
 
 // --- Rolling animation logic ---
-const ROLL_DURATION = 1500; // milliseconds
-const ROLL_INTERVAL = 70;   // ms between rapid cycling entries
+const ROLL_DURATION = 2500; // milliseconds
+const ROLL_INTERVAL = 30;   // ms between rapid cycling entries
 
 function draw(category) {
   if (!category) return;
