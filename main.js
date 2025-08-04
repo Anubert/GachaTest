@@ -60,58 +60,57 @@ function setRarity(min, avg, max) {
 }
 window.setRarity = setRarity;
 
-// === Draw ===
-async function draw(category) {
-  const min = parseFloat(minInput.value);
-  const avg = parseFloat(avgInput.value);
-  const max = parseFloat(maxInput.value);
+//Draw logic 
+function draw(category) {
+  if (!category || !allData[category]) return;
 
-  if (isNaN(min) || isNaN(avg) || isNaN(max)) {
-    resultBubble.textContent = "Invalid rarity values.";
+  const min = parseFloat(document.getElementById("minRarity").value);
+  const avg = parseFloat(document.getElementById("avgRarity").value);
+  const max = parseFloat(document.getElementById("maxRarity").value);
+
+  const entries = allData[category].filter(entry => {
+    return entry.rarity >= min && entry.rarity <= max &&
+           (window.showNSFW || !entry.isNSFW);
+  });
+
+  if (entries.length === 0) {
+    displayResult("Nothing found...", "");
     return;
   }
 
-  try {
-    const module = await import(`./${category}.js`);
-    const pool = module.default;
-    const filtered = window.showNSFW ? pool : pool.filter(obj => !obj.isNSFW);
+  const chosen = entries[Math.floor(Math.random() * entries.length)];
 
-    if (filtered.length === 0) {
-      resultBubble.textContent = "No entries found.";
-      return;
-    }
+  // Color by rarity
+  let color = "white";
+  if (chosen.rarity >= 8.99) color = "red";
+  else if (chosen.rarity >= 7) color = "#c90";         // Mythical
+  else if (chosen.rarity >= 5.5) color = "#c0f";       // Legendary
+  else if (chosen.rarity >= 4) color = "#0ff";         // Mythril
+  else if (chosen.rarity >= 3.25) color = "#0cf";      // Diamond
+  else if (chosen.rarity >= 2) color = "#ffd700";      // Gold
+  else if (chosen.rarity >= 1.25) color = "#ccc";      // Silver
+  else if (chosen.rarity >= 0.75) color = "#cd7f32";   // Bronze
+  else color = "#999";                                 // Trash
 
-    const selected = filtered[Math.floor(Math.random() * filtered.length)];
-    const rarity = selected.rarity ?? avg;
-    const color = getColorForRarity(rarity);
+  const nameText = `${chosen.name}${chosen.isNSFW ? " (NSFW!)" : ""}`;
+  const resultHTML = `<span style="color: ${color}">${nameText}</span>`;
+  const flavorText = chosen.description || "";
 
-    if (window.animEnabled) {
-      resultBubble.classList.add("pulse");
-      setTimeout(() => resultBubble.classList.remove("pulse"), 300);
-    }
+  displayResult(resultHTML, flavorText);
 
-    resultBubble.innerHTML = `<span style="color:${color}">${selected.name}</span>`;
-
-    if (!window.soundEnabled) return;
-    if (rarity >= 8.99) audio.winRare.play();
-    else if (rarity >= 5.5) audio.win.play();
-    else if (rarity < 1.5) audio.trash.play();
-    else audio.click.play();
-  } catch (err) {
-    console.error("Category load failed:", err);
-    resultBubble.textContent = "Error loading data.";
-  }
+  // Play sound based on rarity
+  if (chosen.rarity >= 5) playSound("winRare");
+  else if (chosen.rarity >= 2) playSound("win");
+  else playSound("trash");
 }
-window.draw = draw;
 
-// === Color Helper ===
-function getColorForRarity(rarity) {
-  if (rarity >= 8.99) return "red";
-  if (rarity >= 7.5) return "magenta";
-  if (rarity >= 6.5) return "orange";
-  if (rarity >= 5.5) return "gold";
-  if (rarity >= 4) return "deepskyblue";
-  if (rarity >= 3) return "green";
-  if (rarity >= 1.5) return "gray";
-  return "dimgray";
+function displayResult(nameHTML, description) {
+  const res = document.getElementById("result");
+  res.innerHTML = `<div class="result-name">${nameHTML}</div>
+                   <div class="result-desc">${description}</div>`;
+
+  if (window.animEnabled) {
+    res.classList.add("pulse");
+    setTimeout(() => res.classList.remove("pulse"), 300);
+  }
 }
