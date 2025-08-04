@@ -1,20 +1,52 @@
-window.traitsData = [
+export default [
   {
-    name: "Burning Heart",
-    rarity: 2.33, // Will be evaluated against min/avg/max
+    name: "Voidborn Resilience",
+    rarity: 7.8,
     isNSFW: false,
-    description: "Grants the user unyielding determination and resistance to fear."
   },
   {
-    name: "Succulent Scent",
-    rarity: 7.21,
+    name: "Laughs in the Face of Gods",
+    rarity: 9.3,
+    isNSFW: false,
+  },
+  {
+    name: "Cursed Bloodline",
+    rarity: 6.5,
+    isNSFW: false,
+  },
+  {
+    name: "Eyes That Remember Too Much",
+    rarity: 4.2,
+    isNSFW: false,
+  },
+  {
+    name: "Fluffy Tail of Distraction",
+    rarity: 2.7,
     isNSFW: true,
-    description: "An alluring aura that attracts attention—wanted or not."
   },
   {
-    name: "Shadow Whisper",
-    rarity: 4.86,
+    name: "Chrono-Slippage",
+    rarity: 5.9,
     isNSFW: false,
-    description: "Allows communication with unseen entities at twilight."
+  },
+  {
+    name: "Skeletal Hands That Tremble",
+    rarity: 1.2,
+    isNSFW: false,
+  },
+  {
+    name: "Unremarkable Aura",
+    rarity: 0.5,
+    isNSFW: false,
+  },
+  {
+    name: "Succubus Heritage (Mild)",
+    rarity: 6.6,
+    isNSFW: true,
+  },
+  {
+    name: "Marked by an Ancient Pact",
+    rarity: 8.7,
+    isNSFW: false,
   }
 ];
