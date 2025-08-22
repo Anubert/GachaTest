@@ -1496,7 +1496,8 @@ allData.traits = [
     isNSFW: false,
     description: "Tengen Toppa Gurren Lagann - If there is a will there is a way."
 };
-];
+]
+
 
 
 
