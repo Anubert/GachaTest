@@ -1,7 +1,5 @@
-allData.traits = [
-  window.allData = window.allData || {};
-
-const allData = [
+window.allData = window.allData || {};
+window.allData.traits = [
   {
     name: "Poisonous",
     rarity: 0.24,
@@ -1497,6 +1495,7 @@ const allData = [
     description: "Tengen Toppa Gurren Lagann - If there is a will there is a way."
 }
 ];
+
 
 
 
