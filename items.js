@@ -1801,6 +1801,12 @@ allData.item = [
     description: "300. Hota - A purse filled with endless riches, every 24 hours, 500 200-gram pure gold coins fill this bag and the bag can hold an infinite amount of these coins."
   },
   {
+    name: "Endless Purse of Gold",
+    rarity: 4.11,
+    isNSFW: false,
+    description: "300. Hota - A purse filled with endless riches, every 24 hours, 500 200-gram pure gold coins fill this bag and the bag can hold an infinite amount of these coins."
+  },
+  {
     name: "Horn of the Abyss",
     rarity: 7.59,
     isNSFW: false,
@@ -2554,7 +2560,7 @@ allData.item = [
     name: "Gene Seed Ticket",
     rarity: 4.29,
     isNSFW: false,
-    description: "425. (Tech)Warhammer 40k - A ticket that when ripped transports you to a room full of robotic surgeons that allow you to undergo the creation procedure of a Transhuman Astartes. This procedure is perfected and you will end up with the augments of an Astartes regardless without the downsides. This procedure will not affect your looks or the general shape of your body due to being perfected."
+    description: "425. (Tech)Warhammer 40k - A ticket that when ripped transports you to a room full of robotic surgeons that allow you to undergo the creation procedure of a Transhuman Astartes. This procedure is perfected and you will end up with the augments of an Astartes regardless without the downsides. This procedure is safe and does not affect your looks or your body shape."
   },
   {
     name: "Justice's Shades",
@@ -2682,3 +2688,30 @@ allData.item = [
     isNSFW: false,
     description: "446. (Tech)Ben 10 - A fairly large cozy RV owned by Maxwell Tennyson that has been upgraded numerous times with Plumber Technology. In addition to being an effective mobile home, it can fly and is equipped with numerous offence and defence systems."
   },
+  // Fill in the missing IDs from 447 to 450:
+  {
+    name: "Mystic Amulet",
+    rarity: 4.0,
+    isNSFW: false,
+    description: "447. A mysterious amulet that enhances magical abilities and protects against dark magic."
+  },
+  {
+    name: "Phoenix Feather",
+    rarity: 4.5,
+    isNSFW: false,
+    description: "448. A feather from the legendary phoenix, capable of reviving the bearer once."
+  },
+  {
+    name: "Ancient Scroll of Secrets",
+    rarity: 3.9,
+    isNSFW: false,
+    description: "449. A scroll containing ancient knowledge and spells lost to time."
+  },
+  {
+    name: "Cursed Ring of Shadows",
+    rarity: 4.2,
+    isNSFW: false,
+    description: "450. A ring that grants invisibility at the cost of slowly draining the user's life force."
+  },
+  ];
+  
