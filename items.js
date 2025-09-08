@@ -1,5 +1,5 @@
 window.allData = window.allData || {};
-allData.item = [
+allData.items = [
   {
     name: "Gae Bolg",
     rarity: 5.37,
