@@ -1807,6 +1807,12 @@ allData.item = [
     description: "300. Hota - A purse filled with endless riches, every 24 hours, 500 200-gram pure gold coins fill this bag and the bag can hold an infinite amount of these coins."
   },
   {
+    name: "Endless Purse of Gold",
+    rarity: 4.11,
+    isNSFW: false,
+    description: "300. Hota - A purse filled with endless riches, every 24 hours, 500 200-gram pure gold coins fill this bag and the bag can hold an infinite amount of these coins."
+  },
+  {
     name: "Horn of the Abyss",
     rarity: 7.59,
     isNSFW: false,
@@ -2688,30 +2694,514 @@ allData.item = [
     isNSFW: false,
     description: "446. (Tech)Ben 10 - A fairly large cozy RV owned by Maxwell Tennyson that has been upgraded numerous times with Plumber Technology. In addition to being an effective mobile home, it can fly and is equipped with numerous offence and defence systems."
   },
-  // Fill in the missing IDs from 447 to 450:
   {
-    name: "Mystic Amulet",
-    rarity: 4.0,
+    name: "ColorS",
+    rarity: 1.21,
     isNSFW: false,
-    description: "447. A mysterious amulet that enhances magical abilities and protects against dark magic."
+    description: "447. Fairy Tail - A small book-like magic item that allows the holder to change the color scheme of their clothing by sliding their finger over its surface."
   },
   {
-    name: "Phoenix Feather",
-    rarity: 4.5,
+    name: "Gale Force Reading Glasses",
+    rarity: 2.72,
     isNSFW: false,
-    description: "448. A feather from the legendary phoenix, capable of reviving the bearer once."
+    description: "448. Fairy Tail - A magical item in the form of a pair of spectacles. Wearing these glasses allows one to read books much faster. Allowing them to read any book they are holding 64x faster without sacrificing reading comprehension."
   },
   {
-    name: "Ancient Scroll of Secrets",
-    rarity: 3.9,
+    name: "Music Player",
+    rarity: 1.65,
     isNSFW: false,
-    description: "449. A scroll containing ancient knowledge and spells lost to time."
+    description: "449. (Tech)Not just an ordinary music player, this player is indestructible and has excellent sound quality, with built-in speakers and headphones. It is capable of playing any song the holder has heard of before and records it inside its archive."
   },
   {
-    name: "Cursed Ring of Shadows",
-    rarity: 4.2,
+    name: "Archenemy",
+    rarity: 5.75,
     isNSFW: false,
-    description: "450. A ring that grants invisibility at the cost of slowly draining the user's life force."
+    description: "450. Fairy Tail - A sealed sword imbued with extremely uncontrollable amounts of magical power. The moment the sword is unsheathed it will produce a slash that can cut through several city blocks like butter at minimum. It is advised to keep it inside the sheath."
   },
-  ];
-  
+  {
+    name: "Magic Ticket",
+    rarity: 4.72,
+    isNSFW: false,
+    description: "451. Fairy Tail - A magical ticket that when you rip allows you to choose a grimoire that contains a branch of magic from the world of Fairy Tale. Chosen magic cannot be a Lost Magic, Ancient Magic, Time Magic, Space Magic, Dragonslayer Magic or otherwise any magic above Elite tier. The Chosen Magic category is transformed into a Grimoire you can study to learn from."
+  },
+  {
+    name: "Fev Vat",
+    rarity: 4.05,
+    isNSFW: false,
+    description: "452. (Tech)Fallout - An industrial vat filled with Forced Evolutionary Virus. Turning any human dropped inside into a Super Mutant. In addition, it can also affect animals dropped inside too, usually granting them increased abilities or killing them."
+  },
+  {
+    name: "Null Void Projector",
+    rarity: 6.84,
+    isNSFW: false,
+    description: "453. (Tech)Ben 10 - A handheld projection gun that allows the user to open portals to the Null Void or send whatever they hit into the Null Void. It requires recharging between shots but hey, whatever you sent there is no longer your problem. Incapacitating someone with the Null Void does not grant a feat."
+  },
+  {
+    name: "Tome of Destruction",
+    rarity: 3.75,
+    isNSFW: false,
+    description: "454. Skyrim - A tome that compiles the various destruction spells found in the kingdom of Skyrim and allows the user to train in and learn the spells inside. Spell List: https://elderscrolls.fandom.com/wiki/Destruction_(Skyrim)"
+  },
+  {
+    name: "Tome of Restoration",
+    rarity: 4.65,
+    isNSFW: false,
+    description: "455. Skyrim - A tome that compiles the various restoration spells found in the kingdom of Skyrim and allows the user to train in and learn the spells inside. Spell List: https://elderscrolls.fandom.com/wiki/Restoration_(Skyrim)"
+  },
+  {
+    name: "Tome of Conjuration",
+    rarity: 5.76,
+    isNSFW: false,
+    description: "456. Skyrim - A tome that compiles the various conjuration spells found in the kingdom of Skyrim and allows the user to train in and learn the spells inside. Spell List: "
+  },
+  {
+    name: "Tome of Alteration",
+    rarity: 4.94,
+    isNSFW: false,
+    description: "457. Skyrim - A tome that compiles the various alteration spells found in the kingdom of Skyrim and allows the user to train in and learn the spells inside. Spell List: "
+  },
+  {
+    name: "Tome of Illusion",
+    rarity: 4.27,
+    isNSFW: false,
+    description: "458. Skyrim - A tome that compiles the various illusions spells found in the kingdom of Skyrim and allows the user to train in and learn the spells inside. Spell List: "
+  },
+  {
+    name: "Potarra Earrings",
+    rarity: 5.52,
+    isNSFW: false,
+    description: "459. Dragon Ball - A pair of magical earrings that when worn one each by two different beings, permanently fuses them into one entity that possesses the sum of their powers and abilities."
+  },
+  {
+    name: "Celestial Bronze",
+    rarity: 2.65,
+    isNSFW: false,
+    description: "460. Percy Jackson - A mythical metal native to Mount Olympus. Celestial Bronze possesses the property of being deadly to any magical or mythical being while being completely harmless to anything mundane, passing through them like it's not even there. You get 3 10kg bars. Restock Timer: 24 Hours"
+  },
+  {
+    name: "Stygian Iron",
+    rarity: 3.49,
+    isNSFW: false,
+    description: "461. Percy Jackson - Stygian Iron is a metal native to the River Styx of the underworld. This metal has the property of being able to destroy or absorb the essences of those it kills. Additionally, it is extremely durable and amplifies the power of darkness, necromancy, or infernal abilities. You get 3 10kg bars. Restock Timer: 24 Hours"
+  },
+  {
+    name: "Ebony Blade",
+    rarity: 5.73,
+    isNSFW: false,
+    description: "462. Skyrim - A Daedric Artifact owned by Mephala, Ebony is an indestructible and sharp katana that is capable of absorbing a portion of the vitality of those it has slain and imbue it into the wielder to heal them of their injuries. It is also capable of silencing those it strikes preventing them from casting magic. This blade is strengthened by slaying those who consider you as a friend with its blade."
+  },
+  {
+    name: "Emperors Blade",
+    rarity: 6.41,
+    isNSFW: false,
+    description: "463. Samurai Jack - The ultimate divine blade against evil forged by Odin, Ra and Rama that represents all good in the world. It can only be used in the hands of the righteous and good. The blade is completely unbreakable and incredibly sharp, being reinforced by the user's spirit. Any creature of darkness or infernal will get parts of its body vaporized when damaged by the sword. Massively amplifies the power of holy and light abilities when used as a focus."
+  },
+  {
+    name: "Stopwatch",
+    rarity: 8.52,
+    isNSFW: false,
+    description: "464. A stopwatch that allows the user to stop the time of the universe around them when used, often employed by Ugly Bastards or people whose hair obscures their eyes."
+  },
+  {
+    name: "Ricks Portal Gun",
+    rarity: 7.21,
+    isNSFW: false,
+    description: "465. (Tech)Rick and Morty - A portal gun built by one of the smartest yet stupidest and drunkest inventors in the multiverse. This portal gun is capable of opening portals to any non-spatial blocked location including other universes as long as you know the location's co-ordinates or specifications. The portal fluid refills every 24 hours."
+  },
+  {
+    name: "Ring of the Bull",
+    rarity: 3.15,
+    isNSFW: false,
+    description: "466. This golden ring ruby ring grants its wearer increased strength and endurance when worn. These increased stats are half a flat boost and half a percentage boost."
+  },
+  {
+    name: "Riptide",
+    rarity: 2.18,
+    isNSFW: false,
+    description: "467. Percy Jackson - Riptide is the sword of the demigod son of Poseidon made of Celestial bronze. Making it exceptionally durable and sharp while being unable to hurt anything or anyone mundane. In addition it is able to switch between the form of a pen and a sword at will for you to decide which is stronger. Boosts the power of water affinity when used as a focus."
+  },
+  {
+    name: "Helm of Darkness",
+    rarity: 5.89,
+    isNSFW: false,
+    description: "468. Percy Jackson - One of Hades' symbols of power, this ornate helmet allows whoever wears it to become completely invisible to all senses, pass through walls and melt into shadows. In addition, they are able to radiate an aura of primordial fear when using it. Using the helmet's abilities consumes the energy of the user."
+  },
+  {
+    name: "Hyperbolic Time Chamber",
+    rarity: 5.81,
+    isNSFW: false,
+    description: "469. Dragon Ball - This Hyperbolic Time Chamber allows whoever enters to spend time training inside the gravity-enhanced dimension or just use the safe part as a hideout. The time dilation of the Time Chamber is 3 to 1 meaning three days inside equal to one day outside. You can access the Time Chamber from any door place your hands on."
+  },
+  {
+    name: "Weapon Voucher",
+    rarity: 1.33,
+    isNSFW: false,
+    description: "470. A ticket for any one mundane cold weapon, just tear apart the ticket and think of the weapon you want and it will arrive in your hands."
+  },
+  {
+    name: "Nail of Helena",
+    rarity: 7.02,
+    isNSFW: false,
+    description: "471. Hellsing - A true divine artefact used to nail the saint to the cross. When nailed to someone's heart it transforms them into a being known as a Monster of God(See trait: Monster of God)."
+  },
+  {
+    name: "Dragon Dictionary",
+    rarity: 6.13,
+    isNSFW: false,
+    description: "472. Skyrim - A dictionary on Thu'um written by Parthuunax, written to be able to teach anyone the Thu'um. Inside it is all of the Shouts from Tamriel that those who study the book can learn. Your ability to learn the shouts depends on your talent in magic and vocals. The more powerful and esoteric a shout the harder it is to learn it and its stages. Spell List: https://elderscrolls.fandom.com/wiki/Dragon_Shouts"
+  },
+  {
+    name: "Cupids Arrow",
+    rarity: 6.89,
+    isNSFW: false,
+    description: "473. An arrow that makes two people it pierces fall in love. Just stab each target once. The moment you stab the first, they will fall in love with the second person you pierce. To make it reciprocal just repeat the process by stabbing the other person first. Targets Legendary Rank or Stronger can resist the effects."
+  },
+  {
+    name: "Hand of Midas",
+    rarity: 5.85,
+    isNSFW: false,
+    description: "474. The severed hand of King Midas that still retains his power to turn anything it touches into gold. Anything that you touch with the pointer finger that weighs less than 5 tons or is weaker than Epic rank will be turned into solid gold. But living beings can resist its effects depending on how strong they are."
+  },
+  {
+    name: "FREAK Chip",
+    rarity: 5.02,
+    isNSFW: false,
+    description: "475. Hellsing - A high-tech complex chip developed and created by Incognito. When implanted into a person, the Freak Chip transforms their body into that of an artificial vampire(From Hellsing) along with all of their powers and weaknesses. The success of the transformation depends on the compatibility. But there is little chance of failure. Once implanted the chip fuses with the person. You would need Expert Biology and Master Mechanics to reverse engineer it."
+  },
+  {
+    name: "Retroactive Builders Contract",
+    rarity: 3.02,
+    isNSFW: false,
+    description: "476. A folded-up contract that promises full satisfaction. Just put the specifications of what you want built and where inside of the contract and put in enough money that would normally be required to fund the construction including labor costs etc. The moment you sign the contract off it will burn to ashes whatever you asked for will have been retroactively expertly built an unspecified amount of time ago alongside the money being removed from your possession. Restock Timer: 720 hours."
+  },
+  {
+    name: "Mansion of the Boundary",
+    rarity: 8.85,
+    isNSFW: false,
+    description: "477. A regular mansion to the user's tastes that sits in the middle of everything. Even the Outer Ones cannot breach its dimension, and as the mansion sits in the middle of everything in its own reality, you can enter the mansion through any door you touch and exit it at any door that exists in the confines of reality. Even other multiverses or gardens."
+  },
+  {
+    name: "Plague Reaper Armor",
+    rarity: 6.45,
+    isNSFW: false,
+    description: "478. (Tech)Calamity Mod - A high-tech plague doctor armor fused with the Plague Nanovirus. Wearing this armour greatly amplifies your physical stats and includes a hud to help with your aiming. The armour makes you immune to all diseases and poison below Divine Level while amplifying the power of your own poison and bio abilities greatly. You can also temporarily release a little of the Plague Nanovirues to rot your enemies from the inside out before they dissolve naturally to avoid an apocalypse."
+  },
+  {
+    name: "Wulfrum Armor",
+    rarity: 2.84,
+    isNSFW: false,
+    description: "479. (Tech)Calamity Mod - A simple high-tech armour made of wulfrum that provides reasonable defence and comfort. But when the switch is activated the armour turns into a power armour with its own powerful machinegun with energy already supplied. This mode has a 24-hour cooldown."
+  },
+  {
+    name: "Photon Ripper",
+    rarity: 5.94,
+    isNSFW: false,
+    description: "480. (Tech)Calamity Mod - An incredibly high-technology chainsaw made by Dreadon out of Exo materials. This chainsaw projects dozens of hard light sharp that spin at insane speeds and can adjust its distance as needed, strong enough to shred basically anything in its path. Just a little bit of an overkill for chopping trees."
+  },
+  {
+    name: "Master Ninjas Belt",
+    rarity: 3.45,
+    isNSFW: false,
+    description: "481. A black inconspicuous belt that once belonged to a master ninja. Wearing this belt grants you incredibly acrobatic abilities, allows you to stick to walls, ignore fall damage and muffle all sounds you make unintentionally(Does not work for anything above the volume of speaking)."
+  },
+  {
+    name: "Smoke Bomb",
+    rarity: 2.68,
+    isNSFW: false,
+    description: "\"Smoke Bomb!\" a simple-looking smoke bomb. You can throw one of these at your feet and if you successfully manage to obscure yourself from everyone you can teleport anywhere in a 25-meter range instantly that you would otherwise be able to get into. Restock Timer: 12 Hours"
+  },
+  {
+    name: "ASTER Augmentation Ticket",
+    rarity: 3.66,
+    isNSFW: false,
+    description: "(Tech)Halo - A ticket that when ripped, sends the user into a dimension with highly advanced robotic doctors and surgeons who will perform the ASTER procedure on you in order to turn you into a Spartan. This procedure is perfected and will not cause failure regardless of the target's age or condition. This procedure gives a more durable skeleton, enhanced musculature, visual acuity and reflexes with enhanced mental clarity."
+  },
+  {
+    name: "MJOLNIR Powered Assault Armor IV",
+    rarity: 4.02,
+    isNSFW: false,
+    description: "(Tech)Halo - An advanced Power Armor designed for Superhumans. This high-tech suit is incredibly flexible, not hindering the user's mobility while enhancing their physical capabilities, providing excellent protection against harm and terrain. It is also equipped with basic AI to manage the suits features as well as HUD."
+  },
+  {
+    name: "Ultimate Nullifier",
+    rarity: 9.83,
+    isNSFW: false,
+    description: "(Tech)Marvel - The Ultimate Weapon, the Ultimate Nullifier is capable of destroying anything, from universes to small targets to even timelines, granted the user is capable of wielding its power without perishing."
+  },
+  {
+    name: "Infinity Gauntlet",
+    rarity: 9.92,
+    isNSFW: false,
+    description: "486. Marvel - The Infinity Gauntlet of the Mad Titan containing all of the Infinity Stones inside, allowing the user to wield their power as long as they can handle its nigh-unlimited power. The gauntlet is perfected and will be able to withstand the power of all of the stones without problem."
+  },
+  {
+    name: "Space Stone",
+    rarity: 7.84,
+    isNSFW: false,
+    description: "487. Marvel - One of the infinity stones possessing the power to change the very universe. The Space Stone allows the user to manipulate space, open portals, siphon energy from space itself and many other abilities one can utilise with the ability to control space. But a strong user is needed to bring out its power without devastating consequences."
+  },
+  {
+    name: "Chaos Card",
+    rarity: 7.09,
+    isNSFW: false,
+    description: "488. Binding of Isaac - A simple-looking card that coins unknowable power. Throw this card at a target, and that target will perish instantly unless they are immortal as long as the card makes contact. Once the card kills a target, it is rendered completely inert and unusable."
+  },
+  {
+    name: "Ring of the Shooting Star",
+    rarity: 7.35,
+    isNSFW: false,
+    description: "489. Overlord - A Ring that contains 3 uses of the spell Wish. By invoking a wish you can use the effect of any ability of Mythical tier or below once like using Law of Regression to cure someone, Invoke Genesis etc."
+  },
+  {
+    name: "Sukuna's Finger",
+    rarity: 3.03,
+    isNSFW: false,
+    description: "490. Jujutsu Kaisen - A finger contained 1/20th of the King of Curses, Ryomen Sukuna. It contains incredible cursed energy and will attract cursed lifeforms to it like moths to a flame, a cursed being ingesting the finger will receive a power boost. If a proper vessel ingests the finger they will either incarnate as 1/20th Ryomen Sukuna, exist in the same vessel as him or possibly defeat his fragment and consume the power of said fragment."
+  },
+  {
+    name: "Sukuna's Fingers",
+    rarity: 5.12,
+    isNSFW: false,
+    description: "491. Jujutsu Kaisen - All 20 fingers of King of Curses, Ryomen Sukuna that each contain 1/20th of his power. Each finger contains incredible cursed energy and will attract cursed lifeforms to it like moths to a flame, a cursed being ingesting the finger will receive a power boost. If a proper vessel ingests the finger they will either incarnate as 1/20th Ryomen Sukuna, exist in the same vessel as him or possibly defeat his fragment and consume the power of said fragment."
+  },
+  {
+    name: "Eye of Agamotto",
+    rarity: 8.85,
+    isNSFW: false,
+    description: "492. Marvel - The Eye of Agamotto contains the Time Stone, one of the 6 Infinity Stones. The Eye of Agamotto allows the user to manipulate the time as long as they can harness its power correctly, allowing them to stop time, time travel, set up time loops and much more. The more power they exert with the stone, the more of a backlash they will face that can even kill them."
+  },
+  {
+    name: "Power Stone",
+    rarity: 8.02,
+    isNSFW: false,
+    description: "493. Marvel - The Power Stone is one of the 6 Infinity Stones, one of the most powerful artefacts. The Power Stone allows the user to wield its immense destructive power, whether to empower their body, empower a weapon, or direct its power as blasts and projections. The stone can allow one to shatter even planets when used correctly, but few can withstand its full power."
+  },
+  {
+    name: "Soul Stone",
+    rarity: 8.11,
+    isNSFW: false,
+    description: "494. Marvel - One of the Infinity Stones, some of the most powerful artefacts in existence. The Soul Stone allows the user to control souls, bestow life and even resurrect people with it as long as you are capable of handling the power of the stone."
+  },
+  {
+    name: "Shadow Perfume",
+    rarity: 1.55,
+    isNSFW: false,
+    description: "495. A bottle of pitch black cologne that, when applied, erases all scent from the user and muffles their movements to an extent for 1 hour."
+  },
+  {
+    name: "Ring of Suppression",
+    rarity: 2.58,
+    isNSFW: false,
+    description: "496. A smooth black nondescript ring that completely erases your energy signatures as long as you aren't actively using abilities or spells."
+  },
+  {
+    name: "Neuralyzer",
+    rarity: 3.85,
+    isNSFW: false,
+    description: "497. (Tech)Men in Black -  Otherwise called electro bio-mechanical neural transmitting zero synapse repositioner, that allows the user to flash a target with the flash of the device to erase certain memories and put them in a suggestible state. How many memories are deleted and other stuff can be configured on the device. Strong-willed targets or opponents more powerful than you may be able to resist the effects."
+  },
+  {
+    name: "Jarate Training Kit",
+    rarity: 0.88,
+    isNSFW: false,
+    description: "498. Team Fortress 2 - \"Comes with an infinite supply of kidney enlarging pills.\" This training manual describes how one can effectively utilize their piss in combat by training themselves with kidney enlarging pills."
+  },
+  {
+    name: "1 UP",
+    rarity: 6.14,
+    isNSFW: false,
+    description: "499. Mario - a Green, odd-looking mushroom that, when consumed, will grant the user an extra life, where they will instantly return to life upon the moment of their death at maximum health."
+  },
+  {
+    name: "Portal Gun",
+    rarity: 3.45,
+    isNSFW: false,
+    description: "500. (Tech)Portal - A Portal Gun developed by Aperture Science that allows it to send a blue and orange pulse, wherever the pulse lands, will open a person-sized portal that connects to the other portal of the opposite colour. Only one of each colour can exist at once."
+  },
+  {
+    name: "Gordon's Crowbar",
+    rarity: 1.36,
+    isNSFW: false,
+    description: "501. Half Life - A crowbar that once belonged to the legendary Gordon Freeman. It has spilt innumerable alien blood, making it deal conceptually more damage to all inhuman enemies."
+  },
+  {
+    name: "Stamin Up",
+    rarity: 1.88,
+    isNSFW: false,
+    description: "502. Call of Duty - \"For when you are going at it long and fast\" A special kind of Soda that, when drunk, slightly enhances your agility and stamina for the duration of 1 hour. Effects apply after finishing an entire can and do not stack by drinking more than 1 can. Warning: Drinking more than 3 different buff drinks at once will cause intense haemorrhaging, strokes, and heart attacks. Restock Timer: 24 Hours"
+  },
+  {
+    name: "Deadshot Daiquiri",
+    rarity: 2.29,
+    isNSFW: false,
+    description: "503. Call of Duty - \"I'm not even gonna try and spell that.\" Upon drinking whatever this is called, you temporarily receive increased proficiency and accuracy with all ranged weapons and projectile-based abilities for 1 hour. Effects apply after finishing an entire can and do not stack by drinking more than 1 can. Warning: Drinking more than 3 different buff drinks at once will cause intense haemorrhaging, strokes, and heart attacks. Restock Timer: 24 Hours"
+  },
+  {
+    name: "Vulture's Aid",
+    rarity: 2.49,
+    isNSFW: false,
+    description: "504. Call of Duty - \"Like a scavenging Vulture\" Upon drinking the Vulture's Aid you will be granted treasure sight that allows you to see outlines of treasures and objects of interest through walls. Effects apply after finishing an entire can and do not stack by drinking more than 1 can. Warning: Drinking more than 3 different buff drinks at once will cause intense haemorrhaging, strokes, and heart attacks. Restock Timer: 24 Hours"
+  },
+  {
+    name: "Melee Macchiato",
+    rarity: 2.78,
+    isNSFW: false,
+    description: "505. Call of Duty - \"This really 'packs a punch' badum tss!\" Upon drinking Melee Macchiato, you will be granted temporary enhanced strength and melee skills for 1 hour. Effects apply after finishing an entire can and do not stack by drinking more than 1 can. Warning: Drinking more than 3 different buff drinks at once will cause intense haemorrhaging, strokes, and heart attacks. Restock Timer: 24 Hours"
+  },
+  {
+    name: "Juggernog",
+    rarity: 2.56,
+    isNSFW: false,
+    description: "506. Call of Duty - \"Reach for me, Jugger Girl. Oorah.\" Upon drinking the Juggernog, you will be granted temporary enhanced Vitality and Resilience for 1 hour. Effects apply after finishing an entire can and do not stack by drinking more than 1 can. Warning: Drinking more than 3 different buff drinks at once will cause intense haemorrhaging, strokes, and heart attacks. Restock Timer: 24 Hours."
+  },
+  {
+    name: "Speed Cola",
+    rarity: 1.79,
+    isNSFW: false,
+    description: "507. Call of Duty - \"Crazy Sugar High\" Upon drinking Speed Cola, you will be granted temporary enhanced Dexterity for 1 hour. Effects apply after finishing an entire can and do not stack by drinking more than 1 can. Warning: Drinking more than 3 different buff drinks at once will cause intense haemorrhaging, strokes, and heart attacks. Restock Timer: 24 Hours"
+  },
+  {
+    name: "Death Perception",
+    rarity: 2.08,
+    isNSFW: false,
+    description: "508. Call of Duty - \"You can't escape death\" Upon drinking Death Perception, you will be granted temporary reaper's gaze, allowing you to see the outlines of enemies through walls and through any obstruction for 1 hour. Effects apply after finishing an entire can and do not stack by drinking more than 1 can. Restock Timer: 24 Hours"
+  },
+  {
+    name: "Bonk!",
+    rarity: 3.45,
+    isNSFW: false,
+    description: "509. Team Fortress 2 - Drinking Bonk! Grants you extremely increased reflexes and slows down your perception of time massively for 8 seconds, allowing you to dodge almost all attacks headed your way. But after the 8 seconds are up, you will be rendered exhausted. And you will need to survive the extreme sugar and radiation of this drink. Restock Timer: 72 hours"
+  },
+  {
+    name: "Homerun",
+    rarity: 2.05,
+    isNSFW: false,
+    description: "510. An inordinately durable baseball that has vastly increased knockback when it hits an object or target, as it imbues them with increased velocity at the moment of contact."
+  },
+  {
+    name: "Deeds' Bell",
+    rarity: 2.83,
+    isNSFW: false,
+    description: "511. SCP-662 - A silver ornate bell that, when rung, summons a supernatural butler named Mr. Deeds that can fulfill any one task that can be done by a butler of varying levels of skill such as doing laundry, killing someone, making a sandwich(Does not need ingredients), do your taxes or give you a bar of gold(Does not need access to gold to do so.). If Deeds cannot accomplish a task, he will inform you so and ask you to pick an alternative. Cooldown: 12 Hours"
+  },
+  {
+    name: "Sling Ring",
+    rarity: 7.02,
+    isNSFW: false,
+    description: "512. Marvel - The Sling Ring is a mystical ring that allows its user to open Interdimensional portals, allowing them to travel even across the multiverse by visualising where they want to go and opening a portal to there. But magical training is needed to make full use of the ring's abilities."
+  },
+  {
+    name: "Psychic Paper",
+    rarity: 1.65,
+    isNSFW: false,
+    description: "513. Doctor Who - A piece of psychic paper that causes those who look at it to see what they expect or want to see on the paper, such as identification papers, IDs, permits etc. Does not work on exceptionally strong beings or geniuses that may notice the difference."
+  },
+  {
+    name: "Holy Grail",
+    rarity: 6.89,
+    isNSFW: false,
+    description: "514. Fate - The Holy Grail is a mass of incredible amounts of raw magical power in the shape of a chalice. The Chalice can either be used as an immense source of mana or be used to grant the user's wishes as long as they can be achieved through the effects of magic below Legendary Tier. Restock Timer: 720 Hours"
+  },
+  {
+    name: "Warhammer 40k",
+    rarity: 2.09,
+    isNSFW: false,
+    description: "515. 40,000 regular quality standard Iron Warhammers, you can take out one at a time from your system storage. What did you think it was?"
+  },
+  {
+    name: "Demon Blood Blade",
+    rarity: 2.03,
+    isNSFW: false,
+    description: "516. Adventure Time - A tough and sharp blade created out of the blood of a demon, created by said demon, Kee-Oth. The blade in Unholy in nature, dealing increased damage against Angelic and Holy beings and being able to damage spiritual creatures. If one is a Hemokinetic, they may be able to utilize the blade further."
+  },
+  {
+    name: "Moondrip",
+    rarity: 4.54,
+    isNSFW: false,
+    description: "517. Fairy Tail - A powerful potion that was created by accumulating the power of the moon and condensing it over a long period of time into a potion. Emptying this bottle completely on a spell will dispel as long as it is elite level or below in effect. If drunk, it will cleanse magic effects from the user on the same level. Restock Timer: 24 Hours"
+  },
+  {
+    name: "God Emperor's Blade",
+    rarity: 5.89,
+    isNSFW: false,
+    description: "518. Warhammer 40k - One of the most powerful weapons created personally by the God Emperor of Mankind out of mastery over Science and Warpcraft. This weapon is the Anathema of all Demon or Infernal aligned beings, vaporising all but the strongest infernals(Legendary and above) with a single graze. This blade is covered by Psyker flames that can be used to emit attacks and empower the power of your own pyrokinetic abilities. The blade may still contain a part of the Emperor's essence."
+  },
+  {
+    name: "Salt",
+    rarity: 0.14,
+    isNSFW: false,
+    description: "519. A handful of salt distilled from the tears of failed rolls."
+  },
+  {
+    name: "Snake's Box",
+    rarity: 2.05,
+    isNSFW: false,
+    description: "520. Metal Gear Solid - A very unassuming cardboard box, so unassuming in fact that anything inside the box or covered by it gets its presence completely suppressed, not leaking off any energy or aura. If the box is destroyed, it will return to item space in an hour in pristine condition."
+  },
+  {
+    name: "Blades of Chaos",
+    rarity: 6.89,
+    isNSFW: false,
+    description: "521. God of War - The Blades of Chaos, weapons of Ares, forged by Hepheastus in the furnace of Hades. Whoever is bound to these blades gains immense physical might and unnatural anger of war. The blades can absorb the lifeforce of those whom they claim the lives of and imbues it to the wielder to further strengthen them. They can absorb and use power sources imbued into them. You get the blades from the first moment they were created. The blades also empower fire attributes when using them."
+  },
+  {
+    name: "Blade of Olympus",
+    rarity: 7.55,
+    isNSFW: false,
+    description: "522. God of War - The Blades of Olympus, forged from the Heavens, the Seas, the Afterlife and the Earth. The most powerful weapon of the Olympus gods is strong enough to shatter even the titans with a single swing. The blade contains divine might and can create Divine Energy projections and amplify all Divine Attributes of the user, as well as enhancing all items and abilities in their possession related to the Divine."
+  },
+  {
+    name: "Leviathan Axe",
+    rarity: 5.05,
+    isNSFW: false,
+    description: "523. God of War - The Leviathan Axe is the peer of Mjolnir, being an unbreakable, sharp axe imbued with numerous runes. The Axe allows the user to project an aura of frost from it that they can shape into attacks. The axe also greatly augments the power of Ice/Frost attributes when held. The runes on the axe also allow it to return to the user's hand when thrown."
+  },
+  {
+    name: "Draupnir Spear",
+    rarity: 4.65,
+    isNSFW: false,
+    description: "524. God of War - A spear forged for Kratos himself, imbued with the winds of all realms. The spear is actually a ring worn on the finger that can manifest up to 8 spears at once. Holding a spear allows you to project your energy as wind and boosts the power of your wind attribute. You can also explode the summoned spears into an explosion of wind."
+  },
+  {
+    name: "Canto",
+    rarity: 3.33,
+    isNSFW: false,
+    description: "525. (Tech)Cyberpunk - The Canto is a legendary Cyberdeck considered a myth by many. This implant functions as a very powerful computer connected to your brain, allowing you to interface with and easily hack even the toughest networks, thanks to the sentient Super AI loaded inside helping you with your endeavours. Manifests as a ticket that installs itself in your body when you rip it."
+  },
+  {
+    name: "Kano's Eye",
+    rarity: 3.11,
+    isNSFW: false,
+    description: "526. (Tech)Mortal Kombat - A high-tech cybernetic eye implant without the faceplate part. The eye is capable of switching between several modes of vision, like infrared, heat, electromagnetic, X-ray, etc. It is also capable of releasing condensed energy beams from the eye that vary in power. The eye charges itself by drawing power from your energy reserves. This item manifests itself as a ticket that implants itself perfectly in whoever rips it."
+  },
+  {
+    name: "Hsu's Cybernetic Heart",
+    rarity: 4.52,
+    isNSFW: false,
+    description: "527. (Tech)Mortal Kombat - A high-tech cybernetic implant that replaces the recipient's heart. The Cybernetic Heart grants the user superhuman physical abilities and increased stamina and energy regeneration. The heart can also release a death laser from your chest if you leave it uncovered(by default, the heart is implanted beneath the muscle layer). The cybernetic heart charges its extra reserves over time to build up its laser. The lower your current energy level, the weaker the enhancement the heart will provide. This item manifests itself as a ticket that implants itself perfectly in whoever rips it."
+  },
+  {
+    name: "Classic Omnitrix",
+    rarity: 5.85,
+    isNSFW: false,
+    description: "528. (Tech)Ben 10 - The Classic Omnitrix, the first version ever released. This watch allows the user to turn into any of 10 aliens(And maybe slightly more with experimentation) for around roughly 30 minutes before going on cooldown. This watch can also be used to capture the DNA of creatures you are in contact with to turn into a version of them. The watch is biologically bound to you, and you would need at least Master Mechanics and Biology to tamper with it."
+  },
+  {
+    name: "Omnitrix",
+    rarity: 9.33,
+    isNSFW: false,
+    description: "529. (Tech)Ben 10 - The True Omnitrix, the final version made by the genius Azmuth. The Omnitrix allows the user to transform into any of the millions of aliens stored inside, ranging from living gravity-manipulating planetoids to multiversal reality warpers."
+  },
+  {
+    name: "Chaquetrix",
+    rarity: 6.99,
+    isNSFW: false,
+    description: "530. (Character)(Tech)Chaquetrix - A... weird variant of the fabled Omnitrix that instead creates and summons aliens to you. It will create a version of the selected alien into a breeding compatible companion with you and summon her to either to help you or \"help\" you. Only contains the original 10, but the roster can be increased eventually. Also contains a lifeform analyser to increase the roster."
+  },
+  {
+    name: "Divine Stone",
+    rarity: 5.84,
+    isNSFW: false,
+    description: "531. Arifureta - Despite its name, it is not of Divine Origin. This 10cm crystal is crystallised energy that, while also capable of holding enchantments very well, melts into a sort of Ambrosia over time. Said ambrosia has incredibly potent healing and curing properties."
+  }
+].
