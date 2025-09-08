@@ -3204,4 +3204,4 @@ allData.item = [
     isNSFW: false,
     description: "531. Arifureta - Despite its name, it is not of Divine Origin. This 10cm crystal is crystallised energy that, while also capable of holding enchantments very well, melts into a sort of Ambrosia over time. Said ambrosia has incredibly potent healing and curing properties."
   }
-].
+];
