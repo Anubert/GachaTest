@@ -192,7 +192,9 @@ function getColorByRarity(rarity) {
 function showResultAndPlaySound(chosen) {
   const color = getColorByRarity(chosen.rarity);
   const nameText = `${chosen.name}${chosen.isNSFW ? " (NSFW!)" : ""}`;
-  const resultHTML = `<span style="color: ${color}">${nameText}</span>`;
+  const rarityText = `<small style="color:${color};">Rarity: ${chosen.rarity.toFixed(2)}</small>`;
+  
+  const resultHTML = `<span style="color: ${color}">${nameText}</span><br>${rarityText}`;
   const flavorText = chosen.description || "";
   displayResult(resultHTML, flavorText);
 
