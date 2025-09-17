@@ -1,5 +1,5 @@
 window.allData = window.allData || {};
-allData.item = [
+allData.abilities = [
   {
     name: "Tinder",
     rarity: 1.25,
@@ -2508,5 +2508,1325 @@ allData.item = [
   isNSFW: false,
   description: "One Piece - Harness willpower for reinforcement, perception, and pressure."
 },
-
+  {
+    name: "Conquerors Haki",
+    rarity: 4.83,
+    isNSFW: false,
+    description: "One Piece - Allows you to exert your willpower on the physical world as a wave of power that renders those with weaker willpower unconscious."
+  },
+  {
+    name: "Armament Haki",
+    rarity: 4.52,
+    isNSFW: false,
+    description: "One Piece - Allows you to reinforce your body or an object you are holding with an invisible forcefield that hardens them and allows them to interact with intangibility, and at higher levels can even be projected."
+  },
+  {
+    name: "Observation Haki",
+    rarity: 5.69,
+    isNSFW: false,
+    description: "One Piece - Allows you to expand an imaginary sensory field that allows you to sense movements and objects inside. At higher levels of mastery, you can accurately distinguish between targets, energy and even emotions."
+  },
+  {
+    name: "Elemental Lungs",
+    rarity: 4.44,
+    isNSFW: false,
+    description: "Allows the user to charge their lungs with any elemental energy and unleash a variety of elemental breath attacks with it such as acid, darkness, fire, ice, light, etc."
+  },
+  {
+    name: "Vitality Drain",
+    rarity: 4.81,
+    isNSFW: false,
+    description: "You are able to drain the vitality of targets on touch and use it to heal yourself, the stronger the target is compared to you, the lesser the drain."
+  },
+  {
+    name: "Blood Tax",
+    rarity: 3.87,
+    isNSFW: false,
+    description: "Whenever someone injures you, they lose a portion of their energy or stamina to you, allowing you to recover your energy and stamina even as you are getting damaged."
+  },
+  {
+    name: "Hook & Line",
+    rarity: 3.45,
+    isNSFW: false,
+    description: "Allows you to conjure a hook attached to a line out of energy, the hook can be used as a weapon, when you hurt someone with the hook you can instantly teleport them to you with the reel, which can only be used one target at a time."
+  },
+  {
+    name: "Minefield",
+    rarity: 4.12,
+    isNSFW: false,
+    description: "Unordinary - Allows you to conjure a grid pattern along the terrain and detonate parts of the terrain with the grid as an intermediary."
+  },
+  {
+    name: "Density Manipulation",
+    rarity: 4.86,
+    isNSFW: false,
+    description: "Allows you to increase and decrease your own density or the density of objects you are wielding, the more you decrease or increase a target's density the more energy you need to expend to keep it that way."
+  },
+  {
+    name: "Star Rage",
+    rarity: 6.59,
+    isNSFW: false,
+    description: "JJK - Allows the user to increase their mass without incurring any penalties such as lowered speed or change in stature, allowing them to make their physical attacks unimaginably stronger, if the user continues to increase their own mass they can collapse into a black hole. Higher the mass the more energy is required to maintain the state."
+  },
+  {
+    name: "Lock On",
+    rarity: 4.24,
+    isNSFW: false,
+    description: "Allows you to lock onto targets, when throwing projectiles toward the locked-on target, they start homing in on the target and become nigh impossible to dodge unless you get out of range."
+  },
+  {
+    name: "Absolute Accuracy",
+    rarity: 5.23,
+    isNSFW: false,
+    description: "Whatever projectile you throw WILL hit the target as long as it is physically possible to hit the target, you could throw a human hair through a 1mm hole 10 kilometres away without difficulty."
+  },
+  {
+    name: "Energy Emission",
+    rarity: 4.76,
+    isNSFW: false,
+    description: "Unordinary - Allows you to emit energy as beams or as an energy pulse by expending your own energy, the more energy you expend and the longer you charge for, the stronger the emission."
+  },
+  {
+    name: "Kinetic Energy Absorption",
+    rarity: 5.43,
+    isNSFW: false,
+    description: "Allows you to absorb and store kinetic energy inside of your body that you can release at any time to enhance the power of your blows. If you do not use the kinetic energy for a while it will start fading away."
+  },
+  {
+    name: "Kinetic Energy Manipulation",
+    rarity: 7.54,
+    isNSFW: false,
+    description: "Allows you to manipulate Kinetic Energy in your sensory range, negating it, applying it, changing it and redirecting it. But you cannot control more kinetic energy than you can exert with your own body."
+  },
+  {
+    name: "Vector Manipulation",
+    rarity: 8.88,
+    isNSFW: false,
+    description: "Toaru - Allows you to create and control vectors at the level of a level 5 esper, allowing you to control the movements of basically anything, teleporting, stopping, accelerating, moving, anything related to the movement of things you can perform."
+  },
+  {
+    name: "Halt",
+    rarity: 4.33,
+    isNSFW: false,
+    description: "Allows you to stop all the kinetic energy a target, even a meteor can be brought to a standstill. The larger the amount of force you are stopping, the more energy you expend. It has a 1-second cooldown."
+  },
+  {
+    name: "Lockdown",
+    rarity: 6.00,
+    isNSFW: false,
+    description: "Allows you to Lockdown an area, during a lockdown nobody can leave or enter and spacetime abilities are disabled, this power is absolute, even a god wouldn't be able to breach lockdown. The lockdown area is centred around the user and needs energy to be maintained, not too much energy but it cannot be maintained indefinitely."
+  },
+  {
+    name: "Stick",
+    rarity: 1.20,
+    isNSFW: false,
+    description: "Allows you to stick to objects like super glue."
+  },
+  {
+    name: "Fear Gaze",
+    rarity: 3.66,
+    isNSFW: false,
+    description: "You are able to gaze into people's eyes and make them recall their greatest fear. The stronger a target is, the more energy you have to expend to apply the ability and strong-willed targets may not be affected as much."
+  },
+  {
+    name: "Glide",
+    rarity: 1.49,
+    isNSFW: false,
+    description: "Allows you to glide 1cm above the ground and move like you are not affected by friction, allowing you to move around as if you are skating."
+  },
+  {
+    name: "Absolute Gateway",
+    rarity: 6.00,
+    isNSFW: false,
+    description: "Allows you to create a door that can breach any barrier or defence, the door does not teleport the user but allows them to bypass any barrier or limitation it is placed on."
+  },
+  {
+    name: "Pacifists Domain",
+    rarity: 5.78,
+    isNSFW: false,
+    description: "Allows you to erect a domain with yourself in the middle, inside the domain no one can perform any acts of violence, not even the user."
+  },
+  {
+    name: "Quake",
+    rarity: 6.89,
+    isNSFW: false,
+    description: "One Piece - Allows the user to conjure massive vibrations, tremors and quakes that can travel through any medium like air, water or ground. Powerful enough to massive quakes that can devastate entire landmasses. Quake can also be used to shatter objects like glass and bypass durability to an extent."
+  },
+  {
+    name: "Adamantine Skin",
+    rarity: 6.83,
+    isNSFW: false,
+    description: "Your skin is nigh-invulnerable to all forms of harm, without some form of durability negation it's almost impossible to harm you at a similar level of power. You are also resistant to durability negation, decreasing its efficiency on you, and making it unable to pierce your defenses completely."
+  },
+  {
+    name: "Pheonix Zoan",
+    rarity: 7.34,
+    isNSFW: false,
+    description: "Allows the user to transform into a Blue Phoenix or a hybrid at will. As a Phoenix, they gain increased physical abilities and flight alongside extreme regenerative abilities. They can also emit powerful flames that can heal people."
+  },
+  {
+    name: "Hydra Form",
+    rarity: 6.12,
+    isNSFW: false,
+    description: "Allows the user to transform into a Hydra or a hybrid at will. As a hydra, they gain massively increased physical abilities, high-tier poison immunity, poison breath and extreme regeneration that can recover even limbs. They can also survive being beheaded up to 9 times."
+  },
+  {
+    name: "Thunderbird Form",
+    rarity: 5.78,
+    isNSFW: false,
+    description: "Allows the user to transform into a thunderbird or a hybrid at will. As a thunderbird, they gain increased physical abilities, flight and the ability to emit lightning from their body alongside weather manipulation."
+  },
+  {
+    name: "Portal Creation",
+    rarity: 5.55,
+    isNSFW: false,
+    description: "Allows you to create portals to anywhere in your sensory range or anywhere you have stepped foot into, the size of the portal can be altered, the portal cannot be closed while something is inside of it."
+  },
+  {
+    name: "Doormaker",
+    rarity: 7.62,
+    isNSFW: false,
+    description: "Allows you to create portals that can cross even dimensions that you can place anywhere you can perceive or have been to."
+  },
+  {
+    name: "Clairvoyance",
+    rarity: 4.44,
+    isNSFW: false,
+    description: "Allows you to extend your sight beyond your eyes, allowing you to control it as if it were some free cam or a spectator mode."
+  },
+  {
+    name: "Super Jump",
+    rarity: 1.83,
+    isNSFW: false,
+    description: "Allows you to jump great distances you would otherwise be unable to. Even a regular person would be able to leap over a building with this. And you are also immune to falling damage as a bonus."
+  },
+  {
+    name: "Shaper",
+    rarity: 6.92,
+    isNSFW: false,
+    description: "Worm Panacea - Allows you to freely manipulate flesh and biomaterials with perfect precision down to a cellular level though contact. The larger the power level difference between you and the target, the more they can resist your changes."
+  },
+  {
+    name: "Tool Manipulation",
+    rarity: 3.55,
+    isNSFW: false,
+    description: "Allows you to assign an object weighing less than your lifting strength as a target, you can telekinetically control the target with extreme precision as if it were a limb."
+  },
+  {
+    name: "Energy Drain",
+    rarity: 4.56,
+    isNSFW: false,
+    description: "Allows you to drain energy from living targets via contact. The larger the power level difference between you and the target, the less energy you can drain from at a time."
+  },
+  {
+    name: "Double Jump",
+    rarity: 1.52,
+    isNSFW: false,
+    description: "You are able to jump off of thin air for once as if it were a physical surface."
+  },
+  {
+    name: "Sky Jumper",
+    rarity: 2.78,
+    isNSFW: false,
+    description: "You are able to treat air as a tangible platform to jump off of any time but you can't stand on it for more than a second without falling."
+  },
+  {
+    name: "Clothes Beam",
+    rarity: 2.66,
+    isNSFW: false,
+    description: "Dragon Ball - You are able to fire off a laser beam that can dress anyone in any mundane clothing of your choice."
+  },
+  {
+    name: "Spirit Gathering",
+    rarity: 7.20,
+    isNSFW: false,
+    description: "You are able to channel the energy of anyone willing to share their energy with you regardless of distance and use it as your own."
+  },
+  {
+    name: "Power of Destruction",
+    rarity: 6.84,
+    isNSFW: false,
+    description: "DxD - You are able to conjure and control pure destructive energy that can annihilate anything as long as you have enough magical power."
+  },
+  {
+    name: "Full Counter",
+    rarity: 7.12,
+    isNSFW: false,
+    description: "Nanatsu no Taizai - If used with precise timing the user can counter any attack thrown at them and throw it back with double the power."
+  },
+  {
+    name: "Destruction Incarnate",
+    rarity: 8.13,
+    isNSFW: false,
+    description: "You are destruction Incarnate, you can turn your body into a vessel for nigh endless destructive energy that can wipe almost anything out of existence."
+  },
+  {
+    name: "Ice Man",
+    rarity: 9.21,
+    isNSFW: false,
+    description: "Marvel - Ice, you are everything ice, you can plunge worlds into an ice age, reconstruct your body out of ice, or unleash absolute zero temperatures at will."
+  },
+  {
+    name: "Pheonix Force",
+    rarity: 8.55,
+    isNSFW: false,
+    description: "Marvel - You are a host of the Phoenix Force, the source of all life and fire in the universe, but the Phoenix cannot exert any control or influence over you, the ability just acts like you are hosting it to channel its abilities."
+  },
+  {
+    name: "Stinger",
+    rarity: 8.24,
+    isNSFW: false,
+    description: "Imbue any attack with absolute inviolability, no matter what, this projectile cannot be stopped even by dimensional boundaries or reality-warping."
+  },
+  {
+    name: "Rally",
+    rarity: 3.34,
+    isNSFW: false,
+    description: "Allows you to give a rousing cry that bolsters your allies, giving them the courage of a lion and endless motivation that would turn even a chef into a fearless warrior who can take down a soldier."
+  },
+  {
+    name: "Cybele",
+    rarity: 5.43,
+    isNSFW: false,
+    description: "Fate Medusa - You possess unimaginably beautiful eyes that can turn anything in your gaze or anything that lays their eyes on you to stone. The larger the power level difference between you and a target, the slower they turn into stone."
+  },
+  {
+    name: "Third Person",
+    rarity: 2.54,
+    isNSFW: false,
+    description: "You can turn your perspective from seeing through your eyes to viewing the world as if you are operating a camera in an axis around you as if you were in Dark Souls."
+  },
+  {
+    name: "Seek Guidance",
+    rarity: 4.34,
+    isNSFW: false,
+    description: "When this ability is active, you are able to view commentary of those who were, could have been or would have been. The commentary can be helpful or even deceitful. You might find text written on the ground in front of a treasure informing you it's trapped, or text showing you the location of a hidden wall, or a text telling you to stand in front of a trap. Basically the messages from Eldensoulsborne Games."
+  },
+  {
+    name: "Immune",
+    rarity: 5.53,
+    isNSFW: false,
+    description: "You are immune, simple as, while Immune is in an active slot you cannot be poisoned, become ill, get cursed, or receive debuffs. You are immune to all negative status effects."
+  },
+  {
+    name: "Animate Undead",
+    rarity: 4.32,
+    isNSFW: false,
+    description: "You are able to animate corpses into a variety of undead such as skeletons, zombies, ghouls etc. but you cannot transform them into higher forms of undead such as vampires, dullahans, ghosts etc. Undead possess basic intelligence below human level but can understand orders. You can control up to 100 undead at once, this can be increased through training."
+  },
+  {
+    name: "Necromancy",
+    rarity: 5.55,
+    isNSFW: false,
+    description: "You are able to animate corpses into a variety of undead such as skeletons, zombies, ghouls and even higher forms of undead depending on the quality of the corpses. The higher the quality of the corpse, the higher the intelligence the undead will possess, all undead under your command are naturally loyal and obedient and you can dominate natural undead weaker than you. You can control up to 1000 undead at once, this can be increased through training."
+  },
+  {
+    name: "Authority of Lust",
+    rarity: 6.66,
+    isNSFW: false,
+    description: "When activated, everyone capable of seeing you treats you as an object of affection, whether that be platonic or romantic, the larger the power difference between you and the target the stronger the effect. You can ask a mundane for their life savings or wife and they will happily give it over to you, but for someone of equal level, they might just treat you like an ordinary friend."
+  },
+  {
+    name: "Steal",
+    rarity: 3.33,
+    isNSFW: false,
+    description: "Allows you to remotely steal a possession of a target without them noticing, the target must be an object that is not physically or magically bound to them and they must be within 10 meters of you, the more valuable an object the more energy is required."
+  },
+  {
+    name: "Grand Theft",
+    rarity: 5.32,
+    isNSFW: false,
+    description: "Allows you to steal ALL possessions of a target within a 5-meter range, everything on their body that is not magically or physically bound enters a subspace inventory you have. You can narrow the range of the ability to steal specific targets more easily."
+  },
+  {
+    name: "Record",
+    rarity: 2.72,
+    isNSFW: false,
+    description: "Trash Count - Allows you to record your sight into your mind, recorded information is engraved in memory even better than photographic memory as you can recall it in absolutely perfect detail at any time as if you are actively thinking about it all the time."
+  },
+  {
+    name: "Arousal",
+    rarity: 3.60,
+    isNSFW: true,
+    description: "(Nsfw)Allows you to make targets in your vision aroused or make them climax with enough arousal. The stronger the target the more energy has to be spent and if they are significantly stronger than you they will be able to notice your attempts."
+  },
+  {
+    name: "Audacity",
+    rarity: 4.66,
+    isNSFW: false,
+    description: "Allows you to go unnoticed by people, they try to ignore you to the best of their ability, you can pick the lock to someone's house, grab their wallet while they are having dinner, kill their wife and leave without them even commenting on it. Stronger targets are less affected by this and will notice actions that are drastic, this ability consumes energy and stamina to keep active."
+  },
+  {
+    name: "Mind Reading",
+    rarity: 4.56,
+    isNSFW: false,
+    description: "Allows you to read the mind of a target you are focused on, allowing you to read their surface thoughts, emotions or even deeper thoughts and opinions. The stronger the target, the higher the energy drain."
+  },
+  {
+    name: "Telepathy",
+    rarity: 4.99,
+    isNSFW: false,
+    description: "Allows you to exchange thoughts with people, the range is dependent on your energy levels. You can either read people's surface thoughts or communicate with them telepathically either both ways or one way. This can be done with multiple people but will strain your mind heavily."
+  },
+  {
+    name: "Crimson Fucker",
+    rarity: 6.82,
+    isNSFW: true,
+    description: "Hellsing - You are a descendant of Alucard, the Crimson Fucker himself, sharing all of his natural abilities."
+  },
+  {
+    name: "Basilisk Form",
+    rarity: 4.12,
+    isNSFW: false,
+    description: "You are able to transform into a basilisk at will, partially or fully. Your gaze can petrify and paralyze enemies and your scales grant you natural armor, you are also very resistant to curses."
+  },
+  {
+    name: "Wendigo",
+    rarity: 4.25,
+    isNSFW: false,
+    description: "Allows you to transform into a Wendigo, either partially or fully. As a Wendigo you have increased ice affinity and enhanced physical stats, you can also summon blizzards at will and possess supernatural tracking skills. Beware that you may also develop an appetite for human flesh."
+  },
+  {
+    name: "Oni",
+    rarity: 3.45,
+    isNSFW: false,
+    description: "Allows you to transform into an Oni, either partially or fully. As an Oni, you possess enhanced physical stats and a minor healing factor but are vulnerable to holy."
+  },
+  {
+    name: "Pheonix Form",
+    rarity: 6.75,
+    isNSFW: false,
+    description: "Allows you to transform into a Phoenix, either partially or fully. As a divine bird of flame, you can gain enhanced physical stats, a major boost to fire affinity, and incredible regeneration as well as being able to return from the dead once every 30 days."
+  },
+  {
+    name: "Mirror World",
+    rarity: 5.72,
+    isNSFW: false,
+    description: "Allows you to appear in a mirrored version of the world with no living beings inside, you can also pull other living creatures into the mirror world."
+  },
+  {
+    name: "Mirror Force",
+    rarity: 5.02,
+    isNSFW: false,
+    description: "Yugioh - Allows you to reflect magical attacks back with a large forcefield."
+  },
+  {
+    name: "Disguise",
+    rarity: 3.14,
+    isNSFW: false,
+    description: "Allows you to alter the color and texture of any object by touching them, disguise lasts until the structural integrity of the subject is compromised."
+  },
+  {
+    name: "Fishman",
+    rarity: 3.81,
+    isNSFW: false,
+    description: "One Piece - Allows you to transform into a fishman, as a fishman you have enhanced strength and water affinity as well as water-breathing."
+  },
+  {
+    name: "Lock",
+    rarity: 4.21,
+    isNSFW: false,
+    description: "Allows you to place \"locks\" onto entities, locked entities cannot be interacted with without being unlocked by either fulfilling a certain condition or opening it with a key. Brute forcing is also an option. You cannot lock living beings that are resisting."
+  },
+  {
+    name: "Unlock",
+    rarity: 6.01,
+    isNSFW: false,
+    description: "Allows you to unlock entities, this ability is conceptual in nature. The things you can unlock range from locks to someone's inner potential. Imagination and energy costs are your limit, the more abstract and harder the target is to unlock, the more energy is spent."
+  },
+  {
+    name: "Dragon",
+    rarity: 5.33,
+    isNSFW: false,
+    description: "Allows you to transform into a western dragon either partially or fully, granting you enhanced stats and energy as well as the ability to use your other abilities as breath attacks."
+  },
+  {
+    name: "Energization",
+    rarity: 5.52,
+    isNSFW: false,
+    description: "Allows you to convert your flesh into mana or energy to become an energy being. The more flesh you convert the more energy you have, but you will be more vulnerable to energy-based attacks."
+  },
+  {
+    name: "Everlasting Dragon Form",
+    rarity: 6.57,
+    isNSFW: false,
+    description: "Darksouls - Allows you to transform into a giant everlasting dragon either partially or fully. As an Everlasting Dragon with the stone scales of immortality, you have no need for any kind of sustenance and possess regeneration and a powerful breath attack. As long as your scales are intact you are incredibly resistant to all damage but your immortality fades if your scales are destroyed, you are also vulnerable to lightning."
+  },
+  {
+    name: "Lunarian",
+    rarity: 5.78,
+    isNSFW: false,
+    description: "One Piece - \"No, it doesn't give you the pass\" Allows you to transform into a Lunarian from One Piece, as a Lunarian you can freely fly with your wings and manipulate the fire generated in your body in the form of attacks and otherwise. As long as your flame is intact you gain an extreme durability boost, but if you lose it you lose your extra durability but gain a slight speed increase in exchange."
+  },
+  {
+    name: "Six Eyes",
+    rarity: 5.62,
+    isNSFW: false,
+    description: "JJK - Grants exceptional visual prowess that can even penetrate through solid matter, incredible calculation ability, and energy efficiency, but overuse will strain your eyes heavily."
+  },
+  {
+    name: "Sharingan",
+    rarity: 4.05,
+    isNSFW: false,
+    description: "Naruto - Grants you exceptional visual prowess and allows you to copy and imitate moves and skills you see. With training, you can reach other levels of the sharingan."
+  },
+  {
+    name: "Byakugan",
+    rarity: 4.45,
+    isNSFW: false,
+    description: "Naruto - Grants you exceptional visual prowess that can even penetrate through solid matter and allow you to read energy signatures."
+  },
+  {
+    name: "Nine Eyes",
+    rarity: 7.11,
+    isNSFW: false,
+    description: "Second Coming of Gluttony, When activated, Nine Eyes differentiates objects into nine titular colors each categorized with their own representational meaning, such as various levels of threat evaluation and modest understandings of fate and destiny. If an object is displayed in or changed to a color yet to be unlocked, it is displayed as colorless. Objects or people bestowed with divine power also cannot be perceived with the Nine Eyes. For more info: https://the-second-coming-of-gluttony.fandom.com/wiki/Nine_Eyes"
+  },
+  {
+    name: "Strength",
+    rarity: 3.22,
+    isNSFW: false,
+    description: "Grants you super strength, you can lift cars overhead, punch through reinforced concrete walls, and bend metal like rubber. Scales with base strength consume energy to remain active, you can further augment your strength with more energy."
+  },
+  {
+    name: "Speed",
+    rarity: 3.83,
+    isNSFW: false,
+    description: "Grants you supernatural speed, you can run faster than a car and swifter than a dragonfly. Scales with base speed and consumes energy to remain active, you can further augment your speed with more energy."
+  },
+  {
+    name: "Resistant",
+    rarity: 3.66,
+    isNSFW: false,
+    description: "Grants you supernatural durability, you are immune to low-caliber bullets and cars will be the ones that take damage when they hit you. Scales with base durability and consumes energy to remain active, you can further augment your durability with more energy."
+  },
+  {
+    name: "Master of Arms",
+    rarity: 3.62,
+    isNSFW: false,
+    description: "Whatever weapon you are holding, you get a temporary intermediate mastery for it for as long as you hold onto it."
+  },
+  {
+    name: "Atlas",
+    rarity: 5.90,
+    isNSFW: false,
+    description: "\"The Giant held up the very skies\" grants you immense super strength, strong enough to carve mountains and move cities with your bare hands as long you expend enough energy. You can also release shockwaves with your power. Consumes energy when active."
+  },
+  {
+    name: "Star Toss",
+    rarity: 8.00,
+    isNSFW: false,
+    description: "The ultimate strength, you can pluck the stars from the sky and shatter planets. Your strength is immeasurable, you can augment strength without limits."
+  },
+  {
+    name: "Extreme Speed",
+    rarity: 6.02,
+    isNSFW: false,
+    description: "Allows you to move at extreme speeds, but such speed may be hard to control. You can augment your speed to extreme degrees but the faster you go the more energy you burn."
+  },
+  {
+    name: "Godlike Speed",
+    rarity: 8.34,
+    isNSFW: false,
+    description: "The ultimate speed. Sound is a statue and light is a turtle. Allows you to augment your speed without limits provided you have the energy."
+  },
+  {
+    name: "Invincible",
+    rarity: 5.73,
+    isNSFW: false,
+    description: "You are \"Title Card\". You are extremely durable, even nuclear weapons would find it hard to give you a first-degree burn. You can augment your durability to extreme levels."
+  },
+  {
+    name: "No Friction",
+    rarity: 2.66,
+    isNSFW: false,
+    description: "Allows you to eliminate the friction of the target you are touching."
+  },
+  {
+    name: "Phase Shift",
+    rarity: 4.73,
+    isNSFW: false,
+    description: "Unordinary - Allows you to switch between defensive and offensive forms, in offensive form you gain enhanced speed and strength while in defensive form you gain enhanced durability and resistance."
+  },
+  {
+    name: "Hunter",
+    rarity: 4.94,
+    isNSFW: false,
+    description: "Unordinary - Greatly augments your physical stats but more importantly your sensory abilities, your hearing and focus get heightened to a level where you can hear and lock onto a specific heartbeats a street away. Scales with basic stats."
+  },
+  {
+    name: "Mute",
+    rarity: 3.84,
+    isNSFW: false,
+    description: "Allows you to remove the sound of a target or one of your abilities, making them silent. Abilities that are muted cost double the energy."
+  },
+  {
+    name: "Widen",
+    rarity: 3.89,
+    isNSFW: false,
+    description: "Allows you to extend the area of effect of an ability without decreasing its power, like doubling or tripling the area of effect but making the ability consume more energy."
+  },
+  {
+    name: "Penetrate",
+    rarity: 4.66,
+    isNSFW: false,
+    description: "Allows you to augment your abilities with penetration, allowing them to better ignore resistances and bypass immunities. The main use is to bypass immunities. With Penetrate even a lich can be cursed and a fire dragon burnt."
+  },
+  {
+    name: "Boost",
+    rarity: 4.94,
+    isNSFW: false,
+    description: "Allows you to increase the rating of a targeted ability by a full stage as long as they are below Legendary in rating."
+  },
+  {
+    name: "Delay",
+    rarity: 3.87,
+    isNSFW: false,
+    description: "Allows you to cast an ability but delay its effect, for example, you can launch a fireball and then delay it so that it shoots out 1 minute after in that same location or cast healing on yourself and delay it and undelay it when you need it."
+  },
+  {
+    name: "Permeation",
+    rarity: 4.66,
+    isNSFW: false,
+    description: "MHA - Allows you to phase through objects and attacks but since it is not selective phasing you can fall through the ground and phasing your head makes you blind. If you disable phasing while in a solid object, you will be forced out at high speeds head first."
+  },
+  {
+    name: "Dress Break",
+    rarity: 3.44,
+    isNSFW: false,
+    description: "DxD - By touching a target you can destroy their clothing or armor, you can also delay this effect for up to an hour."
+  },
+  {
+    name: "Multiplicity",
+    rarity: 4.66,
+    isNSFW: false,
+    description: "Allows you to use multiple instances of an ability at once, like triplet fireball that shoots three fireballs or tenfold lightning strike that strikes a location with 10 lightning strikes, every instance of multiplicity consumes appropriate amounts of energy."
+  },
+  {
+    name: "Deduction",
+    rarity: 4.21,
+    isNSFW: false,
+    description: "Worm Tattletale - Allows you to deduct information from a target through enhanced observations, the information you get from this ability is similar to what a genius detective like Sherlock Holmes would be able to infer from a detailed observation of the target."
+  },
+  {
+    name: "Condemnation",
+    rarity: 7.10,
+    isNSFW: false,
+    description: "\"Let there be judgment\" Allows you to cast judgment on a target, depending on their karma level they will receive a sentence when used against irredeemable evil by a user with positive karma the victim's power will be reduced by 10x and the users' power will be increased 10x against the target. 8-hour cooldown."
+  },
+  {
+    name: "Salt King",
+    rarity: 6.72,
+    isNSFW: false,
+    description: "Turns you into the Salt King, while in this form you are able to create, control, and transform targets into salt, the salt under your control is supernaturally powerful and a target needs to be at least on par with you to resist transmutation into salt, your range is as far as your eyes can see."
+  },
+  {
+    name: "Gravity",
+    rarity: 5.58,
+    isNSFW: false,
+    description: "Allows you to create and control gravitational fields."
+  },
+  {
+    name: "Gravity Manipulation",
+    rarity: 7.71,
+    isNSFW: false,
+    description: "Allows you to accurately control gravity on a massive scale. You can invert gravity to throw islands into the sky, create imitation black holes, crush objects with extreme gravity, etc. Imagination and the power of gravity are your limits, with enough training you could remove gravity from a planet."
+  },
+  {
+    name: "Optimization",
+    rarity: 5.23,
+    isNSFW: false,
+    description: "Allows you to optimize targets, reducing the energy consumption of electronics or making your spells and abilities as efficient as they can be."
+  },
+  {
+    name: "Perfect Unknowable",
+    rarity: 6.86,
+    isNSFW: false,
+    description: "Overlord - You can temporarily erase all evidence of your existence, you won't show energy signatures, and you can't be smelled, seen, heard, or perceived by anything in any shape or form until you attack something."
+  },
+  {
+    name: "Life Share",
+    rarity: 3.78,
+    isNSFW: false,
+    description: "You can share your own life force to heal others, this is initiated through touch but further mastery can allow this to be done remotely."
+  },
+  {
+    name: "Wheel of Mahoraga",
+    rarity: 8.21,
+    isNSFW: false,
+    description: "JJK - Manifests a wheel behind, whenever you encounter any phenomenon that you can't overcome the wheel will spin and adapt you and your abilities to make you either resistant against what damaged you or give you the ability to hurt what you previously couldn't, adaptation fades after the ability is canceled but the knowledge and expertise gained such as new ways to utilize your ability stay."
+  },
+  {
+    name: "Decay",
+    rarity: 5.33,
+    isNSFW: false,
+    description: "MHA - Allows you to destroy any object you touch by spreading decay to it, breaking down its structure until its dust, you can spread decay further from the initial area more and more with training. Strong targets can resist decay to an extent."
+  },
+  {
+    name: "Wither",
+    rarity: 5.45,
+    isNSFW: false,
+    description: "Allows you to emit and spread an aura that withers living beings, making them lose vitality and start breaking down from the inside. This also disables regeneration and persists for some time after being exposed to it like poison. With training, you can make this even more potent and harness it as an actual tangible attack with power behind it."
+  },
+  {
+    name: "Overgrowth",
+    rarity: 5.86,
+    isNSFW: false,
+    description: "Allows you to supercharge any plantlife you touch, making them grow incredibly under your control, as long as you control them the plants are reinforced with your energy and you can shape the plants to attack or form constructs, once you stop touching the plants they will revert to their previous form but with training, you can make the effect permanent."
+  },
+  {
+    name: "Mark",
+    rarity: 2.72,
+    isNSFW: false,
+    description: "Allows you to mark targets by touching them, as long as the mark is active you are perfectly aware of how far and where a placed mark is."
+  },
+  {
+    name: "Future Sight",
+    rarity: 5.99,
+    isNSFW: false,
+    description: "One Piece - Allows you to look several seconds into the future that would have occurred had you not used future sight. With training, you can further extend the range of future sight."
+  },
+  {
+    name: "Precognition",
+    rarity: 4.34,
+    isNSFW: false,
+    description: "Allows you to receive precognitive visions of impending danger by focusing you can also actively look a few moments into the future."
+  },
+  {
+    name: "Diagnosis",
+    rarity: 1.73,
+    isNSFW: false,
+    description: "You can touch a target and receive a detailed diagnosis of their health condition."
+  },
+  {
+    name: "Date Scouter",
+    rarity: 2.84,
+    isNSFW: false,
+    description: "Allows you to bring up a status page of a target that shows their likes, dislikes, and their kinks."
+  },
+  {
+    name: "Absolute Territory",
+    rarity: 6.21,
+    isNSFW: false,
+    description: "Create a 100-meter zone around yourself, inside of that territory all abilities are ranked up by one stage and all of your physical abilities are increased, as long as Absolute Territory is active no other being can call authority inside of it, but as a trade-off, you cannot leave your territory for the duration it is active for. Absolute Territory costs a large amount of energy to maintain."
+  },
+  {
+    name: "Branding",
+    rarity: 4.11,
+    isNSFW: false,
+    description: "You can brand unresisting targets, marking them as yours, you are able to know the location and condition of the branded targets and you can even summon yourself to them or them to you with a 24-hour cooldown."
+  },
+  {
+    name: "Soul Marriage",
+    rarity: 5.55,
+    isNSFW: false,
+    description: "You can soul marry a target of your choosing, they must be willing to marry you. With a kiss they will become your bride and get a soul ring on their ring finger, you can freely share your energy with your wives and vice versa. You can also teleport to their location or they can teleport to yours with an 8-hour cooldown. You can track the current state of your wives and their location. You can also give them your abilities and take them back without penalty."
+  },
+  {
+    name: "Mirror",
+    rarity: 4.99,
+    isNSFW: false,
+    description: "You can touch a target to copy their power in place of the mirror ability for 1 hour, only works on abilities Legendary rank or below. No cooldown, you can replace the copied ability anytime. 2 hour cooldown."
+  },
+  {
+    name: "Power Mimicry",
+    rarity: 7.82,
+    isNSFW: false,
+    description: "You can touch a target and add their ability to power mimicry. At any time you can change power mimicry to any power you have stored inside of it. Power mimicry can only mimic one ability at a time."
+  },
+  {
+    name: "Ability Drain",
+    rarity: 6.69,
+    isNSFW: false,
+    description: "You can touch a target and forcefully absorb their ability, only works if their ability is based on their biology, and does not work for things like blessings, curses, authorities, etc."
+  },
+  {
+    name: "Beast Mimicry",
+    rarity: 5.86,
+    isNSFW: false,
+    description: "You can mimic or manifest the aspect of any beast you have consumed within a 24-hour period. Like the shell of a crab as armor or the regeneration of a hydra."
+  },
+  {
+    name: "Overhaul",
+    rarity: 7.61,
+    isNSFW: false,
+    description: "MHA - Allows you to deconstruct and reconstruct matter at will, with training you could even reconstruct matter down to the molecular levels."
+  },
+  {
+    name: "Pocket Dimension",
+    rarity: 5.45,
+    isNSFW: false,
+    description: "You have access to a pocket dimension that you can use to store basically anything inside, buildings, people, or items. The dimension starts off at 1km x 1km and expands as you get stronger. You have to open physical portals to access your dimension so beware."
+  },
+  {
+    name: "Inventory",
+    rarity: 3.84,
+    isNSFW: false,
+    description: "You have access to an inventory that you can store nonliving targets inside of, the capacity of the inventory is equal to the amount of weight you can carry."
+  },
+  {
+    name: "Synthesis",
+    rarity: 6.55,
+    isNSFW: false,
+    description: "You can combine two objects to create an object that combines their desired traits. You could keep combining pebbles until you end up with a material equal to adamantite or you could combine enough iron swords to make an unbreakable sword."
+  },
+  {
+    name: "Sonar",
+    rarity: 2.66,
+    isNSFW: false,
+    description: "You have a sonar on you that you can use to detect your surroundings."
+  },
+  {
+    name: "Life Radar",
+    rarity: 2.84,
+    isNSFW: false,
+    description: "You can detect all lifeforms and their shapes in a 100-meter radius that you can increase with training."
+  },
+  {
+    name: "Devil Control",
+    rarity: 8.33,
+    isNSFW: false,
+    description: "You can completely and absolutely control any being that is lesser than you, but you have to prove they are lesser than you first."
+  },
+  {
+    name: "Arbor",
+    rarity: 4.62,
+    isNSFW: false,
+    description: "MHA - You can create and extend wood constructs out of your body that you can control and reinforce."
+  },
+  {
+    name: "Contractual Rectreation",
+    rarity: 4.01,
+    isNSFW: false,
+    description: "JJK Reggie - You can invoke any legally binding receipt you have ownership of to take advantage of its effect. You can invoke a receipt for a hot spring trip to make yourself refreshed or a receipt for a house to summon a copy of it that you can control etc."
+  },
+  {
+    name: "Trajectory Manipulation",
+    rarity: 6.86,
+    isNSFW: false,
+    description: "You are able to manipulate the trajectory of any projectile in your perception, make bullets curve around you, make the spear you threw take a sharp turn without losing momentum, and reverse the direction of a fireball. The more powerful the projectile the harder it is to control the trajectory of."
+  },
+  {
+    name: "Hermit Purple",
+    rarity: 4.66,
+    isNSFW: false,
+    description: "JJK Joseph - Allows you to call upon Hermit Purple, manifesting as translucent purple vines you can manipulate that can also allow you to divine the future you can increase the accuracy of the divination through training."
+  },
+  {
+    name: "Somnabulist",
+    rarity: 4.22,
+    isNSFW: false,
+    description: "MHA Midnight - Allows you to emit a very powerful sleeping from your skin that takes the form of a purple mist."
+  },
+  {
+    name: "Phantom Touch",
+    rarity: 2.34,
+    isNSFW: false,
+    description: "Allows you to touch a target from range, making them feel your hands or mouth on their body on a spot of your choosing, but these are only phantom sensations that cannot physically affect a target."
+  },
+  {
+    name: "Collaring",
+    rarity: 3.84,
+    isNSFW: false,
+    description: "You can collar a defeated or submitting target, once collared the target cannot move to hurt you in any way and you can force them to comply with your orders, this ability manifests as a translucent collar and chain around the target's neck that can be hidden."
+  },
+  {
+    name: "Material Swim",
+    rarity: 2.45,
+    isNSFW: false,
+    description: "You can go through physical objects as if they have the consistency of water, this does not affect the state or structural integrity of the object you are swimming in."
+  },
+  {
+    name: "Kaleidoscope",
+    rarity: 9.13,
+    isNSFW: false,
+    description: "Fate - A True Magic that allows the user to manipulate parallel worlds."
+  },
+  {
+    name: "Heaven's Feel",
+    rarity: 9.00,
+    isNSFW: false,
+    description: "Fate - A True Magic that turns the soul of the user into an immortal high-dimensional entity that generates infinite energy."
+  },
+  {
+    name: "Denial of Nothingness",
+    rarity: 9.23,
+    isNSFW: false,
+    description: "Fate - A True Magic that allows the user to create anything that can be created given enough energy."
+  },
+  {
+    name: "Lycanthropy",
+    rarity: 5.87,
+    isNSFW: false,
+    description: "Allows you to turn yourself into a werewolf that gives you enhanced physical abilities and the characteristics of a common werewolf. Also allows you to spread it to others to turn them into werewolves."
+  },
+  {
+    name: "Despair Aura I",
+    rarity: 1.34,
+    isNSFW: false,
+    description: "Allows you to emit an aura of despair that makes people feel uneasy and weaker targets to feel fear."
+  },
+  {
+    name: "Despair Aura II",
+    rarity: 2.44,
+    isNSFW: false,
+    description: "Allows you to emit an aura of despair that makes people feel a sense of unease and fear toward you, weaker willed targets will be overcome with unbearable fear and panic."
+  },
+  {
+    name: "Despair Aura III",
+    rarity: 3.14,
+    isNSFW: false,
+    description: "Allows you to emit an aura of despair that makes people feel a sense of deep unease and fear toward you, weaker targets will feel their morale and spirits crushed and be overcome with despair unable to retaliate."
+  },
+  {
+    name: "Despair Aura IV",
+    rarity: 4.86,
+    isNSFW: false,
+    description: "Allows you to emit an aura of despair that makes people feel a sense of unease, fear, and terror toward you, you can drive weaker targets to insanity by focusing your aura on them and make armies of weaker peons fall to their knees in despair and hopelessness in front of you."
+  },
+  {
+    name: "Despair Aura V",
+    rarity: 5.66,
+    isNSFW: false,
+    description: "Allows you to emit an aura of death and despair that commands fear, terror, and hopelessness. This aura can even physically crush opponents and bring them to their knees, the weaker an opponent is the more they are susceptible to panic, fear, and insanity. Against targets that are significantly weaker than you, it can even kill them outright."
+  },
+  {
+    name: "Rubber Body",
+    rarity: 3.68,
+    isNSFW: false,
+    description: "Your body can stretch and compress like it is made of rubber, the higher your physical stats the more it can stretch and compress."
+  },
+  {
+    name: "Magic Jammer",
+    rarity: 4.81,
+    isNSFW: false,
+    description: "Allows you to destroy or disable magical constructs, the stronger the magical construct the more energy it costs to jam them."
+  },
+  {
+    name: "Contract Creation",
+    rarity: 3.73,
+    isNSFW: false,
+    description: "Allows you to enforce the clauses and conditions of any contract you make. The conditions of the contract must be set while Contract Enforcement is active, with contract enforcement you can forcefully activate the clauses of a contract on your contract and force your target to comply, this however goes both ways."
+  },
+  {
+    name: "Binding Vow",
+    rarity: 4.55,
+    isNSFW: false,
+    description: "JJK - Allows you to create binding vows, basically promises with reality itself. If a binding vow between two parties is broken, the breaker will suffer the penalty no matter how strong they are. You can also make self-binding vows, sacrificing things to make your energy output stronger such as being weaker at night in exchange for being stronger at day."
+  },
+  {
+    name: "Chop Chop",
+    rarity: 3.68,
+    isNSFW: false,
+    description: "One piece Buggy - Allows you to chop your body apart and make your body parts telekinetically float around with your feet as the anchor they move around. You are also immune to slashing attacks while this ability is active, if your limbs move too far away from your feet they become inactive."
+  },
+  {
+    name: "Lord of Shades",
+    rarity: 6.00,
+    isNSFW: false,
+    description: "From Hollow Knight - You become the embodiment of shades and shadow, allowing you to freely mold them to your will and absorb energy into yourself, but not wield it for your own."
+  },
+  {
+    name: "Almighty Push",
+    rarity: 4.81,
+    isNSFW: false,
+    description: "Naruto - Allows you to exert an incredible repulsion force under your control that can even wipe out entire streets as a normal human but has a 5-second cooldown."
+  },
+  {
+    name: "Universal Pull",
+    rarity: 4.14,
+    isNSFW: false,
+    description: "Naruto - Allows you to exert an incredibly attractive force under your control that can pull targets from far away or assign it to a target to have them be crushed by objects around them entombing them but has a 5-second cooldown."
+  },
+  {
+    name: "Operation",
+    rarity: 7.22,
+    isNSFW: false,
+    description: "One Piece Trafalgar Law - Allows you to create a circular zone where you have control over space and treat it like an operating table, allowing you to swap the places of objects, amputate people without damaging them, take out someone's beating heart permanently, teleport, etc. with training you can accomplish much more but maintaining the zone. However, utilizing this power consumes an immense amount of energy."
+  },
+  {
+    name: "Azure Dragon Form",
+    rarity: 7.83,
+    isNSFW: false,
+    description: "One Piece Kaido - Allows you to transform into a giant Eastern Azure Dragon or a hybrid at will, massively boosting your physical abilities and allowing you to use elemental breath attacks like fire, lightning, and air, also allows you to summon fire clouds to either lift things up or help you fly."
+  },
+  {
+    name: "Budha Form",
+    rarity: 6.83,
+    isNSFW: false,
+    description: "One Piece - Allows you to transform into a giant golden Buddha statue, massively boosting your physical abilities and allowing you to use golden shockwaves, your body in this form is nigh-invulnerable to most forms of damage."
+  },
+  {
+    name: "Cow Form",
+    rarity: 2.66,
+    isNSFW: false,
+    description: "One Piece - Allows you to transform into a cow or a cow hybrid at will, boosting your physical abilities and augmenting your vitality and stamina. You also inherit the traits a cow possesses while in this form."
+  },
+  {
+    name: "Sea Snake Form",
+    rarity: 5.81,
+    isNSFW: false,
+    description: "Allows you to transform into a sea snake or a sea snake hybrid at will, largely boosting your physical abilities and giving you minor regeneration as well as water breathing and mobility. You can also unleash a lethal poison breath."
+  },
+  {
+    name: "Tantric Healing",
+    rarity: 3.33,
+    isNSFW: true,
+    description: "(Nsfw)Allows you to heal ailments and various negative status effects through sexual intimacy, even scars, old wounds, and diseases can be healed and curses mitigated. The higher the level of intimacy and release the more effective the healing."
+  },
+  {
+    name: "Assembly",
+    rarity: 4.33,
+    isNSFW: false,
+    description: "Allows you to automatically assemble any parts you have access to into any item you have created or built with your own hands before or know how it's made. You can also create lesser versions of the items if the materials you have are subpar."
+  },
+  {
+    name: "Pearl Jam",
+    rarity: 3.94,
+    isNSFW: false,
+    description: "Allows you to imbue Pearl Jam into your cooking and improve it drastically. Depending on the quality of the food, its ingredients, and your power, the food you cook gain additional effects such as healing and curing illnesses and much more."
+  },
+  {
+    name: "Trace On",
+    rarity: 3.87,
+    isNSFW: false,
+    description: "Allows you to create weapons out of magical energy as long as you know how to construct them, the stronger a weapon the higher the energy cost."
+  },
+  {
+    name: "Structural Analysis",
+    rarity: 3.12,
+    isNSFW: false,
+    description: "Fate - Allows you to run your energy through an object or a construct to construct a detailed blueprint of the object in your mind as well as being aware of its weaknesses and flaws."
+  },
+  {
+    name: "Bloodhound",
+    rarity: 2.66,
+    isNSFW: false,
+    description: "Your smell ability is insane, you can track a week-old scent across a city with no problem. Your sense of smell is also incredibly distinguished, allowing you to pick up the scent of the person you want in a room with over 100 people easily."
+  },
+  {
+    name: "Hawk Eyes",
+    rarity: 2.84,
+    isNSFW: false,
+    description: "You have very powerful eyes that can see even hundreds of kilometers away with accuracy."
+  },
+  {
+    name: "Bat Ears",
+    rarity: 2.94,
+    isNSFW: false,
+    description: "Your hearing is incredibly fine-tuned, you can easily distinguish sounds and make out the sound of a coin hitting the ground in the middle of a populated mall."
+  },
+  {
+    name: "Usurper",
+    rarity: 6.01,
+    isNSFW: false,
+    description: "\"Complete Victory\" If you make an opponent recognize their complete and utter defeat towards you, you are able to permanently take one of their abilities. Only works once per target."
+  },
+  {
+    name: "Exchange",
+    rarity: 4.02,
+    isNSFW: false,
+    description: "Allows you to swap a power with the power of another person with their consent as long as both abilities are of the same rank."
+  },
+  {
+    name: "Finger Gun",
+    rarity: 3.94,
+    isNSFW: false,
+    description: "\"Bang\" Allows you to point with your index finger and say the words bang to blast a target with telekinetic energy."
+  },
+  {
+    name: "Telekinesis",
+    rarity: 4.54,
+    isNSFW: false,
+    description: "Allows you to grab and manipulate objects afar with your energy, telekinesis acts like an invisible forcefield that you can shape and move to your liking. Your telekinetic strength starts off as equal to Fubuki from One Punch."
+  },
+  {
+    name: "Greater Telekinesis",
+    rarity: 6.72,
+    isNSFW: false,
+    description: "Allows you to directly manipulate objects, acting as if you exert your willpower over the object itself rather than an outside force, allowing you to manipulate the object itself as well. Your telekinetic might is strong enough to throw around skyscrapers and tear out entire streets at base level and can be improved with training."
+  },
+  {
+    name: "True Telekinesis",
+    rarity: 8.83,
+    isNSFW: false,
+    description: "Your telekinesis is second to none, you can wield it as a forcefield, as an invisible force, manipulating objects directly, the only limit to what you can do with your telekinesis is your training. Your telekinetic talent is equal to or even beyond that of Tatsumaki from One Punch Man."
+  },
+  {
+    name: "Daily Grind",
+    rarity: 4.33,
+    isNSFW: false,
+    description: "When this ability has been in an active ability slot for a total of 24 hours, the physical stats of a regular grown human man get permanently added to your own physical stats. This can be repeated as many times as needed."
+  },
+  {
+    name: "Training Booster",
+    rarity: 4.81,
+    isNSFW: false,
+    description: "While this ability is active, all forms of training are twice as effective, and if Training Booster is placed in an ability slot, for every empty ability slot its effectiveness is doubled. 1 empty slot = 2x, 2 empty slots = 4x, 3 empty slot = 8x etc."
+  },
+  {
+    name: "Scouter",
+    rarity: 3.44,
+    isNSFW: false,
+    description: "Allows you to accurately gauge your opponent's abilities and power level even if they try to hide it from you."
+  },
+  {
+    name: "Danger Rating",
+    rarity: 3.14,
+    isNSFW: false,
+    description: "Allows you to view the danger a target can pose to you, ranging from Safe, Moderate, dangerous, lethal, and certain death."
+  },
+  {
+    name: "Lifeblood",
+    rarity: 3.84,
+    isNSFW: false,
+    description: "Allows you to imbue your blood with your own vitality, those who drink your vitality-infused blood will find themselves healed, the more vitality infused the higher the healing. Imbuing vitality in moderation is harmless but will leave you weakened and exhausted."
+  },
+  {
+    name: "Strength Sap",
+    rarity: 4.76,
+    isNSFW: false,
+    description: "Allows you to drain your opponent's strength and temporarily add it to your own through touch. They will slowly recover their strength but if you kill them using Strength Sap you permanently gain 10% of their physical abilities added to your own. The stronger an opponent is in relation to you, the slower you sap their strength."
+  },
+  {
+    name: "Devil Trigger",
+    rarity: 5.66,
+    isNSFW: false,
+    description: "Devil May Cry - Allows you to tap into your inner demonic power and transform into a Devil form, greatly enhancing your physical abilities and power. If you were a normal human before, with Devil Trigger you could tear apart tanks with your bare hands. Scales with your current abilities."
+  },
+  {
+    name: "Sin Devil Trigger",
+    rarity: 7.33,
+    isNSFW: false,
+    description: "Devil May Cry - Allows you to tap into your inner demonic power and take it to the next level, turning you into the apotheosis of what your devil form could be. Your power and physical abilities are massively boosted and you can wield pure demonic power to boost your existing abilities but you burn through your stamina and health extremely quickly. If your fireball could only knock down a wall before, it can annihilate a few city blocks with ease with Sin Devil Trigger."
+  },
+  {
+    name: "Angel Form",
+    rarity: 4.74,
+    isNSFW: false,
+    description: "Allows you to transform into an angel or an angel hybrid, boosting your physical stats and energy and also allowing you to infuse your abilities and items with holy energy, you can also fly with your wings."
+  },
+  {
+    name: "Archangel Form",
+    rarity: 7.45,
+    isNSFW: false,
+    description: "Allows you to transform into an archangel or an archangel hybrid, massively boosting your physical stats and also allowing you to infuse your abilities and items with pure holy energy, as an archangel you can intuitively use abilities such as blessings, healing, and protection, allowing you to use all Holy Abilities below Elite Rank."
+  },
+  {
+    name: "New Order",
+    rarity: 8.55,
+    isNSFW: false,
+    description: "MHA - Allows you to place or decide a RULE on the world on an object, the rule is only as strong as you are, so you cannot put in absolute commands. You can put commands such as strength to make an object stronger or \"Can grab lightning\" to yourself to make yourself be able to grab lightning, for the ability to work you must know the name of the target that they associate with themselves, no need for it against inanimate object. Can only place 2 orders at a time which can be increased with training."
+  },
+  {
+    name: "Word Magic",
+    rarity: 6.44,
+    isNSFW: false,
+    description: "Allows you to actualize words to invoke their power by writing them in the air. For example, FREEZE will freeze an object, IMMOVABLE will make an object get stuck mid-air, and BURN will cause it to burst into flames. If the word you are trying to use is too strong for your level it cannot be used."
+  },
+  {
+    name: "Life Fiber Creation",
+    rarity: 5.83,
+    isNSFW: false,
+    description: "Kill La Kill - Allows you to convert your lifeforce into Life Fibers, Life Fibers are stronger than any manmade material yet more elastic and flexible than any silk or string. You can freely control these life fibers and can even surround yourself with them to significantly boost your physical abilities."
+  },
+  {
+    name: "Life Fiber Hybrid",
+    rarity: 6.83,
+    isNSFW: false,
+    description: "Your body is infused with Life Fibers, giving you massively superhuman physical abilities and incredible healing ability, whenever you are wounded, the life fibers inside of you will pull you back together, even if you are split in half, they will come out and stitch the two parts together. You also have immense vitality in this form."
+  },
+  {
+    name: "Infernal Chains",
+    rarity: 3.88,
+    isNSFW: false,
+    description: "You are able to conjure infernal barbed chains that can bind or be used as weapons by you."
+  },
+  {
+    name: "Angel Style",
+    rarity: 2.69,
+    isNSFW: false,
+    description: "One Punch Man, Puri Puri Prisoner - For every % of skin you have uncovered, your energy output and physical abilities are increased by the same percentage, reaching 2x when fully naked."
+  },
+  {
+    name: "Heavenly Restriction",
+    rarity: 5.22,
+    isNSFW: false,
+    description: "JJK - While this ability is active, you cannot use energy or mana in any way, in exchange your physical abilities are increased by how much energy you have and you are immune to spells being directly cast on your life buffs, curses, etc. you are also unable to be detected by any magical means or targeted directly by abilities as your body lacks energy/mana."
+  },
+  {
+    name: "White Tiger Form",
+    rarity: 3.10,
+    isNSFW: false,
+    description: "You are able to transform into a snow tiger or a hybrid, giving you enhanced senses, predatory instincts, natural weapons, and increased physical stats as well as the traits a white tiger might otherwise have."
+  },
+  {
+    name: "Swamp Logia",
+    rarity: 6.21,
+    isNSFW: false,
+    description: "One Piece Caribou - You are able to generate, control, create, and turn into mud or a bottomless swamp. You are to drag objects or people into your swamp and store them inside of you as if they are in stasis."
+  },
+  {
+    name: "Idle Death Gamble",
+    rarity: 5.55,
+    isNSFW: false,
+    description: "JJK Hakari - I am not writing all of this down https://jujutsu-kaisen.fandom.com/wiki/Idle_Death_Gamble"
+  },
+  {
+    name: "Susanoo",
+    rarity: 4.66,
+    isNSFW: false,
+    description: "Naruto - Allows you to form a humanoid energy construct around your body that possesses exceptional defense. You can use this construct to both attack and defend for you while still being able to use abilities inside of it as it possesses selective intangibility, allowing you to let inside whatever you want. At first, this manifests as a skeletal humanoid but through training, you can make it stronger and more whole."
+  },
+  {
+    name: "Perfect Mangekyo Sharingan - Sasuke",
+    rarity: 6.11,
+    isNSFW: false,
+    description: "Naruto - Allows you to use the Mangekyo Sharingan possessed by Sasuke Uchiha, in addition to all of the abilities of the normal Sharingan that are enhanced, this allows the user to summon and control Amaterasu and summon a Susanoo."
+  },
+  {
+    name: "Susanoo Ribs",
+    rarity: 3.73,
+    isNSFW: false,
+    description: "Naruto - Allows you to form Susanoo's ribs around yourself, a construct made up of your own energy that is very durable and selectively intangible, allowing you to attack from inside it."
+  },
+  {
+    name: "Barrier",
+    rarity: 4.83,
+    isNSFW: false,
+    description: "Unordinary - You can form an incredibly durable circular or dome-shaped barrier that you can adjust the size of, whoever damages the barrier takes reflective damage forming lacerations and breaks around their body but if the barrier cracks the user will take internal damage and cough blood, if the barrier completely breaks they will take even more backlash. With training, you can even change the shape, size, and amount of barriers you can manifest at once."
+  },
+  {
+    name: "Spider Man",
+    rarity: 5.94,
+    isNSFW: false,
+    description: "Marvel - \"Don't forget the hyphen!\" You were bitten by a radioactive spider, giving you enhanced physical abilities, wall climbing, natural web production as well as precognition, the whole package, and none of the hassle of spider totems."
+  },
+  {
+    name: "Bloodlust",
+    rarity: 2.84,
+    isNSFW: false,
+    description: "Cloak yourself in the aura of a killer, and your instincts are boosted, giving you a sixth, allowing you to know where to strike better, find out weak spots in your enemy, and anticipate their movements. In essence, this gives you the sense of a very experienced killer."
+  },
+  {
+    name: "Phasing",
+    rarity: 6.11,
+    isNSFW: false,
+    description: "Marvel - Allows you to pass phase through objects and make objects phase through other objects as well, you can unphase objects inside of other objects to cause massive damage that ignores conventional durability."
+  },
+  {
+    name: "The Absorber",
+    rarity: 7.22,
+    isNSFW: false,
+    description: "You can absorb all energy, kinetic, thermal, radiation, etc., and convert it into your own, provided the energy makes contact with your body."
+  },
+  {
+    name: "Magic Arrow",
+    rarity: 2.74,
+    isNSFW: false,
+    description: "A simple attributeless energy projectile in the shape of an arrow that you can curve the direction of."
+  },
+  {
+    name: "Momentum",
+    rarity: 2.31,
+    isNSFW: false,
+    description: "The longer you are moving, the faster you start going, with a maximum of 500%. This limit can be expanded through training."
+  },
+  {
+    name: "Fa Jin",
+    rarity: 2.89,
+    isNSFW: false,
+    description: "MHA - Allows you to build up kinetic energy in your limbs through repeated movements that you release for a burst of power and speed. The stockpiled energy slowly fades away if not used."
+  },
+  {
+    name: "Glowing Eyes",
+    rarity: 0.11,
+    isNSFW: false,
+    description: "Your eyes can glow, not enough to provide any tangible advantage or use but they look cool."
+  },
+  {
+    name: "Slipper",
+    rarity: 1.72,
+    isNSFW: false,
+    description: "Your skin is really slippery like it's made of ice covered in oil, anyone trying to grab your body will be really annoyed."
+  },
+  {
+    name: "Waypoint",
+    rarity: 4.44,
+    isNSFW: false,
+    description: "Allows you to leave behind waypoints that you can warp to at any time, setting a waypoint on your location or traveling to it takes 10 seconds. The amount of waypoints you can have at any time is equal to your ability slot count x 3."
+  },
+  {
+    name: "Wood Release",
+    rarity: 6.84,
+    isNSFW: false,
+    description: "Naruto - Wood release allows you to create, shape, and control wood and plant life, in addition, you can absorb and suppress energy/mana through the roots that you create."
+  },
+  {
+    name: "Dust Release",
+    rarity: 7.22,
+    isNSFW: false,
+    description: "Naruto - Allows the user to form three-dimensional translucent constructs such as spheres and cubes that once launched, turn anything that passes through them to dust on a molecular level."
+  },
+  {
+    name: "Skill Drain",
+    rarity: 4.66,
+    isNSFW: false,
+    description: "Worm Victor - Allows you to drain the skills of people through touch, for example, you can drain the swordsmanship skill of a swordsman to worsen their skill and improve yours, but your skill cannot exceed the one you are stealing so you can't become a sword god by absorbing the skills of 1000 basic swordsmen."
+  },
+  {
+    name: "Velocity",
+    rarity: 3.59,
+    isNSFW: false,
+    description: "Worm - You move 10x faster but your influence on the world is 10x less. While you are 10x faster, you will also punch 10x times weaker and air resistance will be 10x stronger, etc."
+  },
+  {
+    name: "Nine Lives",
+    rarity: 7.83,
+    isNSFW: false,
+    description: "Fate - Grants you nine lives, every time you die with Nine Lives active you will be resurrected at full health and you will gain a high level of resistance towards what killed you previously."
+  },
+  {
+    name: "Rinnegan",
+    rarity: 8.66,
+    isNSFW: false,
+    description: "Naruto - The ultimate eyes that grant you the ability to utilize six abilities collectively known as the Six Paths Technique: controlling attractive and repulsive forces with the Deva Path; mechanically altering one's body with the Asura Path; extracting souls through the Human Path; summoning various creatures through the Animal Path; absorbing chakra through the Preta Path; and access to the King of Hell through the Naraka Path. A seventh ability, called the Outer Path, is said to allow the user to preside over life and death, granting them the ability to revive the dead. In addition, you can clearly see the flow of energy and have unparalleled sensory abilities."
+  },
+  {
+    name: "Object Attraction",
+    rarity: 0.85,
+    isNSFW: false,
+    description: "MHA - You can slowly draw small objects toward you, useful for when you don't want to get up from the bed to grab the remote."
+  },
+  {
+    name: "Rad Child",
+    rarity: 4.86,
+    isNSFW: false,
+    description: "Fallout - Who said radiation was bad? You are able to absorb radiation into your body, giving you regeneration and boosted physical abilities while irradiated, you can also absorb radiation to permanently improve your physical abilities and energy reserves."
+  },
+  {
+    name: "Weather",
+    rarity: 0.97,
+    isNSFW: false,
+    description: "You are able to accurately tell the weather of a given area for the span of a week."
+  },
+  {
+    name: "Weather Report",
+    rarity: 7.01,
+    isNSFW: false,
+    description: "JoJo - Allows you to control the weather and atmosphere both passively and actively, you can also control lightning, conjure water, recreate any previous weather phenomenon, create storms, change the composition of air, control wind, etc, this ability can also work autonomously without your input to defend you or act on your intent."
+  },
+  {
+    name: "Hurting",
+    rarity: 3.89,
+    isNSFW: false,
+    description: "Fear and Hunger - Allows you to directly damage a target by pointing at them, causing lacerations on their body."
+  },
+  {
+    name: "Dark Orb",
+    rarity: 2.84,
+    isNSFW: false,
+    description: "Allows you to conjure an orb out of dark energy that you can hurl at your enemies as a projectile."
+  },
+  
 ];
