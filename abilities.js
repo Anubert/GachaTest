@@ -3828,5 +3828,2508 @@ allData.abilities = [
     isNSFW: false,
     description: "Allows you to conjure an orb out of dark energy that you can hurl at your enemies as a projectile."
   },
-  
+  {
+    name: "Internet Access",
+    rarity: 3.61,
+    isNSFW: false,
+    description: "You can access the internet of your local world through your mind and instantly look up any information inside it through it."
+  },
+  {
+    name: "Frisk",
+    rarity: 1.72,
+    isNSFW: false,
+    description: "Allows you to know the full inventory of a target you are looking at, what they are wearing, and what's on their body as well as a quick summary of their inventory."
+  },
+  {
+    name: "Ripen",
+    rarity: 1.23,
+    isNSFW: false,
+    description: "Allows you to ripen and mature organic objects that cannot or do not resist."
+  },
+  {
+    name: "Forced Activation",
+    rarity: 4.66,
+    isNSFW: false,
+    description: "Allows you to forcefully activate and use the ability of a target you are touching as long as they are willing or cannot resist."
+  },
+  {
+    name: "Tactile Telekinesis",
+    rarity: 3.51,
+    isNSFW: false,
+    description: "Allows you to telekinetically manipulate objects you maintaining physical contact with, such as being able to crumple a car with a touch. The stronger a target is, the less of an effect it has on them."
+  },
+  {
+    name: "Tinker - Bombs",
+    rarity: 7.82,
+    isNSFW: false,
+    description: "(Tech)Allows you to build technological constructs or contraptions related to causing explosions and operating them, you can create bombs of all varieties, simple explosives, bombs that freeze time in an area, transmute an area to glass, teleport whatever was exploded, etc depending on the abilities you have as inspiration."
+  },
+  {
+    name: "Tinker - Efficiency",
+    rarity: 4.52,
+    isNSFW: false,
+    description: "(Tech)Allows you to build technological constructs or contraptions related to improving efficiency or more efficient and streamlined versions of existing technology."
+  },
+  {
+    name: "Tinker - Drones",
+    rarity: 3.61,
+    isNSFW: false,
+    description: "(Tech)Allows you to build technological constructs or contraptions related to drones, be it surveillance drones, turret drones, building drones, etc."
+  },
+  {
+    name: "Tinker - Blasto",
+    rarity: 6.71,
+    isNSFW: false,
+    description: "(Tech)Allows you to build technological constructs or contraptions related to biology and minion creation, allowing you to create custom plants, specialized drugs, clones, and homunculi with provided materials, tinker powers can also draw inspiration from your ability and traits list."
+  },
+  {
+    name: "Tinker - Prosthetics",
+    rarity: 3.23,
+    isNSFW: false,
+    description: "(Tech)Allows you to build technological constructs or contraptions related to prosthetics and limb replacements such as bionic arms, mecha legs, weaponized arms with guns and blades hidden inside, etc. Tinker powers can also draw inspiration from your ability and traits list to expand on the list of technology you can build."
+  },
+  {
+    name: "Tinker - Cryogenics",
+    rarity: 4.43,
+    isNSFW: false,
+    description: "(Tech)Allows you to build technological constructs or contraptions related to cryonics, frozen stasis chambers, frost grenades, ice guns, fridges, etc. You'd make Doctor Freeze proud."
+  },
+  {
+    name: "Tinker - Pyrotechnics",
+    rarity: 4.24,
+    isNSFW: false,
+    description: "(Tech)Allows you to build technological constructs or contraptions related to pyrotechnics, flamethrowers, super napalm, missiles, etc. You'd make Firefly proud."
+  },
+  {
+    name: "Tinker - Hacking",
+    rarity: 3.54,
+    isNSFW: false,
+    description: "(Tech)Allows you to build technological constructs or contraptions related to hacking, hijacking, and interfacing with other technologies."
+  },
+  {
+    name: "Tinker - Ai",
+    rarity: 6.64,
+    isNSFW: false,
+    description: "(Tech)Allows you to build technological constructs or contraptions related to artificial intelligence, allowing you to create smart assistants to operate tech for you, sentient companions, or go full Ultron."
+  },
+  {
+    name: "Tinker - Bio",
+    rarity: 7.81,
+    isNSFW: false,
+    description: "(Tech)Allows you to build technological constructs or contraptions related to biology and living organisms, you can make diseases, elixirs, clones, healing pods, custom races, and the list goes on."
+  },
+  {
+    name: "Tinker - Vehicle",
+    rarity: 4.21,
+    isNSFW: false,
+    description: "(Tech)Allows you to build technological constructs or contraptions related to vehicles or methods of transportation, like giant cars with laser canons and cloaking technology, a ship that goes at the speed of sound and does not get affected by waves. If it involves vehicles, you can build it."
+  },
+  {
+    name: "Tinker - Repair",
+    rarity: 2.59,
+    isNSFW: false,
+    description: "(Tech)Allows you to build technological constructs or contraptions related to maintaining and repairing technology. You can also spot the flaws in technology and know how to fix almost all technology."
+  },
+  {
+    name: "Tinker - Travel",
+    rarity: 5.79,
+    isNSFW: false,
+    description: "(Tech)Allows you to build technological constructs or contraptions related to transportation and travel. Teleportation pods, hypersonic cars, wingsuits, etc. if its goal is to get you from point A to point B you can probably build it."
+  },
+  {
+    name: "Tinker - Teleportation",
+    rarity: 4.76,
+    isNSFW: false,
+    description: "(Tech)Allows you to build technological constructs or contraptions related to teleportation like a telepad, teleportation pod, etc."
+  },
+  {
+    name: "Tinker - Melee Weapons",
+    rarity: 4.83,
+    isNSFW: false,
+    description: "(Tech)Allows you to build technological constructs or contraptions related to melee weapons, like fire swords, vibration blades, grenade hammers, etc. If it's a melee weapon and not magic you can probably build it."
+  },
+  {
+    name: "Tinker - Ranged Weapons",
+    rarity: 5.59,
+    isNSFW: false,
+    description: "(Tech)Allows you to build technological constructs or contraptions related to ranged weapons, like laser cannons, a revolver, missile batteries, etc."
+  },
+  {
+    name: "Tinker - Capture and Restraint",
+    rarity: 4.34,
+    isNSFW: false,
+    description: "(Tech)Allows you to build technological constructs or contraptions related to capturing and restraining individuals such as power-suppressing cuffs, containment foam, durable cells, etc."
+  },
+  {
+    name: "Tinker - Construction",
+    rarity: 3.59,
+    isNSFW: false,
+    description: "(Tech)Allows you to build technological constructs or contraptions related to construction such as super cement, reinforced steel structures, and incredibly efficient building schematics."
+  },
+  {
+    name: "Tinker - Cloaking",
+    rarity: 4.13,
+    isNSFW: false,
+    description: "(Tech)Allows you to build technological constructs or contraptions related to cloaking like invisibility fields, anti-radars, sound suppression, etc."
+  },
+  {
+    name: "Tinker - Analysis",
+    rarity: 4.63,
+    isNSFW: false,
+    description: "(Tech)Allows you to build technological constructs or contraptions related to analyzing data like scouters, observation drones predictive programs, etc."
+  },
+  {
+    name: "Tinker - Mecha",
+    rarity: 8.21,
+    isNSFW: false,
+    description: "(Tech)Allows you to build technological constructs or contraptions related to creating big ass mechs like Evangelion, Code Geass, or Gundam."
+  },
+  {
+    name: "Tinker - Cyberpunk 2077",
+    rarity: 5.44,
+    isNSFW: false,
+    description: "(Tech)Allows you to build technological constructs or contraptions from the Cyberpunk 2077 universe."
+  },
+  {
+    name: "Tinker - Metal Gear",
+    rarity: 7.34,
+    isNSFW: false,
+    description: "(Tech)Allows you to build technological constructs or contraptions from the Metal Gear universe."
+  },
+  {
+    name: "Tinker - Androids",
+    rarity: 5.22,
+    isNSFW: false,
+    description: "(Tech)Allows you to build technological constructs or contraptions related to constructing androids and artificial lifeforms."
+  },
+  {
+    name: "Tinker - RWBY",
+    rarity: 6.23,
+    isNSFW: false,
+    description: "(Tech)Allows you to build technological constructs or contraptions from the RWBY Universe including Dust synthesis."
+  },
+  {
+    name: "Tinker - Code Geass",
+    rarity: 6.54,
+    isNSFW: false,
+    description: "(Tech)Allows you to build technological constructs or contraptions from the Code Geass Universe."
+  },
+  {
+    name: "Tinker - Computers",
+    rarity: 4.24,
+    isNSFW: false,
+    description: "(Tech)Allows you to build technological constructs or contraptions related to personal computers, allowing you to build stuff like small supercomputers, etc."
+  },
+  {
+    name: "Tinker - Games",
+    rarity: 2.34,
+    isNSFW: false,
+    description: "(Tech)Allows you to build technological constructs or contraptions related to games or entertainment programs. You are over 100 times more efficient than the average experienced full development team when it comes to making games and entertainment programs."
+  },
+  {
+    name: "Tinker - Dreadon",
+    rarity: 8.33,
+    isNSFW: false,
+    description: "(Tech)Allows you to build technological constructs or contraptions emulating the technology of Dreadon from Calamity Mod."
+  },
+  {
+    name: "Tinker - Sensors",
+    rarity: 4.84,
+    isNSFW: false,
+    description: "(Tech)Allows you to build technological constructs or contraptions related to sensors, sensing, and tracking like radars, sonars, magic sensors, trackers, etc."
+  },
+  {
+    name: "Tinker - Star Wars",
+    rarity: 6.05,
+    isNSFW: false,
+    description: "(Tech)Allows you to build technological constructs or contraptions from the Star Wars universe including Kyber Crystal synthesis."
+  },
+  {
+    name: "Tinker - Defense",
+    rarity: 4.81,
+    isNSFW: false,
+    description: "(Tech)Allows you to build technological constructs or contraptions related to defense or securement, like barrier projectors, reinforced chassis, turrets, etc."
+  },
+  {
+    name: "Tinker - Armor",
+    rarity: 5.86,
+    isNSFW: false,
+    description: "(Tech)Allows you to build technological constructs or contraptions related to armored suits or power armor such as the Iron Man Suit, Fallout Power Armor, basically, you can build any kind of powered suit as long as it is not larger than 5 times your size, because then it is classified as a mech."
+  },
+  {
+    name: "Tinker - Fallout",
+    rarity: 5.32,
+    isNSFW: false,
+    description: "(Tech)Allows you to build technological constructs or contraptions from the Fallout Universe, such as Fusion Batteries, Chems, Power Armor, Stealth Boys, etc. Does not include Big MT. Technology."
+  },
+  {
+    name: "Toggle",
+    rarity: 2.55,
+    isNSFW: false,
+    description: "Allows you to turn objects or targets on and off, does not work on living beings, you could turn a radio on and off, this is also applicable to your own abilities as well."
+  },
+  {
+    name: "Technopathy",
+    rarity: 4.84,
+    isNSFW: false,
+    description: '"Talk to the power" Allows you to communicate and command machines that have code or interfaces, the resistance of the machine against your commands is equal to the strength of their firewall.'
+  },
+  {
+    name: "Dark Hand",
+    rarity: 3.78,
+    isNSFW: false,
+    description: "Dark Souls - This allows you to drain the lifeforce of the people you grab to add it to your own, the opponent must not be able to resist, in addition, you can cover your hand in dark hand to deal more damage or spread it out like a medium-sized shield."
+  },
+  {
+    name: "Polymerization",
+    rarity: 4.34,
+    isNSFW: false,
+    description: "Allows you to temporarily fuse your familiars together or with yourself. The stronger familiars you fuse together with yourself or between them, the higher the energy cost. Keeping two entities fused together drain energy over time."
+  },
+  {
+    name: "Viltrumite Physiology",
+    rarity: 7.11,
+    isNSFW: false,
+    description: "Invincible - You are basically a pure-blooded viltrumite, which means insane durability, the ability to freely move through space to fly, incredible physical abilities, enhanced sensory abilities, and a very adaptable body."
+  },
+  {
+    name: "Kryptonian Physiology",
+    rarity: 8.86,
+    isNSFW: false,
+    description: "DC - You are a pure-blood Kryptonian, a yellow sun supercharges your cells granting you numerous superpowers such as heat vision, ice breath, tactile telekinesis, flight, and super physique alongside all of the abilities a Kryptonian otherwise has. The longer you soak in sunlight the stronger these abilities are, sunlight also permanently improves your energy reserves."
+  },
+  {
+    name: "Saiyan Physiology",
+    rarity: 6.81,
+    isNSFW: false,
+    description: "Dragon Ball - You are a pure-blooded saiyan warrior, giving you a superhuman physique that can improve rapidly and abnormal energy levels, you also have a tail that is your weakness, paralyzing you when grabbed, under the full moon you turn into an Oozaru with massively enhanced stats but is mindless. Also, recovering from near-death injuries makes you significantly stronger. Just don't expect to bust planets too soon, it took Goku 20 years and training all his life to do so."
+  },
+  {
+    name: "Soft & Wet",
+    rarity: 5.81,
+    isNSFW: false,
+    description: "JoJo - You can release soap bubbles that plunder the property of a target they touch, like the friction from the floor to make it slippery or the hydration from a person to make them thirsty."
+  },
+  {
+    name: "Soften",
+    rarity: 3.44,
+    isNSFW: false,
+    description: "Allows you to soften objects you are touching while still keeping their properties otherwise, you can turn the consistency of steel into the dough but it's still as heavy and durable. Once you release your power the objects will slowly gain their hardness back but their shapes will still remain changed."
+  },
+  {
+    name: "Harden",
+    rarity: 3.55,
+    isNSFW: false,
+    description: "Allows you to harden objects you are touching while still keeping their properties, like hardening fire to turn it into a hot barrier or hardening water to turn it into a platform. Once you release your power the objects will slowly gain consistency."
+  },
+  {
+    name: "Clone",
+    rarity: 5.34,
+    isNSFW: false,
+    description: "Allows you to clone yourself and operate your bodies as a hivemind, you can use your abilities from anybody you control but maintaining clones costs energy, not too much but enough to be noticeable and will really add up if you use more than a few for long periods of time."
+  },
+  {
+    name: "Multiply",
+    rarity: 6.81,
+    isNSFW: false,
+    description: "Invincible - Allows you to create clones of your physical body, these clones cannot use your abilities but will carry on your physical traits at the moment of forming, forming them while an ability is active is more taxing, you and your clones work as a hivemind and share one mind. These clones do not require energy to maintain, you can have 10 clones at a time but this number can be increased with training."
+  },
+  {
+    name: "Avatar Creation",
+    rarity: 5.81,
+    isNSFW: false,
+    description: "Allows you to turn your abilities into avatars. To create an avatar you must give it at least 10% of your maximum energy storage. The avatar can act both independently or you can take active control of it at any time. The avatar is only capable of using the ability that you give it and otherwise possesses your basic stats. You can dispel the avatar at any time to get your ability back or otherwise if it perishes, the energy and ability will return in 1 hour."
+  },
+  {
+    name: "Twice",
+    rarity: 8.32,
+    isNSFW: false,
+    description: "MHA - Allows you to clone yourself and others but these clones possess an independent mind and massively reduced durability, you can only clone two targets at a time but your clones can also clone, the clones your clones make have even more reduced durability. After 10 iterations the clones are not strong enough to retain form."
+  },
+  {
+    name: "Clay Bombs",
+    rarity: 4.72,
+    isNSFW: false,
+    description: "Naruto - Allows you to form clay constructs capable of independent movement that can explode upon the user's command, the more energy is infused into the clay, the more power behind the explosion you create."
+  },
+  {
+    name: "Dark Matter",
+    rarity: 9.52,
+    isNSFW: false,
+    description: "Toaru - Allows you to generate and control a nonexistent matter called Dark Matter, Dark Matter can take on any property such as being combustible, turning organic beings to ash, creating new states of matter, creating new elements, creating life, creating clones, creating new powers, the only limitation is computational power."
+  },
+  {
+    name: "Nilbog",
+    rarity: 6.75,
+    isNSFW: false,
+    description: "Worm - Allows you to recycle biomass into customized minions with abilities and self-awareness. To create a minion you need access to biomass like a dog corpse and the biomass and result must have equal biomass, you can create minions in any form as long their body is biologically possible no matter how implausible, so you can create firebreathing horses with graphene scales if you practice enough. Your creations are unconditionally loyal to you."
+  },
+  {
+    name: "World Painting",
+    rarity: 6.71,
+    isNSFW: false,
+    description: "Dark Souls - You are able to bring paintings into existence, whatever landscape you paint you will be able to enter the painting to experience the world inside like it is its own pocket dimension or even its own world depending on your power level. But even at the bare minimum you can paint a small forest and have things live inside of it. With enough training, you can even create your own mini-world."
+  },
+  {
+    name: "Wonder of U",
+    rarity: 9.43,
+    isNSFW: false,
+    description: "JoJo - You are protected by the very concept of Calamity itself. As long as something is pursuing you, or even aware of you they will be inflicted with calamities of increasing magnitude until they stop pursuing you or die. The closer they get to you, the higher the calamities will escalate, they will never reach you as long as you exist. Calamities range from a falling tree to at maximum escalation their own abilities killing themselves. You do not gain tickets from targets killed in a calamity."
+  },
+  {
+    name: "Bloody Imitation",
+    rarity: 3.03,
+    isNSFW: false,
+    description: "MHA - Allows you to transform your physical appearance to the blood of someone you have consumed at will down to the most minute details. The duration of the disguise is equal to (ml of blood consumed x 1 minute)."
+  },
+  {
+    name: "Bloody Replication",
+    rarity: 4.49,
+    isNSFW: false,
+    description: "MHA - Allows you to transform into another person by consuming their blood, the transformation exactly copies the physical abilities of the target including their ability as well as how to use it and basic information about the target. The duration of the transformation is equal to (ml of blood consumed x 1 minute)"
+  },
+  {
+    name: "Tetramand Transformation",
+    rarity: 5.51,
+    isNSFW: false,
+    description: "Ben 10 - You are able to take on the form of a Tetramand or a Tetramand hybrid, Tetramands are among the mightiest warrior races in the galaxy, having rough and durable red skin, four eyes and four arms and known for their incredible strength that is second to none."
+  },
+  {
+    name: "Cement Manipulation",
+    rarity: 3.94,
+    isNSFW: false,
+    description: "MHA - Allows you to conjure and manipulate cement allowing you to shape it into constructs, walls, weapons, and even turn it back into a less solid form."
+  },
+  {
+    name: "Slime Physique",
+    rarity: 3.14,
+    isNSFW: false,
+    description: "Allows you to transform yourself into a slime either fully or partially, allowing you to mostly negate physical damage and take advantage of your slimy physique."
+  },
+  {
+    name: "Cursed Flames",
+    rarity: 3.44,
+    isNSFW: false,
+    description: "Terraria - Allows you to throw green fireballs that cannot burn inanimate objects instead only living devours living flesh, if it makes contact with inanimate objects it will bounce like rubber while sticking to flesh like glue."
+  },
+  {
+    name: "Burning Sea",
+    rarity: 4.34,
+    isNSFW: false,
+    description: "Calamity Mod - Allows you to throw balls of crimson flame that are strengthened by water, trying to extinguish it with water would be like throwing crude oil into flame."
+  },
+  {
+    name: "Brimstone",
+    rarity: 4.72,
+    isNSFW: false,
+    description: "Calamity Mod - You are able to conjure and wield the flames of the Brimstone Crag tempered by the agony of tortured souls, these flames are hot beyond compare, incinerating everything in their path and being able to burn intangible things like souls."
+  },
+  {
+    name: "Ranchor",
+    rarity: 6.67,
+    isNSFW: false,
+    description: "Calamity Mod - The ultimate brimstone flames birthed out of malice, tempered by revenge. The potency and heat of these flames are beyond compare, being able to burn anything, including souls, energy and flesh. But even their user is not immune to their own flames, while to a lesser extent, the more they use ranchor the more they will be burnt."
+  },
+  {
+    name: "Banishing Fire",
+    rarity: 3.65,
+    isNSFW: false,
+    description: "A holy fire gifted to clerics by angels in the form of blessings, these flames do not have any effect on regular living creatures like humans and animals but instead deal extreme damage to any unholy or darkness-aligned being and prevent them from healing."
+  },
+  {
+    name: "Holy Flame",
+    rarity: 4.65,
+    isNSFW: false,
+    description: "Allows you to wield the holy flames of Angels, while not any more effective than regular against regular living creatures like humans and animals they deal extreme damage to any unholy or darkness-aligned being and prevent them from healing. In addition, they can be used to burn away afflictions if one is skilled enough at wielding them."
+  },
+  {
+    name: "Ace of All Trades",
+    rarity: 5.33,
+    isNSFW: false,
+    description: "While this ability is in an active slot your comprehension is massively boosted, you only need to read a book once to learn it completely, and you could imitate someone's martial art by watching a video. You could learn someone's martial art while you are exchanging blows. You learn and master skills at supernatural skills."
+  },
+  {
+    name: "Divinity Fire",
+    rarity: 8.53,
+    isNSFW: false,
+    description: "You are a God of Fire and hold domain over all fire, allowing you to create and control any type of fire and hold power over its shape, temperature and effect."
+  },
+  {
+    name: "Fire Conduit",
+    rarity: 5.52,
+    isNSFW: false,
+    description: "Conduit Ability from Infamous - Allows the user to absorb fire to harness its powers, does not consume mana but instead absorbs fire. Allows the user to turn into, manipulate, and generate flames."
+  },
+  {
+    name: "Ifrit",
+    rarity: 5.23,
+    isNSFW: false,
+    description: "You can transform into an Ifrit, a spirit born from fire, while you are an Ifrit you cannot use water or water-based abilities but all of your fire abilities are much stronger and you have natural flame generation."
+  },
+  {
+    name: "Ifrit Sultan",
+    rarity: 6.65,
+    isNSFW: false,
+    description: "You can transform into an Ifrit Sultan, an ancient spirit of flame that rules over other spirits of fire with power comparable to even ancient dragons. All fire abilities are made stronger and any cryo or hydrokinetic abilities are made unavailable. You have natural pyrokinesis and are immune to all fire."
+  },
+  {
+    name: "More Eyes",
+    rarity: 1.01,
+    isNSFW: false,
+    description: "You can manifest eyes anywhere on your body. You will not be disorientated by the multiple instances of vision you manifest."
+  },
+  {
+    name: "Extension",
+    rarity: 4.84,
+    isNSFW: false,
+    description: "Allows you to extend the duration of something beyond the norm by consuming energy, whether that be increasing the duration of a blessing, extending a lifespan, extending an expiry date, or extending how long a flame burns. To extend a duration you must be able to interact with the target."
+  },
+  {
+    name: "Size Manipulation",
+    rarity: 4.34,
+    isNSFW: false,
+    description: "Allows you to manipulate the size, any by extension mass, of a target you are touching. Every time you double or halve the size of an object the cost of increasing or decreasing the size of the target is doubled."
+  },
+  {
+    name: "Shrink",
+    rarity: 2.78,
+    isNSFW: false,
+    description: "Allows you to shrink yourself to 20x smaller, your power decreases proportionally to your size but you can unshrink yourself at any time. This limit can be increased with training."
+  },
+  {
+    name: "Minimize Me",
+    rarity: 4.75,
+    isNSFW: false,
+    description: "Allows you to shrink yourself up to 20x smaller without compromising your power, whether you are 180cm or 18cm tall, your attack will hit with the same intensity. This limit can be increased with training."
+  },
+  {
+    name: "Gigantism",
+    rarity: 4.23,
+    isNSFW: false,
+    description: "Allows you to increase your size, and by proxy your mass, by up to 10x, maintaining large size consumes stamina and you will burn through energy much quicker. With training, you might be able to get even larger."
+  },
+  {
+    name: "Titanic",
+    rarity: 5.83,
+    isNSFW: false,
+    description: "Allows you to increase your size, and by proxy your mass, by up to 100x, maintaining large size consumes stamina and you will burn through energy much quicker. With training, you can get even larger."
+  },
+  {
+    name: "Enlarge",
+    rarity: 4.01,
+    isNSFW: false,
+    description: "Allows you to enlarge whatever target you touch, this effect can be both permanent or temporary with permanence taking much more energy. The more energy an object possesses the harder and more costly it will be to enhance."
+  },
+  {
+    name: "Message",
+    rarity: 2.66,
+    isNSFW: false,
+    description: "Allows you to send a one-way telepathic message to someone's head as long as they are in your sensory range."
+  },
+  {
+    name: "Induce Baldness",
+    rarity: 0.75,
+    isNSFW: true,
+    description: "\"A power so cruel\" allows you to induce baldness within a target by making contact with them, whether that is making them lose hair over the course of a long time or instantly making all of their hair fall out. Beware, using this may make you the mortal enemy of most."
+  },
+  {
+    name: "Dream Mirror",
+    rarity: 1.73,
+    isNSFW: false,
+    description: "Allows you to view the dreams of anyone in your sensory range like a live stream, you could probably influence their dreams by whispering their ears too."
+  },
+  {
+    name: "Share Sense",
+    rarity: 2.34,
+    isNSFW: false,
+    description: "Allows you to link your senses with other people and vice versa, allowing you to see the world from their perspective and them from yours. You need to touch the target to activate this ability and they must be willing. Linking up with too many people may get disorientating."
+  },
+  {
+    name: "Sleep Talk",
+    rarity: 2.45,
+    isNSFW: false,
+    description: "Allows you to talk to people while they are sleeping to influence them like making them dream of what you want or influencing their opinions like hypnosis."
+  },
+  {
+    name: "Probability Estimation",
+    rarity: 6.81,
+    isNSFW: false,
+    description: "Worm Dinah - Allows you to view probabilities of whatever outcome you question, like the chance of you dying tomorrow, or the chance of finding what you want in a particular place. This ability is always accurate except for when dealing with matters related to blind spots."
+  },
+  {
+    name: "Adhesion",
+    rarity: 1.89,
+    isNSFW: false,
+    description: "You can turn your skin incredibly sticky, sticky enough that you could stick to walls or prevent ordinary people from pulling away from you. You do not feel the difference and can control which parts are sticky."
+  },
+  {
+    name: "Lion Form",
+    rarity: 3.65,
+    isNSFW: false,
+    description: "Allows you to turn into a proud lion or a hybrid at will, granting you enhanced physical ability, a paralyzing roar, and natural weapons. Any mundane animal you meet will defer to you as the king of the animal kingdom as long as you don't harm them."
+  },
+  {
+    name: "Fake Weapon",
+    rarity: 0.68,
+    isNSFW: false,
+    description: "Allows you to create illusionary weapons in your hands for intimidation purposes."
+  },
+  {
+    name: "Bear Manipulation",
+    rarity: 0.88,
+    isNSFW: false,
+    description: "Allows you to take control of all bears within a 50-meter radius around yourself. Good luck finding so many bears."
+  },
+  {
+    name: "Healing Kiss",
+    rarity: 4.23,
+    isNSFW: false,
+    description: "MHA - Allows you to heal people by kissing them, once you kiss someone it supercharges their natural regeneration with your own energy."
+  },
+  {
+    name: "VATS",
+    rarity: 2.84,
+    isNSFW: false,
+    description: "Fallout - \"Vault-tec Assisted Targeting System\" allows you to put your body on autopilot to aim for you or help you aim your attacks or it can help you during melee combat, acting as a helpful combat AI or an automated battle system with Intermediate Level skill."
+  },
+  {
+    name: "Warp Mist",
+    rarity: 6.51,
+    isNSFW: false,
+    description: "MHA - Allows you to create and control dark mists that act like portals you can shape your liking, you can form this mist to anywhere you have been to or can see. With training, you can create more mist and use co-ordinates and images to form portals to places you haven't been to."
+  },
+  {
+    name: "Phenex",
+    rarity: 7.65,
+    isNSFW: false,
+    description: "DxD - You are the Phenex, your flames make you immortal, nearly instantly regenerating your body as long as a single shred of it remains, in addition you can harness powerful flames and winds with ease."
+  },
+  {
+    name: "Crack",
+    rarity: 6.73,
+    isNSFW: false,
+    description: "DxD - Allows the user to create Tears in things within their range, such as creating tears in an attack to render it ineffective or tearing apart a target directly to cause massive damage. Tears are incredibly hard to heal and even an Epic ranked healing ability would take hours to heal it."
+  },
+  {
+    name: "Number Man",
+    rarity: 8.14,
+    isNSFW: false,
+    description: "Worm - You are good with numbers, that is an understatement, you have nigh infinite computational power when it comes to dealing with numbers and calculations, anything related to math or calculations you can put even the strongest supercomputers in a sci-fi world to shame."
+  },
+  {
+    name: "Route",
+    rarity: 1.81,
+    isNSFW: false,
+    description: "You see a line directing you to the location you want to go as long as you precisely know the location of where you want to go."
+  },
+  {
+    name: "Stockpile",
+    rarity: 3.02,
+    isNSFW: false,
+    description: "Allows you to stockpile energy in this ability as long as it is in an active slot. This ability can hold up to 3x your own energy storage but takes 24 hours to fill up completely."
+  },
+  {
+    name: "Cockroach Physique",
+    rarity: 4.12,
+    isNSFW: false,
+    description: "Allows you to turn into a humanoid cockroach or a hybrid at will, granting you extreme resilience and increased physical abilities along with all of the traits a mundane cockroach would otherwise possess."
+  },
+  {
+    name: "Candy Paramecia",
+    rarity: 4.24,
+    isNSFW: false,
+    description: "One Piece Persopero - Allows you to create and control candy at will, the candy emerges as a viscous syrup that can harden itself under your control, and you lose control of the candy after it separates from your body. With training, you can make your candy as hard as steel and even manipulate it outside of your body."
+  },
+  {
+    name: "Bronze Creation",
+    rarity: 3.49,
+    isNSFW: false,
+    description: "Allows you to create and shape Bronze, the superior metal and alloy, forming weapons, armor, or even constructs out of it, you can also reinforce this bronze with your own energy."
+  },
+  {
+    name: "Blood Burn",
+    rarity: 3.83,
+    isNSFW: false,
+    description: "Allows you to enhance your physical stats significantly by burning your own blood, for every second this ability is active you lose 1ml of blood, you can increase this rate to make it up to 5x stronger with 10ml lost every second."
+  },
+  {
+    name: "Devil Regeneration",
+    rarity: 5.97,
+    isNSFW: false,
+    description: "Grants you extreme regeneration capable of regrowing limbs in seconds but this regeneration is fueled by the blood of others instead of energy. The more blood you consume the more you can regenerate. But in general, a large cup of blood should get you from near death to peak condition."
+  },
+  {
+    name: "Tower of Babel",
+    rarity: 5.65,
+    isNSFW: false,
+    description: "Allows you to scramble the senses of everyone within a 500-meter radius of you, disorientating them extremely, making them feel like they are falling, nausea, vertigo, tinnitus, deafness, etc."
+  },
+  {
+    name: "Reactive Activation",
+    rarity: 2.66,
+    isNSFW: false,
+    description: "Allows you to set conditions on your abilities to have them activate once the conditions are met, for example, a barrier being activated when a high-speed projectile is hurled toward you or heal activating when a foreign substance enters you."
+  },
+  {
+    name: "The Camper",
+    rarity: 4.84,
+    isNSFW: false,
+    description: "\"I can stay here all day\" When standing still in a single place for over 10 seconds you gain increased energy, Stamina, and health regeneration as well as increased durability and resistance. If your feet are moved more than 10 centimeters from the initial position this effect fades."
+  },
+  {
+    name: "Energy Regeneration",
+    rarity: 3.33,
+    isNSFW: false,
+    description: "You regenerate your energy/mana but in exchange, your stamina is being consumed instead."
+  },
+  {
+    name: "Bloody Carthus",
+    rarity: 2.84,
+    isNSFW: false,
+    description: "You can sacrifice your health to recover your energy instantly, the more energy you recover the more damage you take from Bloody Carthus."
+  },
+  {
+    name: "Monarch's Indifference",
+    rarity: 3.05,
+    isNSFW: false,
+    description: "Authors PoV - Allows you to suppress your emotions completely and act with complete indifference to accomplish your goal. This also completely counters any mind manipulation or telepathy ability aimed toward you."
+  },
+  {
+    name: "Emotion Spectrum",
+    rarity: 2.34,
+    isNSFW: false,
+    description: "You can see people's emotions as auras of different colors surrounding them. Such as yellow for happiness, green for envy, black for despair, red for anger, etc."
+  },
+  {
+    name: "Sugar Rush",
+    rarity: 2.84,
+    isNSFW: false,
+    description: "MHA - You can consume sugar to gain temporary super strength equal in duration to the amount of sugar you have consumed but after it fades you suffer from a massive sugar crash."
+  },
+  {
+    name: "Scarlet Rot",
+    rarity: 6.41,
+    isNSFW: false,
+    description: "Elden Ring - Allows you to create, control, and inflict scarlet rot. A deadly infection from a foreign god that erodes the minds and bodies of those it ails and turns them into mindless savage monsters."
+  },
+  {
+    name: "Path to Love",
+    rarity: 5.33,
+    isNSFW: false,
+    description: "Allows you to view how to romance people and unlocks their romance questlines. If you have this on your side and still cannot get the partner you want then there is probably no path to love for you."
+  },
+  {
+    name: "Path to Victory",
+    rarity: 9.65,
+    isNSFW: false,
+    description: "Worm - Allows you to create a path to any objective you want as long it is possible to accomplish the goal even if it is a one in one googol chance, as long as it's mechanically possible a path to accomplishing it will be created for you. When following a path you are impossibly precise to be able to obey the path perfectly and avoid mechanical error. The Path is nigh omniscient and can calculate anything that is not a blind spot. You can also choose to only use the paths as a guideline."
+  },
+  {
+    name: "Spectral Claw",
+    rarity: 3.66,
+    isNSFW: false,
+    description: "Unordinary - Allows you to manifest a large demon like clawed arm over your own, this arm possesses superhuman strength and grip, enough to crush steel and lift a car at base strength, it can also extend and grow in size slightly. The damage this arm takes is reflected in your real arm."
+  },
+  {
+    name: "Shield",
+    rarity: 3.55,
+    isNSFW: false,
+    description: "Allows you to create translucent barriers in the shape of domes and walls that act as physical barriers to defend against attacks."
+  },
+  {
+    name: "Absolute Barrier",
+    rarity: 6.52,
+    isNSFW: false,
+    description: "One Piece - By crossing your fingers you can create a transparent barrier that you can control the shape and size of, only one barrier can be made at a time. This barrier is completely invulnerable to all mundane means of damage such as physical force, thermal damage, lightning, etc."
+  },
+  {
+    name: "Shock Absorption",
+    rarity: 3.54,
+    isNSFW: false,
+    description: "Your body absorbs kinetic energy like a sponge, reducing the effectiveness of physical attacks against you."
+  },
+  {
+    name: "Hydrogen Manipulation",
+    rarity: 6.86,
+    isNSFW: false,
+    description: "Allows you to sense and telekinetically control Hydrogen with perfect precision, the most abundant element in the universe. With it, you can manipulate air, and water, create explosions, freeze using liquid hydrogen."
+  },
+  {
+    name: "Oxygen Manipulation",
+    rarity: 7.86,
+    isNSFW: false,
+    description: "Allows you to sense and telekinetically control Oxygen with perfect precision, allowing you to control air, create and control fire with combustion, oxidize objects to corrode them, or poison with pure oxygen clouds."
+  },
+  {
+    name: "Sharpen",
+    rarity: 3.24,
+    isNSFW: false,
+    description: "Allows you to sharpen objects you care touching, you can sharpen a blade until its blade is monomolecular or you can swing air and sharpen it to create razor sharp winds."
+  },
+  {
+    name: "Dragon Projection",
+    rarity: 4.34,
+    isNSFW: false,
+    description: "Allows you to create projections of translucent dragon limbs that you can use in various ways like summoning arms to cut, smash, or protect, its head to bite or to bellow flames, or even its wings on your back to help you fly or glide."
+  },
+  {
+    name: "Hydra Projection",
+    rarity: 4.78,
+    isNSFW: false,
+    description: "MHA - Allows you to unleash projections resembling the head of a hydra from your body or back, the Hydra head can be used to crush, bite, smash, and even constrict using its neck. The hydra is connected to you by its neck and once it's severed you will need time to summon that head back again."
+  },
+  {
+    name: "Natural Armory",
+    rarity: 3.89,
+    isNSFW: false,
+    description: "Allows you to turn objects you are touching into cold weapons that are stable in form regardless of their original matter. Like a solid scythe out of water, a spear out of stone, a sword of air, a whip of fire. The world around you is your armory."
+  },
+  {
+    name: "Unlimited Bladeworks",
+    rarity: 6.45,
+    isNSFW: false,
+    description: "Fate - {Reality Marble} allows you to scan and understand any weapon you come across, the weapon is then added to a mental armory that you can use your energy to temporarily bring it out into the real world as a projection that shares the exact same attributes as the original. With enough practice, you can drag others into your mental world instead, containing all of the swords you can project. You can only add weapons you can understand into your marble, so by default no weapons made by Aliens, Fae, and Divine."
+  },
+  {
+    name: "Reinforcement",
+    rarity: 3.33,
+    isNSFW: false,
+    description: "Fate - Allows you to reinforce the structure and increase the quality of the object you are touching or yourself. The more energy you pour into a reinforcement the stronger it is but the harder it is to maintain."
+  },
+  {
+    name: "Alteration",
+    rarity: 3.57,
+    isNSFW: false,
+    description: "Fate - Allows you to alter the shape and structure of an object you are touching, such as making it sharper, more blunt, and increasing its length. You could turn a sword into a polearm while still keeping all of its abilities."
+  },
+  {
+    name: "Cosmetic Calibration",
+    rarity: 1.55,
+    isNSFW: false,
+    description: "Allows you to change anything about yourself that is purely cosmetic, like the color of your abilities, the color of your hair, the shape of your pupils, the color of your skin, etc."
+  },
+  {
+    name: "Power to Reject Death",
+    rarity: 6.52,
+    isNSFW: false,
+    description: "Legendary Moonlight Sculptor - Upon your death you will resurrect and change your race into an undead, the strength of the undead you revive as is equal to your ability slot count. After 24 hours pass you resurrect again as your original self. 1 = Skeleton 2 = Skeleton Warrior or Skeleton Mage 3 = Dullahan or Necromancer 4 = Death Knight or Lich 5+ = Dread Knight or Elder Lich. This ability has a 10-day cooldown."
+  },
+  {
+    name: "Dead Apostle Ancestor",
+    rarity: 8.31,
+    isNSFW: false,
+    description: "Fate/Tsukihime - You are a Dead Apostle Ancestor, the strongest rank of Vampire, as a Dead Apostle Ancestor you have incredible physical and magical prowess, mist transformation, and unlike normal regeneration, instead of repairing your body, your body turns back its own time whenever you are injured to return you back to your peak state by consuming your own blood. As long as there is blood in your body and your heart is still inside your body you are immortal. In addition, you form your own Idea Blood, an authority belonging to you that is ranked Legendary, the idea blood is based on your experiences and life. You can also turn others into fully fledged undead apostles."
+  },
+  {
+    name: "Crush",
+    rarity: 5.84,
+    isNSFW: false,
+    description: "You are able to remotely crush any object in your line of sight, you can increase the pressure you are putting on them by increasing your energy output. The stronger the target the harder it is to crush them."
+  },
+  {
+    name: "Schrodinger",
+    rarity: 7.92,
+    isNSFW: false,
+    description: "Hellsing - You can teleport, except is it really teleportation? Because in reality, you are everywhere and nowhere at once, all it takes is closing your eyes and you can appear at any location you are aware of. This ability does not consume energy/mana."
+  },
+  {
+    name: "Catch the Rainbow",
+    rarity: 2.14,
+    isNSFW: false,
+    description: "JoJo - When under rainfall you can stand on raindrops, teleport through them, or grab them and use them as knives. Does not work on falling water but only under actual rain instead."
+  },
+  {
+    name: "Ratio Technique",
+    rarity: 2.84,
+    isNSFW: false,
+    description: "JJK - Allows you to split your target into imaginary lines that forcibly create a weak spot for them at the ratio point of seven to three, hitting a target on that spot will deal critical damage."
+  },
+  {
+    name: "Killer Queen",
+    rarity: 6.12,
+    isNSFW: false,
+    description: "JoJo - Allows you to turn anything you touch into a bomb, you can explode this bomb at any time, either choosing to explode the object along with the explosion or make it unscathed by the explosion. Anything that touches a Killer Queen bomb can be exploded along with the target to bypass durability. You can also touch things Killer Queen to explode them with weak power but still disintegrate them. Powerful targets can resist this effect to a degree."
+  },
+  {
+    name: "Diver Down",
+    rarity: 4.84,
+    isNSFW: false,
+    description: "JoJo - Allows you to dive into objects and restructure from the inside, either knitting someone's insides back together or fusing two objects together. You can also simply take advantage of going inside objects to hide inside of people or objects."
+  },
+  {
+    name: "Berserk",
+    rarity: 4.52,
+    isNSFW: false,
+    description: "\"Power at what cost?\" you gain extreme strength and endurance as well as near pain immunity in exchange for losing your inhibitions and entering a trance. With berserk, even an ordinary man could throw around trucks, tear apart tanks, and eat missiles."
+  },
+  {
+    name: "Move Mimicry",
+    rarity: 4.02,
+    isNSFW: false,
+    description: "You are able to mimic any one move or ability your opponent has displayed and store it inside of Mimic, you can unleash the exact same move or ability yourself with Mimic. Copied effect cannot be ranked higher than Epic and after use, Mimic will return to its basic state, the ability can be only used once and only one ability can be mimicked at a time. 8-hour cooldown."
+  },
+  {
+    name: "Clockwork",
+    rarity: 6.79,
+    isNSFW: false,
+    description: "You can rewind time with 1-minute charges, when you spend a charge you return to the past by 1 minute, you gain a charge every 24 hours, and can hold up to 30 charges at a time."
+  },
+  {
+    name: "Luck Aura",
+    rarity: 7.73,
+    isNSFW: false,
+    description: "You can store and unleash luck, every 24 hours you get a charge of luck aura that you can spend to get an instance of extreme luck such as somehow surviving a lethal attack or finding precisely what you need. This does not apply to gacha tickets. You can hold at most 7 charges at a time."
+  },
+  {
+    name: "Lucky Strike",
+    rarity: 4.34,
+    isNSFW: false,
+    description: "When you use lucky strike you can turn luck and favor your way for once, for 1 hour you are filled with extraordinary amounts of luck, and fortune of all kinds are on your side. Cooldown: 7 days 7 hours 7 minutes."
+  },
+  {
+    name: "Eye of Discernment",
+    rarity: 5.05,
+    isNSFW: false,
+    description: "{Mystic Eyes} These mystic eyes allow you to see through all illusions and deceit. Any illusion you lay your eyes on reveals their true form to you and you can tell when people intend to deceive you and which of their words are correct."
+  },
+  {
+    name: "Enchanting",
+    rarity: 4.34,
+    isNSFW: false,
+    description: "Allows you to enchant items according to your own abilities and traits, if you have pyrokinesis you can grant fire related enchantments to items or you can imbue the power itself to the item to make it able to release the ability as a limited use consumable. The strength of the enchantment depends on the item and your power level."
+  },
+  {
+    name: "Greater Enchanting",
+    rarity: 5.34,
+    isNSFW: false,
+    description: "Allows you to enchant items according to your own abilities and traits, if you have pyrokinesis you can grant fire related enchantments to items or you can imbue the power itself to the item to make it able to release the ability as a limited use consumable. The strength of the enchantment depends on the item and your power level."
+  },
+  {
+    name: "Esper Silence",
+    rarity: 5.14,
+    isNSFW: false,
+    description: "Legendary Mechanic - Allows you to disable the ability of a target by making physical contact with them, the duration of the silence is dependent on the power difference between you and the target but the minimum is 3 seconds. 5 minute cooldown."
+  },
+  {
+    name: "Flawed Return",
+    rarity: 5.15,
+    isNSFW: false,
+    description: "You can turn back the clock but it's not exactly right, you go back in time by up to 5 minutes with a 10-minute cooldown. But when you go back in time your body also does, meaning your injuries and exhaustion carry over."
+  },
+  {
+    name: "Save & Load",
+    rarity: 9.02,
+    isNSFW: false,
+    description: "You have 12 save files that you can save and load at any time. There are no quicksaves or autosaves so you have to use them manually."
+  },
+  {
+    name: "Xavier",
+    rarity: 7.72,
+    isNSFW: false,
+    description: "You are an extremely powerful telepath, being able to communicate with people tens of kilometers away and control the human mind like its clay."
+  },
+  {
+    name: "We Are Network",
+    rarity: 4.84,
+    isNSFW: false,
+    description: "Allows you to borrow the processing power of objects, slowing them down while speeding up yours massively, you need to make contact with the target to take their processing power. Overuse might cause brain damage to both parties."
+  },
+  {
+    name: "Gallant",
+    rarity: 4.66,
+    isNSFW: false,
+    description: "Worm - You are able to sense people's emotions and send projectiles that deal no damage but change the emotions of the target like making them euphoric or depressed temporarily."
+  },
+  {
+    name: "Empathy",
+    rarity: 2.84,
+    isNSFW: false,
+    description: "You can sense people's emotions and with training, you might even be able to point out why they feel the emotions and get more detailed sensations."
+  },
+  {
+    name: "Heartbreaker",
+    rarity: 5.84,
+    isNSFW: false,
+    description: "Worm - You are able to manipulate the emotions of people in your range that start at 50 meters, making them suicidal, adoring, lustful, wrathful, and everything in between. You can subtly tweak emotions or overwhelm them. Effectiveness depends on the power difference between you and the target."
+  },
+  {
+    name: "Piloting",
+    rarity: 5.02,
+    isNSFW: false,
+    description: "You can take control of and pilot people's bodies while suppressing their minds or them letting you take the driver's seat. While piloting your body is unconscious but with training, you may be able to pilot more people at once. You need eye contact to take control and people with strong willpower or power can resist it."
+  },
+  {
+    name: "Snap Out of It!",
+    rarity: 3.83,
+    isNSFW: false,
+    description: "You can clear negative mental conditions such as fear, panic, or even mind control from people by firmly slapping them. The effectiveness scales with your physical stats."
+  },
+  {
+    name: "Volition",
+    rarity: 4.54,
+    isNSFW: false,
+    description: "You are at your maximum, while volition is active you are immune to status effects like fear, panic, sadness, despair, and all else, you are also incredibly motivated and determined."
+  },
+  {
+    name: "Frenzy",
+    rarity: 3.23,
+    isNSFW: false,
+    description: "You are drunk on the scent of blood, you are immune to negative mental effects but at the time you lose most of your inhibitions in exchange for a large boost to your instincts."
+  },
+  {
+    name: "Trance",
+    rarity: 3.68,
+    isNSFW: false,
+    description: "Allows you to snap your fingers to put anyone who has their attention on you in a trance, you can subtly influence them in their trance or take other advantages, and being harmed snaps them out of their trance. Cannot be used on especially strong willed people or people stronger than you."
+  },
+  {
+    name: "Suggestion",
+    rarity: 3.94,
+    isNSFW: false,
+    description: "Allows you to send a mental suggestion to your target to subtly make them do what you want them to do by making them perceive it as their idea to manipulate them or condition them."
+  },
+  {
+    name: "Hypnosis",
+    rarity: 3.84,
+    isNSFW: false,
+    description: "Allows you to hypnotize people and influence or change their minds either subtly or directly, to hypnotize someone you have to get them off guard. The higher the target's willpower the more they can resist."
+  },
+  {
+    name: "King of the Castle",
+    rarity: 5.84,
+    isNSFW: false,
+    description: "Allows you to erect a castle around yourself with your energy/mana by transmuting the ground, the shape and form of the castle is decided by your mental state when erecting it. You can also create soldiers and beasts out of the ground you built your castle out of. You can also change the shape of your castle at will, creating medieval cannons, ballistas, or even guns. The constructs in the castle stop being animated if you leave the castle."
+  },
+  {
+    name: "Memory Reading",
+    rarity: 3.84,
+    isNSFW: false,
+    description: "Allows you the read the memories of a target who cannot or won't resist your influence, to read their memories you have to place the palm of your hand on their forehead. The stronger their will to resist you the harder it is to read."
+  },
+  {
+    name: "Graviton Tyrant",
+    rarity: 6.54,
+    isNSFW: false,
+    description: "Allows you to manipulate gravity on a massive scale with immense power but grants you little control and precision over it. You can change the direction and intensity of gravity at will but your minimum area of effect is 100 meters and the minimum intensity is 50x gravity. You can rip out entire city blocks and send them to space with training."
+  },
+  {
+    name: "Fast Travel",
+    rarity: 3.65,
+    isNSFW: false,
+    description: "Allows you to skip the travel part of traveling, allowing you to travel back to anywhere you have been to as long as you aren't in any danger at the moment, the longer the distance the more energy/mana this ability costs."
+  },
+  {
+    name: "Gaster Blaster",
+    rarity: 4.02,
+    isNSFW: false,
+    description: "Undertale - Allows you to conjure floating dragon skull like projections capable of unleashing blasts of condensed energy in the form of lasers or use their jaws to bite down on enemies. You can also use them as transportation by riding the floating skull or as a defense by summoning one in front of you to take the blow."
+  },
+  {
+    name: "Kingdom Soul",
+    rarity: 7.72,
+    isNSFW: false,
+    description: "Your soul is its own sovereign kingdom, you can take the souls of the people you have killed or any wayward souls you have encountered into your soul and add them to your kingdom. For spirit like entities, inside of you is like a vast kingdom that you can shape at your will, acting as an afterlife of its own. You can control the souls inside of your kingdom to either turn them into physical soldiers with your mana, sacrifice them to increase your power, recover your energy, or simply let them exist in your kingdom."
+  },
+  {
+    name: "Pixie Power",
+    rarity: 2.66,
+    isNSFW: false,
+    description: "Allows you to transform into a pixie, a small lesser fairy, at will. As a pixie, you gain increased energy/mana reserves and agility as well as flight in exchange for your reduced endurance and strength."
+  },
+  {
+    name: "Ajin Form",
+    rarity: 6.81,
+    isNSFW: false,
+    description: "Ajin - You are an Ajin, a race of creatures that resembles humans with the exception of their complete biological immortality, whenever you die as an Ajin, your body is completely healed to its peak by Invisible Black Matter that reconstructs it after you die from the biggest piece of flesh you have left, this does not consume energy/mana to activate. You can also summon shadows made of Invisible Black Matter under your command to either fight, defend, or scout for you as they can follow your orders and intentions."
+  },
+  {
+    name: "Measure King",
+    rarity: 1.35,
+    isNSFW: false,
+    description: "Measure once, cut twice. Allows you to know the exact dimensions and measurements of anything you come across just by taking a look at them."
+  },
+  {
+    name: "Normal World",
+    rarity: 7.12,
+    isNSFW: false,
+    description: "Normality Field allows you to erect a field with yourself in the middle, in this field, no one can invoke any supernatural effect with the exception of you removing the field. Even the greatest mage or god will be left with just their physical body to fend for themselves."
+  },
+  {
+    name: "Nice Guy",
+    rarity: 7.23,
+    isNSFW: false,
+    description: "Worm - People are incapable of perceiving you as a threat, even if you were to harm them they are incapable of forming thoughts or actions that relate to you being a danger or threat to them, essentially making you immune to all hostility. Does not work on people with mental abilities far beyond your level or beings of the divine level of strength above yours."
+  },
+  {
+    name: "Imp",
+    rarity: 6.24,
+    isNSFW: false,
+    description: "Worm - People are incapable of perceiving you or acknowledging you exist, the moment someone tries to, you are wiped from their mind as long as your ability is active, this extends to even recordings, you are effectively invisible to all forms of perception but people are still capable of deducing your existence and take countermeasures even if they cannot remember you."
+  },
+  {
+    name: "Majin Physique",
+    rarity: 7.62,
+    isNSFW: false,
+    description: "Dragon Ball - You are kin to Majin Buu, your body is compromised of amorphous pink blob like flesh with no bones or organs, you can freely morph your body and you are immortal and possess super regeneration as long a part of your body larger than a walnut remains and you have energy left. In addition, you possess greatly enhanced physical stats and the ability to absorb other people to gain a portion of their strength."
+  },
+  {
+    name: "Disaster Nature",
+    rarity: 7.33,
+    isNSFW: false,
+    description: "JJK Hanami - Allows you to control and create plants of your own energy as well as plant related abilities equal to that of Hanami. Such as cursed buds that drain energy/mana, creating roots to bind, or you can draw energy/mana from existing nature to charge your own energy/mana."
+  },
+  {
+    name: "Shark Physique",
+    rarity: 2.84,
+    isNSFW: false,
+    description: "You are able to turn into a shark or a shark hybrid at will. As a shark, you have enhanced physical stats that are further boosted underwater. You also possess incredibly sharp razor teeth and bite force enough to tear apart metal with ease. In shark form, you also have increased water affinity. As well as any other abilities the average Shark would otherwise possess."
+  },
+  {
+    name: "Octopus Physique",
+    rarity: 3.24,
+    isNSFW: false,
+    description: "You are able to transform into an octopus or an octopus hybrid at will. As an octopus, you possess enhanced physical stats that are further boosted underwater. In addition, you can independently control any part of your without thought. You can also regenerate your own limbs and organs, albeit slowly. As well as any other abilities the average octopus would otherwise possess."
+  },
+  {
+    name: "Minotaur",
+    rarity: 4.72,
+    isNSFW: false,
+    description: "You are able to transform into a minotaur, or partially into one. As the minotaur, the beast of the labyrinth you have massively enhanced strength, stamina, and durability in exchange for losing your inhibitions. You also possess formidable regeneration. With training, you might be able to retain your control over this form better."
+  },
+  {
+    name: "Outgun",
+    rarity: 2.44,
+    isNSFW: false,
+    description: "This ability allows the user to transmute any material they are touching into any gun they are aware of as well as bullets. The power of the gun scales to the power of the material used."
+  },
+  {
+    name: "Capture Token",
+    rarity: 4.54,
+    isNSFW: false,
+    description: "You are able to capture anything you have defeated inside of capture tokens, which are 5x5 rooms they cannot exit out of nor use their abilities in. You can instantly capture someone instead of killing them with this ability in an active spot. The target must not be able to resist. You can also transport people with tokens."
+  },
+  {
+    name: "Crystalline",
+    rarity: 4.66,
+    isNSFW: false,
+    description: "Allows you to create and control gem-like crystals that you can conjure by expending your energy. The more energy you expend the more durable the crystals are. You can also exert telekinetic control over your crystals and spread them over surfaces you are touching."
+  },
+  {
+    name: "Crystal Caesar",
+    rarity: 5.21,
+    isNSFW: false,
+    description: "You are able to create and control gem-like crystal constructs that you conjure by expending your energy. You have fine control over your crystals, being able to control them even in the form of powder, in addition, you can create simple crystal golems that can act semi-autonomously but turn to dust when you disable your ability, having crystal soldiers active slightly drains energy."
+  },
+  {
+    name: "Weaver",
+    rarity: 3.02,
+    isNSFW: false,
+    description: "You are able to conjure threads made of energy under your control. The power of the threads and their numbers depend on the amount of energy you expend. You can control each thread like a limb but you lose control of it the moment they leave your body after which they dissipate."
+  },
+  {
+    name: "Kirin Phsyique",
+    rarity: 4.89,
+    isNSFW: false,
+    description: "Monster Hunter - You are able to transform into a Kirin or a Kirin Hybrid at will. As a Kirin you possess enhanced physical stats and speed as well as increased lightning affinity. While in Kirin form or Hybrid you possess the ability to summon down powerful bolts of lightning from the sky."
+  },
+  {
+    name: "Remember Me?",
+    rarity: 4.12,
+    isNSFW: false,
+    description: "No, they don't. While Remember Me is active, everyone who knows you temporarily forget about you and nobody you encounter can remember or recall your exact features."
+  },
+  {
+    name: "Sprout",
+    rarity: 1.23,
+    isNSFW: false,
+    description: "You are able to communicate with and control plants in your range to a minor degree. You can order plants to start growing faster, and imbue them with your energy to make them grow even faster. You can also change their general shape slightly."
+  },
+  {
+    name: "Sapling",
+    rarity: 2.14,
+    isNSFW: false,
+    description: "You are able to create, communicate with and control plants in your range. You can make grass grow on fertile dirt, make roots dig through concrete, ripen plants, change their shape slightly, make trees grow fast enough to create natural barriers and harvest the bounty of nature."
+  },
+  {
+    name: "Bloom",
+    rarity: 3.66,
+    isNSFW: false,
+    description: "You are a chlorokinetic, allowing you to create, communicate with and control plants in your sensory range. You can make branches crawl out of the ground and snare your enemies, make trees break through the concrete, create and grow plant life on fertile soil, manipulate vines as whips, or simply grow an apple tree to get a ripe apple."
+  },
+  {
+    name: "Verdance",
+    rarity: 4.66,
+    isNSFW: false,
+    description: "You have formidable chlorokinetic abilities. Allowing you to create, communicate with and control plants in your sensory range. You are able to create plants out of the soil and boost any existing plant to supernatural levels, making wood harder than steel, bring down leaves sharper than razors, impale people with roots that erupt from the ground, or simply grow a berry bush for a quick snack. But you need a plant in your range or grow one to use your abilities on them."
+  },
+  {
+    name: "Overgrowth",
+    rarity: 5.65,
+    isNSFW: false,
+    description: "You are a powerful chlorokinetic. Being able to create, reinforce, communicate with and control all plant life in your sensory range. You can take a withering sapling in your range and turn it into a house-sized tree, make roots erupt from the ground and swallow your foes, grow a forest from the dirt beneath your feet, you can grab a branch and reinforce it enough to cut a block of titanium in half, as long as you have enough energy of course. But you need a plant in your range or grow one to use your abilities on them."
+  },
+  {
+    name: "Flora",
+    rarity: 6.41,
+    isNSFW: false,
+    description: "You are the master of plants. Being able to create, reinforce, communicate with and control all plant life in your sensory range. You can make a forest erupt from beneath your feet, create trees with wood stronger than metal, launch a handful of seeds and make them explode into vibrant plantlife, make the forest come to life, combine trees into a giant treant golem, as long as plants can do it, so can you, provided you have the energy required."
+  },
+  {
+    name: "Gaia",
+    rarity: 7.33,
+    isNSFW: false,
+    description: "You are one with Mother Nature. Being able to create, reinforce, communicate with and control all plant life. You can make titanic verdant jungles erupt beneath your feet and swallow the world. Overrun armies with swathes of treants. Spear through titans with a spear of roots combined to over a kilometre in length. If you can do it with plants, you can do it, as long as you have enough energy only plants are the limit."
+  },
+  {
+    name: "Spiritual Interaction",
+    rarity: 2.34,
+    isNSFW: false,
+    description: "You are able to interact with the spiritual world and so are your abilities. Your perception extends down to the level of souls and spirits as well."
+  },
+  {
+    name: "Bow and Arrow",
+    rarity: 2.45,
+    isNSFW: false,
+    description: "You are able to conjure a bow and arrow made of energy in your hands to shoot down enemies and targets. The more energy you put into the arrow, the stronger it is."
+  },
+  {
+    name: "Sharpshooter",
+    rarity: 3.44,
+    isNSFW: false,
+    description: "You are able to conjure a bow and arrow made of energy in your hands to shoot down enemies and targets, while aiming with the bow your shooting mastery is increased and your senses are sharpened. The more energy you put into the arrow, the stronger it is. You can also change the shape and size of your arrow."
+  },
+  {
+    name: "Oddyseus Draw",
+    rarity: 4.56,
+    isNSFW: false,
+    description: "You are able to conjure a great bow and arrow made of energy in your hands to shoot down enemies and targets, while aiming with the bow your shooting mastery is increased and your senses are sharpened. Your arrow is strong enough to tear through most metals with ease and it will get stronger the more energy you imbue into it. You can also choose to alter the shape and size of your arrow."
+  },
+  {
+    name: "Hou Yi's Bow",
+    rarity: 5.45,
+    isNSFW: false,
+    description: "You are able to conjure an imitation of the bow of the archer who shot down the sun using your energy and release arrows of destructive power by channeling your power through it, while aiming with the bow your shooting mastery is increased and your senses are sharpened. The arrows you unleash are stronger the more energy you imbue into them. You can also choose to alter the shape and size of your arrow."
+  },
+  {
+    name: "Artemis' Might",
+    rarity: 6.15,
+    isNSFW: false,
+    description: "You are able to conjure a bow made of energy that channels the blessing of Artemis herself and unleashes powerful arrows that can pierce the toughest enemies. While aiming with the bow you are blessed by Artemis, increasing your shooting mastery and sharpening your senses while guiding your arrow. The arrows you unleash are stronger the more energy you imbue into them. You can also choose to alter the shape and size of your arrow."
+  },
+  {
+    name: "Bountiful Harvest",
+    rarity: 1.73,
+    isNSFW: false,
+    description: "You are able to create ripe and tasty fruits and vegetables by expending your own energy."
+  },
+  {
+    name: "Orchard",
+    rarity: 3.81,
+    isNSFW: false,
+    description: "You are able to create fruits and vegetables out of your own energy. The fruit and vegetables you create are extremely refreshing and can have unique properties depending on your abilities."
+  },
+  {
+    name: "Bone Baron",
+    rarity: 4.82,
+    isNSFW: false,
+    description: "You are able to create and control bones at will, being able to make them erupt from surfaces in your line of sight and summoning skeleton soldiers that can act semi-autonomously under your control. The soldiers are dispelled when the ability gets cancelled or switched out. The more soldiers you have the higher your energy drain."
+  },
+  {
+    name: "Summon Item",
+    rarity: 1.45,
+    isNSFW: false,
+    description: "You are able to mark up to 10 items weighing less than your lifting strength that you can summon to your location at will and send back to where you last summoned them from."
+  },
+  {
+    name: "Silk Weaver",
+    rarity: 3.55,
+    isNSFW: false,
+    description: "You are able to produce and control silk that you produce from your body, you can use it to grapple around, restrain targets, fasten objects etc. The durability of the silk and the amount you can produce scales with your physical stats."
+  },
+  {
+    name: "Space Ripper Stingy Eyes",
+    rarity: 3.52,
+    isNSFW: false,
+    description: "JoJo - No, you cannot change the name. Allows you to shoot out pressurized energy from your eyes that can cut steel and stone like it's made of foam even at base human level."
+  },
+  {
+    name: "Slip In",
+    rarity: 2.91,
+    isNSFW: false,
+    description: "You were always a slippery one, you can pass your body through any opening wider than 5 centimeters in length."
+  },
+  {
+    name: "Superhuman",
+    rarity: 2.53,
+    isNSFW: false,
+    description: "You are superhuman, or whatever race you are. Even as a base human, you are able to lift cars overhead, punch through metal, survive small caliber bullets, and run as fast as a tiger, all of these enhancements scale with your base stats."
+  },
+  {
+    name: "Superhuman",
+    rarity: 3.55,
+    isNSFW: false,
+    description: "You are superhuman, or whatever race you are. Even as a base human you are able to lift trucks and are unharmed by small caliber bullets. Basically, you are about as strong as Captain America is. All of these enhancements scale with your base stats."
+  },
+  {
+    name: "Bulk Up",
+    rarity: 2.61,
+    isNSFW: false,
+    description: "You are able to bulk up, reinforcing and strengthening all of your muscles to superhuman levels, allowing you to exert superhuman strength. Even as a base human you can easily tear apart and throw around cars. Overuse can lead to extreme soreness and muscle tears."
+  },
+  {
+    name: "Iron Skin",
+    rarity: 2.41,
+    isNSFW: false,
+    description: "You are able to reinforce your skin and body to the level where it resembles metal more than flesh and increases your mass, giving you superhuman durability. Even as a base human, baseball bats would break on impact, small caliber bullets are ineffective. Even a car crash, while it would hurt, you can walk away. But maintaining iron skin can make you slower to move."
+  },
+  {
+    name: "Aura",
+    rarity: 5.91,
+    isNSFW: false,
+    description: "RWBY - Your body is covered by a barrier released by your soul, this barrier enhances your physical capabilities and acts as invisible armor against all attacks, as long as your aura is active you are able to survive at least one hit before it breaks."
+  },
+  {
+    name: "Alexandria",
+    rarity: 7.52,
+    isNSFW: false,
+    description: "Worm - You have super strength, high speed flight, enhanced mental abilities, and most of all, a time locked body. In addition to your superhuman abilities allowing you to lift millions of tons easily in base your body is completely time locked, making you invulnerable to all non spacetime-based abilities. But you are still vulnerable to suffocation."
+  },
+  {
+    name: "Super",
+    rarity: 4.45,
+    isNSFW: false,
+    description: "Probably the most median powerset in existence. You have super speed, super strength, super durability, and flight. If you are in a superhero world you already probably saw at least 60 of these guys going around. You don't excel in any of those qualities but you are better than average in all aspects."
+  },
+  {
+    name: "Stone Skin",
+    rarity: 1.81,
+    isNSFW: false,
+    description: "Allows you to cover your skin in a stone like texture that enhances your durability and increases your mass."
+  },
+  {
+    name: "Overheat",
+    rarity: 3.69,
+    isNSFW: false,
+    description: "You burn through your energy in exchange for greatly increasing your attack power and speed while increasing the potency of fire based abilities but lowering your defensive abilities and recovery. The more energy you burn and the longer you burn the hotter your body will get and the stronger you will get until your organs and brain start melting that is."
+  },
+  {
+    name: "Frozen Soul",
+    rarity: 4.12,
+    isNSFW: false,
+    description: "Your soul is frozen. Your internals get colder and colder and your emotions get duller as you gain enhanced defensive ability and your cryokinetic abilities get more potent but your speed and offensive abilities suffer a decrease. The colder your inside gets the more durable you get and the colder your energy becomes until your insides get completely frozen over."
+  },
+  {
+    name: "Transhuman",
+    rarity: 5.73,
+    isNSFW: false,
+    description: "(Tech)You can transform your body into technology at will, replace the muscle strands with advanced carbon nanofiber, arms with weaponized prosthetics, and eyes with scanners, as long as you know how the technology works you can convert your body into it. With training, you can even ignore the discrepancy of mass."
+  },
+  {
+    name: "Invulnerable",
+    rarity: 9.81,
+    isNSFW: false,
+    description: "You are invulnerable, simple as that. As long as you do not want to get damaged there is nothing below reality manipulation that can hurt you, even if they were to collapse the entire multiverse on you, you would come out without a scratch."
+  },
+  {
+    name: "Immortal",
+    rarity: 9.69,
+    isNSFW: false,
+    description: "You are immortal, and there are no buts. If you are killed reality will somehow bring you back, even if every atom in your body is annihilated, your soul vanished, and every trace of you erased, reality itself will bring you back moments after in perfect condition, in addition you heal from wounds fast enough that even if you were reduced to a single cell while taking a step, you would have reformed by the time your foot met the ground. Even the blind idiot would find it difficult to end you. Not only that, every moment you meet your demise, some of the unknowable seeps into you, increasing all of your stats."
+  },
+  {
+    name: "Exclusion",
+    rarity: 9.69,
+    isNSFW: false,
+    description: "You don't want to be a part of this so you won't be, at any time you can exclude yourself from anything, whether that's severing yourself from the flow of time and space, excluding yourself from physics, excluding yourself from harm, excluding yourself from targeting, excluding yourself from all perception. As long as something can interact with you, you can make it not do that."
+  },
+  {
+    name: "All Fiction",
+    rarity: 9.89,
+    isNSFW: false,
+    description: "Medaka Box - You can gaslight reality and deny the existence of anything, even deny something not existing and it will listen. Reality is basically clay under your fingers."
+  },
+  {
+    name: "Desperation",
+    rarity: 3.33,
+    isNSFW: false,
+    description: "Your physical stats are augmented by the amount of danger you are in at any given moment, if you aren't in danger it will give you nothing, if you are in mild danger it will give you a common rank boost in all stats, if you are in severe danger it will be raised to rare, if you are in danger of dying at any moment it will be raised to Epic. This ability does not cost energy."
+  },
+  {
+    name: "Masochistic Soul",
+    rarity: 3.83,
+    isNSFW: false,
+    description: "\"Hurt me more~\" The more negative effects you are under, the faster you regenerate energy and health, curses, poisons, illnesses, bleeding, they just fuel you."
+  },
+  {
+    name: "Sadism",
+    rarity: 4.62,
+    isNSFW: false,
+    description: "\"You are enjoying this far too much\" Whenever you inflict damage on someone you recover a portion of the energy you spent to use the attack proportional to the amount of damage you dealt but at the same time, if you fail to inflict damage with an attack, the cost of it doubled."
+  },
+  {
+    name: "Level Up!",
+    rarity: 4.72,
+    isNSFW: false,
+    description: "Whenever you kill something, you absorb 10% of their stats and permanently add it to your own, such a simple ability with promises of so much power."
+  },
+  {
+    name: "Ogre Form",
+    rarity: 3.92,
+    isNSFW: false,
+    description: "You can turn into an Ogre, A hulking humanoid with rippling muscles, or an Ogre hybrid at will. As an Ogre, you have increased physical stats and regeneration as well as any other characteristics the average Ogre would possess."
+  },
+  {
+    name: "Bear Form",
+    rarity: 3.72,
+    isNSFW: false,
+    description: "You can turn into a Bear or a Bear hybrid at will. As a bear, you gain enhanced physical stats, fangs, claws, and a thick hide providing you enhanced defensive capabilities as well as any other characteristics the average Bear would possess."
+  },
+  {
+    name: "Threshold Clause",
+    rarity: 5.81,
+    isNSFW: false,
+    description: "\"Who said you could oneshot me? That wasn't in my contract.\", regardless of how strong your opponent is or strong the attack is, you cannot suffer more than 25% of your total health in the span of 5 seconds."
+  },
+  {
+    name: "Bloody Survival",
+    rarity: 5.61,
+    isNSFW: false,
+    description: "\"Invincibility at what cost?\" You can sacrifice 33% of your health to turn yourself completely invincible for 10 seconds, this 33% cannot be regenerated or healed but instead recovers over the span of 1 hour."
+  },
+  {
+    name: "Cat Form",
+    rarity: 2.32,
+    isNSFW: false,
+    description: "You are able to turn into a cat or a cat hybrid at will. Gaining enhanced agility, senses, reflexes, claws, and sharp teeth as well as any other characteristics the average Cat would possess."
+  },
+  {
+    name: "Bat Form",
+    rarity: 2.42,
+    isNSFW: false,
+    description: "\"Vampirism was too expensive\" You are able to turn into a bat or a bat hybrid at will. Gaining enhanced agility, senses, sonar, flight, claws, and sharp teeth as well as any other characteristics the average Bat would possess."
+  },
+  {
+    name: "Wolf Form",
+    rarity: 2.83,
+    isNSFW: false,
+    description: "\"Lycantrophy was too expensive\" You are able to turn into a wolf or a wolf hybrid at will. Gaining enhanced stats, claws, fangs, night vision, and enhanced senses as well as any other characteristics the average Wolf would possess."
+  },
+  {
+    name: "Idle Transfiguration",
+    rarity: 7.31,
+    isNSFW: false,
+    description: "JJK - You are able to able to shape and alter souls by touching targets with souls, and by shaping their souls you can also shape and alter their bodies by proxy. The stronger a target is in relation to you the more effort you have to exert to shape their soul. You can also freely shape your own soul to shapeshift, but the more mass you add or decrease, the less energy you have."
+  },
+  {
+    name: "Fist Projection",
+    rarity: 3.73,
+    isNSFW: false,
+    description: "Allows you to launch projections of your fist by punching, the more energy you use the stronger and larger the launched projection, you can use this close range to amplify the power of your physical attacks or launch projections to take enemies down from afar while still using your physical strength. The base power of the projections is equal to your physical strength."
+  },
+  {
+    name: "Combo",
+    rarity: 3.52,
+    isNSFW: false,
+    description: "Every time you connect a physical hit within a 3-second time frame, your next hit is 10% stronger, as long you hit your opponent at least once every 3 seconds you will maintain the combo and the multiplier will keep increasing like 10%, 20%, 30%... if you cannot land an attack in 3 seconds the combo is reset. The maximum multiplier for the combo is 999%."
+  },
+  {
+    name: "Overdraw",
+    rarity: 5.91,
+    isNSFW: false,
+    description: "Allows you to slot in abilities even if you have filled up your ability slots, but for every extra ability you put in, your energy/mana consumption is doubled, with 1 it's 2x, 2 it's 4x, 3 it's 8x, etc."
+  },
+  {
+    name: "Mystic Eyes of Flaw Perception",
+    rarity: 6.23,
+    isNSFW: false,
+    description: "{Mystic Eyes} When MEFP is activated, you are able to deduce and see the weaknesses in objects and creatures highlighted in red. A weak spot in armor, an Achilles heel, a structural flaw, you can see it all. With training, you can even understand the flaws and you can access break points, by destroying a break point you can deal severe damage to creatures, collapse entire buildings, and hitting the small break points in spells dispel them."
+  },
+  {
+    name: "Enhanced Senses",
+    rarity: 4.11,
+    isNSFW: false,
+    description: "You are able to freely enhance all 5 of your senses with energy, enhance your sight to the point where you can see country to country, smell to the point where you can track people from scent marks left months ago, hearing to the point where you can hear a pin drop a city away, etc. as long as you have enough energy."
+  },
+  {
+    name: "Sixth Sense",
+    rarity: 4.61,
+    isNSFW: false,
+    description: "Allows you to sense intent directed at you like hostility, malintent, or killer intent. You can accurately tell where it is coming from too but trained killers may be harder to tell apart due to their training."
+  },
+  {
+    name: "Dangersense",
+    rarity: 3.78,
+    isNSFW: false,
+    description: "Allows you to accurately sense danger like a sense, the bigger the danger that is posed towards you the stronger the sensation."
+  },
+  {
+    name: "Bungee Gum",
+    rarity: 3.73,
+    isNSFW: false,
+    description: "HxH - Allows you to conjure Bungee Gum, a substance with the properties of both rubber and gum, and manipulate it at will."
+  },
+  {
+    name: "Material Absorption",
+    rarity: 4.81,
+    isNSFW: false,
+    description: "Ben 10/Marvel - Allows you to absorb the properties of a material you touching to to either cover your body in it or turn your body into it and gain its properties. You can absorb steel and turn your body into pure steel, making you more resilient and able to conduct electricity, or uranium to make yourself radioactive, the glass would make you brittle, etc. This also extends to esoteric materials like vibranium and adamantite."
+  },
+  {
+    name: "Greater Material Absorption",
+    rarity: 5.91,
+    isNSFW: false,
+    description: "Ben 10/Marvel - Allows you to absorb the properties of a material you touching to to either cover your body in it or turn your body into it and gain its properties. You can absorb steel and turn your body into pure steel, making you more resilient and able to conduct electricity, or uranium to make yourself radioactive, glass would make you brittle, etc. This also extends to esoteric materials like vibranium and Adamantite. In addition, you can shape your body, such as turning your arms into weapons or even creating more of the material you absorbed by expending energy/mana."
+  },
+  {
+    name: "Galvanic Mechamorph Form",
+    rarity: 5.72,
+    isNSFW: false,
+    description: "(Tech)Ben 10 - Allows you to transform into a Galvanic Mechamorph at will, as a Galvanic Mechamorph you are able to freely fuse with and upgrade technology in proportion to your power level."
+  },
+  {
+    name: "Greater Throw",
+    rarity: 3.58,
+    isNSFW: false,
+    description: "Allows you to imbue additional speed into any object you throw proportional to the amount of energy/mana you expend. You can throw a rock and launch it at Mach speeds with enough energy."
+  },
+  {
+    name: "Launch",
+    rarity: 4.81,
+    isNSFW: false,
+    description: "Allows you to imbue kinetic energy to launch objects you are touching, the speed of the object is determined by how much energy/mana you expend, with enough energy you can send a car flying at a hundred times the speed of sound. Living beings are able to resist being launched."
+  },
+  {
+    name: "Reflection",
+    rarity: 5.72,
+    isNSFW: false,
+    description: "Allows you to create invisible forcefields that reflect Kinetic energy, if an enemy were to punch a forcefield their punch would be reflected back at their fist with double the strength, these forcefields have upper limits to what they can deflect equal to your power. Keeping forcefields active costs energy/mana and so does reflecting an attack. With training, you can create larger fields and change their shapes."
+  },
+  {
+    name: "Blademaster",
+    rarity: 3.92,
+    isNSFW: false,
+    description: "Unordinary - Allows you to create a variety of blades made of energy, ranging from throwing knives, katanas, sabers, large greatswords, etc. while also providing a minor strength boost."
+  },
+  {
+    name: "Spear of Justice",
+    rarity: 4.81,
+    isNSFW: false,
+    description: "Undertale - Allows you to summon spears made of energy that you can telekinetically control and conjure from any solid surface."
+  },
+  {
+    name: "Ripper Mode",
+    rarity: 4.00,
+    isNSFW: false,
+    description: "Metal Gear - \"Let er' rip!\" Allows you to unleash all of your rage and repressed killing intent. When activated, you will enter a battle trance like state, massively increasing your perception to the point where the world looks slowed down and unlocks your latent power, allowing you to unleash 100% of your power regardless of the damage it does to your body. Overuse may cause damage to your body and it consumes energy to remain active."
+  },
+  {
+    name: "Atomic Manipulation",
+    rarity: 8.89,
+    isNSFW: false,
+    description: "Allows you to manipulate atoms with great precision, allowing you to fundamentally change matter and control the elements. With training, you could change all of the atoms in someone's body to transform into a shoe by snapping your fingers or creating improbable matters far more powerful than regular matter through careful atomic configuration. This ability requires extreme amounts of training to use effectively."
+  },
+  {
+    name: "Time Stop",
+    rarity: 8.32,
+    isNSFW: false,
+    description: "Allows you to stop time at will, bringing all of reality to a standstill. Beings far beyond your caliber can escape your stilling of the flow of time. Stopping time consumes a lot of energy to remain active."
+  },
+  {
+    name: "Time Calibration",
+    rarity: 7.33,
+    isNSFW: false,
+    description: "You can control how time interacts with your body, slowing down the world around you, speeding yourself up, speeding only your perception, slowing the time of a wound to prevent it from getting worse, slowing down objects coming into contact with your body, etc. the larger the scale of calibration, the higher the energy cost."
+  },
+  {
+    name: "Space Manipulation",
+    rarity: 8.81,
+    isNSFW: false,
+    description: "Allows you to manipulate space at will, move things with telekinesis, create inviolable objects, tear space and everything inside of it in half, teleport, create pocket dimensions, distort and warp objects and with enough training even invade other worlds."
+  },
+  {
+    name: "Adventure Awaits!",
+    rarity: 6.81,
+    isNSFW: false,
+    description: "\"Huzzah!\" Allows you to temporarily leave your current world and be sent to a random world with a mission, you can leave the other world once you have completed your mission and you can also travel to that world and back with spatial transportation abilities or vehicles. Cooldown: 1 Month (In your current world excluding the mission)"
+  },
+  {
+    name: "Time Manipulation",
+    rarity: 9.33,
+    isNSFW: false,
+    description: "Allows you to manipulate time freely, rewind, fast forward, travel, and stop. As long as you have the energy, you have the time."
+  },
+  {
+    name: "Luck Manipulation",
+    rarity: 9.72,
+    isNSFW: false,
+    description: "Allows you to manipulate the luck values of targets. Increase and decrease the luck of any target as long as you have enough energy."
+  },
+  {
+    name: "Wrath",
+    rarity: 8.81,
+    isNSFW: false,
+    description: "You are wrath itself, the angrier you are and the bigger the conflict you are in, the stronger you get. Without limits, even as a regular human, given time and anger issues you can escalate yourself to end the entire universe, but the higher you escalate the more you lose your sense of reason, and after you go over a certain point you lose it completely and keep escalating like a mindless beast until you die or the universe is extinguished."
+  },
+  {
+    name: "Sage",
+    rarity: 4.62,
+    isNSFW: false,
+    description: "Slime Tensei - Allows the user to massively boost their thought speed, comprehension, and reasoning skills to a level beyond that of a computer."
+  },
+  {
+    name: "Great Sage",
+    rarity: 7.52,
+    isNSFW: false,
+    description: "Slime Tensei - Allows you to comprehend the world around you in a way incomparable to before. You can freely accelerate your thoughts, instantly perform detailed analysis of objects, and gather detailed information about a target as long as you have a basic understanding of it. Great Sage can perform all of these automatically and independently of the user as well as help them utilize their abilities."
+  },
+  {
+    name: "Magic Dominion",
+    rarity: 8.11,
+    isNSFW: false,
+    description: "You are the true user of magic in this world. Allows you to dominate mana and all magic around yourself, making magic inert and unable to be cast, instantly learning any spell in your sensory range, being able to cast spells instantly and instinctively, and absorbing magical energy from people and the environment."
+  },
+  {
+    name: "The Void",
+    rarity: 8.41,
+    isNSFW: false,
+    description: "You are the Void, you can suck in any kind of energy almost limitlessly. Mana, Energy, Stamina, Kinetic, Electricity, Telesma, Psionic etc. Even as a base human, you could detonate a hydrogen bomb next to your face and barely feel warm."
+  },
+  {
+    name: "Nihil",
+    rarity: 8.52,
+    isNSFW: false,
+    description: "The Grand Nullifier. Allows you to dispel anything, motion in an area, all mana from an area, abilities of an individual, and their minds. Anything you can interact with, you can nullify. You can't dispel or nullify a lack of something."
+  },
+  {
+    name: "Open Frenzy",
+    rarity: 5.51,
+    isNSFW: false,
+    description: "\"Shed all worldly concerns and embrace slaughter.\" When open frenzy is activated you lose all inhibitions, pain turns into pleasure, and all of your stats get massively enhanced. But the amount of energy inside you will slowly tear apart your body as you fight and with the sense of limitless power, you might be inclined to not turn the power off."
+  },
+  {
+    name: "Karmic Enforcement",
+    rarity: 6.63,
+    isNSFW: false,
+    description: "\"Tit for Tat\" Allows you to enforce Karma."
+  },
+  {
+    name: "Fire Dragon Slayer",
+    rarity: 6.91,
+    isNSFW: false,
+    description: "Fairy Tail - Allows the user to transform into and wield the powers of a fire dragon. Allowing them to generate fire from their body that they can control and even devour flames. They also have great control over their flames, being able to alter their properties such as making them blunt or sharp. They are also immune to all fire below their level and can eat flames to recover their vitality and energy. By consuming other sources of magic they can temporarily incorporate it into their own flames."
+  },
+  {
+    name: "Water Dragon Slayer",
+    rarity: 6.52,
+    isNSFW: false,
+    description: "Fairy Tail - Allows the user to transform into and wield the powers of a water dragon. Allowing them to generate, control and even devour water. They also have great control over water, being able to alter its properties such as making it blunt or sharp. They are also immune to all water-based attacks below their level and can drink water to recover their vitality and energy, but depending on the pollution of the water it can harm them instead. By consuming other sources of magic they can temporarily incorporate it into their own water."
+  },
+  {
+    name: "Sky Dragon Slayer",
+    rarity: 7.32,
+    isNSFW: false,
+    description: "Fairy Tail - Allows the user to transform into and wield the powers of a sky dragon. Allowing them to generate, control and even devour wind. They also have great control over their winds, being able to alter their properties such as making them blunt or sharp. They are also immune to all wind-based attacks below their level and can breathe in air to recover their vitality and energy, but if the air is polluted it will instead harm them. By consuming other sources of magic they can temporarily incorporate it into their own wind attacks instead. They can also use their winds to heal people."
+  },
+  {
+    name: "Poison Dragon Slayer",
+    rarity: 6.72,
+    isNSFW: false,
+    description: "Fairy Tail - Allows the user to transform into and wield the powers of a poison dragon. Allowing them to generate, control and even devour potent poison. They also have great control over poison, being able to alter its properties such as making it corrosive, sickening, boiling etc. They are also immune to all poison below their level and can even consume to recover their vitality and energy. By consuming other sources of magic they can temporarily incorporate it into their own poison."
+  },
+  {
+    name: "Lightning Dragon Slayer",
+    rarity: 6.81,
+    isNSFW: false,
+    description: "Fairy Tail - Allows the user to transform into and wield the powers of a lightning dragon. Allowing them to generate lightning from their body that they can control and even devour lightning. They also have great control over their lightning, being able to alter their properties such as making them blunt or sharp. They are also immune to all lightning below their level and can eat lightning to recover their vitality and energy. By consuming other sources of magic they can temporarily incorporate it into their own lightning."
+  },
+  {
+    name: "Shadow Dragon Slayer",
+    rarity: 6.72,
+    isNSFW: false,
+    description: "Fairy Tail - Allows the user to transform into and wield the powers of a dark dragon. Allowing them to generate shadows from their body that they can control and even turn into a shadow and merge with them. They also have great control over their shadows and darkness, being able to alter their properties such as making them blunt or sharp. They are also immune to all dark attributes below their level and can eat shadows to recover their vitality and energy. By consuming other sources of magic they can temporarily incorporate it into their own shadows."
+  },
+  {
+    name: "White Dragon Slayer",
+    rarity: 6.63,
+    isNSFW: false,
+    description: "Fairy Tail - Allows the user to transform into and wield the powers of a white dragon. Allowing them to generate and control Holy Light from their body. They also have great control over their Holy Light, being able to alter their properties such as making them blunt or sharp. They are also immune to all Light and Holy attributes below their level and can eat light energy and holy objects to recover their vitality and energy. By consuming other sources of magic they can temporarily incorporate it into their own light."
+  },
+  {
+    name: "Earth Dragon Slayer",
+    rarity: 6.72,
+    isNSFW: false,
+    description: "Fairy Tail - Allows the user to transform into and wield the powers of an earth dragon. Allowing them to generate, control and even devour Earth. They also have great control over Earth, being able to alter its properties such as making it denser, tougher and heavier. They are also immune to all earth-based attacks below their level and can devour earth and rocks to recover their vitality and energy, the amount recovered is dependent on the quality of the rock. By consuming other sources of magic they can temporarily incorporate it into their earth."
+  },
+  {
+    name: "Spirit Dragon Slayer",
+    rarity: 6.63,
+    isNSFW: false,
+    description: "Fairy Tail - Allows the user to transform into and wield the powers of a spirit dragon. Allowing them to emit spiritual energy from their body that they can control and even persist as a spirit form after death. They also have great control over their soul and the constructs they generate, being able to alter their properties such as making them blunt or sharp. They can devour souls to become stronger and rejuvenate themselves. They can also freely shift into a spirit form and possess people."
+  },
+  {
+    name: "Muscular",
+    rarity: 4.23,
+    isNSFW: false,
+    description: "You can freely increase the density and mass of muscle fibres in your body, massively increasing your explosive power and durability. If you increase the fibres more than they can fit in your skin, they will cover the outside of your body, wrapping around you like a second set of muscles. The more muscle fibres you have the faster you will burn through your stamina."
+  },
+  {
+    name: "Rejuvenation",
+    rarity: 3.63,
+    isNSFW: false,
+    description: "You are able to rejuvenate targets and yourself, restoring their virility and health, while it doesn't heal them from injuries it does cure illnesses and ailments. In addition, it can make the sands of time retreat, you can give an old person their youth, or someone who sacrificed their lifespan get it back, you can use this on rotten or ill vegetation. The stronger a target is, the more energy you have to expend."
+  },
+  {
+    name: "Rise Again",
+    rarity: 5.52,
+    isNSFW: false,
+    description: "Nothing is going to keep you down. As long as this ability is in your active slot, at the moment of your death, this ability activates and you revive 10 seconds later with your health and energy restored to 50%. 7 Day cooldown."
+  },
+  {
+    name: "Ace of All Trades",
+    rarity: 5.31,
+    isNSFW: false,
+    description: "While this ability is in an active slot your comprehension is massively boosted, you only need to read a book once to learn it completely, and you could imitate someone's martial art by watching a video. You could learn someone's martial art while you are exchanging blows. You learn and master skills at supernatural skills."
+  },
+  {
+    name: "Militia",
+    rarity: 5.22,
+    isNSFW: false,
+    description: "Worm - You can summon a projection of any mundane weapon in your hands. As long as the weapon is not tinkertech or beyond the level of the technology of your current world you can summon it. You can also control the ammunition, such as summoning a beanbag shotgun, a nuclear bomb launcher, an automatic rifle, a sword, a crossbow etc."
+  },
+  {
+    name: "Light Step",
+    rarity: 3.23,
+    isNSFW: false,
+    description: "You can step and walk on anything, water, air, space, you can even treat nothing as a solid surface to walk on."
+  },
+  {
+    name: "Perfection",
+    rarity: 3.02,
+    isNSFW: false,
+    description: "Your abilities are proportionally increased depending on how strong you are, at 100% health all of your stats are increased by +100%, at 90% they are increased by +90% etc."
+  },
+  {
+    name: "No Guard",
+    rarity: 3.79,
+    isNSFW: false,
+    description: "\"Offence is the best defence\" All of your physical stats except durability is increased proportionally to how much you lower your defence. You can drop your durability all the way down to -500% to get your strength up to +500%."
+  },
+  {
+    name: "Battle Growth",
+    rarity: 5.32,
+    isNSFW: false,
+    description: "You an eternal engine for battle, you grow in power every time you fight. The harder a battle is, the stronger and faster you grow in the middle of it, allowing you to adapt and surpass your opponent. This growth is permanent."
+  },
+  {
+    name: "Blood Portals",
+    rarity: 3.59,
+    isNSFW: false,
+    description: "Allows you to create portals by sacrificing your own health, creating a two-way portal costs 10% of your maximum health. As long these portals remain open, you lose access to 10% of your maximum health that cannot heal as long as the portal remains open."
+  },
+  {
+    name: "Shadowverse",
+    rarity: 6.65,
+    isNSFW: false,
+    description: "Invincible - Allows you to access the shadow-verse by sinking into shadows. Inside the Shadow-verse you can jump from shadow to shadow, bring people in and trap them with the monsters inside, or just bring monsters outside."
+  },
+  {
+    name: "Bloody Escalation",
+    rarity: 6.72,
+    isNSFW: false,
+    description: "\"Power for Pain\" For every 1% of health you lose with Blood Escalation active, all of your stats increase by 1%, as soon as you leave combat this increase resets."
+  },
+  {
+    name: "D4C",
+    rarity: 8.84,
+    isNSFW: false,
+    description: "JoJo - Allows you to open doors to parallel worlds, by trapping yourself between two objects you can travel the infinite parallel world. You can also pull people out of parallel worlds and into your own, including yourself who is fully aware you are the original and has no qualms with it. If you ever die, all of your abilities and the gacha are transferred to a random you across the multiverse."
+  },
+  {
+    name: "Obito's Mangekyo Sharingan Left",
+    rarity: 6.02,
+    isNSFW: false,
+    description: "Naruto - You possess the Left eye of Obito Uchiha, granting you access to half of the Kamui technique and all the benefits of the Sharingan such as incredible visual prowess and instant memorization. With the left eye, you get access to a short version of the Kamui at any time, granting you access to an endless pocket dimension in your Left eye. You can transport yourself into the Kamui to move across the real world by moving through it and leaving in a different location. You can also semi-transport yourself into the Kamui to render yourself intangible at the cost of stamina. Lastly, you can also send objects you are touching into the Kamui realm."
+  },
+  {
+    name: "Obito's Mangekyo Sharingan Right",
+    rarity: 5.83,
+    isNSFW: false,
+    description: "Naruto - You possess the Right eye of Obito Uchiha, granting you access to half of the Kamui technique and all the benefits of the Sharingan such as incredible visual prowess and instant memorization. With the right eye, you get access to the long-ranged version of the Kamui granting you access to an endless pocket dimension in your Left eye. Also allowing you to create ranged barrier spaces that you can use to suck objects and people into the Kamui, or you can essentially shut the door on them halfway into the dimension to kill them. You can also create this barrier around yourself in practice to access the dimension. The larger the barrier you create, the more energy it consumes."
+  },
+  {
+    name: "Obito's Mangekyo Sharingan",
+    rarity: 7.00,
+    isNSFW: false,
+    description: "Naruto - You possess the Eternal Mangekyo Sharingan of Obito Uchiha in addition to all of the benefits of the regular Sharingan you have full access to the Kamui technique. Granting you access to an endless pocket dimension called the Kamuki. With it, you can create barriers that pull people into your dimension, freely teleport inside it, teleport by leaving it in a different location, use it to become temporarily intangible, and even open portals in space and breach other dimensions with your own ability."
+  },
+  {
+    name: "Physical Therapy",
+    rarity: 4.12,
+    isNSFW: false,
+    description: "Allows you to convert the physical force you exert into positive energy, allowing you to heal people by hitting them with your body. The larger amounts of strength you exert the higher the healing. Punch them in the gut, full force to bring them from near death to full health."
+  },
+  {
+    name: "Tiamat",
+    rarity: 6.84,
+    isNSFW: false,
+    description: "Mother of All Dragons\" You are able to transform yourself and any other biological structure you are touching into a dragon as well as spawn temporary dragon projections from your own body. The power and shape of the dragon depends on your own skill and the amount of energy you expend, the more you violate the conservation of mass, the more energy this ability costs. Sentient beings can resist conversion depending on how strong they are."
+  },
+  {
+    name: "Hands of Time",
+    rarity: 5.55,
+    isNSFW: false,
+    description: "You are able to reverse or accelerate the time of an object, withering a tree or turning it into a sapling with just a touch. The stronger a target is, the slower their time is altered."
+  },
+  {
+    name: "Shadows of Time",
+    rarity: 5.33,
+    isNSFW: false,
+    description: "Your shadow is a temporal anomaly, being able to stretch and move independently and even manifest outside of a 2d space to physically interact and attack things. Moreover, whatever your shadow touches gets their time altered, either quickly ageing or getting younger. The stronger a target is, the slower their time is altered."
+  },
+  {
+    name: "Bloody Lust",
+    rarity: 6.65,
+    isNSFW: false,
+    description: "\"You are enjoying this far too much\" Your lust for violence is insatiable, whenever you are hurt you recover your energy proportional to how much you got hurt by. At the same time, you also recover your health proportionally to how damage you deal to a target. You an eternal engine of battle."
+  },
+  {
+    name: "Infernal Engine",
+    rarity: 4.66,
+    isNSFW: false,
+    description: "Your heart is an Infernal Engine, when activated your regeneration speeds increase and you gain the ability to wield Hellflames. But when using the Infernal Engine, your body starts heating up, and the longer you use it the more it heats up. The hotter your body the more effective the Infernal Engine is, but be wary of going over the edge and burning yourself with your own Hellflames."
+  },
+  {
+    name: "Blacklight",
+    rarity: 7.01,
+    isNSFW: false,
+    description: "Your body is entirely made up of the Blacklight Virus, allowing you to freely shapeshift down to the cellular level, you can also absorb any biological matter to get stronger and analyse its composition and replicate it, and consuming brains grants you access to all memories the target had."
+  },
+  {
+    name: "Rule Breaker",
+    rarity: 6.44,
+    isNSFW: false,
+    description: "The rules don't matter to you anymore. You can expend energy to remove rules that apply to you or a target you are touching, remove gravity affecting you, magic affecting a target, remove being able to be targeted by magic etc. The more vague and more impactful a rule you remove the more energy you expend, a rule broken will slowly restore itself but its effects won't."
+  },
+  {
+    name: "Creation",
+    rarity: 6.24,
+    isNSFW: false,
+    description: "You can create objects and matter through your magical energy as long you remember how to make them, this can range from creating a phone, creating a bar of gold, or even creating a magical sword provided you know how to make one. The higher the mass and the more magical an object you create, the more energy you need to expend."
+  },
+  {
+    name: "Diamond Draw",
+    rarity: 5.55,
+    isNSFW: false,
+    description: "Allows you to temporarily summon an item from the Diamond Item Gacha that lasts for 1 hour before disappearing(You roll the gacha). The item given is random as the user is given a temporary ticket to roll. This ability starts its 8-hour cooldown the moment it is used. If the item pulled is an elixir, the effects of the Elixir are made temporary. 2 hour cooldown."
+  },
+  {
+    name: "Chainsaw Man",
+    rarity: 6.89,
+    isNSFW: false,
+    description: "Chainsaw Man - You are the Chainsaw Hybrid, by pulling on the ripcord on your chest you can turn into your hybrid form, replacing your head with that of a chainsaw and sprouting additional chainsaws on your arms, and even your legs if you choose to. While in Chainsaw Man Form you have enhanced physical stats and extreme regeneration fueled by blood. You are also immortal in your hybrid state, as long as your heart remains, pulling your ripcord will revive you."
+  },
+  {
+    name: "Bang!",
+    rarity: 4.66,
+    isNSFW: false,
+    description: "Chainsaw Man - Simply point your index finger toward and say \"Bang!\" to unleash an immense telekinetic force that tears apart anything in your way."
+  },
+  {
+    name: "Spatial Displacement",
+    rarity: 5.11,
+    isNSFW: false,
+    description: "You can freely teleport in a 50-meter range around yourself and have complete spatial awareness of it. You can teleport inside of that range instantly but the more you teleport in a row the more vertigo you will experience."
+  },
+  {
+    name: "Warp Drive",
+    rarity: 5.00,
+    isNSFW: false,
+    description: "You can warp space around yourself to move at absurd speeds. When you warp space around yourself you can accelerate yourself more and faster than you would otherwise be able to, allowing you to reach extreme speeds but making it hard for you to make precise movements."
+  },
+  {
+    name: "Form Change",
+    rarity: 5.55,
+    isNSFW: false,
+    description: "Allows you to freely change and augment your attributes in the form of forms you have access to, Offensive Form increases and decreases your defence for more Energy Output and Speed, Defensive Form increases your Defense and Resilience while decreasing your speed. Recovery Form decreases your strength to increase your regeneration and recovery. Speed Form increases your speed drastically while sacrificing your attack and defence. The user can also create their own forms."
+  },
+  {
+    name: "Murder Swarm",
+    rarity: 3.65,
+    isNSFW: false,
+    description: "Allows you to transform into a murder of 100 crows at will. You can perfectly control each crow and you are equally each crow, whenever a crow gets killed you take 1% damage, you can also partially turn into crows and use them to deliver messages, spy on people etc. You will return to 100 crows even if you lose 30 as long you recover all of your health."
+  },
+  {
+    name: "Hero Time",
+    rarity: 3.83,
+    isNSFW: false,
+    description: "\"Time to be a hero\" For 10 minutes all parameters are greatly increased, all regenerations are massively amplified. 5 Day cooldown."
+  },
+  {
+    name: "Limit Break",
+    rarity: 5.34,
+    isNSFW: false,
+    description: "\"Time to go all out\" Upon activating Limit Break, for 4 minutes and 11 seconds all parameters and energy regeneration are increased, in addition, your ability Slots are removed, allowing you to use all Abilities at once. This ability places immense strain on your body and can kill you. 7 Day cooldown."
+  },
+  {
+    name: "Toolbelt",
+    rarity: 3.89,
+    isNSFW: false,
+    description: "While toolbelt you can summon any one item of rare rank or below into your hand and use it however you like, you can also discard the item to switch to another but only one toolbelt item can exist at a time. If you use a consumable you cannot use Toolbelt for the same amount as its Restock timer."
+  },
+  {
+    name: "Restraints and Amplifications",
+    rarity: 3.03,
+    isNSFW: false,
+    description: "Novel's Extra - Allows you to put restraints on yourself to amplify your powers, you can sacrifice your sight to boost your hearing to daredevil levels, you can sacrifice an arm to make another arm much stronger. You can restrict other ability slots to make the others stronger. The amplifications are equal to the severity of the restraints you place on yourself."
+  },
+  {
+    name: "Power Charge",
+    rarity: 3.52,
+    isNSFW: false,
+    description: "Allows you to charge your body with energy, adding increased power to your next move, charge your fist to release more energy with your punch or charge your legs to leap over buildings. The more energy you charge the stronger the result is."
+  },
+  {
+    name: "One For All",
+    rarity: 6.49,
+    isNSFW: false,
+    description: "My Hero Academia - You inherit the collective power of 9 people accumulated over multiple generations. One For All gives you incomparable Physical Enhancement but using too much can break your body, in addition, you can awaken the abilities of its past users, these quirks being Gearshift, Blackwhip, Float, Smokescreen, Dangersense and Fa-Jin."
+  },
+  {
+    name: "Door Crossing",
+    rarity: 2.84,
+    isNSFW: false,
+    description: "Re:Zero - Allows you to create indoor portals out the doors and entrances inside of a building. Allowing you to teleport yourself and others from door to door, allowing you to either quickly traverse the people or prevent others from leaving."
+  },
+  {
+    name: "Kraft Works",
+    rarity: 4.84,
+    isNSFW: false,
+    description: "JoJo - Allows you to affix objects to other objects or locations, objects that are affixed are completely inviolable and immovable without spacetime interference. In addition, all kinetic energy applied to the object during the time it was affixed will be applied to it the moment it's released. The larger the mass and energy of an object you affix, the more energy you consume. Keeping objects affixed consumes energy."
+  },
+  {
+    name: "Gate Creation",
+    rarity: 5.65,
+    isNSFW: false,
+    description: "Allows you to create semi-permanent gates that you can teleport through, to create a gate through a location you have to be either incredibly familiar with the location or have been to it. To set a gate you need to focus for 1 minute. You can have up to 10 gates that exist at a time, you can improve this limit as you get stronger."
+  },
+  {
+    name: "Web Slinger",
+    rarity: 2.15,
+    isNSFW: false,
+    description: "Allows you to shoot sticky and durable ropes of spider webs from your body, these webs dissolve naturally after an hour."
+  },
+  {
+    name: "Drake Form",
+    rarity: 3.22,
+    isNSFW: false,
+    description: "Allows you to take on the form of a firebreathing drake or a hybrid at will. As a lesser dragon, becoming a drake grants you increased physical abilities and the ability to fly as well as breathe fire."
+  },
+  {
+    name: "Klyntar Form",
+    rarity: 6.02,
+    isNSFW: false,
+    description: "Marvel - Allows you to transform into a Klyntar, a symbiotic amorphous race with the ability to merge with biological matter and assume their characteristics. Bonding with or taking over a host allows you to share their powers as well as grant them your own power and physical abilities. But in this form you are incredibly vulnerable to loud noises and fire."
+  },
+  {
+    name: "Psychometry",
+    rarity: 3.05,
+    isNSFW: false,
+    description: "Saiki K. - Allows you to read the history of an object by making physical contact with it and expending energy. The more energy you expend the more you can read about its history, giving you visions as to how it was made, what has happened to it or what it has seen, the more energy spent the more accurate the vision is."
+  },
+  {
+    name: "Aqueduct",
+    rarity: 2.84,
+    isNSFW: false,
+    description: "You can merge with and move through water at extreme speeds, at least 10x your running speed. When dive into a body of water you merge with it, and are able to move through it freely, the water must be at least equal to your mass. If the body of water you are in is compromised you take considerable damage."
+  },
+  {
+    name: "Marked",
+    rarity: 2.42,
+    isNSFW: false,
+    description: "Allows you to place marks on objects or creatures that you can monitor at any time, you are always aware of the location of the mark relative to you and the structural integrity of the bearer of the mark. You can have up to 10 marks at a time which increases as you get stronger."
+  },
+  {
+    name: "Teleport",
+    rarity: 6.23,
+    isNSFW: false,
+    description: "You can teleport, and everything that entails. As long as you are properly aware of the location or its coordinates you can instantly teleport to it, teleportation is instant and scales slightly with distance, but even a beginner could skip countries. Overuse can cause vertigo."
+  },
+  {
+    name: "Shut Down",
+    rarity: 5.00,
+    isNSFW: false,
+    description: "You are able to create a large zone around you that shuts off the functions of magical and sci-fi items. In this range, even the Excalibur is just a very durable sword. But if the item is too far above your level their power is simply drastically reduced."
+  },
+  {
+    name: "Stone Free",
+    rarity: 4.00,
+    isNSFW: false,
+    description: "JoJo - Stone Free allows you to convert any part of your body into translucent string you can control and move at will. The strong has the exact same physical abilities as you and can be instinctively woven into complex patterns etc."
+  },
+  {
+    name: "Petal Burst",
+    rarity: 3.41,
+    isNSFW: false,
+    description: "RWBY - Allows you to temporarily shift into the form of a mass of rose petals to move at superspeeds for a short duration, in rose form you are more resistant toward physical attack and anything you are in contact with is also in this form, but the larger the mass the higher the energy consumption. In addition, your control over your direction is lessened."
+  },
+  {
+    name: "Grant",
+    rarity: 4.91,
+    isNSFW: false,
+    description: "You are able to grant people lesser versions of your abilities, when you grant someone an ability Elite rank or below it is dropped down by one rank. Epic and Legendary abilities are dropped by two ranks. Only one ability can be granted to one person at a time."
+  },
+  {
+    name: "Man in the Mirror",
+    rarity: 4.84,
+    isNSFW: false,
+    description: "JoJo - You are able to go into any mirror as if it were a real portal and access the mirror dimension, a replica of the real world without anything living inside. The only way to enter and exit other than spacetime ability is you dragging people inside or outside."
+  },
+  {
+    name: "Metallurgy",
+    rarity: 4.76,
+    isNSFW: false,
+    description: "Metallurgy allows you to create metal at will and control it telekinetically. You are able to create any mundane metal you are aware of and you can telekinetically control the metals you have created, the stronger or more complex a metal is the more energy you need to expend to create it."
+  },
+  {
+    name: "Metallurge",
+    rarity: 6.44,
+    isNSFW: false,
+    description: "You are able to conjure and control any metal you know the composition of, even if they are legendary metals like Uru, Adamantium or Vibranium. But the higher rank a metal is the more energy you need to expend to create it, and you cannot permanently create metals stronger than your rank."
+  },
+  {
+    name: "Threshold",
+    rarity: 4.86,
+    isNSFW: false,
+    description: "While threshold is in an active ability slot you cannot take damage from anything below a certain level. As long as the ability wouldn't hurt you more than a light cut, you can ignore it completely."
+  },
+  {
+    name: "Building",
+    rarity: 2.52,
+    isNSFW: false,
+    description: "You are able to perform transmutation on a macro scale, while you cannot build complex constructs or small applications you could turn the ground into a proper building in less than an hour. This ability does not move particularly fast, so its combat applications are limited."
+  },
+  {
+    name: "Compass",
+    rarity: 0.23,
+    isNSFW: false,
+    description: "You can conjure a mental compass that acts like a regular compass."
+  },
+  {
+    name: "Prophetic Compass",
+    rarity: 3.56,
+    isNSFW: false,
+    description: "Allows you to conjure a phantasmal compass in your hands that points towards your target, as long as you are aware of the target you are looking for and have something related to it on your body, you can use the compass to track it down."
+  },
+  {
+    name: "Tentacled Creature",
+    rarity: 3.33,
+    isNSFW: false,
+    description: "You are able to turn into a hentai tentacles creature or a manifest the tentacles of one at will. You are like a ball with numerous tentacles that can act as both regular limbs or reproductive organs."
+  },
+  {
+    name: "Madness Wavelength",
+    rarity: 5.24,
+    isNSFW: false,
+    description: "You emit a wavelength from your body that alters the minds and perceptions of those it interacts with. You can drive an entire town to madness while passing by, you can also tweak the madness this ability exerts."
+  },
+  {
+    name: "Inner Gate",
+    rarity: 5.34,
+    isNSFW: false,
+    description: "Re:Zero - You have a gate inside of you that allows you to convert your energy to elemental mana that you can use to cast a variety of elemental magic depending on your aptitude."
+  },
+  {
+    name: "Time Accel",
+    rarity: 4.04,
+    isNSFW: false,
+    description: "Fate - You are able to speed up the time of your own body by increments of 2x, 3x, 4x... the more you accelerate however the more strain is put on your body and mind."
+  },
+  {
+    name: "Divine Blade",
+    rarity: 5.99,
+    isNSFW: false,
+    description: "Allows you to conjure a sword of Divine Light that you can alter the shape of. This blade is lightweight yet unbelievably sharp and durable. In addition, it burns anything it strikes with purifying holy flames but as long as the wielder wills it the blade cannot hurt even a fly even if swung at full power."
+  },
+  {
+    name: "Soul Bet",
+    rarity: 3.04,
+    isNSFW: false,
+    description: "JoJo - Take some inspiration from the Fae. If you get people to wager their souls in a bet with you, you can claim your prize, extracting their souls from their bodies and granting you possession of it. To work the opponent must internally acknowledge their own defeat."
+  },
+  {
+    name: "Martyr",
+    rarity: 3.94,
+    isNSFW: false,
+    description: "You are able to take the burdens of others onto yourself. Transferring their injuries, exhaustion, curses, sicknesses and any other ailment onto yourself by touching them."
+  },
+  {
+    name: "Reroll",
+    rarity: 3.63,
+    isNSFW: false,
+    description: "\"Lucky\" When you roll this ability, whatever ticket you got it with is rolled twice and this ability is removed."
+  },
+  {
+    name: "Disillusioned",
+    rarity: 2.54,
+    isNSFW: false,
+    description: "You can see through any kind of deception and physical concealment. You can see right through a pitfall as it is a deception etc."
+  },
+  {
+    name: "Piercing Eyes",
+    rarity: 2.16,
+    isNSFW: false,
+    description: "Your eyes can see far and see through objects, and you can adjust the level perfectly according to your needs."
+  },
+  {
+    name: "Dead Bone Pulse",
+    rarity: 4.92,
+    isNSFW: false,
+    description: "Naruto - A Kekkei Genkai that allows the user to grow bones and bone constructs on and out of their body. In addition, the user can manipulate the shape of their bones and reinforce them by increasing their density. They can also manipulate their own skeleton to increase their defence."
+  },
+  {
+    name: "All Killing Ash Bones",
+    rarity: 6.55,
+    isNSFW: false,
+    description: "Naruto - All Killing Ash Bones allows the user to control their own skeleton and grow bone constructs out of their own body. They are able to reinforce these bones and if they manage to pierce the body of a living being they start deteriorating down to the molecular level until they die. The sure kill effect's potency is dependent on the power difference between the user and the target."
+  },
+  {
+    name: "Prophecy",
+    rarity: 4.45,
+    isNSFW: false,
+    description: "You are able to tell the future across a large timeframe as prophecies. Although they aren't very accurate, your prophecies can point you towards crucial information or important things. The vaguer the prophecy the less energy you require to tell it."
+  },
+  {
+    name: "Future Observation",
+    rarity: 5.85,
+    isNSFW: false,
+    description: "You are able to tell the future, across a short or longer span of time. The more seconds you look into the future, the more energy you expend. The future you see is the future that would have happened had you not used Future Sight. Overuse can cause temporary brain bleeding."
+  },
+  {
+    name: "Future Reading",
+    rarity: 3.27,
+    isNSFW: false,
+    description: "You can read the near future. Being able to tell what can happen in a small time frame that you can train to increase. The future you read is not absolute but very probable, the more knowledge you have about the situation, the more accurate your readings."
+  },
+  {
+    name: "Future Prediction",
+    rarity: 3.77,
+    isNSFW: false,
+    description: "You can predict the future. Allowing you to calculate the future of a target. You can predict the chances of a dice rolling a 6, or what the roll of a slot machine is going to give. What move your opponent is going to open up with or what stocks are going to rise and fall. The more information and better sensory abilities you have, the better your predictions."
+  },
+  {
+    name: "Foresight",
+    rarity: 3.55,
+    isNSFW: false,
+    description: "Yomi Hustle - Allows you to place a foresight, an afterimage of yourself in anywhere in your range of perception. At any moment you teleport to the location of this foresight but it disappears if you leave within 100 meters of it or leave it for more than 1 hour, it also dissipates when damaged. You can only create a single Foresight but you can increase that number by training."
+  },
+  {
+    name: "Tinker PvZ",
+    rarity: 5.25,
+    isNSFW: false,
+    description: "Plants vs Zombies - Allows you to genetically engineer plants from Plants vs Zombies. Such as flowers that turn sunlight into energy, ones that punch people or breathe fire. The more powerful and esoteric a plant is the more resources you need to produce them."
+  },
+  {
+    name: "Labyrinthian",
+    rarity: 7.15,
+    isNSFW: false,
+    description: "You are the legendary minatour of myth. Your physical abilities are amplified to an inhuman level, especially your strength and endurance in addition to gaining the traits of a bull. In addition, you can turn any area you are in into a labyrinth, allowing you to shuffle all points of entry and exit in an era to lead to wherever you want. Even a future reader would get stuck for a hundred years in a forest."
+  },
+  {
+    name: "Hyper",
+    rarity: 6.55,
+    isNSFW: false,
+    description: "You are not just super, you are HYPER! You have extreme physical abilities and flight, the classic super package taken to the extreme. The more energy you expend the stronger and faster you are."
+  },
+  {
+    name: "Divinity Healing",
+    rarity: 8.65,
+    isNSFW: false,
+    description: "You are a god of healing and restoration, possessing domain over all healing allowing you to perform miracles governing your domain by expending energy. For you, death may as well be the same as sleeping and mythical poisons a mild cold."
+  },
+  {
+    name: "Law of Restoration",
+    rarity: 7.52,
+    isNSFW: false,
+    description: "Allows you to enforce the Law of Restoration on a target. When the law is enforced the target is forcefully restored to whatever state it is deemed \"restored\" in. Even corpses can be restored to life, even erasure can be reversed as long as something remains. The more powerful, damaged or abnormal a target is the more energy you need to expend. As long as it is slotted in, it will activate on yourself at the moment of your death."
+  },
+  {
+    name: "Inner Isles",
+    rarity: 5.85,
+    isNSFW: false,
+    description: "There is an island inside of your being. Using this ability you can create doors to a spatial dimension inside of your existence, manifesting as a small island in the middle of a vast ocean with no life in sight, the island does contain vegetation though. Creating larger doors and maintaining doors can consume energy."
+  },
+  {
+    name: "Sea Serpent of the End",
+    rarity: 7.25,
+    isNSFW: false,
+    description: "DxD - Allows you to transform into the Sea Serpent of the End, Leviathan. As Leviathan, a giant mythical sea snake monster you can control all water in your range on a massive scale, being able to tilt seas and drown cities, you can create even more water serpents or summon rains that cause floods. All water-based abilities and effects are massively amplified when using it."
+  },
+  {
+    name: "Gradual Transformation",
+    rarity: 3.66,
+    isNSFW: false,
+    description: "You can gradually transform your body into any shape, but due to the transformation being slow, it must be used carefully. It would take roughly 3 hours to slowly turn into a cat and you cannot increase or decrease your mass by more than 500%."
+  },
+  {
+    name: "Meltdowner",
+    rarity: 6.11,
+    isNSFW: false,
+    description: "Toaru - Meltdowner allows the user to create and control Particle Waveform High-Speed Canons out of altered electrons. Or in more simple it allows them to unleash incredibly powerful and hot electron beams from their body capable of slicing through any metal like its paper. The more energy you expend the stronger beams you can unleash."
+  },
+  {
+    name: "Curse Breaker",
+    rarity: 3.65,
+    isNSFW: false,
+    description: "Curse Breaker allows you to break curses by touching them or an area around you with some training. The strength of the curses and charms you can break scales with the amount of energy you expend."
+  },
+  {
+    name: "Shatter Curse",
+    rarity: 5.23,
+    isNSFW: false,
+    description: "Upgrade to Curse Breaker - No curse is safe around you. You are able to dispel and break all curses you touch. The strength of the curses you can break is equal to the amount of energy you expend. With enough energy you can break the curses of gods."
+  },
+  {
+    name: "Mystical Eyes of Purity",
+    rarity: 6.44,
+    isNSFW: false,
+    description: "Mystical Eye of the Pure World, using these mystical eyes you can cleanse any target you lock your sight on, allowing you to break curses, cleanse disease and poison, dispel charms and otherwise any status effect that goes against the natural state of the target. The more powerful an affliction the more energy you have to expend and the more strain your eyes suffer."
+  },
+  {
+    name: "Point of View",
+    rarity: 2.54,
+    isNSFW: false,
+    description: "Allows you to adjust your viewpoint into three different settings, 1st person is your regular perception, 2nd person allows you to see through the eyes of anyone you are looking and 3rd person allows you to look at things like you have a camera around you that you can rotate as you like."
+  },
+  {
+    name: "Minimap",
+    rarity: 2.94,
+    isNSFW: false,
+    description: "You have a minimap in the corner of your vision that automatically maps where you go, and reveals the location of enemies in places you have seen as long as you know they are hostile to you. You can enlarge and zoom the minimap as you like."
+  },
+  {
+    name: "Megamap",
+    rarity: 4.45,
+    isNSFW: false,
+    description: "You have a megamap in the corner of your vision, the cooler version of a minimap. The mega map maps everything within a 2.5km radius wherever you step into and keeps track of all living beings' insides, marking them as red or blue depending on whether they are hostile or not. The map is real-time, so it can also be used for satellite viewing."
+  },
+  {
+    name: "Loboan Form",
+    rarity: 4.99,
+    isNSFW: false,
+    description: "Ben 10 - You are able to transform into a Loboan or a Loboan Hybrid at will. Loboans are alien werewolves with formidable physical abilities, sharp teeth and claws, as well as having great senses being able to track smells like bloodhounds. Their most notable ability is the ability to send out direct sonic howls that are powerful enough to cause severe damage."
+  },
+  {
+    name: "Blood Golem",
+    rarity: 2.52,
+    isNSFW: false,
+    description: "Fear and Hunger - Allows you to shed your blood to create a puddle of it on the ground from which you can summon a Blood Golem or several Blood Golems. The strength or number of Blood Golems you can summon scales with your physical stats alongside the amount of blood shed (minimum 100ml)."
+  },
+  {
+    name: "Apothecary Physique",
+    rarity: 5.84,
+    isNSFW: false,
+    description: "Apothecary Physique allows you to manipulate the inside of your body to reproduce the effects of any chemical or digestible item you have consumed before. Like a health potion, mana potion, iron skin potion, night vision etc. as long as the item you consumed was Epic rank or below. This also grants you complete control over your biochemistry."
+  },
+  {
+    name: "Seraph Tracers",
+    rarity: 5.04,
+    isNSFW: false,
+    description: "Calamity Mod - \"At the speed of heaven\" Allows you to manifest Seraphic wings on your back, amplifying your speed and allowing you to freely fly at great speeds. In addition, for as long as the wings are manifest you are able to resist mundane environmental effects below Epic rank, allowing you to swim in lava, walk on water, walk through natural fire, ignore fall damage, breathe in space etc. The wings themselves are also superhumanly strong, being able to easily bisect people with a swipe and scale with your physical stats."
+  },
+  {
+    name: "Nebula Mantle",
+    rarity: 3.65,
+    isNSFW: false,
+    description: "Terraria/Calamity Mod - \"The very stars guide your flight\" You can manifest a pair of cosmic wings that grant you fast flight but do not exist in physical space. While the wings are active they resonate with cosmic energies, boosting the power of all spells and allowing you to recover your energy faster the closer it is to night."
+  },
+  {
+    name: "Icarus' Folly",
+    rarity: 3.53,
+    isNSFW: false,
+    description: "\"And so the sun never allowed a mortal to flight again\" Allows you to enact Icaru's Folly in an area, evoking the wrath of the sun against those who dare take to the skies. Those who exceed 10 meters in elevation start getting burnt by a holy inferno, the higher in elevation they are relative to the ground the hotter the flames they will be burnt by. The width of the zone is dependent on the amount of energy you expend. The larger the area the more energy is expended. Those in the folly are instinctually aware of the danger of flight."
+  },
+  {
+    name: "Bullseye",
+    rarity: 2.89,
+    isNSFW: false,
+    description: "\"Boom, headshot.\" Bullseye creates bullseye reticle crosshairs on several random spots on all targets in your line of vision, hitting one of these crosshairs in the middle with a projectile automatically turns into a critical hit, amplifying its power and damage. With training, you can more accurately place crosshairs on targets."
+  },
+  {
+    name: "Perfect Impostor",
+    rarity: 6.03,
+    isNSFW: false,
+    description: "You can disguise yourself as other people with your ability, but not just that, it will apply a normality effect on them that will actively convince others that you are that person even if you act out of character. The more out of character the more energy you consume and the effect will fade if the target is absolutely stronger than you or you act in ways that would directly compromise your identity."
+  },
+  {
+    name: "Sticky Icky",
+    rarity: 0.45,
+    isNSFW: false,
+    description: "Your skin is uncomfortably sticky to other people, as if you were soaked in glue or soda but you won't feel the difference."
+  },
+  {
+    name: "Tinker - Hentai",
+    rarity: 2.63,
+    isNSFW: true,
+    description: "(Tech)Tinker - Allows you to build technological constructs or items that are related to Sexual events, such as Aphrodisiacs, Sexual Instruments, Contraceptives, etc."
+  },
+  {
+    name: "Shrine",
+    rarity: 6.19,
+    isNSFW: false,
+    description: "JuJutsu Kaisen - The Cursed Technique of the Kind of Curses. Shrine allows you to use Cleave, Dismantle and Furnace. Dismantle allows you to send out flying invisible slashes of varying power, Cleave allows you to create more powerful instant slashes across a target by touching them, and Furnace allows you to manifest a powerful fire arrow that you can unleash. If you achieve enough mastery or receive enlightenment, you may even be able to unleash the Malevolent Shrine."
+  },
+  {
+    name: "Imagine Breaker",
+    rarity: 6.58,
+    isNSFW: false,
+    description: "Toaru - The Illusion Killer, Imagine Breaker is the ultimate negation tool. Being able to negate anything supernatural that couldn't possibly exist on base Earth. The Imagine Breaker dwells in your right hand but as it is so powerful, it also negates your own supernatural capabilities, such as abilities, magic etc. for as long as it is active(Note: This is only the base Imagine Breaker and does not contain the beings sealed inside)"
+  },
+  {
+    name: "Sex Manipulation",
+    rarity: 1.04,
+    isNSFW: true,
+    description: "(Nsfw) Allows you to alter your genitals to your liking as long as the changes are not absurd. Make your penis large, smaller, curved, horse shaped or just add another penis on top because why not? Get rid of your wiener, give yourself one if you never had one. Go wild, the possibilities are there."
+  },
+  {
+    name: "Genderswap",
+    rarity: 1.87,
+    isNSFW: false,
+    description: "Allows you to swap your gender and the genders of those who don't or can't resist your ability. The swapped gender version will usually be in a form that you yourself find attractive. You could also go halfway if need be."
+  },
+  {
+    name: "Deception",
+    rarity: 3.14,
+    isNSFW: false,
+    description: "Your words are imbued with the power of lies, making them sound more convincing or believable. The stronger a target is, the more energy will be consumed and the less efficient the ability will be. The more unbelievable your lie is, the less effective the ability is and the more energy it will consume."
+  },
+  {
+    name: "Vainglory",
+    rarity: 6.44,
+    isNSFW: false,
+    description: "You possess the ability of Vainglory, the ability to assert your own false truth. By expending your energy, you are able to convince people of your words, no matter how far-fetched, such as making them believe they were a bird. The larger the power difference between you and the target dictates the efficiency of the ability, the harder a lie to believe, the more energy you have to expend to assert it."
+  },
+  {
+    name: "Golemancy",
+    rarity: 5.89,
+    isNSFW: false,
+    description: "Golemancy allows you to animate the inanimate into golems under your control. You can create a golem out of any inanimate object you have access to. The power of the golem is dependent on the quality of the materials used and your own power level. Creating golems out of stronger materials consumes more energy, and the maximum amount of golems you can maintain under your control is dependent on your maximum energy(minimum 10); the stronger a golem, the more slots they take up."
+  },
+  {
+    name: "Elemental Sublimation",
+    rarity: 5.26,
+    isNSFW: false,
+    description: "Allows the user to turn their body into any basic element of their choosing while still retaining control over their body. Like turning into fire to burn someone, turning into lightning to travel through cables, wind to fly, etc. If any part of your mass is destroyed while in elemental form, the damage will be reflected back to you."
+  },
+  {
+    name: "Video Travel",
+    rarity: 4.65,
+    isNSFW: false,
+    description: "(Tech)Video Travel allows you to slip into screens of screens of devices and travel from them to other devices with a screen connected to the same network or wired together."
+  },
+  {
+    name: "Luck Drain",
+    rarity: 5.24,
+    isNSFW: false,
+    description: "Allows you to touch people to drain their luck and add it to your own temporarily. The more energy you expend and the longer the contact the more luck you can steal, the more luck you steal, the more the energy requirement scales exponentially. This luck is temporary and will fade over time, returning to the target it was stolen from."
+  },
+  {
+    name: "Jinx",
+    rarity: 3.05,
+    isNSFW: false,
+    description: "Jinx allows you to inflict a curse on targets that reduces their luck by touch, not to an extent that would harm them, but enough to disadvantage them. This effect can be somewhat increased by expending more energy and being stronger than the target. You can also unleash this ability as a moderate speed Hex projectile."
+  },
+  {
+    name: "Misfortune",
+    rarity: 4.83,
+    isNSFW: false,
+    description: "You can unleash an aura of misfortune from your body, reducing the luck of those close to you or direct it towards further targets by narrowing the range. The more energy you expend, the more powerful the luck reduction is, and the difference between you and the target's power dictates the effect of the aura on them."
+  },
+  {
+    name: "Malus",
+    rarity: 6.23,
+    isNSFW: false,
+    description: "\"Directing the hatred of fate\" You are able to inflict a target in your range of vision with Malus. When a target is marked by Malus, you are able to expend energy to reduce the outcomes of their actions. If this were DnD, you would be putting a negative modifier on the actions they take. The stronger of a malus you inflict on a target, the more energy you have to expend and the more exhausted you will be. Trying to put too big of a malus on too strong of a target can cause it to backfire."
+  },
+  {
+    name: "Choosing Fate",
+    rarity: 8.55,
+    isNSFW: false,
+    description: "You are able to see numerous possible futures that do not take into account your precognition. And you are able to enforce the future of your choice by expending energy. Out of the billions of possible futures from a slot machine, you can always pick the one where you get a jackpot. Or for your opponents, throw out the attacks and perform the actions that give you a better advantage. The more powerful a target and the more improbably a future you are altering the fate of, the larger the backlash you will incur and the more energy you have to expend. With enough energy you can even enforce an absolutely improbable future where your opponents attack tunnel effects through you."
+  },
+  {
+    name: "United We Stand",
+    rarity: 4.65,
+    isNSFW: false,
+    description: "Yugioh - For as long as United We Stand is active, you are able to select a familiar and add all of its physical stats onto your own. For each ability slot you are not using, you can choose another familiar to use the strength of."
+  },
+  {
+    name: "Tinker - Minimisation",
+    rarity: 3.71,
+    isNSFW: false,
+    description: "(Tech) Allows you to build, construct, and design contraptions or machines that are minimised and smaller versions of existing technology. Like creating a hyper compact nuclear reactor that can fit in an apartment, a building-sized supercomputer into a laptop, etc. Whatever technology exists, you can create a far smaller version of it without sacrificing quality and reducing energy consumption."
+  },
+  {
+    name: "Tinker - Macro",
+    rarity: 4.15,
+    isNSFW: false,
+    description: "(Tech) Allows you to build, construct, and design contraptions or machines that are scaled-up versions of existing technologies. You can create gigantic warplanes hundreds of meters long, create cannons that shoot out human-sized shells, a giant microwave death chamber, etc."
+  },
+  {
+    name: "Tinker - Ecology",
+    rarity: 3.23,
+    isNSFW: false,
+    description: "(Tech) Allows you to build, construct, and design contraptions or machines that deal with Nature, utilising, helping and benefiting from it. You can create Bio-Domes, incredibly efficient fertilisers, animal lures and foods, very efficient solar panels and geothermal reactors, terraforming equipment and much more."
+  },
+  {
+    name: "Tinker - Energy",
+    rarity: 6.01,
+    isNSFW: false,
+    description: "(Tech) Allows you to build, construct, and design contraptions or machines related to the production and use of energy. Such as hyper-efficient solar panels and wind farms, microfusions reactors, bio reactors, Hydro Reactors, and even arc reactors."
+  },
+  {
+    name: "Tinker - Industrialisation",
+    rarity: 3.69,
+    isNSFW: false,
+    description: "(Tech) Allows you to build, construct, and design contraptions or machines related to industrialisation. Such as creating factories, massive, efficient production lines, autonomous drone workers, assembly lines, anything you can build, you can create production lines and factories to do it for you more efficiently at a larger scale."
+  },
+  {
+    name: "Tinker - Augments",
+    rarity: 4.55,
+    isNSFW: false,
+    description: "(Tech) Allows you to build, construct, and design contraptions or machines related to augmenting Biology and Physical Bodies. Such as subdermal armour, biomonitors, hormone regulators, bonding bone with metal, metal skeleton, reinforced tendons, stronger muscles etc."
+  },
+  {
+    name: "Tinker - Nanomachines",
+    rarity: 6.15,
+    isNSFW: false,
+    description: "(Tech) Allows you to build, construct, and design contraptions or machines related to Nanotechnology. Such as creating nanobots to perform operations and tasks at an impossibly small scale, like altering individual cells, creating nanomachines that harden in response to physical trauma, nanobots that can disrupt machines, nanocameras, nanomachine clothes etc."
+  },
+  {
+    name: "Tinker - Dimensions",
+    rarity: 8.27,
+    isNSFW: false,
+    description: "(Tech) Allows you to build, construct, and design contraptions or machines related to the manipulations of dimensions and dimensional operations. Such as pocket dimension generators, teleportation sealers, Dimensional Rams, Interdimensional Portals, unbreakable spatial barrier generators, drawing energy from neighbouring parallel dimensions and much more. Essentially the Kaleidescope through Science."
+  },
+  {
+    name: "Tinker - Medicine",
+    rarity: 5.77,
+    isNSFW: false,
+    description: "(Tech) Allows you to build, construct, and design contraptions or machines related to Medicines and the Production of them. Such as medicines that cure poisons and toxins, medicines that bolster health etc."
+  },
+  {
+    name: "Tinker - Destruction",
+    rarity: 8.02,
+    isNSFW: false,
+    description: "(Tech) Allows you to build, construct, and design contraptions or machines related to destruction and mass destruction. Such as Unstable Matter Rockets, Disintegration Cannons, Black Hole Generators, and Doomsday Devices in general. The constructions you create generally take inspiration from your abilities and traits."
+  },
+  {
+    name: "Tinker - Mind",
+    rarity: 6.83,
+    isNSFW: false,
+    description: "(Tech) Allows you to build, construct, and design contraptions or machines related to influencing and controlling minds. Such as mental suggestion music, neuralyzers, mind control helmets, mental reprogramming machines, etc."
+  },
+  {
+    name: "Tinker - Time",
+    rarity: 7.89,
+    isNSFW: false,
+    description: "(Tech) Allows you to build, construct, and design contraptions or machines related to messing with time. Grenades that age people to dust, time-dilated training rooms, time-stopping machines, stasis barriers, FTL spacecraft via time dilation drives, etc. This speciality is a really expensive one."
+  },
+  window.allData = window.allData || {};
+allData.item = [
+  {
+    name: "Aid",
+    rarity: 1.37,
+    isNSFW: false,
+    description: "You are capable of healing others and yourself by expending your energy, but not by a very substantial amount. You might be able to heal scratches, scrapes and bruises. Healing effectiveness is dependent on the power difference between you and the target."
+  },
+  {
+    name: "Minor Cure",
+    rarity: 2.48,
+    isNSFW: false,
+    description: "You are capable of healing others by expending your energy. You can heal things like stabs, slashes and broken bones, but more severe wounds take significantly more energy. Healing effectiveness is dependent on the power difference between you and the target."
+  },
+  {
+    name: "Cure",
+    rarity: 3.55,
+    isNSFW: false,
+    description: "You are capable of healing others and yourself by expending your energy. The scale of healing you perform is dependent on the amount of energy you expend; the more lethal a wound is, the greater amount of energy you need to expend. Healing effectiveness is dependent on the power difference between you and the target."
+  },
+  {
+    name: "Greater Cure Wounds",
+    rarity: 4.41,
+    isNSFW: false,
+    description: "You are capable of greatly healing others and yourself by expending your energy. The more energy you expend, the stronger a healing effect you can exert; the more severe a wound, the more energy your healing consumes, but you can heal even lethal wounds. Healing effectiveness is dependent on the power difference between you and the target."
+  },
+  {
+    name: "Restoration",
+    rarity: 5.67,
+    isNSFW: false,
+    description: "You are capable of healing yourself and others by expending your own energy and imbuing them with potent healing energies. The more energy you exert, the more potent the effect of your healing. Healing effectiveness is dependent on the power difference between you and the target."
+  },
+  {
+    name: "Nightmare",
+    rarity: 5.58,
+    isNSFW: false,
+    description: "\"Reaper of Minds\" You have offensive mind manipulation, you cannot subtly influence minds, if conventional telepathy is a scalpel, yours is a missile. You can send mind blasts to confuse opponents, damage their minds with a look, crush the minds of those weaker than you, and hijack their bodies to act against their minds or torment them with living nightmares. The less destructive purposes Nightmare is used for, the greater the energy cost is increased by. Effectiveness is dependent on the mental strength of the opponent and their power level relative to yours."
+  },
+  {
+    name: "Cry",
+    rarity: 0.11,
+    isNSFW: false,
+    description: "You are able to shed very salty tears at will."
+  },
+  {
+    name: "Super Polymerization",
+    rarity: 5.58,
+    isNSFW: false,
+    description: "Yugioh - Allows you to temporarily fuse two living beings together to get a new entity with both of their abilities. Unwilling targets can resist the effect depending on their level of power. The stronger targets you fuse together with yourself or between them, the higher the energy cost. Keeping two entities fused together drains energy over time."
+  },
+  {
+    name: "Greedy Healing",
+    rarity: 5.52,
+    isNSFW: false,
+    description: "\"Restoration, but at what cost?\" Greedy Healing is an incredibly potent restoration ability, but instead of consuming Mana, it consumes wealth instead. The more wealth you give up to Greedy healing, the more potent the effect you will get. For a dollar, you would be pressed to recover a chipped nail, but with enough material wealth burnt, you can bring back even limbs and possibly even a life. The stronger a target you are affecting, and the larger the effect you want to enact, the more wealth you have to sacrifice in the form of wealth that belongs to you, such as gold coins, artefacts, items and or even people.(Infinite Money Glitch does not count as a valid sacrifice)"
+  },
+  {
+    name: "Tinker - Gravity",
+    rarity: 3.52,
+    isNSFW: false,
+    description: "(Tech)Allows you to build technology and technological constructs based on the manipulation of gravity. You are able to build things like anti-gravity thrusters, Zero-G fields, gravity anchors, increased weight training rooms and much more. As this is a low rank, do not expect to be building black hole projectors or gravitron crushers anytime soon."
+  },
+  {
+    name: "The Tinkerer",
+    rarity: 9.36,
+    isNSFW: false,
+    description: "(Tech)Worm - This tinker ability allows you to build the technology and technological constructs of the Entities. Such as Doomsday Drivers, Multiversal Travel, Time Bombs, and any Tinker specialisation from their universe."
+  },
+  {
+    name: "Tinker - One Punch Man",
+    rarity: 7.72,
+    isNSFW: false,
+    description: "(Tech)One Punch Man - This tinker ability allows you to build and replicate the technology of Metal Knight from One Punch Man. Such as mass producing weapons, Drone Bodies, giant mechs, large-scale drones and much, much more. You can even build Dragon Class Mechs if given enough time."
+  },
+  {
+    name: "Tinker - Scraps",
+    rarity: 3.04,
+    isNSFW: false,
+    description: "(Tech) - This tinker allows you to build much more functional and useful technology out of scraps. You could probably build a working tank in a scrapyard, a phone out of a broken radio, a mech out of demolished cars, and can easily jury-rig existing technology out of subpar materials."
+  },
+  {
+    name: "Tinker - Big MT",
+    rarity: 6.72,
+    isNSFW: false,
+    description: "(Tech)Fallout - This tinker allows you to build the technologies of the Big Mountain built by the Think Tank. Including teleporters, genetically modified monsters, pacification fields, sonic weaponry, lobotomites and much more."
+  },
+  {
+    name: "Tinker - Kuseno",
+    rarity: 7.22,
+    isNSFW: false,
+    description: "(Tech)One Punch Man - You are able to build technology based on the knowledge base of the Genius Dr. Kuseno. Allowing you to build immensely powerful cyborg bodies, ranging from destroying city blocks to continent busters with enough time, testing and resources."
+  },
+  {
+    name: "Tinker - The Baker",
+    rarity: 9.91,
+    isNSFW: false,
+    description: "(Tech)Cookie Clicker - You are capable of building the technology of the THE BAKERY. With enough time and resources, you can make assembly lines that compress universes into little balls to play bowling with and then turn every atom inside of them into cookies to get shipped to the rest of the multiverse when you are tired of them."
+  },
 ];
