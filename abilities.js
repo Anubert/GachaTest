@@ -6234,8 +6234,6 @@ allData.abilities = [
     isNSFW: false,
     description: "(Tech) Allows you to build, construct, and design contraptions or machines related to messing with time. Grenades that age people to dust, time-dilated training rooms, time-stopping machines, stasis barriers, FTL spacecraft via time dilation drives, etc. This speciality is a really expensive one."
   },
-  window.allData = window.allData || {};
-allData.item = [
   {
     name: "Aid",
     rarity: 1.37,
