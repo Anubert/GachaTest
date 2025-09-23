@@ -1,5 +1,5 @@
 window.allData = window.allData || {};
-allData.summmon = [
+allData.summons = [
   {
     name: "Suu",
     rarity: 3.55,
